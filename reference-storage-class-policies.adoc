@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: reference-storage-class-policies.html 
+keywords: storage class policies, performance policy, capacity policy, security policy, data protection policy, netapp console 
+summary: 參考 NetApp Console 本機部署中可用的系統定義儲存設備類別原則。 
+---
+= 審查 NetApp Console 本機部署中預先定義的儲存設備類別原則
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本機部署包含所有四種原則類型的系統定義原則。在建立或自訂儲存設備類別時，請使用此參考來識別哪種原則最符合您的工作負載需求。
+
+
+
+[[performance-policies]]
+== 效能原則
+
+極致效能:: 適用於需要高突發 IOPS 和可預測低延遲的 HPC、AI/ML 和分析工作負載。
+資料庫資料的 Extreme:: 適用於需要持續高 IOPS 和亞毫秒延遲的交易項目資料庫資料 Volume。
+資料庫日誌的 Extreme:: 適用於需要最高 IOPS 下限的資料庫交易記錄 Volume，以防止寫入瓶頸。
+Extreme for Database Shared Data:: 適用於多個主機存取的共享資料庫 Volume，需要高處理量和一致的延遲。
+效能:: 適用於需要可靠效能但無極端 IOPS 需求的虛擬化及企業應用程式。
+價值:: 適用於對成本敏感的工作負載，例如使用者主目錄、檔案共用和存檔。
+
+
+
+
+[[capacity-policies]]
+== 容量原則
+
+自動擴充容量:: 適用於必須自動擴充以防止空間不足故障的生產工作負載。
+
+
+
+
+[[security-policies]]
+== 安全性原則
+
+靜態資料加密:: 適用於需要加密以符合法規的生產工作負載。
+勒索軟體防護:: 適用於包含敏感或業務關鍵資料且需要作用中勒索軟體保護的工作負載。
+標準安全性:: 適用於平台預設安全性行為可以接受的工作負載。
+
+
+
+
+[[data-protection-policies]]
+== 資料保護原則
+
+預設:: 適用於需要短期恢復點而不需要長期保留例行成本的標準工作負載。
+3 個月（每小時）:: 適用於需要精細的日內恢復點和三個月歷史資料保留的受監管或業務關鍵型工作負載。
+30 天恢復:: 適用於需要短期恢復點而不需要長期保留例行成本的標準工作負載。
+90 天恢復:: 適用於需要精細的日內恢復點和三個月歷史資料保留的受監管或業務關鍵型工作負載。
+

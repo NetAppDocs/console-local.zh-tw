@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: task-customize-dashboard-cards.html 
+keywords: add card, dashboard card, card template, widget, preview, netapp console local 
+summary: 在 NetApp Console 本機部署中，透過設定範圍、範本、資源和時間視窗來自訂儀表板卡片。 
+---
+= 在 NetApp Console 本機部署中自訂卡片
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，您可以自訂儀表板卡片，以便讓維運人員專注於最重要的訊號，例如 SLA 風險、容量壓力或重複出現的警報雜訊。利用本主題，您可以根據團隊需要做出的維運決策來建立儀表板檢視。
+
+
+
+[[before-you-begin]]
+== 開始之前
+
+* 建立或開啟一個儀表板，用於放置卡片。
+* 查看可用的範本和計量（位於 link:reference-dashboard-card-templates.html["了解 NetApp Console 本地部署中的自訂儀表板卡片和計量"]）。
+
+
+
+
+[[add-cards-while-refining-an-existing-dashboard]]
+== 在完善現有儀表板的同時新增卡片
+
+當您需要改進現有儀表板並快速新增卡片以回答特定操作問題時，請使用此選項。
+
+.步驟
+. 開啟要新增卡片的儀表板。
+. 選擇 *Add Card*。
+. 選擇卡片的*資源類型*，例如機組、系統或 Volume，然後從可用資源清單中選擇資源。
+. 選擇 *Next* 繼續選擇計量和卡片類型。
+. 選擇要顯示的計量。您可以按類型篩選可用計量：*計量類型*：*效能*、*容量*、*健全狀況*或*警示*；也可以按名稱搜尋特定計量。可用計量取決於您選擇的資源類型。
++
+link:reference-dashboard-card-templates.html#metrics-list["了解可用的計量。"]
+
+. 選擇要包含在儀表板中的卡片，然後選擇 *下一步*。
++
+您一次只能選擇一張卡片。卡片預覽顯示所選指標和資源類型的即時資料。
+
+. 為您的卡片命名。卡片名稱在儀表板中必須是唯一的。
+. 查看卡片預覽，輸入卡片名稱和執行摘要，然後選擇 *新增*。
+. 對其他卡片重複這些步驟。
+. 儲存儀表板。
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]
+* link:concept-custom-dashboards.html["了解 NetApp Console 本機部署中的自訂儀表板"]
+* link:task-dashboard-create.html["建立自訂儀表板"]
+* link:task-dashboard-manage.html["管理自訂儀表板"]
+* link:reference-dashboard-card-templates.html["了解 NetApp Console 本地部署中的自訂儀表板卡片和計量"]
+

@@ -1,0 +1,265 @@
+---
+sidebar: sidebar 
+permalink: reference-dashboard-card-templates.html 
+keywords: card templates, dashboard cards, metric types, chart types, performance, capacity, health, alerts, netapp console local 
+summary: NetApp Console 本機部署中預先定義儀表板、自訂儀表板卡片和計量的參考。 
+---
+= NetApp Console 本機部署中預先定義的儀表板和自訂儀表板卡片參考
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，預先定義的儀表板和自訂儀表板卡片範本可監控 ONTAP 的效能、容量、健全狀況和警示操作。
+
+
+
+[[predefined-dashboards]]
+== 預先定義的儀表板
+
+以下預先定義的儀表板可隨裝即用。
+
+[cols="35,65"]
+|===
+| Name | 說明 
+
+
+| 磁碟區 | Volume 效能、容量、QoS、FabricPool、成長率和預測計量。 
+
+
+| 滿載時間 | ONTAP 叢集、Volume 及集合體的滿載時間預測。 
+
+
+| 安全性 | 安全法規遵循、加密、自主勒索軟體保護和驗證總覽。 
+
+
+| SVM | ONTAP SVM 效能、容量、Volume、LIF、協定（CIFS、FCP、iSCSI、NFS、NVMe/FC）、QoS 和延遲熱圖監控。 
+
+
+| 電源 | ONTAP 叢集節點、機櫃和集合體的用電量、溫度和風扇轉速監控。 
+
+
+| 節點 | ONTAP 節點效能、CPU、網路和後端監控。 
+
+
+| 網路 | 網路效能計量包括乙太網路、FibreChannel、NVMe/FC、連結聚合組和路由。 
+
+
+| LUN | ONTAP LUN 效能、容量和效率監控。 
+
+
+| 健全狀況 | ONTAP 叢集健全狀況監控，包括錯誤、警告、EMS 警報、HA 問題、節點/磁碟/機櫃健全狀況、Volume、授權和網路連接埠。 
+
+
+| Aggregate | ONTAP 彙總容量、效率比率和成長率監控。 
+|===
+
+
+[[dashboard-level-time-windows-and-aggregation]]
+== 儀表板層級時間視窗和集合體
+
+可用的時間窗口包括 30 分鐘、1 小時、24 小時、48 小時、7 天和 30 天。集合體選項因範本而異，包括整個機群彙總或前 N 個結果等檢視。時間窗口和集合體在儀表板層級設定，並套用於儀表板中的所有卡片。
+
+
+
+[[dashboard-card-templates-and-metrics]]
+== 儀表板卡片範本和計量
+
+卡片是建立自訂儀表板的基本單元。每張卡片都使用預先定義的範本，包含計量和圖表類型，然後將該檢視對應至特定的 ONTAP 物件和監控目標。
+
+
+NOTE: 卡片模板是預先定義的，並非使用者建立的。
+
+
+
+[[storage-operations-metric-index-at-a-glance]]
+[[metrics-list]]
+=== 儲存設備作業計量索引（總覽）
+
+指標類型與常見的儲存設備管理結果一致，包括效能瓶頸、容量壓力、健全狀況風險和警示量。
+
+[cols="18,37,30,15"]
+|===
+| 計量類型 | 支援的計量 | 儲存管理員使用案例 | 詳細範本 
+
+
+| 效能 | 平均延遲、峰值延遲、IOPS、處理量（MB/s）、使用率、效能容量 | 找出瓶頸、持續壓力和效能空間 | <<performance-templates,前往範本>> 
+
+
+| 容量 | 已使用容量、可用容量、已使用容量（%）、已使用快照容量 | 追蹤成長情況、識別低可用容量區域，並監控快照影響。 | <<capacity-templates,前往範本>> 
+
+
+| 健全狀況 | 健全狀況、降級/關鍵物件、故障磁碟、網路介面錯誤、熱點物件（依延遲） | 偵測健全狀況衰退並優先處理操作分類 | <<health-templates,前往範本>> 
+
+
+| 警示 | 警報（嚴重）、按嚴重程度分類的警報、按影響區域分類的警報、近期警報、警報趨勢 | 監控作用中事件並分析警示 Volume 隨時間的變化趨勢 | <<alerts-templates,前往範本>> 
+|===
+
+
+[[supported-ontap-object-hierarchy-resource-types]]
+=== 支援的 ONTAP 物件層次結構（資源類型）
+
+卡片資料可在多個 ONTAP 物件層級上呈現，從機群層級的可見度到物件層級的疑難排解。
+
+*資源類型*設定會對應到以下一個或多個資源層級：
+
+* 艦隊
+* 叢集
+* 系統（節點）
+* SVM
+* 磁碟區
+* LUN
+* 本機層（彙總）
+
+
+可用資源層級取決於您選擇的範本和指標。
+
+
+
+[[chart-types-for-operational-analysis]]
+=== 用於營運分析的圖表類型
+
+圖表類型會影響您解讀趨勢、比較、分佈和時間點數值的速度。
+
+[cols="25,75"]
+|===
+| 圖表類型 | 最適合 
+
+
+| 折線圖 | 時間序列趨勢，例如延遲、IOPS、處理量、使用率和警報趨勢隨時間的變化。 
+
+
+| 長條圖 | 分類比較和分佈，例如按嚴重程度或影響區域發出的警報。 
+
+
+| 派或甜甜圈 | 比例分配，例如已使用容量百分比。 
+
+
+| 表格 | 詳細的多欄資料，例如已使用容量、健全狀況和最近的警報。 
+
+
+| 單一數字（統計數據） | 單一關鍵值，例如關鍵警報計數或故障磁碟。 
+|===
+
+
+[[performance-templates-for-workload-triage]]
+[[performance-templates]]
+=== 用於工作負載分類的效能模板
+
+效能模板著重於延遲、處理量和使用率訊號，這些訊號可以指示工作負載壓力。
+
+[cols="25,20,55"]
+|===
+| 範本 | 圖表類型 | 說明 
+
+
+| 平均延遲 | 線 | 在選定的時間視窗內，所選目標的平均延遲。 
+
+
+| 尖峰延遲 | 線 | 在所選時間視窗內，對所選目標觀察到的最大延遲。 
+
+
+| IOPS | 線 | 所選目標每秒 I/O 作業的總和。 
+
+
+| 處理量（MB/s） | 線 | 所選目標的資料處理量總和。 
+
+
+| 使用率 | 線 | 所選目標的平均 CPU 或磁碟使用率。 
+
+
+| 效能容量 | 表格 | 淨空餘量分析，將目前使用率與最佳點進行比較。 
+|===
+
+
+[[capacity-templates-for-growth-and-headroom]]
+[[capacity-templates]]
+=== 成長和預留空間的容量模板
+
+容量模板著重於已使用空間和可用空間，以支援成長規劃和風險檢測。
+
+[cols="25,20,55"]
+|===
+| 範本 | 圖表類型 | 說明 
+
+
+| 已用容量 | 表格 | 所選目標已用容量總和。 
+
+
+| 可用容量 | 表格 | 所選目標的可用容量總和。 
+
+
+| 容量使用率 (%) | 派或甜甜圈 | 所選目標的平均使用量與總量比率。 
+
+
+| 已使用 Snapshot 快照技術容量 | 表格 | 所選目標所消耗的 Snapshot 快照技術空間總和。 
+|===
+
+
+[[health-templates-for-risk-detection]]
+[[health-templates]]
+=== 用於風險偵測的健全狀況範本
+
+健全狀況範本著重於物件狀態和故障指標，以支援操作分類。
+
+[cols="25,20,55"]
+|===
+| 範本 | 圖表類型 | 說明 
+
+
+| 健全狀況 | 表格 | 每個選定目標物件的最新健全狀況狀態。 
+
+
+| 受損/關鍵物件 | 單一號碼 | 健全狀況狀態不佳的物件數量。 
+
+
+| 故障磁碟 | 單一號碼 | 所選系統中故障磁碟總數。 
+
+
+| 網路介面錯誤 | 派或甜甜圈 | 所選目標網路介面錯誤計數器的總和。 
+
+
+| 熱門物件（按延遲排序） | 表格 | 資源依峰值延遲降序排列。 
+|===
+
+
+[[alerts-templates-for-incident-prioritization]]
+[[alerts-templates]]
+=== 用於事件優先排序的警報模板
+
+警報範本著重於事件數量、嚴重程度和影響範圍，以支援監控和優先排序。
+
+[cols="25,20,55"]
+|===
+| 範本 | 圖表類型 | 說明 
+
+
+| 警報（關鍵） | 單一號碼 | 時間窗口內關鍵嚴重性警示的數量。 
+
+
+| 按嚴重程度分類的警報 | 列 | 按嚴重性層級分組的警示。 
+
+
+| 依影響區域分類的警示 | 列 | 按影響區域分組的警示，例如容量、效能或安全性。 
+
+
+| 最新警報 | 表格 | 最新警報，依時間降序排列。 
+
+
+| 警報趨勢 | 線 | 在選定時間窗口內，每個時間段的警示計數。 
+|===
+
+
+[[related-information]]
+== 相關資訊
+
+* link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]
+* link:concept-custom-dashboards.html["了解 NetApp Console 本機部署中的自訂儀表板"]
+* link:task-dashboard-create.html["建立自訂儀表板"]
+* link:task-customize-dashboard-cards.html["在 NetApp Console 本機部署中自訂儀表板卡片"]
+* link:task-dashboard-manage.html["管理自訂儀表板"]
+

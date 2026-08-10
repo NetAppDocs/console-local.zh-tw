@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: task-provisioning-agentic.html 
+keywords: agentic provisioning, AI-assisted provisioning, natural language, conversational provisioning, plan-and-approve, storage class, Console assistant, LLM, RBAC, netapp console local 
+summary: 使用 AI 驅動的代理程式資源配置，在 NetApp Console 本地部署中自主完成儲存設備請求。 
+---
+= 在 NetApp Console 本機部署中，使用 AI 輔助（代理）工作流程進行儲存資源配置
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，如果您希望以對話方式要求儲存設備、審查建議的計劃並核准變更，請使用 AI 輔助（代理）資源配置。如果您希望在減少 UI 導覽的同時加快請求速度，並保持資源配置與儲存設備類別及角色型存取控制 （RBAC） 一致，此方法非常實用。
+
+
+NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能，此文件以技術預覽版形式提供。對於此預覽產品，NetApp 保留在正式發行前修改產品詳情、內容及時間表的權利。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾或機組管理員，或儲存管理員。您的 AI 輔助行動與 UI 型行動一樣，都受到角色型存取控制的限制。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+代理資源配置需要在您的 NetApp Console 本機部署環境中設定並啟用 LLM 整合。
+
+
+
+[[before-you-begin]]
+== 開始之前
+
+* 請確保已為 NetApp Console 本機部署設定並啟用 LLM 整合。
+* 確保目標機組包含已探索的儲存設備系統。
+* 確保已設定儲存設備類別並將其與機組建立關聯，以便助理可以提出與類別一致的計劃。
+
+
+.步驟（待重新檢視）
+. 開啟 NetApp Console 助手。
+. 請用簡單易懂的語言描述您的需求（例如，協定、規模、環境、效能目標以及目標機組（如適用））。
+. 審查建議方案，包括：選定的機組和目標系統部署（如適用）、選定或建議的儲存設備等級、將套用的關鍵設定（容量行為、保護排程、安全性要求，以及任何與 QoS 相關的意圖（如有顯示））。
+. 確認或調整計劃。如果計劃選擇了非預期的等級或部署位置，請指定所需的等級、機組或約束條件，然後重新產生計劃。
+. 批准執行以資源配置工作負載。
+. 在儲存設備清單中驗證已建立的資源，並確認其與預期的儲存設備類別相關聯，以便進行後續的漂移監控。
+

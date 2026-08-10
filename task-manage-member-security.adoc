@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-manage-member-security.html 
+keywords: member security, password reset, MFA, multi-factor authentication, service account, credentials, netapp console local, AD, Active Directory, directory services 
+summary: 在 NetApp Console 本機部署中管理成員安全性設定，包括密碼重設、MFA 管理和服務帳戶認證資料。 
+---
+= 在 NetApp Console 本機部署中管理成員安全性
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+透過管理成員安全性設定，確保使用者對 NetApp Console 本地部署組織的存取安全。您可以指導本機使用者變更自己的密碼、管理本機使用者的多重要素驗證 （MFA），以及重新建立服務帳戶認證資料。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾管理員或機組管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+
+
+[[reset-user-passwords-local-users-only]]
+== 重設使用者密碼（僅限本機使用者）
+
+系統管理員無法直接重設本機使用者密碼。
+
+引導本機使用者透過選擇 *Forgot password?* 從 Console 本機部署登入頁面重設密碼。
+
+
+NOTE: 目錄使用者無法使用此選項。
+
+
+
+[[manage-a-local-users-multi-factor-authentication-mfa]]
+== 管理本機使用者的多因素驗證 （MFA）
+
+如果本機使用者無法存取其 MFA 設備，您可以移除或停用其 MFA 組態。
+
+
+NOTE: 多因素驗證僅適用於本機使用者。目錄使用者無法透過 Console 本機部署啟用多因素驗證。
+
+請遵循以下準則選擇正確的行動：
+
+* 當使用者暫時無法存取其 MFA 裝置時，請選擇*停用*。停用 MFA 後，使用者可以在八小時內無需 MFA 即可登入一次，之後 MFA 將自動重新啟用。
+* 當使用者需要完全重設 MFA 時，請選擇「移除」。移除 MFA 後，使用者將在未設定 MFA 的情況下登入，直到他們重新設定 MFA 為止。
+
+
+如果使用者儲存了恢復代碼，則可以使用該代碼登入。如果使用者沒有恢復代碼，請停用 MFA，以便使用者可以登入並重新取得存取權限。
+
+
+NOTE: 若要管理本機使用者的多因素驗證，您必須擁有與受影響使用者在同一網域中的電子郵件地址。
+
+.步驟
+. 選擇 *Administration* > *Identity and access*。
+. 選擇*成員*。
+. 從「成員」頁面，導覽至表格中的某個成員，選擇 image:icon-action.png["一個有三個點的圖示"]，然後選擇「管理多因素驗證」。
+. 選擇是否移除或停用使用者的 MFA 組態。
+
+
+.完成後
+審查稽核日誌，確認是誰更改了 MFA 存取、更改時間以及行動是否成功。link:task-audit-console-activity.html["了解如何稽核 NetApp Console 本機部署活動"]。
+
+
+
+[[recreate-the-credentials-for-a-service-account]]
+== 重新建立服務帳戶的認證資料
+
+如果您遺失服務帳戶的憑證或需要更新憑證，可以建立新的憑證。
+
+建立新認證資料會刪除舊認證資料。您將無法使用舊認證資料。
+
+.步驟
+. 選擇 *Administration* > *Identity and access*。
+. 選擇*成員*。
+. 在「成員」表中，導覽至服務帳戶，選擇 image:icon-action.png["一個有三個點的圖示"]，然後選擇 *Recreate secrets*。
+. 選擇 *Recreate*。
+. 下載或複製用戶端 ID 和用戶端金鑰。
++
+Console 本機部署僅顯示一次用戶端金鑰。請務必複製或下載該金鑰並妥善保管。
+
+

@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-storage-class-fleet-associate.html 
+keywords: associate, storage class, fleet, assign, netapp console 
+summary: 在 NetApp Console 本地部署中，將儲存設備類別與機組建立關聯，以套用一致的儲存原則。 
+---
+= 在 NetApp Console 本機部署中將儲存設備類別與機組建立關聯
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，將儲存設備類別與機組建立關聯，以強制執行特定環境的標準、控制操作員可使用的選項，並簡化針對已指派類別的法規遵循檢查。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾或機組管理員，或儲存設備管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+
+
+[[associate-a-storage-class-with-a-fleet]]
+== 將儲存設備類別與機組關聯
+
+將儲存設備類別與機組關聯，以便在該機組內進行儲存資源配置和後續法規遵循監控。
+
+.步驟
+. 開啟您要管理的機組。
+. 找到儲存設備類別的機組組態區域。
+. 選擇一個或多個儲存設備類別以與機組建立關聯。
+. 選擇 *Save*。
+
+
+.驗證
+. 在機組中啟動儲存資源配置工作流程，並確認儲存設備類別可供選擇。
+

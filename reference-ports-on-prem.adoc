@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-on-prem.html 
+keywords: networking, network requirements, ports, on-premises, TCP, HTTP, HTTPS, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local 
+summary: Console 代理程式在手動安裝於內部部署 Linux 主機上時，會使用_傳入_連接埠。請參考這些連接埠以供規劃之用。 
+---
+= NetApp Console 本地部署中內部部署 Console 代理程式的連接埠
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，手動安裝在內部部署 Linux 主機上的 Console 代理程式會使用_傳入_連接埠。請參考這些連接埠以供規劃之用。
+
+這些傳入規則適用於所有 NetApp Console 部署模式。
+
+[cols="10,10,80"]
+|===
+| 傳輸協定 | 連接埠 | 目的 
+
+
+| HTTP | 80  a| 
+* 提供從用戶端 Web 瀏覽器到本機使用者介面的 HTTP 存取
+* 在 Cloud Volumes ONTAP 升級過程中使用
+
+
+
+
+| HTTPS | 443 | 提供從用戶端 Web 瀏覽器到本機使用者介面的 HTTPS 存取 
+|===

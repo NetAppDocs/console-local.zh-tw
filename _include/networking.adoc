@@ -1,0 +1,74 @@
+= 
+:allow-uri-read: 
+
+
+專用主機:: 此代理程式不支援在與其他應用程式共享的主機上執行。主機必須是專用主機。
+
+
+VPC 和子網路:: 建立 Console 代理程式時，需要指定其所在的 VPC 和子網路。
+
+
+VNet 和子網路:: 建立 Console 代理程式時，需要指定其所在的 VNet 和子網路。
+
+
+與目標網路的連線:: Console 代理程式需要連線至您規劃建立和管理系統的位置。例如，您規劃在本機環境中建立 Cloud Volumes ONTAP 系統或儲存系統的網路。
+
+
+傳出網際網路存取:: 部署 Console 代理程式的網路位置必須具有傳出網際網路連線，才能聯繫特定端點。
+
+
+從 NetApp Console 聯繫的端點:: 當您使用透過 SaaS 階層提供的網路型 NetApp Console 時，它會連接多個端點以完成資料管理員任務。這包括用於從 Console 部署 Console 代理程式的端點。
++
+--
+link:reference-networking-saas-console.html["從 NetApp Console 檢視已連線的端點清單"]。
+
+--
+
+
+Azure 區域:: 如果您使用 Cloud Volumes ONTAP，則 Console 代理程式應部署在與其管理的 Cloud Volumes ONTAP 系統相同的 Azure 區域中，或部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 區域對"^] Cloud Volumes ONTAP 系統所在的 Azure 區域。此要求可確保 Cloud Volumes ONTAP 與其關聯的儲存設備帳戶之間使用 Azure Private Link 連線。
++
+--
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["了解 Cloud Volumes ONTAP 如何使用 Azure Private Link"^]
+
+--
+
+
+連接埠:: 除非您發起請求，或將其用作 Proxy 將 AutoSupport 訊息從 Cloud Volumes ONTAP 傳送到 NetApp 支援部門，否則 Console 代理程式不會接收任何傳入流量。
++
+--
+* HTTP (80) 和 HTTPS (443) 提供對本機 UI 的存取，您在極少數情況下會使用它。
+* 只有在需要連線至主機進行疑難排解時，才需要 SSH (22)。
+* 如果在無法使用傳出網際網路連線的子網路中部署 Cloud Volumes ONTAP 系統，則需要透過連接埠 3128 建立傳入連線。
++
+如果 Cloud Volumes ONTAP 系統沒有傳出網際網路連線來傳送 AutoSupport 訊息，Console 會自動將這些系統設定為使用 Console 代理程式隨附的 Proxy 伺服器。唯一的要求是確保 Console 代理程式的安全性群組允許透過連接埠 3128 傳入連線。部署 Console 代理程式後，您需要開啟此連接埠。
+
+
+
+--
+
+
+Proxy 伺服器:: NetApp 支援明確和透明的 Proxy 組態。如果使用透明的 Proxy，只需提供 Proxy 伺服器的憑證。如果使用明確 Proxy，則還需要提供 IP 位址和憑證。
++
+--
+* IP 位址
+* 認證資料
+* HTTPS 憑證
+
+
+--
+
+
+Azure 中的公用 IP 位址:: 如果要將公用 IP 位址與 Azure 中的 Console 代理程式 VM 搭配使用，則該 IP 位址必須使用基本 SKU，以確保 Console 使用此公用 IP 位址。
++
+--
+image:screenshot-azure-sku.png["這是 Azure 中建立新 IP 位址的快照，您可以在 SKU 欄位下選擇「基本」。"]
+
+如果您使用標準 SKU IP 位址，則 Console 將使用 Console 代理程式的_私人_ IP 位址，而不是公用 IP 位址。如果您用於存取 Console 的電腦無法存取該私人 IP 位址，則 Console 執行的操作將會失敗。
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文件：公用 IP SKU"^]
+
+--
+
+
+啟用 NTP:: 如果您規劃使用 NetApp Data Classification 來掃描您的企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定 （NTP） 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]
+

@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: task-iam-fleet-mgmt-get-started.html 
+keywords: iam, quick start, get started, get started with iam, identity and access management 
+summary: 在 NetApp Console 本機部署中，透過建立資料夾和機組層級、新增成員、新增資源並將這些資源放置在正確的機組中來設定身分識別和存取管理。 
+---
+= 開始使用 NetApp Console 本機部署中的身分識別與存取管理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，設定資料夾和機組層級，新增成員和初始權限，並將資源新增至正確的機組中，以便正確的團隊可以存取和管理它們。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾管理員或機組管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+您需要擁有 *Organization admin* 或 *Super admin* 角色才能完成初始設定。設定完成後，隨著組織的變更，管理資源、成員存取和機組存取。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 新增或探索資源
+[role="quick-margin-para"]
+將系統新增至 Console 本機部署。在初始設定期間，通常會在選擇預設機組的情況下新增系統。
+
+[role="quick-margin-para"]
+了解如何建立或發現資源：
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["內部部署 ONTAP 叢集"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 建立資料夾和機組層級結構
+[role="quick-margin-para"]
+建立與您的業務層級結構相符的其他機組和資料夾。
+
+[role="quick-margin-para"]
+link:task-iam-manage-folders-fleets.html["學習如何使用資料夾和機組來組織資源"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]將資源與正確的機組建立關聯
+[role="quick-margin-para"]
+在 Console 本機部署中新增或探索系統時，系統會自動將該資源與目前選定的機組建立關聯。若要使系統可供適當的團隊使用，請將其與層級結構中的對應機組建立關聯。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-resources.html["了解如何管理資料夾和機組中的資源"]。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 新增成員並指派初始權限
+[role="quick-margin-para"]
+根據成員的管理內容，在組織、資料夾或機組層級新增成員並為其指派角色。
+
+[role="quick-margin-para"]
+link:task-iam-manage-members-permissions.html["了解如何管理成員及其權限"]。
+
+
+
+[[after-initial-setup]]
+== 初始設定完成後
+
+初始設定完成後，隨著組織的變化，管理存取和資源部署：
+
+* link:task-iam-manage-resources.html["管理資料夾和機組中的資源"]
+* link:task-iam-manage-roles.html["跨機組和資料夾管理成員存取（以成員為中心）"]
+* link:task-iam-users-fleets-assign.html["管理誰可以存取特定的機組或資料夾（以機組為中心）"]
+* link:task-iam-manage-folders-fleets.html#delete-a-folder-or-fleet["不再需要時，請刪除資料夾和機組。"]
+
+
+.相關資訊
+* link:concept-identity-and-access-management.html["了解 NetApp Console 中的身分識別與存取管理"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分識別與存取管理 API"^]
+

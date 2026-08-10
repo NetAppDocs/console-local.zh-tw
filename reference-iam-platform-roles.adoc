@@ -1,0 +1,116 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-platform-roles.html 
+keywords: predefined roles, iam roles, Organization admin, Folder or fleet admin, Super admin, Federation admin, platform roles, role, iam, identity and access management, netapp console local 
+summary: 為使用者指派平台角色，以授予其管理 NetApp Console 本機部署、指派角色、新增使用者和管理聯盟的權限。 
+---
+= NetApp Console 本機部署平台存取角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+為使用者指派平台角色，以授予其管理 NetApp Console 本機部署、指派角色、新增使用者、建立機組和管理使用者身分驗證的權限。
+
+.大型跨國組織的組織角色範例
+XYZ Corporation 按地區（北美、歐洲和亞太地區）組織資料儲存設備存取，提供集中監督的區域控制。
+
+在 XYZ Corporation 的 Console 本機部署中，*組織管理員* 負責建立初始組織，並為每個區域建立分隔的資料夾。每個區域的 *資料夾或機組管理員* 負責組織該區域資料夾內的機組（及其關聯資源）。
+
+具有 *Folder or fleet admin* 角色的區域管理員透過新增資源和使用者來主動管理其資料夾。這些區域管理員還可以新增、移除或重新命名其管理的資料夾和機組。*Organization admin* 繼承所有新資源的權限，從而維護整個組織儲存設備使用量的可見度。
+
+在同一組織內，會為一名使用者指派「Federation admin」角色，用於管理組織與其企業身分提供者 （IdP） 之間的聯盟。該使用者可以新增或移除已聯盟的組織，但無法管理組織內的使用者或資源。「Organization admin」會為另一位使用者指派「Federation viewer」角色，用於檢查聯盟狀態並檢視已聯盟的組織。
+
+下表列出每個 Console 本機部署平台角色可以執行的動作。
+
+
+
+[[organization-administration-roles]]
+[[organization-admin-roles]]
+== 組織管理角色
+
+[cols="2,1,1"]
+|===
+| 任務 | 組織管理員 | 資料夾或機組管理員 
+
+
+| 從 Console 本機部署建立、修改或刪除系統（新增或探索系統） | 是的 | 是的 
+
+
+| 建立資料夾和機組，包括刪除 | 是的 | 否 
+
+
+| 重新命名現有資料夾和機組 | 是的 | 是的 
+
+
+| 指派角色並新增使用者 | 是的 | 是的 
+
+
+| 將資源與資料夾和機組建立關聯 | 是的 | 是的 
+
+
+| 透過 Console 註冊支援並提交案例 | 是的 | 是的 
+
+
+| 使用未與明確存取角色關聯的資料服務 | 是的 | 是的 
+
+
+| 查看稽核頁面和通知 | 是的 | 是的 
+|===
+
+
+[[federation-roles]]
+== 聯盟角色
+
+[cols="2,1,1"]
+|===
+| 任務 | 聯盟管理員 | Federation 檢視者 
+
+
+| 建立和更新目錄服務整合 | 是的 | 否 
+
+
+| 檢視聯盟及其詳細資料 | 是的 | 是的 
+|===
+
+
+[[super-admin-and-viewer-roles]]
+[[super-admin-roles]]
+== 超級管理員和檢視者角色
+
+*Super admin* 角色提供對管理 Console 功能、儲存設備和資料服務的完全存取。此角色適合負責管理和治理的人員。相較之下，*Super viewer* 角色提供唯讀存取，非常適合需要可見度但無需進行任何變更的稽核人員或利害關係人。
+
+組織應謹慎使用 *Super admin* 存取，以最大程度地降低安全性風險，並遵守最小權限原則。大多數組織應指派細粒度的角色，僅授予必要的權限，以降低風險並提高可稽核性。
+
+.超級角色範例
+ABC Corporation 有一個五人小團隊，利用 NetApp Console 進行資料服務和儲存管理。他們沒有分配多個角色，而是將 *Super admin* 角色分配給兩位資深團隊成員，負責所有管理任務，包括使用者管理和資源組態。其餘三名團隊成員則被分配了 *Super viewer* 角色，讓他們可以監控儲存設備健全狀況和資料服務狀態，但無法修改設定。
+
+[cols="2,1"]
+|===
+| 角色 | 繼承的角色 
+
+
+ a| 
+超級管理員
+ a| 
+* 組織管理員
+* 資料夾或機組管理員
+* 備份與恢復超級管理員
+* 儲存管理員
+
+
+
+
+ a| 
+超級檢視器
+ a| 
+* 組織檢視器
+* 備份檢視器
+* 儲存檢視器
+
+
+|===

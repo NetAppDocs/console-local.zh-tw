@@ -1,0 +1,31 @@
+= 
+:allow-uri-read: 
+
+
+前往 Azure 入口網站，將 Azure 自訂角色指派給一個或多個訂閱的 Console 代理程式虛擬機器。
+
+.步驟
+. 從 Azure 入口網站開啟「訂閱」服務，然後選擇您的訂閱。
++
+從 *Subscriptions* 服務指派角色至關重要，因為這會指定訂閱層級的角色指派範圍。_範圍_ 定義了存取所適用的資源集。如果您在其他層級（例如，虛擬機器層級）指定範圍，則您在 NetApp Console 中完成行動的能力將受到影響。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文件：了解 Azure RBAC 的範圍"^]
+
+. 選擇 *存取控制 （IAM）* > *新增* > *新增角色指派*。
+. 在「角色」標籤中，選擇「Console Operator」角色，然後選擇「下一步」。
++
+
+NOTE: Console Operator 是原則中提供的預設名稱。如果您為該角色選擇了其他名稱，請選擇該名稱。
+
+. 在「成員」標籤中，完成以下步驟：
++
+.. 為*受控識別*指派存取權。
+.. 選擇 *Select members*，選擇建立 Console 代理程式虛擬機器的訂閱，在 *Managed identity* 下，選擇 *Virtual machine*，然後選擇 Console 代理程式虛擬機器。
+.. 選擇 *Select*。
+.. 選取 *下一步*。
+.. 選取 *Review + assign*。
+.. 如果要管理其他 Azure 訂閱中的資源，請切換至該訂閱，然後重複這些步驟。
+
+
+

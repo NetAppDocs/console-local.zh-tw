@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: console-differences.html 
+keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, active directory, bring-your-own-license 
+summary: NetApp Console 是一款 SaaS 應用程式，使用 Console 代理來管理雲端和內部部署儲存設備系統。NetApp Console 本地部署是一種自我託管的無代理虛擬機器，用於企業級 ONTAP 機組管理，具備原則執行、漂移修復和完整資料主權等功能。 
+---
+= 比較 NetApp Console 本機部署和 NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+未解析的指令位於 <stdin> - include::https://raw.githubusercontent.com/NetAppDocs/console-all-family/main/intro-family.adoc[lines=15..-1]

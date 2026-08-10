@@ -1,0 +1,124 @@
+= 
+:allow-uri-read: 
+
+
+手動安裝期間所聯繫的端點:: 當您在自己的 Linux 主機上手動安裝 Console 代理程式時，Console 代理程式的安裝程式在安裝過程中需要存取下列 URL：
+
+
+[cols="2*"]
+|===
+| 端點 | 目的 
+
+
+| \https://mysupport.netapp.com |  
+
+
+| \https://signin.b2c.netapp.com | （此端點是 https://mysupport.netapp.com 的 CNAME URL） 
+
+
+| \https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+ a| 
+* 選項 1 （建議）：
++
+** \https://bluexpinfraprod.eastus2.data.azurecr.io
+** \https://bluexpinfraprod.azurecr.io
+
+
+* 選項 2：
++
+** \https://*.blob.core.windows.net
+** \https://cloudmanagerinfraprod.azurecr.io
+
+
+
+ a| 
+要取得映像，安裝程式需要存取以下兩組端點之一。^1^ 建議使用選項 1 中列出的端點，因為它們更安全。我們建議您設定防火牆，允許存取選項 1 中所列的端點，同時禁止存取選項 2 中所列的端點。請注意以下關於這些端點的事項：
+
+* 從 Console 代理程式的 3.9.47 版本開始，支援選項 1 中列出的端點。與 Console 代理程式的先前版本不相容。
+* Console 代理程式首先聯絡選項 2 中所列的端點。如果這些端點無法存取，Console 代理程式會自動聯絡選項 1 中列出的端點。
+* 如果您將 Console 代理程式與 NetApp Backup and Recovery 或 NetApp Ransomware Resilience 搭配使用，則選項 1 中的端點不受支援。在此情況下，您可以拒絕選項 1 中列出的端點，同時允許選項 2 中列出的端點。
+
+
+|===
+手動安裝期間所聯繫的端點:: 當您在自己的 Linux 主機上手動安裝 Console 代理程式時，Console 代理程式的安裝程式在安裝過程中需要存取多個 URL。
+
+
+[cols="2*"]
+|===
+| 端點 | 目的 
+
+
+| \https://mysupport.netapp.com |  
+
+
+| \https://signin.b2c.netapp.com | 此端點是 \https://mysupport.netapp.com 的 CNAME URL 
+
+
+| \https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+2+| *AWS Government region* 如果您在 AWS Government region 中安裝 Console 代理程式，則安裝程式也需要存取下列端點： 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\https://cloudmanagerinfraprod.azurecr.io
+ a| 
+
+
+
+2+| *Azure Government region* 如果您在 Azure Government region 中安裝 Console 代理程式，安裝程式也需要存取以下端點： 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\https://occmclientinfragov.azurecr.us
+ a| 
+
+
+
+2+| *商業區域或主權區域* 如果您在商業區域或主權區域中安裝 Console 代理程式，則可以在兩組端點之間進行選擇： 
+
+
+ a| 
+**選項 1（建議）：** * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io
+
+**選項 2：** * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io
+ a| 
+建議使用選項 1 中列出的端點，因為它們更安全。我們建議您設定防火牆，允許選項 1 中所列的端點，同時禁止選項 2 中所列的端點。請注意以下關於這些端點的事項：
+
+* 從 Console 代理程式的 3.9.47 版本開始，支援選項 1 中列出的端點。與 Console 代理程式的先前版本不相容。
+* Console 代理程式首先聯絡選項 2 中所列的端點。如果這些端點無法存取，Console 代理程式會自動聯絡選項 1 中列出的端點。
+* 如果您將 Console 代理程式與 NetApp Backup and Recovery 或 NetApp Ransomware Resilience 搭配使用，則選項 1 中的端點不受支援。在此情況下，您可以拒絕選項 1 中列出的端點，同時允許選項 2 中列出的端點。
+
+
+|===
++
+
+建議使用選項 1 中列出的端點，因為它們更安全。我們建議您設定防火牆，允許選項 1 中所列的端點，同時禁止選項 2 中所列的端點。請注意以下關於這些端點的事項：** 選項 1 中列出的端點從 Console 代理程式的 3.9.47 版本開始受支援。與 Console 代理程式的先前版本不相容。** Console 代理程式會先聯絡選項 2 中所列的端點。如果這些端點無法存取，Console 代理程式會自動聯絡選項 1 中列出的端點。** 如果您將 Console 代理程式與 NetApp Backup and Recovery 或 NetpApp Ransomware Resilience 搭配使用，則不支援選項 1 中的端點。在此情況下，您可以禁止選項 1 中列出的端點，同時允許選項 2 中列出的端點。
+
+主機在安裝期間可能會嘗試更新作業系統軟體套件。主機可以聯絡不同的鏡射網站來取得這些作業系統軟體套件。

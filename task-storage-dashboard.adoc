@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: task-storage-dashboard.html 
+keywords: storage dashboard, home page, fleet health, capacity monitoring, IOPS, performance metrics, alerts, storage KPIs, monitoring, netapp console local 
+summary: 在 NetApp Console 本機部署中，您可以在首頁上檢視計量。 
+---
+= 在 NetApp Console 本機部署中檢視首頁計量
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，使用主頁儀表板作為監控儲存設備健全狀況和效能的預設起點。它提供有關機組健全狀況、警報、安全性、容量使用情況、延遲、處理量和 IOPS 的高階計量。
+
+首頁儀表板會自動限定範圍，僅顯示您有權檢視的機組和系統。您也可以為首頁新增自訂儀表板，用於特定角色的監控。
+
+將這些卡片用作分層分類工作流程。首先使用「機組健全狀況」和「警報」來尋找風險熱點。使用「系統健全狀況狀態」和「建議的修復措施」來識別受影響的資源。使用「容量使用情況」、「延遲」、「處理量」和「IOPS」來調查根本原因。
+
+
+
+[[fleet-health]]
+== 機組健全狀況
+
+「機組健全狀況」卡片顯示排名前五的機組的高階狀態總結，包括系統數量、已使用容量、安全性法規遵循和關鍵警報。使用此卡片可以確定哪些機組需要立即注意。選擇機組名稱即可檢視所選機組的專屬儀表板。
+
+
+
+[[recommended-remediations]]
+== 建議的補救措施
+
+「建議補救措施」卡片列出作用中的問題和建議的措施。該卡片根據容量壓力、離線資源和保護相關風險對補救措施進行優先排序。
+
+
+
+[[alerts]]
+== 警示
+
+「警報」卡片匯總所選時間範圍內的警報數量，並依嚴重程度分組。使用此卡片可了解目前的事件負載，並發現關鍵、警告或資訊警報的最新變化。
+
+
+
+[[security]]
+== 安全性
+
+*Security* 卡片匯總了法規遵循和保護計量，例如系統法規遵循和勒索軟體相關控制措施。使用此檢視可以監控所有資源的安全性趨勢。
+
+
+
+[[capacity-usage]]
+== 容量使用
+
+「容量使用情況」卡片顯示所選機組或系統的預期和歷史使用趨勢。使用此卡片可以識別成長模式並規劃額外容量。
+
+
+
+[[latency]]
+== 延遲
+
+「延遲」卡片會追蹤所選系統隨時間變化的反應時間行為。利用此趨勢可以偵測新興的效能延遲，並比較不同資源之間的相對延遲。
+
+
+
+[[throughput]]
+== 吞吐量
+
+*處理量* 卡顯示所選系統的資料傳輸速率隨時間的變化。使用此卡可以了解工作負載強度並監控處理量需求的變化。
+
+
+
+[[iops]]
+== IOPS
+
+*IOPS* 卡片顯示一段時間內的輸入/輸出作業速率。使用此卡片可比較不同系統之間的活動層級，並識別持續或間歇性的 I/O 需求。
+
+
+
+[[dashboard-card-example-metric-card]]
+== 儀表板卡片（範例計量卡）
+
+下方的「儀表板」區域可以包含使用者選擇的自訂儀表板，例如選定生產範圍的平均延遲。使用這些卡片可以按團隊、工作負載或目標進行重點監控。
+
+
+
+[[system-health-status]]
+== 系統健全狀況
+
+*系統健全狀況狀態* 卡片列出各個系統及其目前的健全狀況狀態。使用此卡片可快速識別狀況不佳的系統，並將狀態變更與警示及效能訊號相互關聯。
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:concept-custom-dashboards.html["了解 NetApp Console 本機部署中的自訂儀表板"]
+* link:reference-dashboard-card-templates.html["了解 NetApp Console 本地部署中的自訂儀表板卡片和計量"]
+

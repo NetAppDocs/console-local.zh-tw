@@ -1,0 +1,8 @@
+---
+permalink: reference-connector-operating-system-changes.html 
+redirect: console-setup-admin/reference-agent-operating-system-changes.html 
+---
+= 
+:allow-uri-read: 
+
+

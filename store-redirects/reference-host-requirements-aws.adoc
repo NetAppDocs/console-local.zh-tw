@@ -1,0 +1,8 @@
+---
+permalink: reference-host-requirements-aws.html 
+redirect: console-setup-admin/task-install-connector-aws-manual.html 
+---
+= 
+:allow-uri-read: 
+
+

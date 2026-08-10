@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: concept-workload-analyzer.html 
+keywords: workload analyzer, volume analysis, latency, throughput, capacity, performance, netapp console 
+summary: 了解工作負載分析器如何協助您調查 Volume 層級的效能、容量和資料保護問題。 
+---
+= 了解 NetApp Console 本機部署工作負載分析器
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Console 本機部署工作負載分析器，可以檢視單一 Volume 隨時間推移的行為。您可以從 Volume 本身、警示或清單中調查效能減低、容量趨勢和資源爭用問題。
+
+
+
+[[how-workload-analyzer-identifies-root-causes]]
+== 工作負載分析器如何識別根本原因
+
+使用工作負載分析器，可關聯來自單一 Volume 六個區段的計量，從而快速識別根本原因。選擇 Volume 和時間範圍，即可在同一視窗中同時檢視事件、效能和容量。此檢視可協助您判斷應用程式問題的可能來源是否為儲存設備，或是其他階層（例如連網）所造成的問題。
+
+當您已經知道哪個 Volume 受到影響時，分析器最為有用。如果您從警報或 Volume 清單中開啟它，Console 本機部署會在開啟分析器時自動選取該 Volume，以便您可以專注於分析視窗和圖表。
+
+分析器一次只能追蹤一個 Volume，因此請使用它來調查特定問題，而不是比較多個 Volume。
+
+請將容量部分作為此評估的一部分進行審查。當 ONTAP 系統的使用率超過 85% 時，高使用率本身就會導致效能問題，因此低可用容量可以解釋單靠效能圖表無法說明的延遲。
+
+確定根本原因後，您可以直接透過分析器採取行動。如果自動化選項可用，Console 本機部署會提供 Fix-It 建議，包括引導步驟或一鍵修復。
+
+
+NOTE: LUN 的工作負載圖表提供的詳細程度不如 Volume 的圖表，因此在分析 LUN 時，您看到的統計資料會更少。
+
+
+
+[[access-workload-analyzer]]
+== 存取工作負載分析器
+
+您可以透過多種方式開啟工作負載分析器：
+
+* 從 *健全狀況* 功能表中，選擇 *工作負載分析器*，然後在 *Volume* 欄位中搜尋並選擇要調查的 Volume。
+* 從「儲存設備 > 機組 > 清單」頁面，導覽至要分析的 Volume，然後從行動選單中選擇「分析」。
+* 從「警報 > 概覽」頁面中，選擇要調查的 Volume 的警報，然後從警報詳細資料中選擇「分析」。
+
+
+您也可以分析 LUN，但它們顯示的統計資料比 Volume 少。
+
+
+
+[[analyze-latency-throughput-and-storage-capacity]]
+== 分析延遲、處理量和儲存容量
+
+利用以下六個部分來調查 Volume：
+
+Volume 選取:: 選擇要調查的 Volume 和時間範圍，以便所有圖表和事件都與相同的工作負載和分析視窗一致。
+事件時間表:: 在分析視窗期間，檢視所選 Volume 的目前和歷史組態變更、警告警示和關鍵警示。使用此區段將「變更內容」與效能或容量行為的變化建立關聯。
+延遲分析:: 查看 Volume 的延遲隨時間的變化情況，可以查看總延遲，也可以依延遲中心（網路、資料處理、彙總操作、叢集互連等）細分。如果 Volume 使用了 QoS 原則，分析器會將該原則的最大和最小延遲限制顯示為參考線，以便您了解工作負載距離節流臨界值的程度。切換預測功能，即可預測延遲是否朝著警告或關鍵臨界值發展。
+處理量分析:: 檢視 IOPS 和 MB/s 隨時間的變化情況，並可選擇讀寫/其他細分資料。如果 Volume 使用 QoS 原則，分析器將顯示 IOPS 和處理量限制線。切換預測功能，以預測需求是否趨向 QoS 限制。
+資源使用率:: 在分析視窗期間，檢視服務於該 Volume 的節點和集合體的繁忙程度。分析器將每個資源繪製成一條獨立的曲線，而不是堆疊數值，因此您可以識別特定節點或集合體是否為爭用來源。切換預測功能，以預測是否有任何資源正趨向高使用率臨界值。
+容量分析:: 查看 Volume 中實體空間和可用空間隨時間的變化。將滑鼠停留在上方，即可查看儲存效率細分，包括重複資料刪除、壓縮和資料精簡的節省。切換預測功能，即可預測 Volume 何時達到警告或關鍵容量臨界值。切換至快照檢視，即可查看快照空間與已設定的快照保留空間的追蹤狀況。
+
+
+
+
+[[forecast-capacity-and-performance-trends]]
+== 預測容量和效能趨勢
+
+在每個分析部分中使用預測切換按鈕，可將圖表時間軸延伸至當前時間之外，並根據觀察到的趨勢預測未來值。虛線用於區分預測值與實際資料。當預測顯示可能突破臨界值時，分析器也會顯示一則提示訊息，以及預計突破時間。
+
+.相關資訊
+link:task-analyzer-volume-latency-investigate.html["調查 Volume 上的高延遲"]。link:task-analyzer-volume-throughput-investigate.html["調查 Volume 的高處理量需求"]。link:task-analyzer-volume-capacity-investigate.html["調查 Volume 的容量成長"]。link:reference-workload-analyzer-metrics.html["了解 NetApp Console 本機部署中的工作負載分析器計量"]。

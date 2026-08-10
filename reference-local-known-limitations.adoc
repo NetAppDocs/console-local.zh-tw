@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: reference-local-known-limitations.html 
+keywords: console local deployment, known limitations, unsupported platforms, unsupported devices, unsupported functions, IP range 
+summary: NetApp Console 本機部署中已知限制的參考。 
+---
+= NetApp Console 本地部署的已知限制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知限制是指本產品版本不支援或無法與之正確互通的平台、設備或功能。請仔細閱讀這些限制。
+
+這些限制是針對 NetApp Console 和管理設定的特定限制：代理程式、軟體即服務（SaaS）平台等等。
+
+
+
+[[console-vm-limitations]]
+== 控制台虛擬機器限制
+
+
+
+[[possible-conflict-with-ip-addresses-in-the-10-42-0-016-and-10-43-0-016-ranges]]
+=== 可能與 10.42.0.0/16 和 10.43.0.0/16 範圍內的 IP 位址衝突
+
+NetApp Console 本機部署使用固定位址空間進行服務間通訊。IP 位址範圍 10.42.0.0/16 和 10.43.0.0/16 用於內部網路。在部署 Console 本機部署之前，請確保這些 IP 位址範圍未指派給提供給 Console 本機部署的 VLAN 上的其他虛擬機器、DHCP 範圍、DNS 記錄或負載平衡器 VIP 集區。
+
+有關如何變更代理程式介面的 IP 位址的說明，請參閱知識庫文章「代理程式 IP 與現有網路衝突」。
+
+
+
+[[shared-linux-hosts-are-not-supported]]
+=== 不支援共享的 Linux 主機
+
+該代理程式不支援在與其他應用程式共享的虛擬機器上執行。虛擬機器必須專用於代理程式軟體。
+
+
+
+[[third-party-agents-and-extensions]]
+=== 第三方代理程式和擴充功能
+
+代理程式 VM 不支援第三方代理程式或 VM 擴充功能。

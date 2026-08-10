@@ -1,0 +1,8 @@
+---
+permalink: task-creating-connectors-gcp.html 
+redirect: console-setup-admin/concept-install-options-google.html 
+---
+= 
+:allow-uri-read: 
+
+

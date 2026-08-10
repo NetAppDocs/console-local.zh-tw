@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-members-permissions.html 
+keywords: user, directory user, directory users, service account, member, role, permissions, organization, fleet, folder, iam, identity and access management, access roles, add members, grant permissions, AD, Active Directory, directory services 
+summary: 新增成員並指派角色，以便在組織資源層級的不同層級提供權限。 
+---
+= 將成員新增至您的 NetApp Console 本機部署組織
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將成員新增至您的 NetApp Console 本機部署組織，並指派角色，以在組織、資料夾或機組層級為使用者、服務帳戶和目錄使用者授予存取。
+
+.所需存取權限
+超級管理員、組織管理員或資料夾/機組管理員（針對他們所管理的資料夾和機組）。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+
+
+[[before-you-begin]]
+== 開始之前
+
+* 建立與您的組織相符的資料夾和機組層級結構。link:task-iam-manage-folders-fleets.html["學習如何使用資料夾和機組來組織資源"]。
+* 在指派成員存取之前，請先將資源與正確的機組關聯起來。link:task-iam-manage-resources.html["了解如何管理資料夾和機組中的資源"]。
+* 如果要新增目錄用戶，請先整合目錄服務。link:task-iam-active-directory-integrate.html["了解如何與您的目錄服務整合"]。
+
+
+
+
+[[understand-how-access-is-granted-in-netapp-console-local-deployment]]
+== 了解如何在 NetApp Console 本機部署中授予存取權
+
+NetApp Console 使用角色型存取控制 （RBAC） 來管理權限。為成員指派角色以提供所需的存取。每個角色定義了對特定資源的允許操作。
+
+請注意以下關於在 NetApp Console 本機部署中授予存取的事項：
+
+* 您必須明確地將每個使用者新增至您的組織中，並指派至少一個角色，然後該使用者才能存取資源。
+* 在組織或資料夾層級指派的角色會由子作用域繼承，因此請謹慎選擇指派範圍，以便僅在需要時才授予成員存取權限。link:concept-iam-rbac.html#role-inheritance["了解 NetApp Console 本地部署中的角色繼承"]。
+
+
+
+
+[[add-members-to-your-organization]]
+[[add-members]]
+== 為您的組織新增成員
+
+NetApp Console 支援三種類型的成員：使用者帳戶、目錄使用者和服務帳戶。
+
+
+NOTE: 您必須先設定電子郵件伺服器以搭配 Console 本機部署使用，才能新增使用者。link:task-console-configure-notifications-delivery.html["學習如何設定郵件伺服器。"]
+
+目錄使用者透過整合目錄服務進行驗證，但您仍需在 Console 本機部署中個別新增每個目錄使用者並指派角色。直接在 Console 中建立服務帳戶。
+
+所有成員必須至少明確指派一個角色，才能存取 Console 本機部署。
+
+新增成員時，選擇成員需要存取的組織、資料夾或機組，並指派他們需要的初始角色。
+
+
+
+[[add-a-user-account]]
+=== 新增使用者帳戶
+
+您必須擁有組織管理員、資料夾管理員或機組管理員角色，才能將使用者新增至組織、資料夾或機組，以便他們可以存取資源。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*成員*。
+. 選擇 *Add a member*。
+. 對於「成員類型」，請保持選取「使用者」。
+. 對於 *User's email*，請輸入與使用者建立的登入名稱關聯的使用者信箱位址。
+. 使用「選擇組織、資料夾或機組」部分來選擇成員需要存取的位置。
++
+請注意下列事項：
+
++
+** 您只能選擇您擁有權限的資料夾和機組。
+** 選擇組織或資料夾時，即授予該成員對其所有內容的存取權限。
+** 您只能在組織層級指派*Organization admin*角色。
+
+
+. *選取類別*，然後選取*角色*，賦予成員對您選擇的組織、資料夾或機組所需的初始權限。
++
+link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+. 若要授予對更多資料夾、機組或角色的存取，請選擇 *新增角色*，選擇資料夾、機組或角色類別，然後選擇角色。
+. 選擇 *Add* 。
++
+Console 會透過電子郵件向使用者發送操作說明。
+
+
+
+
+
+[[add-a-service-account]]
+[[service-account]]
+=== 新增服務帳戶
+
+當您需要自動化任務或安全地連線至 Console API 時，請新增服務帳戶。建立帳戶後，複製其用戶端 ID 和用戶端金鑰，以供整合使用。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*成員*。
+. 選擇 *Add a member*。
+. 對於「成員類型」，請選擇「服務帳戶」。
+. 請輸入服務帳戶的名稱。
+. 使用「選擇組織、資料夾或機組」部分來選擇服務帳戶需要存取的位置。
++
+請注意下列事項：
+
++
+** 您只能從您擁有權限的資料夾和機組中進行選擇。
+** 選擇組織或資料夾後，該成員將獲得對其所有內容的存取權限。
+** 您只能在組織層級指派*Organization admin*角色。
+
+
+. 選擇一個 *Category*，然後選擇一個 *Role*，為服務帳戶授予對您選擇的組織、資料夾或機組所需的初始權限。
++
+link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+. 若要授予對更多資料夾、機組或角色的存取，請選擇 *新增角色*，選擇資料夾、機組或角色類別，然後選擇角色。
+. 下載或複製用戶端 ID 和用戶端金鑰。
++
+Console 只會顯示一次用戶端金鑰。請妥善複製保存；如果遺失，您可以稍後重新建立。
+
+. 選擇*關閉*。
+
+
+
+
+[[add-a-directory-user-to-your-organization]]
+== 將目錄使用者新增至您的組織
+
+從整合目錄服務中新增使用者並授予其初始角色。例如，從 Active Directory 新增一位新的儲存設備工程師，並為其指派 `Production-US-East`機組的 Storage admin 角色，以便能夠在該機組運作。
+
+必須先設定目錄服務，然後才能新增目錄使用者。link:task-iam-active-directory-integrate.html["了解如何與您的目錄服務整合"]。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*成員*。
+. 選擇 *Add a member*。
+. 對於「成員類型」，選擇「目錄使用者」。
+. 在「使用者信箱」欄中，輸入您要新增的目錄使用者的電子郵件地址。此電子郵件地址必須與該使用者在您的目錄中的登入電子郵件地址一致。
+. 使用「選擇組織、資料夾或機組」部分來選擇目錄使用者需要存取的位置。
++
+請注意下列事項：
+
++
+** 您只能從您擁有權限的資料夾和機組中進行選擇。
+** 選擇組織或資料夾後，該成員將獲得對其所有內容的存取權限。
+** 您只能在組織層級指派*Organization admin*角色。
+
+
+. 選擇一個 *Category*，然後選擇一個 *Role*，賦予目錄使用者對所選組織、資料夾或機組所需的初始權限。
++
+link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+. 若要授予使用者對其他資料夾、機組或角色的額外存取，請選取 *Add role*，選擇資料夾或機組、角色類別，然後選取角色。
+

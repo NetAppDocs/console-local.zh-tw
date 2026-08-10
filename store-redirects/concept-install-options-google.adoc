@@ -1,0 +1,8 @@
+---
+permalink: concept-install-options-google.html 
+redirect: console-setup-admin/concept-agent-install-options.html 
+---
+= 
+:allow-uri-read: 
+
+

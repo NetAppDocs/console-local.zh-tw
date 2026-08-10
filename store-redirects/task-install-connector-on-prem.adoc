@@ -1,0 +1,8 @@
+---
+permalink: task-install-connector-on-prem.html 
+redirect: console-setup-admin/task-install-agent-on-prem.html 
+---
+= 
+:allow-uri-read: 
+
+

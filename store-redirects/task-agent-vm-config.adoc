@@ -1,0 +1,8 @@
+---
+permalink: task-agent-vm-config.html 
+redirect: console-local/task-console-local-vm-config.html 
+---
+= 
+:allow-uri-read: 
+
+

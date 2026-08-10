@@ -1,0 +1,8 @@
+---
+permalink: task-create-connectors-gov.html 
+redirect: console-setup-admin/task-quick-start-restricted-mode.html 
+---
+= 
+:allow-uri-read: 
+
+

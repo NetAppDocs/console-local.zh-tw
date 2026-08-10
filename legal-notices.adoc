@@ -1,0 +1,61 @@
+---
+permalink: legal-notices.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= NetApp Console 本地部署的法律聲明
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本機部署文件，適用於本頁。
+
+[role="lead"]
+法律聲明提供版權聲明、商標、專利等資訊的存取權限。
+
+
+
+[[copyright]]
+== 版權
+
+link:https://www.netapp.com/company/legal/copyright/["https://www.netapp.com/company/legal/copyright/"^]
+
+
+
+[[trademarks]]
+== 商標
+
+NETAPP、NETAPP 標誌以及 NetApp 商標頁面上所列的標記均為 NetApp, Inc. 的商標。其他公司和產品名稱可能是其各自所有者的商標。
+
+link:https://www.netapp.com/company/legal/trademarks/["https://www.netapp.com/company/legal/trademarks/"^]
+
+
+
+[[patents]]
+== 專利
+
+目前 NetApp 擁有的專利清單可在以下網址找到：
+
+link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf"^]
+
+
+
+[[privacy-policy]]
+== 隱私權政策
+
+link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
+
+
+
+[[open-source]]
+== 開放原始碼
+
+通知文件提供有關 NetApp 軟體中使用的第三方版權和授權的資訊。
+
+link:media/notice.pdf["NetApp Console 通知"^]。

@@ -1,0 +1,8 @@
+---
+permalink: task-update-agent-addressing.html 
+redirect: console-local/task-update-console-local-addressing.html 
+---
+= 
+:allow-uri-read: 
+
+

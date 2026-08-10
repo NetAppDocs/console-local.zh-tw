@@ -1,0 +1,43 @@
+= 
+:allow-uri-read: 
+
+
+以下影片展示了從 AWS Marketplace 訂閱 NetApp Intelligent Services 的步驟：
+
+.從 AWS Marketplace 訂閱 NetApp Intelligent Services
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.步驟
+. 選擇 *Administration > Credentials*。
+. 選擇*組織憑證*。
+. 選擇與 Console 代理程式關聯的一組憑證的行動選單，然後選擇「設定訂閱」。
++
+您必須選擇與 Console 代理程式關聯的憑證。您無法將市場訂閱與 NetApp Console 關聯的憑證建立關聯。
+
++
+image:screenshot_aws_configure_subscription.png["現有憑證集的行動選單快照。"]
+
+. 若要將憑證與現有訂閱關聯，請從下拉清單中選擇訂閱，然後選擇 *Configure*。
+. 若要將憑證與新訂閱關聯，請選擇 *新增訂閱 > 繼續*，然後按照 AWS Marketplace 中的步驟操作：
++
+.. 選擇 *View purchase options*。
+.. 選擇*訂閱*。
+.. 選擇 *Set up your account* 。
++
+您將被重新導向至 NetApp Console。
+
+.. 來自「訂閱分配」頁面：
++
+*** 選擇要與此訂閱建立關聯的 Console 組織或帳戶。
+*** 在「*取代現有訂閱*」欄位中，選擇是否要以此新訂閱自動取代某個組織或帳戶的現有訂閱。
++
+Console 會將組織或帳戶中所有憑證的現有訂閱替換為此新訂閱。如果某組憑證之前從未與任何訂閱關聯，則此新訂閱也不會與這些憑證關聯。
+
++
+對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
+
+*** 選擇 *Save*。
+
+
+
+
+

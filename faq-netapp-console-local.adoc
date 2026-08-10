@@ -1,0 +1,176 @@
+---
+sidebar: sidebar 
+permalink: faq-netapp-console-local.html 
+keywords: faq, frequently asked questions, frequently asked questions about netapp console local, netapp console local, storage classes, storage class policies, storage fleets, folders, rbac, role inheritance, active directory, mfa, workload analyzer, alerts, custom dashboards, llm, ai-assisted management, backup and recovery, audit, ontap 
+summary: 關於 NetApp Console 本地部署的常見問題，包括部署、儲存設備類別、機組、RBAC、監控、AI 輔助管理和資料保護。 
+---
+= NetApp Console 本地部署常見問題
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+本常見問題集解答有關 NetApp Console 本地部署的常見問題。本文著重說明在部署、設定及管理 Console 本地部署時實用的概念、先決條件及系統行為。
+
+
+
+[[get-started-with-netapp-console-local-deployment]]
+== 開始使用 NetApp Console 本機部署
+
+.什麼是 NetApp Console 本地部署？我為什麼要使用自架選項？
+NetApp Console 本機部署是一種自託管部署選項，可在您自己的內部部署環境中執行 Console 控制平面。它提供統一化儲存管理和自動化——包括資源配置、原則執行、偏差偵測和修復——同時將您的資料、中繼資料和管理流量完全保留在您自己的基礎架構內，讓您在不犧牲資料主權的前提下獲得營運運用。link:concept-netapp-console-local.html["了解 NetApp Console 本機部署"]。
+
+.如何部署 NetApp Console 本機部署？
+您可以使用預先設定的 OVA 映像，在 VMware vCenter 環境中將 NetApp Console 本地部署為虛擬應用裝置。部署後，請探索您的儲存設備並新增成員並指派角色以開始使用。link:concept-deploy-netapp-console-local.html["了解部署選項"]。
+
+.我是否需要授權或訂閱才能使用 NetApp Console 本地部署？
+不，您無需授權或訂閱即可開始使用 NetApp Console 本地部署。但是，某些可透過 Console 本地部署存取的 NetApp 資料服務（例如 NetApp Backup and Recovery）需要授權或訂閱，並且可能產生相關費用。
+
+.在 NetApp Console 本機部署中，儲存管理的建議設定順序是什麼？
+典型的工作流程是：將儲存設備系統探索到正確的機組中，定義儲存設備類別原則，根據這些原則建立儲存設備類別，將類別與適用的機組建立關聯，使用類別資源配置 Volume 或 LUN，然後監控偏差並進行修復，以保持工作負載的一致性。link:concept-manage-storage.html["了解如何管理儲存設備"]。
+
+
+
+[[storage-classes-and-policies]]
+== 儲存類別和原則
+
+.什麼是儲存設備類別？為什麼要使用儲存設備類別？
+儲存設備類別是一個可重複使用的模板，它將您組織的儲存設備標準（效能、容量、安全性和資料保護）封裝在由儲存設備類別原則組成的單一命名物件中。使用儲存設備類別進行資源配置時，Console 本機部署會自動強制執行這些標準，無需針對每個工作負載進行組態決策；之後，它會監控工作負載是否符合該類別，並在出現法規遵循偏差時發出警報。link:concept-storage-classes.html["了解儲存設備類別"]。
+
+.什麼是儲存設備類別原則？它們與儲存設備類別有何關係？
+儲存類別原則是建立儲存類別的基本組成部分。每個原則控制儲存設備行為的一個維度，因此您可以獨立定義原則，然後將它們組合成一個類別。這樣，您就可以在多個類別中重複使用相同的原則，或在一個地方更新原則，並將此變更套用到所有使用該原則的類別。link:concept-storage-class-policies.html["了解儲存設備類別原則"].
+
+.我可以建立哪些類型的儲存設備類別原則？
+NetApp Console 本地部署包含四種類型的儲存設備類別原則：
+
+* *效能原則*：設定預期 IOPS/TB、峰值 IOPS/TB、絕對最小 IOPS 和預期延遲目標，用於放置和漂移偵測。
+* *容量原則*：控制保留空間、自動成長、FabricPool 分層，以及 NAS 的 FlexVol® 或 FlexGroup 資源配置。
+* *安全性原則*：設定加密、勒索軟體保護和 FIPS 要求。
+* *資料保護原則*：設定每個時間間隔內保留的快照數量，以保持一致的備份計畫。
+
+
+link:concept-storage-class-policies.html["了解儲存設備類別原則"]。
+
+.我需要從頭開始建立儲存設備類別和原則嗎？
+否。Console 本機部署包含系統定義的原則，涵蓋所有四種原則類型和預先定義的儲存設備類別。您可以直接使用它們，也可以將其複本作為起點，以建立符合您組織需求的自訂原則和類別。link:concept-storage-class-policies.html["了解儲存設備類別原則"]。
+
+.建立儲存設備類別之前需要進行哪些設定？
+在建立儲存設備類別之前，請確保您已：
+
+* 至少探索一個 ONTAP 叢集，以便 NetApp Console 本地部署在放置期間有儲存設備目標可供評估。
+* 擁有組織管理員角色。
+* 建立儲存設備類別原則，以滿足您的效能、容量和其他要求，因為類別是由原則組成的。
+
+
+link:concept-storage-classes.html["了解儲存設備類別"]。
+
+.當工作負載偏離其儲存類別的法規遵循時會發生什麼情況？
+配置完成後，Console 本機部署會持續評估每個工作負載與其儲存設備類別的匹配情況。當工作負載出現偏差（例如叢集組態直接變更或效能下降）時，Console 會立即標記違規情況並發出警報。您可以按照引導式修復步驟進行操作，也可設定自動修復來解決常見的偏差問題。link:concept-storage-classes.html["了解儲存設備類別"]。
+
+
+
+[[storage-fleets-and-folders]]
+== 儲存機組和資料夾
+
+.什麼是儲存設備機組？我為什麼要使用它？
+儲存設備機組將您共同管理的儲存系統分組在一起。您無需逐個叢集設定原則或存取叢集，只需在機組層級套用一次，即可確保機組中的每個叢集都遵循相同的標準，從而減少重複性工作並保持行為一致。link:concept-storage-fleets.html["了解儲存設備機組"]。
+
+.資料夾和機組有什麼區別？
+資料夾將相關的機組（例如，按區域或業務單位）分組，且無法直接關聯儲存設備系統；而機組則將您管理的儲存設備系統分組在一起。資料夾是一種組織和存取委派工具，沒有 IAM 權限的成員無法看見資料夾——成員存取機組，而不是資料夾。link:concept-folders-fleets-overview.html["了解資料夾和機組"]。
+
+.將儲存設備類別與機組關聯起來會對資源配置產生什麼影響？
+將儲存設備類別與機組關聯後，Console 本機部署會將該類別的原則套用至機組內的所有資源配置。在機組中配置的工作負載會自動繼承效能、容量和分層規則，無需管理員選擇或驗證設定，使機組與類別的關聯成為跨叢集強制執行一致標準的主要方式。link:concept-storage-fleets.html["了解儲存設備機組"]。
+
+
+
+[[provisioning-storage]]
+== 配置儲存設備
+
+.NetApp Console 本地部署支援哪些資源配置方法？
+NetApp Console 本機部署支援三種資源配置工作流程，所有這些工作流程都強制執行儲存設備類別，並受角色型存取控制 （RBAC） 和稽核記錄的約束：
+
+* *手動資源配置*：您可以選擇目標系統和組態詳細資訊進行明確控制。
+* *自動化資源配置*：您提供工作負載輸入和選購的儲存設備類別，Console 會建議最適合的放置位置。
+* *AI 輔助（代理）資源配置*：您以自然語言描述所需內容，Console 會提出方案，供您審查並核准後再進行資源配置。
+
+
+link:concept-manage-storage.html["了解如何管理儲存設備"]。
+
+
+
+[[monitoring-and-alerts]]
+== 監控和警示
+
+.如何監控儲存設備的健全狀況和效能？
+NetApp Console 本地部署提供機組範圍的健全狀況和效能儀表板，用於發現需要注意的叢集或 Volume；工作負載分析器用於深入的 Volume 調查；可設定的警示和通知；以及引導式或自動化修復。link:concept-monitor-storage.html["了解儲存設備監控"]。
+
+.工作負載分析器是做什麼的？
+工作負載分析器會顯示單一 Volume 隨時間推移的行為，將延遲、處理量、IOPS、資源使用率、容量和組態變更關聯在同一視窗中，以便您能夠精確找出根本原因。它可以幫助您確定應用程式問題的來源是儲存設備還是其他階層（例如連網），並且您可以直接從分析器執行 Fix-It 建議。link:concept-workload-analyzer.html["了解工作負載分析器"].
+
+.為什麼即使效能圖表看起來正常，某個 Volume 的延遲也可能很高？
+可用容量不足可能是原因之一。當 ONTAP 系統的使用率超過 85% 時，高使用率本身就會導致效能問題，因此工作負載分析器的容量部分可以解釋效能圖表單獨無法說明的延遲。link:concept-workload-analyzer.html["了解工作負載分析器"]。
+
+.NetApp Console 本地部署中的警報來自哪裡，它們是如何分類的？
+警報源自已探索叢集上的 ONTAP 事件管理系統 （EMS），以及 NetApp Backup and Recovery 作業，並整合至單一組織範圍的檢視。每個警報都會識別受影響的系統、嚴重程度（例如關鍵、警告或資訊）以及影響範圍（容量、連線能力、資料保護、效能或安全性）。Console 僅顯示您的權限所允許的機組警報。link:concept-console-alerts.html["了解警報"]。
+
+.警報通知規則如何決定通知對象？
+通知規則會根據服務、嚴重性、影響區域和目標系統來比對警報，然後透過電子郵件或 Webhook 向具有指定存取角色的使用者傳送通知。請注意，規則適用於特定系統，而非整個機組，並且可在計劃維護期間靜音。Console 包含預設規則，並可讓您建立自訂規則。link:concept-console-alerts.html["了解警報"]。
+
+.自訂儀表板可以做什麼？
+自訂儀表板可讓您透過從預定義範本組裝卡片來建立個人化的監控檢視，並選擇範圍、計量、集合體、目標資源和時間視窗。範本涵蓋效能、容量、健全狀況和警報，您可以將卡片的範圍限定在 ONTAP 層級結構的任何層級。每個儀表板和卡片都對您私有，且僅顯示您有權檢視的資源的資料。link:concept-custom-dashboards.html["了解 NetApp Console 本機部署中的自訂儀表板"]。
+
+
+
+[[identity-and-access]]
+== 身分識別與存取
+
+.在 NetApp Console 本地部署中，角色型存取控制是如何運作的？
+RBAC 允許您在組織、資料夾或機組層級為成員指派預先定義的最低權限角色，且相同角色會根據指派範圍的不同而授予不同的有效存取。這可讓您賦予中央管理員廣泛的存取權限，同時將區域或團隊管理員的權限限制在其所管理的機組範圍內。link:concept-iam-rbac.html["了解角色型存取控制"]。
+
+.角色繼承是如何運作的？我可以在較低層級置換它嗎？
+在組織或資料夾層級指派的角色會被其下的所有子資料夾、機組和資源繼承，因此您的資料夾和機組設計決定了角色指派的適用範圍。您無法在較低層級置換繼承的存取權限－若要變更，請在原先授予該權限的較高層級修改指派。link:concept-iam-rbac.html#role-inheritance["了解 NetApp Console 本地部署中的角色繼承"]。
+
+.有哪些預先定義的角色類別可供選擇？
+NetApp Console 本機部署群組將預先定義的角色分為三類：
+
+* *平台角色*：Console 管理權限，例如組織管理員、資料夾或機組管理員、聯盟管理員、超級管理員或超級檢視者。
+* *應用程式角色*：儲存設備和監控權限，例如 Storage admin、Storage viewer 和 Operations support analyst。
+* *資料服務角色*：特定資料服務的權限，例如 Backup and Recovery 角色以及分類檢視器。
+
+
+link:reference-iam-predefined-roles.html["了解預先定義的存取角色"]。
+
+.為什麼要將 NetApp Console 本機部署與 Active Directory 整合？
+與 Active Directory 整合後，使用者可以使用現有的企業憑證登入，無需個別的 Console 密碼，管理員在指派存取權限時可以直接查詢目錄使用者。授權機制保持獨立：Console 仍使用自己的角色來控制每個成員可執行的操作link:concept-secure-access.html["了解安全的存取"]。
+
+.Console 使用者的多重要素驗證如何運作？
+本機使用者可以啟用多因素驗證 （MFA），以增加額外的驗證步驟，從而降低憑證外洩導致未經授權存取的風險。目錄驗證使用者無法透過 Console 本機部署啟用 MFA。link:concept-secure-access.html["了解安全的存取"]。
+
+
+
+[[ai-assisted-management]]
+== 人工智慧輔助管理
+
+.哪些 LLM 供應商支援 NetApp Console 本地部署以實現 AI 輔助管理？
+您需要自備訂閱或服務存取，且供應商類型必須為受支援的 OpenAI 或 OpenAI 相容型。組態過程中，您需要提供有效的 API 金鑰。此外，您還需要部署具有叢集存取的 Console、與已設定端點的傳出網路連線、組織管理員角色，以及用於指引資源配置的儲存設備類別。link:concept-llm-integration.html["了解 LLM 整合"]。
+
+.啟用 LLM 整合是否會將我的儲存設備資料或查詢傳送到第三方服務？
+Console 僅向您設定的 LLM 端點傳送提示和相關上下文。如果該端點是第三方雲端服務，資料會透過 HTTPS 傳送至該服務。如果該端點是內部 OpenAI 相容服務，資料將保留在您內部的整合路徑中。所有 AI 行動均遵循您的 RBAC，且敏感操作需要您確認。link:concept-llm-integration.html["了解 LLM 整合"].
+
+.控制台助手可以做什麼？如何控制它是否更改我的儲存設備？
+連接 LLM 後，Console 助手允許使用者使用自然語言資源配置儲存設備、調查警報並取得答案。使用者可以選擇存取模式：在「唯讀」模式下，助手會提供答案和指導，但不會進行任何變更；而在「讀取/寫入」模式下，助手可以對儲存基礎架構進行操作，但會在每次變更之前顯示詳細資訊供使用者審查和確認。link:task-llm-connect.html["連接您的 LLM 並啟用 NetApp Console 助手"]。
+
+
+
+[[data-protection-and-auditing]]
+== 資料保護與稽核
+
+.NetApp Console 本地部署提供哪些資料保護功能？
+NetApp Console 本地部署可讓您存取 NetApp Backup and Recovery，從而透過相同介面備份和還原資料，保持治理的一致性，並減少團隊使用的工具數量。link:concept-data-services.html["了解資料服務"].
+
+.NetApp Console 本地部署如何支援稽核和記錄保留？
+每次管理行動都會產生一條稽核記錄，您可以在「稽核」頁面上審查和篩選這些記錄。您可以透過 webhook 將稽核日誌匯出至您自己的 syslog 伺服器，以便傳輸至集中式監控或 SIEM 工具，以實現更長時間的保留和分析；由於 Console 在您的環境中執行，因此日誌資料永遠不會離開您的基礎架構。link:task-audit-console-activity.html["稽核 NetApp Console 本地部署活動"]。

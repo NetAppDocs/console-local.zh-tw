@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard-manage.html 
+keywords: manage dashboard, view dashboards, edit dashboard, clone dashboard, delete dashboard, netapp console local 
+summary: 在 NetApp Console 本機部署中，透過開啟、編輯、複製和刪除自訂儀表板來檢視和管理儀表板。 
+---
+= 在 NetApp Console 本機部署中管理儀表板
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中管理自訂儀表板，以確保檢視與營運保持一致。您可以根據團隊、機組和優先順序的變化編輯、複製和刪除儀表板。
+
+此工作僅適用於「儲存設備 > 儀表板」下的自訂儀表板。預先定義的首頁儀表板無法以相同方式編輯。
+
+
+
+[[view-dashboards]]
+== 檢視儀表板
+
+檢視自訂和預先定義的儀表板，找到要開啟、編輯、複製或刪除的儀表板。
+
+
+TIP: 您可以複製預先定義的儀表板，建立可編輯的自訂版本。
+
+.步驟
+. 選擇 *Storage（儲存設備）> Dashboards（儀表板）*。
+. 查看儀表板表格，找到要開啟的儀表板。
+. 選擇儀表板名稱即可開啟並檢視其計量。
+. 如有需要，可使用可用行動來編輯、複製或刪除自訂儀表板。
+
+
+
+
+[[update-a-dashboard-as-priorities-change]]
+== 根據優先權變化更新儀表板
+
+當您的營運優先順序發生變化，需要調整顯示哪些卡片和計量時，請編輯儀表板。
+
+.步驟
+. 選擇 *Storage（儲存設備）> Dashboards（儀表板）*。
+. 開啟您要編輯的儀表板。
+. 在儀表板，選擇卡片操作選單中的「編輯」選項，即可修改現有卡片。
+. 選擇 *Add Card* 即可新增卡片到儀表板。
++
+link:task-customize-dashboard-cards.html["在 NetApp Console 本機部署中自訂卡片"]。
+
+. 選擇 *Save changes* 以儲存儀表板。
++
+** 您也可以選擇將變更儲存為新的儀表板，只需從行動選單中選擇「另存為新儀表板」即可。如果您希望保留原始儀表板供其他團隊或機組使用，同時建立新版本以滿足當前的監控需求，此選項將非常實用。
+** 您也可以從行動選單中選取 *捨棄變更* 來捨棄變更。如果您想回復到儀表板的上次儲存版本，此選項非常有用。
+
+
+
+
+
+
+[[reuse-a-custom-dashboard-for-another-resource-or-fleet]]
+== 將自訂儀表板重用於其他資源或機組
+
+當您想要為另一個團隊、機組或監控場景重複使用獲證實的佈局，而無需從頭開始重建時，可以複製儀表板。
+
+
+TIP: 您可以複製預先定義的儀表板，建立可編輯的自訂版本。
+
+.步驟
+. 選擇 *Storage（儲存設備）> Dashboards（儀表板）*。
+. 若要複製儀表板，請從行動選單中選取 *Duplicate*。
++
+Console 本機部署會建立一個複本，其中包含原始儀表板中的所有卡片。
+
+. 請為複製的儀表板提供名稱和執行摘要。
+. 選擇您剛剛建立的複製儀表板。變更計量、資源和卡片類型，以符合您的新監控情境。
++
+link:task-customize-dashboard-cards.html["在 NetApp Console 本機部署中自訂卡片"]。
+
+
+
+
+
+[[remove-dashboards-you-no-longer-use]]
+== 移除不再使用的儀表板
+
+當某個儀表板不再支援目前操作，且您希望儀表板清單專注於作用中使用案例時，請將其刪除。
+
+.步驟
+. 選擇 *Storage（儲存設備）> Dashboards（儀表板）*。
+. 若要移除某個儀表板，請選擇「刪除」。
+. 確認刪除。
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]
+* link:task-dashboard-get-started.html["開始在 NetApp Console 本機部署中使用儀表板"]
+* link:concept-custom-dashboards.html["了解 NetApp Console 本機部署中的自訂儀表板"]
+* link:task-dashboard-create.html["建立自訂儀表板"]
+* link:task-customize-dashboard-cards.html["在 NetApp Console 本機部署中自訂儀表板卡片"]
+

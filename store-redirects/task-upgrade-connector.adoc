@@ -1,0 +1,8 @@
+---
+permalink: task-upgrade-connector.html 
+redirect: console-setup-admin/task-upgrade-agent.html 
+---
+= 
+:allow-uri-read: 
+
+

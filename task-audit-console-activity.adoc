@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: task-audit-console-activity.html 
+keywords: administer, monitor, timeline, notifications, alerts, events, notification center, email, audit page, audit action 
+summary: 您可以在「稽核」頁面稽核使用者活動（包括透過 UI 和 API 啟動的活動），並監控 Console 正在執行的操作狀態，以查看是否有需要解決的問題。您可以從「稽核」頁面檢視狀態，也可以設定稽核日誌以傳送到您自己的 syslog 伺服器。 
+---
+= 稽核 NetApp Console 本地部署活動
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以從「稽核」頁面稽核透過 UI 和 API 發起的使用者活動，還可以監控 NetApp Console 本機部署中的操作狀態以及發起這些操作的使用者。
+
+.所需角色
+超級管理員、組織管理員、資料夾和機組管理員、維運支援分析師、超級檢視器、組織檢視器或資料夾和機組檢視器。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+您可以在 Console 本機部署中檢視稽核活動、下載稽核日誌的 CSV，或使用 webhook 設定稽核日誌傳送至您自己的 syslog 伺服器。
+
+
+
+[[audit-user-activity-from-the-audit-page]]
+== 從「稽核」頁面稽核使用者活動
+
+使用「稽核」頁面來確認誰執行了某項行動或其狀態。
+
+「稽核」頁面顯示使用者在組織內完成的行動。例如，您可以驗證是誰為組織新增了成員，或者某個機組是否已成功刪除，也可以檢視使用者在組織內執行的其他儲存管理行動。
+
+稽核日誌顯示以下服務的活動：
+
+* 租戶：與管理您的組織相關的行動，例如新增使用者、建立機組和關聯資源。
+* 儲存管理：與管理儲存資源相關的行動。
+* 聯盟：與管理聯盟相關的行動，例如建立聯盟以及新增或移除聯盟組織。
+
+
+.步驟
+. 選擇「管理 > 稽核」。
+. 使用表格上方的篩選器來變更表格中顯示的行動。
++
+例如，您可以使用 *Service* 篩選器來顯示與特定服務相關的行動，或者您可以使用 *User* 篩選器來顯示與特定使用者帳戶相關的行動。
+
+
+
+
+
+[[filter-audit-logs-for-identity-and-access-management-actions]]
+=== 篩選身分和存取管理動作的稽核日誌
+
+若要僅檢視與管理組織相關的行動（例如新增成員、建立機組或刪除資源），請依 Tenancy 服務篩選稽核日誌。
+
+.步驟
+. 選擇「管理 > 稽核」。
+. 使用篩選器縮小搜尋結果範圍。選擇 *Service* ，然後選擇 *Tenancy* 。
+. 使用其他篩選條件可以進一步精簡結果。
++
+例如，使用 *使用者* 篩選器顯示特定使用者帳戶執行的 IAM 行動。
+
+
+
+
+
+[[download-audit-logs-from-the-audit-page]]
+=== 從「稽核」頁面下載稽核日誌
+
+您可以從「稽核」頁面將稽核日誌下載到 CSV 檔案。這樣，您可以記錄使用者在組織中執行的行動。下載的 CSV 檔案包含所有稽核日誌欄，無論「稽核」頁面上的篩選條件或顯示的欄位為何。
+
+.步驟
+. 在「稽核」頁面中，選擇表格右上角的下載圖示。
+

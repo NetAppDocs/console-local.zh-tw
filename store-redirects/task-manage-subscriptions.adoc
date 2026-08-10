@@ -1,0 +1,8 @@
+---
+permalink: task-manage-subscriptions.html 
+redirect: console-licenses-subscriptions/task-manage-subscriptions.html 
+---
+= 
+:allow-uri-read: 
+
+

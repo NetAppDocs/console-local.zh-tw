@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+您也可以直接從 Console 代理程式主機存取 JSON 格式的驗證報告和組態日誌，這些檔案位於以下目錄：
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----

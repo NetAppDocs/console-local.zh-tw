@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-storage-roles.html 
+keywords: storage roles, Storage admin, Storage viewer, System health specialist, ONTAP management, storage governance, identity and access management, access roles, rbac, netapp console local 
+summary: 您可以為使用者指派下列角色，以便他們存取 NetApp Console 本機部署中的儲存管理功能。您可以為使用者指派管理角色來管理儲存設備，或指派檢視者角色來監控。 
+---
+= NetApp Console 本機部署的儲存存取角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以為使用者指派下列角色，以便他們存取 NetApp Console 本機部署中的儲存管理功能。您可以為使用者指派管理角色來管理儲存設備，或指派檢視者角色來監控。
+
+管理員可以為使用者指派以下儲存資源和功能的儲存設備角色：
+
+儲存資源：
+
+* 內部部署 ONTAP 叢集
+
+
+Console 服務與功能：
+
+* 儲存健全狀況功能
+
+
+.NetApp Console 本地部署中的儲存設備角色範例
+XYZ Corporation 是一家跨國公司，擁有龐大的儲存設備工程師和儲存設備管理員團隊。他們允許該團隊管理其所在區域的儲存設備資產，同時限制其對核心 Console 本地部署工作（例如使用者管理和授權管理）的存取。
+
+在一個由 12 人組成的團隊中，兩名使用者被賦予「Storage viewer」角色，讓他們可以監控與其指派的 Console 本地部署機組相關的儲存資源。其餘九名使用者被賦予「Storage admin」角色，該角色包括管理軟體更新、透過 Console 本地部署存取 ONTAP System Manager 以及探索儲存資源（新增系統）的權限。團隊中還有一名成員被賦予「System health specialist」角色，以便管理其所在區域的儲存資源健全狀況，但無權修改或刪除任何系統。該成員還可以對其指派的機組中的儲存資源執行軟體更新。
+
+該組織還有兩名具有 *Organization admin* 角色的使用者，他們可以管理 Console 本地部署的所有方面，包括使用者管理和授權管理；此外還有幾名具有 *Folder or fleet admin* 角色的使用者，他們可以針對所指派的資料夾和機組執行 Console 本地部署管理工作。
+
+下表顯示每個儲存設備角色執行的行動。
+
+[cols="40,20a,20a,20a"]
+|===
+| 功能與行動 | 儲存管理員 | 系統健全狀況專家 | 儲存檢視器 
+
+
+4+| *儲存管理*： 
+
+
+| 發現新資源（新增系統）  a| 
+是的
+ a| 
+是的
+ a| 
+否
+
+
+
+| 檢視已新增的系統  a| 
+是的
+ a| 
+是的
+ a| 
+否
+
+
+
+| 從 Console 刪除系統  a| 
+是的
+ a| 
+否
+ a| 
+否
+
+
+
+| 修改系統  a| 
+是的
+ a| 
+否
+ a| 
+否
+
+
+
+4+| *System Manager 存取* 
+
+
+| 可以輸入憑證  a| 
+是的
+ a| 
+是的
+ a| 
+否
+
+|===

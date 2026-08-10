@@ -1,0 +1,8 @@
+---
+permalink: task-iam-associate-connectors.html 
+redirect: console-setup-admin/task-iam-associate-agents.html 
+---
+= 
+:allow-uri-read: 
+
+

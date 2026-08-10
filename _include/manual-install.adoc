@@ -1,0 +1,151 @@
+= 
+:allow-uri-read: 
+
+
+.開始之前
+您應具備以下條件：
+
+* 安裝 Console 代理程式需要 root 權限。
+* 如果需要透過 Proxy 從 Console 代理程式存取網際網路，則提供有關 Proxy 伺服器的詳細資訊。
++
+安裝後您可以選擇設定 Proxy 伺服器，但這樣做需要重新啟動 Console 代理程式。
+
+* 如果 Proxy 伺服器使用 HTTPS 或 Proxy 是攔截 Proxy，則需要 CA 簽署的憑證。
+
+
+
+NOTE: 手動安裝 Console 代理程式時，無法為透明的 Proxy 伺服器設定憑證。如果需要為透明的 Proxy 伺服器設定憑證，則必須在安裝後使用 Maintenance Console。深入瞭解link:reference-agent-maint-console.html["代理程式維護主控台"]。
+
+.關於此任務
+NetApp 支援網站上提供的安裝程式可能是早期版本。安裝後，如果有新版本可用，Console 代理程式會自動更新。
+
+.步驟
+. 如果主機上設定了 _http_proxy_ 或 _https_proxy_ 系統變數，請將其移除：
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+如果不移除這些系統變數，安裝將會失敗。
+
+. 從 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支援網站"^]下載 Console 代理程式軟體，然後將其複製到 Linux 主機。
++
+您應該下載「線上」代理程式安裝程式，該程式可在您的網路或雲端使用。
+
+. 指派執行指令碼的權限。
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+其中 <version> 是您下載的 Console 代理程式版本。
+
+. 如果在政府雲端環境中安裝，請停用組態檢查。link:task-troubleshoot-console-local.html#disable-config-check["了解如何停用手動安裝的組態檢查。"]
+. 執行安裝指令碼。
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+如果您的網路需要 Proxy 才能存取網際網路，則需要新增 Proxy 資訊。您可以新增透明的或明確的 Proxy。--proxy 和 --cacert 參數為選用項目，系統不會提示您新增這些參數。如果您有 Proxy 伺服器，則需要按照所示輸入參數。
+
++
+以下範例示範如何設定具有 CA 簽章憑證的明確 Proxy 伺服器：
+
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy` 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS Proxy 伺服器：
+
++
+** \http://位址:連接埠
+** \http://user-name:password@address:port
+** http://domain-name%92user-name:password@address:port
+** \https://address:port
+** \https://user-name:password@address:port
+** \https://domain-name%92user-name:password@address:port
++
+請注意下列事項：
+
++
+*** 使用者可以是本機使用者或網域使用者。
+*** 對於網域使用者，必須使用如上所示的 ASCII 碼表示反斜線 \。
+*** Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。
+*** 如果密碼包含以下任何特殊字元，則必須在該特殊字元前加上反斜線以進行跳脫處理：& 或 !
++
+例如：
+
++
+\http://bxpproxyuser:netapp1\!@address:3128
+
+
+
+
+
+
+
+`--cacert` 指定用於 Console agent 和 Proxy 伺服器之間 HTTPS 存取的 CA 簽章憑證。HTTPS Proxy 伺服器、攔截 Proxy 伺服器和透明的 Proxy 伺服器均需要此參數。
+
+以下是設定透明 Proxy 伺服器的範例。設定透明的 Proxy 時，無需定義 Proxy 伺服器。只需將 CA 簽署的憑證新增至 Console 代理程式主機即可：
+
++
+
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. 如果您使用了 Podman，則需要調整 aardvark-dns 連接埠。
++
+.. 透過 SSH 連接到控制台代理程式虛擬機器。
+.. 開啟 podman _/usr/share/containers/containers.conf_ 檔案，並修改 Aardvark DNS 服務所選的連接埠。例如，將其變更為 54。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. 重啟 Console 代理程式虛擬機器。
+
+
+
+
+. 等待安裝完成。
++
+安裝結束時，如果您指定了 Proxy 伺服器，則 Console 代理程式服務 (occm) 將重新啟動兩次。
+
+
+
+
+NOTE: 如果安裝失敗，您可以檢視安裝報告和日誌，以協助您解決問題。link:task-troubleshoot-console-local.html#troubleshoot-installation["了解如何疑難排解安裝問題。"]
+
+. 在已連線至控制台代理程式虛擬機器的主機上開啟 Web 瀏覽器，並輸入下列 URL：
++
+https://_ipaddress_[]
+
+. 登入後，設定 Console 代理程式：
++
+.. 指定要與 Console 代理程式關聯的組織。
+.. 請輸入系統名稱。
+.. 在「您是否在安全的環境中運作？」下，保持受限模式停用狀態。
++
+您應該保持受限模式停用狀態，因為以下步驟介紹的是如何以標準模式使用 Console。只有當您擁有安全的環境並希望中斷此帳戶與後端服務的連線時，才應啟用受限模式。如果是這種情況，link:task-quick-start-restricted-mode.html["請依照下列步驟，在受限模式下開始使用 NetApp Console。"]。
+
+.. 選擇 *Let's start*。
+
+
+

@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: concept-monitor-fleets-inventory.html 
+keywords: inventory, fleet inventory, systems, volumes, capacity, security, performance, monitoring, ONTAP, clusters, fleet visibility, capacity planning, storage governance, netapp console local 
+summary: 使用庫存監控機組健全狀況並調查 NetApp Console 本地部署中的儲存資源。 
+---
+= 在 NetApp Console 本機部署中使用庫存監控機組
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，使用清單功能可以監控機組健全狀況，並調查整個環境中的儲存資源。清單功能提供容量、安全性和效能檢視，協助您識別問題、了解資源使用率並追蹤代管儲存系統。
+
+庫存主要是一個資訊和診斷工作區。透過庫存，您可以審查整個機組中的系統、Volume 和其他儲存設備物件，並執行常見操作，例如配置儲存資源。對於進階儲存管理操作，NetApp Console 本機部署會將您重新導向至 System Manager。
+
+
+
+[[access-inventory]]
+== 存取庫存
+
+您可以從 Console 本地部署的多個區域存取「庫存」功能，包括：
+
+* 首頁
+* 機組總覽頁面
+* 機組健全狀況卡及相關庫存檢視
+
+
+根據您進入 *Inventory* 的位置，顯示的範圍可以是組織層級或機組層級。
+
+
+
+[[inventory-views]]
+== 庫存檢視
+
+*Inventory* 提供多種檢視，協助您分析儲存環境的不同面向。
+
+容量:: 檢視容量使用率，並識別使用儲存資源的系統、Volume 和其他儲存設備物件。
+安全性:: 審查代管儲存資源的安全相關資訊和法規遵循狀態。
+效能:: 分析效能相關的計量，並識別可能需要進一步調查的資源。
+
+
+顯示的資訊會根據所選檢視和物件類型而有所不同。
+
+
+
+[[investigate-storage-resources]]
+== 調查儲存資源
+
+使用 *Inventory* 可以：
+
+* 監控機組健全狀況
+* 審查儲存容量使用情況
+* 追蹤代管儲存系統
+* 識別使用容量的 Volume 和其他物件
+* 調查潛在的安全性或效能問題
+* 尋找需要管理注意的資源
+
+
+*Inventory* 可協助您從對環境的高階可見度過渡到對特定儲存資源的更詳細調查。
+
+
+
+[[provision-storage-resources]]
+== 資源配置儲存資源
+
+庫存管理包括允許您資源配置儲存資源（例如 Volume 和 LUN）的工作流程。
+
+在資源配置時，您可以選擇現有的代管儲存系統，並提供工作負載所需的組態設定。
+
+
+
+[[inventory-and-alerts]]
+== 庫存和警示
+
+系統會針對環境中的特定儲存設備物件和條件產生警報。
+
+當您選擇某個警報時，Console 本機部署可能會引導您前往 System Manager 進行進一步調查或管理行動。*清單*功能可作為警報的補充，提供對儲存環境和代管資源整體狀態的更全面可見度。
+
+
+
+[[advanced-management-tasks]]
+== 高階管理任務
+
+*庫存* 可協助您識別需要行動的資源，但部分進階儲存管理作業是在 System Manager 中執行。
+
+例如：
+
+* 進階工作負載管理
+* 資源重新安置與優化任務
+* 詳細的系統管理活動
+
+
+使用「Inventory」功能來識別和調查問題，然後在需要更深層的管理功能時使用 System Manager。

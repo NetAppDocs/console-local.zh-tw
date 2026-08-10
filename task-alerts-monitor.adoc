@@ -1,0 +1,198 @@
+---
+sidebar: sidebar 
+permalink: task-alerts-monitor.html 
+keywords: view alerts, alerts overview, alerts dashboard, org-wide alerts, fleet alerts, netapp console local 
+summary: 在 NetApp Console 本機部署的警報總覽頁面中，查看整個組織或特定機組的作用中警報。 
+---
+= 在 NetApp Console 本地部署中監控和調查警示
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+監控並調查 NetApp Console 本地部署中的警示，以維持儲存設備健全狀況並將中斷情況降至最低。
+
+您可以查看整個組織或特定機組的作用中警報，按嚴重程度和影響範圍進行優先排序，並調查根本原因，以便在問題提報之前加以解決。如果警報包含建議的行動或 Fix It 選項，您可以直接從調查階段進入修復階段。
+
+.所需存取權限
+除 Federation admin 和 Federation viewer 角色外的所有角色。擁有 Federation admin 或 Federation viewer 角色的使用者無法檢視警報。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+對於 ONTAP 警報，您可以直接從警報頁面存取 System Manager 和 Workload Analyzer 等工具，以調查和解決問題。
+
+對於外部報告，您可以將警報清單匯出至 CSV 檔案，以進行離線分析。
+
+
+NOTE: 您也可以設定通知規則，透過電子郵件或 Webhook 接收提醒。link:task-alert-rules-manage.html["了解如何設定提醒通知"]。
+
+
+
+[[available-alerts]]
+== 可用警報
+
+NetApp Console 本地部署支援 ONTAP 和 NetApp Backup and Recovery 的警示。
+
+* link:reference-ontap-alerts.html["了解 NetApp Console 本地部署中的 ONTAP 警示"]
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/reference-audit-actions.html["了解更多關於 NetApp Backup and Recovery 警報的資訊。"^]
+
+
+
+
+[[view-the-alerts-dashboard]]
+== 檢視警報儀表板
+
+使用警報儀表板可以快速檢視所選範圍內的目前警報活動。儀表板按嚴重程度和影響區域匯總了作用中警報，並包含一個圖表，顯示過去 24 小時內的警報分佈，以便您快速發現趨勢。
+
+您可以篩選儀表板，以專注於關鍵警報或特定影響區域的警報。
+
+.步驟
+. 選擇「健全狀況 > 警示 > 總覽」。
+. 從範圍選擇器中選擇以下選項之一：
++
+** *全部*（預設）表示查看您有權存取的所有機組的警報
+** 選擇特定機組，僅查看該機組的警報
+
+
+. 根據您需要檢視的警報篩選儀表板，包括：
++
+** 嚴重程度（關鍵、警告或資訊）
+** 按影響區域分組的關鍵警報
+** 影響領域（安全性、保護、可用性、效能、容量或配置）
+
+
+
+
+
+
+[[view-all-alerts]]
+== 檢視所有警示
+
+使用「警報」標籤可檢視所選範圍內作用中警報的完整清單。此清單會根據目前組織或機組範圍進行更新，您可以按名稱或執行摘要搜尋特定警報。
+
+.步驟
+. 選擇「健全狀況 > 警示 > 總覽」。
+. 從範圍選擇器中選擇以下選項之一：
++
+** *全部*（預設）表示查看您有權存取的所有機組的警報
+** 選擇特定機組，僅查看該機組的警報
+
+
+. 選取「警報」索引標籤，以檢視所選範圍內作用中警報的完整清單。
+. （可選）依名稱或執行摘要搜尋清單中的特定警報。
++
+image:screenshot-alerts-search.png["按名稱或執行摘要搜尋提醒"]
+
+
+
+
+
+[[view-alerts-by-system]]
+== 按系統檢視警示
+
+您可以檢視機組或組織內特定系統的警報。
+
+.步驟
+. 選擇「健全狀況 > 警示 > 總覽」。
+. 從範圍選擇器中選擇以下選項之一：
++
+** *全部*（預設）表示查看您有權存取的所有機組的警報
+** 選擇特定機組，僅查看該機組的警報
+
+
+. 選擇「系統健全狀況」標籤，檢視與您所選範圍內系統相關的警示總結。
+. 在對應系統的行中選擇 *View alerts*，即可檢視與該系統關聯的作用中警報的完整清單。
+
+
+
+
+[[investigate-an-alert]]
+== 調查警報
+
+您可以調查警報，查看觸發警報的原因以及收到通知的人員。
+
+在調查 ONTAP 警報時，您也可以直接前往產生警報之系統的 System Manager 介面，檢視其他詳細資訊並採取行動。
+
+.步驟
+. 選擇「健全狀況 > 警示 > 總覽」。
+. 從範圍選擇器中選擇以下選項之一：
++
+** *全部*（預設）表示查看您有權存取的所有機組的警報
+** 選擇特定機組，僅查看該機組的警報
+
+
+. 在任一標籤頁中，選擇要調查的警報名稱以檢視其詳細資訊。
++
+image:screenshot-alerts-investigate.png["檢視警示詳細資料"]
+
+. 如果適用，請選擇 VM 或叢集名稱，以開啟產生警示之系統的 System Manager 介面。
++
+image:screenshot-alerts-details.png["檢視警示詳細資料並瀏覽至 System Manager"]
+
+
+
+
+
+[[remediate-an-alert]]
+== 修復警報
+
+當警報包含建議的行動或 Fix It 選項時，可以使用該選項從調查階段過渡到修復階段，而無需離開警報詳細資料。
+
+.步驟
+. 選擇「健全狀況 > 警示 > 總覽」。
+. 從範圍選擇器中選擇以下選項之一：
++
+** *全部*（預設）表示查看您有權存取的所有機組的警報
+** 選擇特定機組，僅查看該機組的警報
+
+
+. 選擇要修復的警報。
+. 審查警示詳細資料，然後選擇建議的行動或「Fix It」選項（如果有）。
+. 請依照引導步驟進行修復，然後返回警示詳細資料以確認警示狀態。
+
+
+如果該行動解決了問題，則該範圍內的警報將不再顯示為作用中。如果警報仍然處於作用中，請再次審查警報詳細資訊並繼續調查。
+
+
+
+[[analyze-an-alert]]
+== 分析警報
+
+您可以在 Workload Analyzer 中分析 ONTAP 警報，以了解觸發警報的原因。
+
+在調查 ONTAP 警報時，您也可以直接前往產生警報之系統的 System Manager 介面，檢視其他詳細資訊並採取行動。
+
+.步驟
+. 選擇「健全狀況 > 警示 > 總覽」。
+. 從範圍選擇器中選擇以下選項之一：
++
+** *全部*（預設）表示查看您有權存取的所有機組的警報
+** 選擇特定機組，僅查看該機組的警報
+
+
+. 選擇「系統健全狀況」標籤，檢視所選範圍內作用中警報的完整清單。
+. 在任一標籤頁中，選擇要調查的警報名稱以檢視其詳細資訊。
++
+image:screenshot-alerts-investigate.png["檢視警示詳細資料"]
+
+. 如果適用，請選擇「分析」以開啟產生警報的系統的工作負載分析器介面。
++
+image:screenshot-alerts-analyze.png["檢視警示詳細資料並瀏覽至工作負載分析器"]
+
+. 輸入涵蓋警報觸發期間的時間範圍，然後選取 *Analyze* 以檢視分析結果。link:concept-workload-analyzer.html["了解工作負載分析器。"]
+
+
+
+
+[[export-alerts-to-csv]]
+== 將警報匯出為 CSV 檔案
+
+將 NetApp Console 本機部署中的警示清單匯出至 CSV 檔案，以便進行離線分析或產生報告。匯出會反映目前範圍（組織或機組）、搜尋文字和篩選條件。
+
+.步驟
+. 選取 *健全狀況 > 警示*，然後選取 *警示* 索引標籤。
+. 設定範圍（組織或機組），並套用您希望包含在匯出的任何篩選條件或搜尋文字。
+. 選擇下載圖示，將警示清單匯出至 CSV 檔案。
+

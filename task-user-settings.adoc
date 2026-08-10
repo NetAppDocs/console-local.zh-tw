@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: task-user-settings.html 
+keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode, read-only mode, contact admin, AD, Active Directory, directory services 
+summary: 您可以修改您的 Console 個人資料，包括變更密碼、啟用多重要素驗證 （MFA），以及查看您的 Console 系統管理員是誰。 
+---
+= 管理您的 NetApp Console 本機部署使用者設定
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，您可以修改 Console 本機部署設定檔，包括變更密碼、啟用多因素驗證 （MFA），以及查看您的 Console 系統管理員是誰。
+
+
+
+[[change-your-display-name]]
+== 更改您的顯示名稱
+
+您可以變更 Console 本機部署的顯示名稱，該名稱用於向其他使用者識別您的身分。您無法變更使用者名稱或電子郵件地址。
+
+.步驟
+. 選擇 Console 本機部署右上角的設定檔圖示，即可檢視使用者設定面板。
+. 選擇您姓名旁邊的*編輯*圖示。
+. 請在「名稱」欄位中輸入您的新顯示名稱。
+
+
+
+
+[[configure-multi-factor-authentication]]
+[[task-user-mfa]]
+== 設定多因素驗證
+
+設定多因素驗證 （MFA） 以提高安全性，在登入 NetAppConsole 本地部署時要求使用第二種驗證方法。
+
+透過 NetApp 支援網站登入的使用者無法啟用 MFA。如果您屬於這種情況，則在個人資料設定中看不到啟用 MFA 的選項。
+
+如果您的使用者帳戶用於 API 存取，請勿啟用多因素驗證 （MFA）。為使用者帳戶啟用多因素驗證後，將停止 API 存取。所有 API 存取均應使用服務帳戶。
+
+
+NOTE: 如果您的帳戶使用 Active Directory 或其他整合目錄服務進行驗證，則無法透過 Console 本機部署為您的帳戶設定 MFA。
+
+.開始之前
+* 您必須已在裝置上下載驗證應用程式，例如 Google Authenticator 或 Microsoft Authenticator。
+* 您需要輸入密碼才能設定多因素驗證 (MFA)。
+
+
+
+NOTE: 如果您無法存取驗證應用程式或遺失了恢復代碼，請聯絡您的 Console 系統管理員尋求協助。
+
+.步驟
+. 選擇 Console 右上角的個人資料圖示，即可檢視使用者設定面板。
+. 選取 *多重身分驗證* 標題旁的 *設定*。
+. 依照提示為您的帳戶設定 MFA。
+. 完成後，系統會提示您儲存恢復代碼。您可以選擇複製程式碼或下載包含程式碼的文字檔案。請妥善保管這些程式碼。如果您無法存取驗證應用程式，則需要使用這些恢復代碼。
++
+
+NOTE: 如果需要使用恢復代碼登入，請按照恢復代碼提示期間使用者介面中顯示的順序使用。
+
++
+設定 MFA 後，每次登入時，Console 本機部署都會提示您輸入驗證應用程式的一次性代碼。
+
+
+
+
+
+[[regenerate-your-mfa-recovery-code]]
+== 重新產生您的 MFA 恢復程式碼
+
+恢復碼只能使用一次。如果遺失，請建立一個新的。
+
+.步驟
+. 選擇 Console 本機部署右上角的個人資料圖示，即可檢視使用者設定面板。
+. 選擇 *Multi-Factor Authentication* 標題旁邊的 image:icon-action.png["一個由三個並排的點組成的圖示"]。
+. 選擇 *Regenerate recovery code*。
+. 複製產生的恢復碼，並將其儲存在安全的位置。
+
+
+
+
+[[delete-your-mfa-configuration]]
+== 刪除您的 MFA 組態
+
+刪除 MFA 後，下次登入時將不再需要第二步驟驗證。若要再次使用 MFA，您必須在使用者設定中重新設定。
+
+
+NOTE: 如果您無法存取您的驗證應用程式或恢復程式碼，則需要聯絡您的組織系統管理員以重設您的 MFA 組態。
+
+.步驟
+. 選擇 Console 本機部署右上角的設定檔圖示，即可檢視使用者設定面板。
+. 選擇 *Multi-Factor Authentication* 標題旁邊的 image:icon-action.png["一個由三個並排的點組成的圖示"]。
+. 選擇 *Delete*。
+
+
+
+
+[[contact-your-organization-administrator]]
+[[contact-admin]]
+== 請聯絡您的組織系統管理員
+
+如果您需要聯絡組織系統管理員，可以直接透過 Console 傳送電子郵件。系統管理員負責管理組織內的使用者帳號和權限。
+
+
+NOTE: 若要使用「聯絡系統管理員」功能，您的瀏覽器必須設定預設電子郵件應用程式。
+
+.步驟
+. 選擇 Console 本機部署右上角的設定檔圖示，即可檢視使用者設定面板。
+. 選擇 *Contact admins* 以傳送電子郵件給您的組織系統管理員。
+. 選擇要使用的電子郵件應用程式。
+. 寫完郵件後，選擇 *Send*。
+
+
+
+
+[[configure-dark-mode-dark-theme]]
+== 設定深色模式（深色主題）
+
+您可以將 Console 本機部署設定為以深色模式顯示。
+
+.步驟
+. 選擇 Console 本機部署右上角的設定檔圖示，即可檢視使用者設定面板。
+. 移動*深色主題*滑桿即可啟用它。
+

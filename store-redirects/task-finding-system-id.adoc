@@ -1,0 +1,8 @@
+---
+permalink: task-finding-system-id.html 
+redirect: console-setup-admin/task-troubleshoot-agent.html 
+---
+= 
+:allow-uri-read: 
+
+

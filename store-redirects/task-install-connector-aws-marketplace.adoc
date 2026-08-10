@@ -1,0 +1,8 @@
+---
+permalink: task-install-connector-aws-marketplace.html 
+redirect: console-setup-admin/task-install-agent-aws-marketplace.html 
+---
+= 
+:allow-uri-read: 
+
+

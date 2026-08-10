@@ -1,0 +1,8 @@
+---
+permalink: task-install-connector-aws-manual.html 
+redirect: console-setup-admin/task-install-agent-aws-manual.html 
+---
+= 
+:allow-uri-read: 
+
+

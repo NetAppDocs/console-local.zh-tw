@@ -1,0 +1,8 @@
+---
+permalink: task-uninstall-connector.html 
+redirect: console-setup-admin/task-uninstall-agent.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: concept-administer-netapp-console-local.html 
+keywords: administer Console local deployment, audit, audit log, compliance, SIEM, webhook, VM maintenance, access management, demonstrate compliance, operational visibility, netapp console local 
+summary: 了解如何管理和監控 NetApp Console 本地部署，包括稽核活動、訂閱、維護、疑難排解和成員存取。 
+---
+= 了解 NetApp Console 本地部署的管理與監控
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+部署 NetApp Console 本地部署後，使用管理和監控工具來審查活動、維護 VM，以及管理成員存取。
+
+
+
+[[audit-activity]]
+== 稽核活動
+
+審查使用者和 API 活動、追蹤 Console 操作狀態、下載稽核日誌，並在需要較長保留時間或進行額外分析時將日誌匯出至外部工具。
+
+* link:task-audit-console-activity.html["稽核 NetApp Console 本地部署活動"]
+* link:task-console-configure-notifications-delivery.html["在 NetApp Console 本機部署中設定通知傳遞管道"]
+
+
+
+
+[[licenses-and-subscriptions]]
+== Licenses and subscriptions
+
+使用 Licenses and subscriptions 資訊，了解您的 NetApp Console 環境的服務授權和訂閱狀態。
+
+link:https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["了解 Licenses and subscriptions"^]。
+
+
+
+[[maintain-and-troubleshoot-the-console-local-deployment-vm]]
+== 維護和疑難排解 Console 本地部署 VM
+
+維護託管 Console 本地部署的 VM，審查網路和系統設定，存取診斷工具，並在服務或代理程式未按預期運行時進行疑難排解。
+
+link:task-console-local-vm-config.html["維護您的 vCenter 或 ESXi 主機以進行 NetApp Console 本機部署"]。
+
+
+
+[[manage-users-and-access]]
+== 管理使用者和存取
+
+審查組織內成員的存取，調整機組層級的存取，並管理安全性設定，例如 MFA 恢復和服務帳戶憑證。
+
+* link:task-iam-manage-roles.html["在 NetApp Console 中管理成員存取"]
+* link:task-iam-users-fleets-assign.html["在 NetApp Console 本地部署中檢視或變更機組存取指派"]
+* link:task-manage-member-security.html["在 NetApp Console 本機部署中管理成員安全性"]
+

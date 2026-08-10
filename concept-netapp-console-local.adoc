@@ -1,0 +1,125 @@
+---
+sidebar: sidebar 
+permalink: concept-netapp-console-local.html 
+keywords: netapp console local, overview, self-hosted, data sovereignty, storage management, ONTAP, fleet management, RBAC, policy enforcement, storage governance 
+summary: 了解 NetApp Console 本地部署，這是一個您可以在自己環境中部署的自託管儲存管理平台。 
+---
+= 了解 NetApp Console 本機部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本地部署可讓您在自己的基礎架構中主機和執行 NetApp Console 自主控制平面。
+
+您將獲得統一化儲存管理、原則執行、機組規模自動化和 AI 輔助作業。所有資料、中繼資料和管理流量都不會離開您的環境。
+
+
+
+[[deploy-and-operate-console-in-your-own-infrastructure]]
+== 在您自己的基礎架構中部署和操作 Console
+
+NetApp Console 本機部署在您自己的基礎架構中執行，因此您的團隊可以控制部署、連線及日常作業。您部署 Console 代理程式、維護 Console 虛擬機器，並管理監控和管理流量所需的網路路徑。這讓企業管理員能夠完全控制作業邊界，同時將管理資料保留在環境內部。
+
+* link:task-install-agent-on-prem-ova.html["在 vCenter 中使用 OVA 部署 NetApp Console 本地部署"]。
+* link:task-console-local-vm-config.html["維護您的 vCenter 或 ESXi 主機以進行 NetApp Console 本機部署"]。
+* link:reference-ports-on-prem.html["了解 NetApp Console 本地部署中內部部署 Console 代理程式的連接埠"]。
+
+
+
+
+[[automate-storage-operations-with-apis-and-service-accounts]]
+== 利用 API 和服務帳戶實現儲存設備操作自動化
+
+NetApp Console 本機部署支援基於 API 的整合，讓您的組織能夠自動化可重複的儲存設備操作。服務帳戶可讓應用程式驗證並以指派的角色運作。適用於互動式使用者的角色型存取控制和稽核控制同樣治理這些行動。這既支援企業自動化，又能確保存取範圍可控且可追溯。
+
+* link:task-iam-manage-members-permissions.html["將成員新增至您的 NetApp Console 本機部署組織"]。
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解 NetApp Console IAM 的 API"^]
+
+
+
+
+[[control-access-with-rbac-and-active-directory-integration]]
+== 透過角色型存取控制 （RBAC） 和 Active Directory 整合來控制存取
+
+NetApp Console 本機部署提供零信任角色型存取控制 （RBAC），可限制使用者在其管理的機組和資源中可檢視及執行的操作。您可以與 Active Directory 整合，讓使用者以現有的企業憑證登入，本機使用者也可新增多因素驗證 （MFA） 以增加額外的驗證階層。存取治理與您組織更廣泛的身分識別與存取管理實務保持一致。
+
+* link:concept-identity-and-access-management.html["了解 NetApp Console 本地部署中的身分識別與存取管理"]。
+* link:concept-secure-access.html["了解如何安全存取 NetApp Console 本機部署"]。
+
+
+
+
+[[organize-fleets-and-delegate-storage-administration]]
+== 組織機組並委派儲存管理
+
+NetApp Console 本地部署透過將資源組織成資料夾和機組來擴充管理。您可以將機組對應到環境、業務部門或區域，然後在組織、資料夾或機組範圍內委派管理，以保持所有權清晰。此結構有助於大型儲存設備團隊分配工作，同時確保原則一致性和治理的完整性。
+
+* link:concept-folders-fleets-overview.html["了解 NetApp Console 本地部署中的資料夾和機組"]。
+* link:concept-storage-fleets.html["了解 NetApp Console 本地部署中的儲存設備機組"]。
+
+
+
+
+[[track-and-export-administrative-activity-for-compliance]]
+== 追蹤和匯出管理活動以符合法規遵循
+
+每次管理行動都會產生一筆稽核記錄。安全性與法規遵循團隊可以利用這些記錄來調查事件、證明控制的有效性並滿足稽核要求。透過 webhook 將稽核日誌匯出至您的 syslog 伺服器，以進行集中監控、延長保留期限及分析。由於 NetApp Console 本機部署在您自己的環境中執行，因此日誌資料永遠不會離開您的基礎架構。
+
+* link:task-audit-console-activity.html["稽核 NetApp Console 本地部署活動"]。
+
+
+
+
+[[provision-storage-consistently-with-storage-class-policies]]
+== 使用儲存類別原則一致地進行儲存資源配置
+
+NetApp Console 本機部署透過儲存設備類別（將效能、容量和分層原則套裝組合到可重複使用定義中的範本）來強制執行一致的儲存行為。管理員只需定義一次儲存設備標準。管理員和自動化工作流程即可在整個環境中使用這些已核准的儲存設備類別來執行所有資源配置活動。這可以防止組態偏差，減少初級管理員在資源配置決策上花費的時間，並確保每個工作負載都能立即符合組織的標準。資源配置完成後，Console 本機部署會持續監控每個工作負載的法規遵循狀況。
+
+* link:concept-manage-storage.html["了解如何使用 NetApp Console 本機部署管理儲存設備"]。
+
+
+
+
+[[monitor-storage-class-compliance-and-remediate-drift-automatically]]
+== 自動監控儲存設備類別法規遵循並修正偏差
+
+NetApp Console 本機部署會監控每個工作負載與用於資源配置的儲存設備類別是否相符。當工作負載出現偏差（例如由於叢集組態直接變更或效能下降）時，NetApp Console 本機部署會立即標記違規情況。管理員可以按照引導式修復步驟進行操作，或設定自動修復，無需手動介入即可解決常見的偏差問題。這種持續的強制執行可降低稽核風險，並確保您的環境在兩次定期審核之間保持符合法規。
+
+
+
+[[monitor-storage-health-and-receive-alerts-across-fleets]]
+== 監控儲存設備健全狀況並接收跨機組的警報
+
+NetApp Console 本機部署讓您能夠在單一平台上監控您管理的每個叢集的健全狀況和效能。機組範圍的儀表板會顯示需要注意的叢集和 Volume。自訂儀表板可讓管理員建立符合其職責的監控檢視。工作負載分析器會將延遲、處理量、資源使用率和組態變更隨時間的相關性建立關聯，協助您在問題影響工作負載之前找出根本原因。
+
+設定電子郵件和 Webhook 發送管道，以便在情況發生變化時，警報能夠送達正確的團隊。組織管理員設定目標位置，儲存設備管理員將其套用至警報規則中，使回應路徑與您的營運模式相符。這有助於企業團隊更快地回應容量、效能和保護事件。
+
+* link:concept-monitor-storage.html["了解如何在 NetApp Console 本機部署中監控儲存設備健全狀況"]。
+* link:task-console-configure-notifications-delivery.html["在 NetApp Console 本機部署中設定通知傳遞管道"]。
+* link:task-alert-rules-manage.html["在 NetApp Console 本機部署中設定警示通知規則"]。
+
+
+
+
+[[provision-storage-and-investigate-alerts-with-natural-language]]
+== 使用自然語言配置儲存設備和調查警報
+
+NetApp Console 本機部署可連接至您自己的大型語言模型 （LLM），以提供 AI 輔助的儲存管理。您可以用簡單的語言描述工作負載以取得資源配置計畫、要求 Console 調查作用中警示，或取得有關儲存環境的情境式解答。所有 AI 行動均遵循您的儲存設備類別及適用於您帳戶的角色型存取控制，且您必須在執行敏感作業之前確認。Console 本機部署僅將請求傳送至管理員所設定的 LLM 端點。
+
+* link:concept-llm-integration.html["了解 LLM 在 NetApp Console 本機部署中的整合"]。
+
+
+
+
+[[back-up-and-restore-storage-with-netapp-backup-and-recovery]]
+== 使用 NetApp Backup and Recovery 備份及還原儲存設備
+
+除了資源配置和監控之外，NetApp Console 本機部署還可讓您存取 NetApp Backup and Recovery，以便您透過相同介面保護資料。您可以備份和還原資料，以支援您的保護和恢復需求。將資料保護與儲存設備一起管理，可保持治理的一致性，並減少團隊操作所需的工具數量。
+
+* link:concept-data-services.html["了解 NetApp Console 本機部署中的資料服務"]。
+

@@ -1,0 +1,8 @@
+---
+permalink: task-troubleshoot-agent.html 
+redirect: console-local/task-troubleshoot-console-local.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: concept-llm-integration.html 
+keywords: LLM, AI, artificial intelligence, AI-assisted management, large language model, proxy, openai-compatible, netapp console 
+summary: 了解 NetApp Console 本地部署如何與 OpenAI 和 OpenAI 相容模型整合，包括供應商、Proxy 和安全性決策。 
+---
+= 了解 LLM 在 NetApp Console 本機部署中的整合
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本機部署連線至大型語言模型 （LLM），用於 AI 輔助的儲存管理。設定後，使用者可以使用自然語言來進行儲存設備資源配置、調查警示並取得儲存設備指引。
+
+
+NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能，此文件以技術預覽版形式提供。對於此預覽產品，NetApp 保留在正式發行前修改產品詳情、內容及時間表的權利。
+
+AI 輔助管理讓使用者能以簡單的語言描述請求，而 Console 本機部署則套用您的儲存設備原則。
+
+Console 本機部署僅向您設定的端點傳送 LLM 請求。
+
+
+
+[[what-you-can-do-with-ai-assisted-storage-management]]
+== 您可以利用 AI 輔助儲存管理執行哪些作業
+
+啟用 LLM 整合後，NetApp Console 本機部署可透過 Console 助手提供以下三項功能：
+
+* *儲存設備資源配置* 請用簡單易懂的語言描述工作負載需求。Console 本機部署會根據您的儲存設備類別推薦並執行資源配置計畫。
+* *警報回應* 要求 Console 本機部署調查作用中警報。它會分析問題，並根據指派的權限建議或執行相應的行動。
+* *搜尋與指導* 詢問有關儲存環境或 ONTAP 管理的問題。NetApp Console 本機部署會根據文件和目前機組狀態傳回內容相關的答案。
+
+
+
+
+[[choose-read-only-or-readwrite-access-for-the-console-assistant]]
+== 選擇 Console 助手的唯讀或讀寫存取
+
+使用者根據自身需求選擇助手存取模式：
+
+* *唯讀*模式，用於指導和調查，無需進行基礎架構變更。
+* *讀寫*模式，用於引導式執行。Console 本機部署會顯示建議的行動，要求確認，然後執行變更。
+
+
+
+
+[[understand-what-controls-console-assistant-actions]]
+== 了解控制 Console 助理行動的項目
+
+Console 本地部署透過平台所使用的相同治理模型來控制 Console 助理行動：
+
+* 角色型存取控制可限制每位使用者可查看及執行的操作。
+* 儲存原則會限制資源配置及相關行動。
+* Console 助理在執行儲存設備變更行動之前需要確認。
+
+
+
+
+[[choose-an-llm-provider-path]]
+== 選擇 LLM 供應商路徑
+
+NetApp Console 本機部署支援以下 LLM 供應商類型：
+
+* *OpenAI* 用於直接存取 OpenAI 模型。
+* *相容於 OpenAI*，適用於相容的端點，例如企業閘道或 Proxy 服務。
+* Anthropic 適用於 Anthropic 的 Claude 模型。
+
+
+模型可用度取決於您設定的端點。請從 Console 本機部署的清單中選取模型。
+
+有關支援的型號詳情，請參閱link:reference-llm-supported-models.html["了解 NetApp Console 本機部署中支援的 LLM 供應商和模型"]。
+
+
+
+[[understand-where-llm-requests-go]]
+== 了解 LLM 要求的去向
+
+資料流取決於您選擇的端點路徑：
+
+* 如果設定了 OpenAI 端點，Console 本機部署會將提示和上下文傳送到 OpenAI 端點。
+* 如果您設定了與 OpenAI 相容的端點，Console 本機部署會將提示和上下文傳送到您組織所設定的相容端點。
+
+
+
+
+[[protect-llm-credentials-and-control-admin-access]]
+== 保護 LLM 認證資料並控制管理員存取
+
+使用以下控制項保護整合：
+
+* 將 API 金鑰視為特權認證資料，並根據組織原則進行輪調。
+* 審查供應商端的使用情況和警示，以偵測異常活動。
+
+
+
+
+[[connect-your-llm]]
+== 連接您的 LLM
+
+做出這些決定後，繼續link:task-llm-connect.html["連接您的 LLM 並啟用 NetApp Console 助手"]。
+
+如果連線或執行階段檢查失敗，請參閱link:task-llm-troubleshoot-integration.html["疑難排解 LLM 整合"]。

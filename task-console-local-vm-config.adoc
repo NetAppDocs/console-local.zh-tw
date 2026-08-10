@@ -1,0 +1,179 @@
+---
+sidebar: sidebar 
+permalink: task-console-local-vm-config.html 
+keywords: Console local VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, Console local maintenance, Console local operating system, Console local host 
+summary: 部署 Console 本機部署後，您可以對現有的 vCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 本機部署的 VM 執行個體的 CPU 或 RAM。 
+---
+= 維護您的 vCenter 或 ESXi 主機以進行 NetApp Console 本機部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，您可以在部署 Console 本機部署後，對現有的 VCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 本機部署的 VM 執行個體的 CPU 或 RAM。
+
+使用虛擬機器 Web 控制台執行下列維護任務：
+
+* 增加磁碟大小
+* 重新啟動 Console 本機部署
+* 更新靜態路由
+* 更新搜尋網域
+
+
+.限制
+您只能透過維護主控台檢視（無法更新）有關 IP 位址、DNS 和閘道的資訊。
+
+
+
+[[access-the-vm-maintenance-console]]
+== 存取虛擬機器維護主控台
+
+您可以從 vSphere 用戶端存取維護主控台。
+
+.步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+
+
+
+
+[[change-the-maint-user-password]]
+=== 變更 maint 使用者密碼
+
+您可以變更該 `maint`使用者的密碼。
+
+.步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+. 點擊 `1`以檢視 `System Configuration`功能表。
+. 輸入 `1`以變更維護使用者密碼，並按照螢幕提示操作。
+
+
+
+
+[[increase-the-cpu-or-ram-of-the-vm-instance]]
+=== 增加虛擬機器執行個體的 CPU 或記憶體
+
+您可以增加託管 Console 本機部署的虛擬機器執行個體的 CPU 或 RAM。
+
+在 vCenter 或 ESXi 主機中編輯 VM 執行個體設定，然後使用維護 Console 套用變更。
+
+.vSphere 用戶端中的步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 右鍵單擊 VM 執行個體，然後選擇 *Edit Settings*。
+. 增加 /opt 或 /var 分割區使用的硬碟機空間。
++
+.. 選擇 *Hard Disk 2* 以增加 /opt 使用的硬碟機空間。
+.. 選擇 *Hard Disk 3* 以增加 /var 使用的硬碟機空間。
+
+
+. 儲存變更。
+
+
+.維護主控台中的步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+. 進入 `1 to view the `System Configuration`功能表。
+. 輸入 `2`並依照螢幕提示操作。主控台會掃描新設定並增加分割區大小。
+
+
+
+
+[[view-network-settings-for-the-console-local-deployment-vm]]
+=== 檢視 Console 本地部署虛擬機器的網路設定
+
+在 vSphere 用戶端中檢視 Console 本機部署虛擬機器的網路設定，以確認或疑難排解網路問題。您只能檢視（不能更新）以下網路設定： IP 位址和 DNS 詳細資料。
+
+.步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+. 點擊 `2`以檢視 `Network Configuration`功能表。
+. 輸入 1 到 6 之間的數字，檢視對應的網路設定。
+
+
+
+
+[[update-the-static-routes-for-the-console-local-deployment-vm]]
+=== 更新 Console 本機部署 VM 的靜態路由
+
+根據需要為 Console 本機部署 VM 新增、更新或移除靜態路由。
+
+.步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+. 點擊 `2`以檢視 `Network Configuration`功能表。
+. 輸入 `7`以更新靜態路由，並依照螢幕提示操作。
+. 按 Enter 鍵。
+. （可選）進行其他變更。
+. 按 Enter 鍵 `9`提交變更。
+
+
+
+
+[[update-domain-search-settings-for-the-console-local-deployment-vm]]
+=== 更新 Console 本機部署虛擬機器的網域搜尋設定
+
+您可以更新 Console 本機部署虛擬機器的搜尋網域設定。
+
+.步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+. 點擊 `2``以檢視 `Network Configuration`選單。
+. 輸入 `8`以更新網域搜尋設定，並依照螢幕提示操作。
+. 按 Enter 鍵。
+. （可選）進行其他變更。
+. 按 Enter 鍵 `9`提交變更。
+
+
+
+
+[[access-the-console-local-deployment-diagnostic-tools]]
+[[connect-vcenter-host]]
+=== 存取 Console 本機部署診斷工具
+
+存取診斷工具以疑難排解 Console 本機部署問題。NetApp Support 在疑難排解問題時可能會要求您執行此操作。
+
+.步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+. 輸入 `3`以檢視支援和診斷選單。
+. 輸入 `1`以存取診斷工具，並按照螢幕提示操作。
+
+
+
+
+[[access-the-console-local-deployment-diagnostic-tools-remotely]]
+=== 遠端存取 Console 本機部署診斷工具
+
+您可以使用 Putty 等工具遠端存取診斷工具。透過指派一次性密碼，啟用對 Console 本機部署虛擬機器的 SSH 存取。
+
+SSH 存取可啟用複製和貼上等進階終端機功能。
+
+.步驟
+. 開啟 vSphere 用戶端並登入您的 vCenter。
+. 選擇託管 Console 本機部署的虛擬機器執行個體。
+. 選擇 *Launch Web Console*。
+. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
+. 點擊 `3`以檢視 `Support and Diagnostics`功能表。
+. 輸入 `2`以存取診斷工具，並依照螢幕提示設定 24 小時後過期的一次性密碼。
+. 使用 Putty 等 SSH 工具，透過使用者名稱 `diag`和您設定的一次性密碼連線到 Console 本機部署 VM。
+

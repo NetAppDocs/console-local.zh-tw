@@ -1,0 +1,499 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-backup-rec-roles.html 
+keywords: backup and recovery roles, NetApp Backup and Recovery, backup admin, restore admin, clone admin, backup and recovery viewer, backup and recovery super admin, roles, permissions, rbac, access control, identity and access management, netapp console local 
+summary: 您可以為使用者指派以下角色，以便他們在 Console 中存取 NetApp Backup and Recovery。Backup and Recovery 角色讓您靈活地為使用者指派特定角色，以滿足他們在組織內需要完成的任務。角色指派方式取決於您自身的業務和儲存管理實務。 
+---
+= NetApp Backup and Recovery 在 NetApp Console 本地部署中的角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，您可以為使用者指派以下角色，以便他們能夠存取 Console 中的 NetApp Backup and Recovery。Backup and Recovery 角色讓您能夠靈活地為使用者指派特定角色，以滿足他們在組織內需要完成的任務。角色指派方式取決於您自身的業務和儲存管理實務。
+
+本服務使用以下專門用於 NetApp Backup and Recovery 的角色。
+
+* *Backup and recovery super admin*：在 NetApp Backup and Recovery 中執行任何行動。
+* *Backup and recovery backup admin*：在 NetApp Backup and Recovery 中執行備份至本機 Snapshot 快照技術、複寫至次要儲存設備，以及備份至物件儲存的行動。
+* *Backup and recovery restore admin*：使用 NetApp Backup and Recovery 還原工作負載。
+* *備份與恢復 Clone 管理員*：使用 NetApp Backup and Recovery Clone 應用程式和資料。
+* *備份與恢復檢視器*：檢視 NetApp Backup and Recovery 中的資訊，但不執行任何行動。
+
+
+有關所有 NetApp Console 存取角色的詳細資訊，請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Console 設定與管理文件"^]。
+
+
+
+[[roles-used-for-common-actions]]
+== 用於常見行動的角色
+
+下表列出每個 NetApp Backup and Recovery 角色可對所有工作負載執行的行動。
+
+[cols="20,20,15,15a,15a,15a"]
+|===
+| 功能與行動 | 備份與恢復超級管理員 | 備份與恢復備份管理員 | 備份與恢復還原管理員 | 備份與恢復 Clone 管理員 | 備份與恢復檢視器 
+
+
+| 新增、編輯或刪除主機 | 是的 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 安裝外掛程式 | 是的 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 新增憑證（主機、執行個體、vCenter） | 是的 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 檢視儀表板和所有索引標籤 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+| 開始免費試用 | 是的 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 啟動工作負載探索 | 否 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+否
+
+
+
+| 檢視授權資訊 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+| 啟用授權 | 是的 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 檢視主機 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+6+| *排程*： 
+
+
+| 啟用排程 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+否
+
+
+
+| 暫停排程 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+否
+
+
+
+6+| *原則與保護*： 
+
+
+| 檢視保護計畫 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+| 建立、修改或刪除保護計劃 | 是的 | 是的  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 恢復工作負載 | 是的 | 否  a| 
+是的
+ a| 
+否
+ a| 
+否
+
+
+
+| 建立、分割或刪除複製 | 是的 | 否  a| 
+否
+ a| 
+是的
+ a| 
+否
+
+
+
+| 建立、修改或刪除原則 | 是的 | 是的  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *報告*： 
+
+
+| 檢視報告 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+| 建立報告 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+否
+
+
+
+| 刪除報告 | 是的 | 否  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *從 SnapCenter 匯入並管理主機*： 
+
+
+| 檢視匯入的 SnapCenter 資料 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+| 從 SnapCenter 匯入資料 | 是的 | 是的  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+| 管理（移轉）主機 | 是的 | 是的  a| 
+否
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *組態設定*： 
+
+
+| 設定記錄目錄 | 是的 | 是的  a| 
+是的
+ a| 
+否
+ a| 
+否
+
+
+
+| 關聯或移除執行個體憑證 | 是的 | 是的  a| 
+是的
+ a| 
+否
+ a| 
+否
+
+
+
+6+| *Buckets*： 
+
+
+| 檢視儲存桶 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+| 建立、編輯或刪除儲存桶 | 是的 | 是的  a| 
+否
+ a| 
+否
+ a| 
+否
+
+|===
+
+
+[[roles-used-for-workload-specific-actions]]
+== 用於特定工作負載操作的角色
+
+下表列出每個 NetApp Backup and Recovery 角色可針對特定工作負載執行的動作。
+
+
+
+[[kubernetes-workloads]]
+=== Kubernetes 工作負載
+
+此表顯示每個 NetApp Backup and Recovery 角色可針對 Kubernetes 工作負載執行的動作。
+
+[cols="20,20,15,15a,15a"]
+|===
+| 功能與行動 | 備份與恢復超級管理員 | 備份與恢復備份管理員 | 備份與恢復還原管理員 | 備份與恢復檢視器 
+
+
+| 檢視叢集、命名空間、儲存設備類別和 API 資源 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 新增 Kubernetes 叢集 | 是的 | 是的  a| 
+否
+ a| 
+否
+
+
+
+| 更新叢集組態 | 是的 | 否  a| 
+否
+ a| 
+否
+
+
+
+| 從管理中移除叢集 | 是的 | 否  a| 
+否
+ a| 
+否
+
+
+
+| 檢視應用程式 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 建立和定義新應用程式 | 是的 | 是的  a| 
+否
+ a| 
+否
+
+
+
+| 更新應用程式組態 | 是的 | 是的  a| 
+否
+ a| 
+否
+
+
+
+| 從管理中移除應用程式 | 是的 | 是的  a| 
+否
+ a| 
+否
+
+
+
+| 檢視受保護資源和備份狀態 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 建立備份並使用原則保護應用程式 | 是的 | 是的  a| 
+否
+ a| 
+否
+
+
+
+| 取消應用程式保護並刪除備份 | 是的 | 是的  a| 
+否
+ a| 
+否
+
+
+
+| 檢視恢復點和資源檢視器結果 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 從恢復點恢復應用程式 | 是的 | 否  a| 
+是的
+ a| 
+否
+
+
+
+| 檢視 Kubernetes 備份原則 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 建立 Kubernetes 備份原則 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 更新備份原則 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 刪除備份原則 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 檢視執行掛鉤和掛鉤來源 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 建立執行鉤子和鉤子來源 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 更新執行掛鉤和掛鉤來源 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 刪除執行掛鉤和掛鉤來源 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 檢視執行掛勾範本 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 建立執行掛勾範本 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 更新執行掛勾範本 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 刪除執行掛鉤範本 | 是的 | 是的  a| 
+是的
+ a| 
+否
+
+
+
+| 檢視工作負載總結與分析儀表板 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+
+
+| 檢視 StorageGRID 儲存區和儲存設備目標 | 是的 | 是的  a| 
+是的
+ a| 
+是的
+
+|===

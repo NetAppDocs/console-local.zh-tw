@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: task-console-asst-use.html 
+keywords: console assistant, ai assistant, ask questions, provision storage, natural language, agentic, netapp console local 
+summary: 在 NetApp Console 本機部署中，使用 Console 助手來資源配置儲存設備、調查警報並使用自然語言取得答案。 
+---
+= 在 NetApp Console 本地部署中使用 NetApp Console 助理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中使用 NetApp Console 助理來管理儲存設備，並以自然語言獲取答案。以簡單的語言描述您的需求，NetApp Console 本機部署將根據您的儲存設備原則和角色型存取執行相應的操作。
+
+
+NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能，此文件以技術預覽版形式提供。對於此預覽產品，NetApp 保留在正式發行前修改產品詳情、內容及時間表的權利。
+
+助理的操作權限受您指派的角色型存取限制。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+
+
+[[see-what-you-can-do-with-the-console-assistant]]
+== 瞭解您可以使用 Console 助理執行的操作
+
+Console 助手是 NetApp Console 本機部署的自然語言介面。您可以提出問題或描述工作，它會傳回答案或建議的行動。此助手提供以下功能：
+
+* *資源配置儲存設備* 請用簡單易懂的語言描述工作負載。助理會推薦儲存設備類別和位置，並在您確認詳細資料後建立 Volume 或 LUN。例如，您可以要求它建立一個具有特定容量的 CIFS Volume。助理會辨識叢集和儲存虛擬機器 （SVM），填入所需參數，並進行儲存設備資源配置。
+* *搜尋並取得指導* 詢問有關儲存環境的問題，尋找 Console 本機部署功能，並從 NetApp 文件和目前機組狀態中取得情境式答案。
+* *調查警報* 請助手調查作用中警報。它會分析問題並提出修復建議，或在您確認後執行補救行動。
+
+
+此助手僅向系統管理員在 Console 本機部署中設定的 LLM 端點傳送請求。它會在執行儲存設備變更動作之前要求確認，且所有動作均遵守指派給您帳戶的角色型存取控制。
+
+
+
+[[confirm-that-you-can-use-the-console-assistant]]
+== 確認您可以使用 Console 助手
+
+* 組織管理員或超級管理員必須透過將大型語言模型 (LLM) 連接到 Console 本機部署來啟用 Console 助理。如果您在儀表板上看不到 *Console assistant* 按鈕，請聯絡您的系統管理員以啟用此功能。如需詳細資訊，請參閱 link:task-llm-connect.html["連接您的 LLM 並啟用 NetApp Console 助手"]。
+* 請確保您已具備助手執行所需動作的角色型存取控制。
+
+
+
+
+[[ask-the-console-assistant-a-question-or-request-an-action]]
+== 向 Console 助手提問或請求行動
+
+開啟 Console 助手，選擇存取模式，然後輸入描述您要求的提示。
+
+.步驟
+. 從 NetApp Console 本機部署儀表板中，選擇 *Console assistant* 按鈕。
+. 選擇存取模式：
++
+** 選擇*唯讀*即可提問並獲取指導，而無需進行任何變更。
+** 選擇 *Read/write* 以允許助手對您的儲存基礎架構執行操作。
+
+
+. 輸入描述您的問題或工作的提示，然後選擇 *Send*。
++
+例如： `Create a 10GiB volume for home directories named home, and share it with Everyone set to FULL_CONTROL.`
+
+. 審查助理的回應：
++
+** 對於所提出的問題，助手會回傳一個您可以採取相應行動的答案。
+** 對於某個行動，助手會顯示建議的行動，詢問缺少的詳細資訊（例如權限層級），然後在繼續之前請求確認。
+
+
+. 確認行動。對於非同步作業（例如 Volume 建立），助理會建立工作來完成要求。
+. 若要查詢請求狀態，請詢問助手。例如，輸入 `Let me know when the job completes`，助手會回傳目前狀態。
+

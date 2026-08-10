@@ -1,0 +1,11 @@
+= 
+:allow-uri-read: 
+
+
+.步驟
+. 前往 Amazon EC2 主控台。
+. 選擇*執行個體*。
+. 選擇 Console 代理程式執行個體。
+. 選擇 *Actions > Security > Modify IAM role*。
+. 選擇 IAM 角色，然後選擇 *Update IAM role*。
+

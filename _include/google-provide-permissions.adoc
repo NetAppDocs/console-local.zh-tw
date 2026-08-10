@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+將服務帳戶與 Console 代理程式虛擬機器建立關聯。
+
+.步驟
+. 前往 Google Cloud 入口網站，並將服務帳戶指派給 Console 代理程式 VM 執行個體。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud 文件：變更執行個體的服務帳戶和存取範圍"^]
+
+. 如果您想管理其他專案中的資源，請將具有 Console 代理程式角色的服務帳戶新增至該專案，以授予存取權限。您需要對每個專案重複此步驟。
+

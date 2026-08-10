@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+使用網路型 NetApp Console 時，電腦連線的端點::
++
+--
+透過網頁瀏覽器存取 Console 的電腦必須能夠連接多個端點。您需要使用 Console 來設定 Console 代理程式，並進行日常使用。
+
+link:reference-networking-saas-console.html["為 NetApp Console 準備連網"]。
+
+--
+

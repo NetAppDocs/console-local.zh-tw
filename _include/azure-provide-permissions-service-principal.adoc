@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+. 選擇 *Administration > Credentials*。
+. 選擇 *Add Credentials* ，然後依照精靈中的步驟操作。
++
+.. *憑證位置*：選擇 *Microsoft Azure > 代理程式*。
+.. *定義憑證*：輸入授予所需權限的 Microsoft Entra 服務主體的相關資訊：
++
+*** 應用程式（用戶端）ID
+*** 目錄（租戶）ID
+*** 用戶端密碼
+
+
+.. *Marketplace Subscription*：立即訂閱或選擇現有訂閱，將 Marketplace 訂閱與這些認證資料建立關聯。
+.. *審核*：確認新憑證的詳細資訊，然後選擇*新增*。
+
+
+

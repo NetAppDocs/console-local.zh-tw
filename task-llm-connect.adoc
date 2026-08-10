@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: task-llm-connect.html 
+keywords: LLM, AI, connect, large language model, console assistant, openai, openai-compatible, proxy, netapp console 
+summary: 連接 OpenAI 或 OpenAI 相容的端點，以在 NetApp Console 本機部署中啟用 Console 助理和 AI 輔助管理。 
+---
+= 連接您的 LLM 並在 NetApp Console 本機部署中啟用 NetApp Console 助手
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將您的大型語言模型 (LLM) 連接到 NetApp Console 本機部署，以啟用 Console 助理和 AI 輔助儲存管理。
+
+
+NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能，此文件以技術預覽版形式提供。對於此預覽產品，NetApp 保留在正式發行前修改產品詳情、內容及時間表的權利。
+
+.所需存取權限
+超級系統管理員或組織系統管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+設定後，使用者從儀表板開啟 Console 助手並選擇存取模式：
+
+* 在*唯讀*模式下，助理會回答問題並提供指導，但不會進行任何變更。
+* 在 *Read/write* 模式下，助手可以對儲存基礎架構進行操作。每次變更之前，它都會顯示詳細資訊供審查和確認。對於非同步操作（例如建立 Volume），它會建立一個工作，使用者可以從助手檢視該工作。
+
+
+若要連接您的 LLM，請選擇供應商路徑，輸入端點詳細資訊和 API 金鑰，然後在「管理 > AI 工具」中選擇模型。助手行動將遵守您的儲存設備原則和角色型存取控制。
+
+
+
+[[gather-what-you-need-before-you-connect-an-llm]]
+== 在連接 LLM 之前，請先準備好所需資料。
+
+在連接您的 LLM 之前，請收集以下資料：
+
+* 您的供應商類型選擇：OpenAI 或 OpenAI 相容型。link:concept-llm-integration.html["了解供應商的選擇。"]
+* 您所選供應商路徑的有效 API 金鑰。
+* 您的供應商路徑的端點 URL。
+* 如果您的組織需要，請提供您的 Proxy 或閘道 URL。
+* 如果需要，請提供您的 LLM 供應商帳戶的使用者名稱或單一登入 （SSO） ID。
+* 從 Console 本機部署到所選端點的網路存取。
+* 儲存類別和角色型存取控制，適用於您計劃允許的助手行動。
+
+
+有關支援的型號詳情，請參閱link:reference-llm-supported-models.html["了解 NetApp Console 本機部署中支援的 LLM 供應商和模型"]。
+
+
+
+[[connect-an-llm-to-netapp-console-local-deployment]]
+== 將 LLM 連線到 NetApp Console 本機部署
+
+輸入供應商設定、API 金鑰和模型，將您的 LLM 連接到 Console 本機部署。
+
+.步驟
+. 登入 NetApp Console 本機部署。
+. 選擇 *Administration > AI Tools*。
+. 選擇選單，然後選擇*編輯*。
+. 在「供應商類型」中，選取供應商類型。
++
+link:concept-llm-integration.html["了解 LLM 在 NetApp Console 本機部署中的整合"]。
+
+. 如果提示輸入供應商端點，請輸入您選擇的供應商路徑的端點 URL。
+. 輸入 Proxy 或閘道 URL 和認證資料。
+. 在「使用者名稱」欄位中，輸入您的使用者名稱或 SSO ID （如果您的供應商路徑要求）。
+. 在「API 金鑰」欄位中，貼上您選擇的供應商路徑中的 API 金鑰。
+. 從清單中選取型號。
+. 審查組態，然後選擇 * 儲存 *。
++
+如果儲存或測試失敗，請驗證供應商類型、端點 URL、API 金鑰和所選模型，然後重試。
+
+
+
+link:task-llm-troubleshoot-integration.html["追蹤 LLM 整合問題"]。
+
+
+
+[[verify-that-llm-integration-works]]
+== 驗證 LLM 整合是否正常運作
+
+儲存組態後，驗證助手的可用度和行為。
+
+.步驟
+. 確認「Console assistant」按鈕出現在 NetApp Console 本機部署儀表板上。
+. 以*唯讀*模式開啟助理並執行基本查詢。
+. 以*讀取/寫入*模式開啟助手，並確認變更儲存設備的行動在執行前需要使用者確認。
+. 確認需要行動工作流程的使用者是否擁有必要的角色型存取控制權限。
+
+
+完成驗證後，使用者可以從儀表板開啟 Console 助手，並以簡單的語言描述工作。有關使用範例和終端使用者工作流程，請參閱 link:task-console-asst-use.html["使用 NetApp Console 助手"]。
+
+
+
+[[protect-credentials-and-monitor-llm-usage]]
+== 保護認證資料並監控 LLM 使用情況
+
+* 盡可能使用專用 API 金鑰進行 Console 本機部署整合。
+* 根據貴組織的原則輪換 API 金鑰。
+* 限制只有必要的管理員角色才能編輯 AI 工具設定。
+* 監控供應商端 API 使用情況和警示，以追蹤異常活動或成本飆升。
+

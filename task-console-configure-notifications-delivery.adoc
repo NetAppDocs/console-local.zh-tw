@@ -1,0 +1,128 @@
+---
+sidebar: sidebar 
+permalink: task-console-configure-notifications-delivery.html 
+keywords: console local, SMTP, email server, webhook,  notifications delivery, alert routing, incident response, operational awareness, third-party integration, SIEM 
+summary: 設定 NetApp Console 本機部署的通知傳遞管道。 
+---
+= 在 NetApp Console 本機部署中設定通知傳遞管道
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，您可以設定多個警示通知管道，包括電子郵件和 Webhook。
+
+.所需存取權限
+超級系統管理員或組織系統管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+預設情況下，Console 本機部署會透過其內建的通知系統顯示通知。設定其他傳遞管道可讓您以最適合您工作流程的方式接收通知。
+
+您可以將所有通知傳送到相同管道，也可以為不同類型的通知使用不同的管道。例如，您可以透過電子郵件傳送緊急儲存設備警報，同時透過 webhook 將其他警報流量路由至第三方監控工具。
+
+設定好通知發送管道後，您可以設定通知規則並將其指派給不同的管道。link:task-alert-rules-manage.html["了解如何設定通知規則"]。
+
+
+
+[[configure-an-email-server]]
+== 設定電子郵件伺服器
+
+設定電子郵件伺服器後，Console 本機部署會透過該伺服器傳送通知、警報和使用者邀請。Console 本機部署支援 SMTP 電子郵件伺服器，可以是您現有的企業電子郵件伺服器，也可以是第三方電子郵件服務。
+
+.步驟
+. 選擇「Administration > Console」。
+. 選擇 *Configuration* 以開啟系統組態頁面。
+. 在「電子郵件伺服器」部分，選擇「設定」。
+. 請輸入您的電子郵件伺服器連線詳細資訊：
++
+** 新增寄件者姓名和寄件者電子郵件地址。
+** *SMTP 主機*：您的 SMTP 伺服器的主機名稱或 IP 位址。如果有多台伺服器，請輸入主伺服器。
+** 請從「連線安全性」下拉清單中選擇連線協定。連接埠已為您設定，且為唯讀：SMTP （使用 STARTTLS） 為 25，SMTPS 為 465。
++
+SMTPS（連接埠 465）可立即建立加密連線，建議在安全性要求較高的環境中使用。STARTTLS（連接埠 25）可從非加密連線升級，如果加密協商失敗，則可能回退至非加密傳輸。
+
+
+
+. 選擇 *Test email* 以傳送測試郵件給您指定的收件者。
+. 測試成功後，選擇 *Save* 以儲存組態。
++
+如果測試失敗，請重新驗證您輸入的設定，並仔細檢查 Console 本機部署是否具有對電子郵件伺服器的網路存取。
+
+
+
+
+
+[[update-an-email-server-configuration]]
+=== 更新郵件伺服器組態
+
+如果您想使用不同的郵件伺服器，可以更新現有的郵件伺服器組態。
+
+.步驟
+. 選擇「Administration > Console」。
+. 選擇 *Configuration* 以開啟系統組態頁面。
+. 在「電子郵件伺服器」部分，選擇「設定」。
+. 選擇 *Clear fields* 以清除現有組態。
+. 請輸入您的電子郵件伺服器的新連線詳細資訊。
+. 選擇 *Test email* 以傳送測試郵件給您指定的收件者。
+. 測試成功後，選擇「儲存」以儲存新組態。
++
+如果測試失敗，請重新驗證您輸入的設定，並仔細檢查 Console 本機部署是否具有對電子郵件伺服器的網路存取。
+
+
+
+
+
+[[remove-an-email-server-configuration]]
+=== 移除電子郵件伺服器組態
+
+如果您不再希望 Console 本機部署傳送電子郵件，則可以移除電子郵件伺服器組態。
+
+.步驟
+. 選擇「Administration > Console」。
+. 選擇 *Configuration* 以開啟系統組態頁面。
+. 在「電子郵件伺服器」部分，選擇「設定」。
+. 選擇 *Clear fields* 以清除現有組態。
+. 選擇「儲存」以儲存已清除的組態，這將從 Console 本機部署中移除電子郵件伺服器組態。
+
+
+
+
+[[configure-a-webhook]]
+== 設定 Webhook
+
+設定 Webhook，以便將來自 Console 本地部署的通知傳送到其他工具或服務。您可以設定多個 Webhook，每個 Webhook 指向不同的端點。例如，一個指向 SIEM，另一個指向值班尋呼服務。
+
+建立 Webhook 後，具有儲存管理員角色的使用者可以將其指派給特定的警告規則。例如，他們可以將關鍵警告傳送至電子郵件，同時透過 Webhook 將所有警告傳送至第三方監控工具。
+
+
+NOTE: Console 本機部署不會對 Webhook 端點強制執行存取控制。任何能夠存取端點 URL 的使用者或系統都會收到警示資料。請確保透過接收應用程式本身的存取控制機制，將對該應用程式的存取限制為已授權的使用者。
+
+.開始之前
+確認 Console 本機部署可以透過網路存取接收應用程式，並收集該應用程式所需的端點 URL、HTTP 方法以及任何驗證或憑證詳細資訊。
+
+.步驟
+. 選擇「Administration > Console」。
+. 選擇 *Configuration* 以開啟系統組態頁面。
+. 在「Webhook 整合」部分，選擇「設定」。
+. 請輸入 webhook 所需的詳細資訊：
++
+** webhook 的描述性名稱。
+** 接收應用程式提供的端點 URL。
+** HTTP 方法
+** 可選：PEM 格式的自簽名憑證。
+** 任何必需的標頭或金鑰（身分驗證認證資料）。
+** 發送 webhook 時使用的格式。支援 JSON 和 OTEL （OpenTelemetry）格式。
++
+對於通用 Webhook 和自訂 REST 端點，請使用 JSON。對於原生使用 OpenTelemetry 訊號的可觀測性平台，例如 Grafana 或其他 OpenTelemetry 相容的收集器，請使用 OTEL。
+
+
+
+. 選擇 *Test webhook* 以測試 webhook 連線，並確保 Console 本地部署可以成功傳送訊息至接收應用程式。
+. 測試成功後，選擇 *Save* 以建立 webhook。
++
+儲存 webhook 後，使用者可在支援 webhook 的位置選取該 webhook，例如警示傳送選項。link:task-alert-rules-manage.html["了解如何建立警示規則並指派用於傳送警示的 Webhook。"]
+
+

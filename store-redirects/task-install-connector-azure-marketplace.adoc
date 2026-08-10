@@ -1,0 +1,8 @@
+---
+permalink: task-install-connector-azure-marketplace.html 
+redirect: console-setup-admin/task-install-agent-azure-marketplace.html 
+---
+= 
+:allow-uri-read: 
+
+

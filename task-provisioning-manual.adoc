@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task-provisioning-manual.html 
+keywords: provisioning, provision storage, create volume, create LUN, ONTAP, storage class, fleet, NAS, SAN, manual provisioning, netapp console 
+summary: 使用 NetApp Console 本機部署進行儲存資源配置。 
+---
+= 在 NetApp Console 本機部署中進行儲存資源配置
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中配置 Volume 和 LUN，以便為您的工作負載提供儲存資源。在資源配置過程中，您可以選擇性地選取儲存設備類別，以套用預先定義的儲存設備原則和組織標準。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾或機組管理員，或儲存設備管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+
+
+[[provision-a-volume]]
+== 配置磁碟區
+
+.步驟
+. 選擇 *Storage > Management*。
+. 選擇 *Fleets*。
+. 選擇您要資源配置的機組。
+. 選擇 *Add* 。
+. 從選單中選取 *Volume*。
+. 在「Volume 詳細資料」下：
++
+.. 請輸入 Volume 名稱。
+.. 輸入容量（如果需要，請選擇單位）。
+.. （可選）選擇要套用儲存設備類別策略的儲存設備類別。如果未選擇，Volume 將不套用儲存設備類別策略。
+
+
+. 在「系統詳細資料」下：
++
+.. 從符合條件的系統中為所選機組選擇一個系統。
+.. 選取儲存 VM。
+
+
+. 在「主機 （NAS） 詳細資料」下，選擇主機存取 Volume 的方式：
++
+.. 透過 NFS 匯出（匯出原則控制哪些 NFS 主機可以存取該 Volume）
+.. 透過 SMB/CIFS 共用
+
+
+. 選擇 *Add* 。
+
+
+
+
+[[provision-a-lun]]
+== 配置 LUN
+
+.步驟
+. 選擇 *Storage > Management*。
+. 選擇 *Fleets*。
+. 選擇您要資源配置的機組。
+. 選擇 *Add* 。
+. 從選單中選擇 *LUNs*。
+. 在「LUN 儲存設備詳細資料」下：
++
+.. 請輸入前綴名稱。
+.. 請輸入要使用該前置詞建立的 LUN 數量。
+.. 輸入每個 LUN 的容量（如有需要，請選擇單位）。
+.. （可選）選擇要套用儲存設備類別原則的儲存設備類別。如果未選擇，LUN 將在不套用儲存設備類別原則的情況下進行資源配置。
+
+
+. 在「系統詳細資料」下：
++
+.. 選擇系統（如果提示）。
+.. 選取儲存 VM。
+
+
+. 在「主機 （SAN） 詳細資料」下，選擇主機存取 Volume 的方式：
++
+.. 選擇主機作業系統（例如 Windows 或 Linux）以設定 LUN 對齊和區塊大小的建議預設值。
+.. 選擇主機映射群組以控制哪些啟動器可以存取 LUN。
+
+
+. 選擇 *Add* 。
+

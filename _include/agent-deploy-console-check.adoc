@@ -1,0 +1,16 @@
+= 
+:allow-uri-read: 
+
+
+. 請檢查您的選擇，以確認設定是否正確。
++
+.. 預設情況下，*Validate agent configuration* 核取方塊處於選取狀態，以便在部署時讓 Console 驗證網路連線要求。如果 Console 部署代理程式失敗，它會提供一份報告來協助您進行疑難排解。如果部署成功，則不會提供任何報告。
+
+
++
+[]
+====
+如果您仍在使用用於代理程式升級的 link:reference-networking-saas-console-previous.html["先前的端點"]，驗證將失敗並顯示錯誤。為避免此情況，請取消勾選核取方塊以跳過驗證檢查。
+
+====
+

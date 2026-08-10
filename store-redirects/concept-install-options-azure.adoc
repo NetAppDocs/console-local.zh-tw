@@ -1,0 +1,8 @@
+---
+permalink: concept-install-options-azure.html 
+redirect: console-setup-admin/concept-agent-install-options.html 
+---
+= 
+:allow-uri-read: 
+
+

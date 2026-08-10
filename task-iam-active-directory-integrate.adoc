@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-iam-active-directory-integrate.html 
+keywords: AD, Active Directory, LDAP, directory services, directory users, authentication, user management, netapp console 
+summary: 將 NetApp Console 本機部署與 Active Directory 整合，以實現基於目錄的登入和使用者查找。 
+---
+= 將 NetApp Console 本機部署與 Active Directory 整合
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將 NetApp Console 本機部署與 Active Directory 整合，以實現基於目錄的登入和使用者查找。使用目錄服務驗證使用者，然後在 NetApp Console 本機部署中為這些使用者指派存取權限。
+
+.所需存取權限
+超級系統管理員或組織系統管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+當您與 Active Directory 整合時，Console 本機部署會透過您現有的目錄對使用者進行驗證。新增目錄使用者後，請為其指派 Console 存取角色，以控制該使用者可以存取的內容。
+
+Active Directory 整合還可以透過將您現有的控制、稽核追蹤和政策套用至 Console 本機部署存取，協助您滿足法規遵循要求。
+
+[NOTE]
+====
+* Active Directory 整合不會建立聯合群組、不會同步目錄群組分配，也不會自動授予存取權限。管理員仍需在 Console 本機部署中將目錄使用者新增至組織並指派角色。
+* 一次只能支援一個 Active Directory 整合。整合設定完成後，*新增整合* 按鈕將會停用。若要切換到其他目錄，請先停用或刪除現有整合。
+* 目錄使用者不設定或使用多因素驗證 （MFA）。Console 本機部署僅支援本機使用者的 MFA。link:task-manage-member-security.html["了解如何管理成員安全性設定"]。
+
+
+====
+
+
+[[before-you-begin]]
+== 開始之前
+
+在與 Active Directory 整合之前，請確認您已具備下列條件：
+
+* 一個 Active Directory 網域和可用於查詢目錄的認證資料
+* LDAP 伺服器位址和目錄樹的基本可分辨名稱 (DN)
+* 從 Console 本機部署透過連接埠 389 （LDAP） 或 636 （LDAPS） 對 LDAP 伺服器進行網路存取
+* 如果您打算使用 LDAPS，則需要 SSL/TLS 憑證。
+
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇 *Directory services* 以開啟 Federations 頁面。
+. 選擇 *Add integration*。
+. 請輸入您的 Active Directory 伺服器的連線詳細資訊：
++
+** 整合的描述性名稱。
+** *LDAP 主機*：LDAP 伺服器的主機名稱或 IP 位址。如果有多台伺服器，請輸入主伺服器。
+** 連接埠：LDAP 使用 389，LDAPS 使用 636。
+** 連線逾時時間，單位為毫秒。預設值為 1000 毫秒。
+
+
+. 選擇 *Use SSL/TLS* 以使用 LDAPS。請確認您的 LDAP 伺服器支援 LDAPS，且 Console 可以存取所需的憑證。
+. 測試連線。如果連線失敗，請檢查 LDAP 主機、連接埠、網路連線以及 SSL/TLS 憑證。
+. 測試成功後，輸入目錄和使用者詳細資料：
++
+** *基本 DN 連結*：輸入此應用程式將用於連接到目錄的 LDAP/AD 帳戶的連結 DN，並輸入該帳戶的連結認證資料（密碼）。Console 使用這些詳細資訊連結到 LDAP 並驗證連線。
+** *使用者 DN*：具有查詢目錄權限的使用者帳戶。例如， `CN=ldap-reader,OU=Service Accounts,DC=example,DC=com`。
+
+
+. 選擇 *Add* 以儲存整合。
+
+
+.完成後
+儲存整合後，將目錄使用者新增至您的組織並指派角色。您必須設定並啟用至少一個 Active Directory 整合，然後才能新增目錄使用者。link:task-iam-manage-members-permissions.html["了解如何新增目錄使用者和指派角色"]。
+
+
+
+[[disable-or-enable-an-active-directory-integration]]
+== 停用或啟用 Active Directory 整合
+
+停用整合可以暫時中止基於目錄的驗證，而不會刪除組態。停用目錄服務後，目錄使用者將無法透過目錄登入。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇 *Directory services* 以開啟 Federations 頁面。
+. 在整合清單中，找到該整合並選擇該列的行動選單。
+. 選擇「停用」可暫停整合，選擇「啟用」可還原整合。
+
+
+
+
+[[delete-an-active-directory-integration]]
+== 刪除 Active Directory 整合
+
+刪除整合將永久移除目錄服務組態。刪除前，請審查與該整合關聯的目錄使用者的任何警告，因為他們的存取將受到影響。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇 *Directory services* 以開啟 Federations 頁面。
+. 在整合清單中，找到該整合並選擇該列的行動選單。
+. 選取*刪除*並確認刪除。
+

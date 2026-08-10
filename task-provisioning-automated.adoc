@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: task-provisioning-automated.html 
+keywords: automated provisioning, automation, policy-driven, storage class, netapp console 
+summary: 在 NetApp Console 本機部署中使用儲存設備類別和原則設定自動儲存資源配置。 
+---
+= 在 NetApp Console 本機部署中自動進行儲存資源配置
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，使用自動資源配置功能，根據儲存設備等級標準和機組容量分配儲存設備。如果您希望獲得一致的結果並減少手動決策，自動資源配置是最佳選擇。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾或機組管理員，或儲存設備管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+自動資源配置通常會根據容量和效能餘裕，從機組中的可用系統選擇最合適的放置位置，然後使用與儲存設備等級一致的設定來配置工作負載。
+
+
+
+[[before-you-begin]]
+== 開始之前
+
+* 確保在目標機組中至少探索到一個 ONTAP 叢集。
+* 如果您想要基於類別的結果，請確保儲存設備類別存在並與機組關聯。
+

@@ -1,0 +1,8 @@
+---
+permalink: task-set-up-networking-azure.html 
+redirect: console-setup-admin/task-install-agent-azure-console.html 
+---
+= 
+:allow-uri-read: 
+
+

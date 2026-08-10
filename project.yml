@@ -1,0 +1,205 @@
+---
+settings:
+  name: NetApp Console local deployment
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  release_notes_autogen:
+    release_notes_repo: console-local-relnotes
+  langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
+sidebar:
+  entries:
+  - title: NetApp Console 本地部署
+    entries:
+    - title: 版本資訊
+      entries:
+      - title: 新增功能
+        url: "/whats-new.html"
+      - title: 已知限制
+        url: "/reference-local-known-limitations.html"
+      - title: 比較 NetApp Console 本機部署和 NetApp Console
+        url: "/console-differences.html"
+    - title: 開始使用
+      entries:
+      - title: 了解 NetApp Console
+        url: "/concept-netapp-console-local.html"
+      - title: 了解身分和存取管理
+        url: "/concept-identity-and-access-management.html"
+      - title: 了解機組管理
+        url: "/concept-manage-storage.html"
+      - title: 了解儲存設備類別和策略
+        url: "/concept-storage-classes.html"
+      - title: 了解 LLM 整合（人工智慧輔助管理）
+        url: "/concept-llm-integration.html"
+      - title: 了解 NetApp Backup and Recovery
+        url: "/concept-data-services.html"
+    - title: 安裝和設定
+      entries:
+      - title: 快速開始設定 NetApp Console
+        url: "/task-quick-start-console-setup.html"
+      - title: 安裝 NetApp Console
+        entries:
+        - title: 安裝 NetApp Console
+          url: "/task-install-agent-on-prem-ova.html"
+      - title: 規劃您的 Console 組織
+        entries:
+        - title: 開始使用身分和存取
+          url: "/task-iam-fleet-mgmt-get-started.html"
+        - title: 了解資料夾和機組
+          url: "/concept-folders-fleets-overview.html"
+        - title: 了解角色型存取控制 （RBAC）
+          url: "/concept-iam-rbac.html"
+      - title: 設定您的 Console 組織
+        entries:
+        - title: 建立資料夾和機組
+          url: "/task-iam-manage-folders-fleets.html"
+        - title: 將儲存設備系統新增至 NetApp Console
+          url: "/task-add-systems.html"
+        - title: 將資源與資料夾和機組建立關聯
+          url: "/task-iam-manage-resources.html"
+        - title: 新增成員並指派初始角色
+          url: "/task-iam-manage-members-permissions.html"
+        - title: 存取角色
+          entries:
+          - title: NetApp Console 存取角色
+            url: "/reference-iam-predefined-roles.html"
+          - title: 平台角色
+            url: "/reference-iam-platform-roles.html"
+          - title: 營運支援分析師職位
+            url: "/reference-iam-analyst-roles.html"
+          - title: 儲存角色
+            url: "/reference-iam-storage-roles.html"
+          - title: 備份和還原角色
+            url: "/reference-iam-backup-rec-roles.html"
+      - title: 設定 Console 整合與服務
+        entries:
+        - title: 將 NetApp Console 與 Active Directory 整合
+          url: "/task-iam-active-directory-integrate.html"
+        - title: 連接您的 LLM 並啟用 NetApp Console 助手
+          url: "/task-llm-connect.html"
+        - title: 疑難排解 LLM 整合
+          url: "/task-llm-troubleshoot-integration.html"
+        - title: 設定通知交付
+          url: "/task-console-configure-notifications-delivery.html"
+    - title: 使用 NetApp Console
+      entries:
+      - title: 登入 NetApp Console
+        url: "/task-logging-in.html"
+      - title: 檢視與機組相關聯的系統
+        url: "/task-iam-switch-fleets.html"
+      - title: 管理您的 NetApp Console 使用者設定
+        url: "/task-user-settings.html"
+      - title: 使用 NetApp Console 助手
+        url: "/task-console-asst-use.html"
+    - title: 在 NetApp Console 中管理儲存設備
+      entries:
+      - title: 了解儲存管理
+        url: "/concept-manage-storage.html"
+      - title: 規範儲存設備行為
+        entries:
+        - title: 了解儲存設備類別
+          url: "/concept-storage-classes.html"
+        - title: 了解儲存設備類別原則
+          url: "/concept-storage-class-policies.html"
+        - title: 檢視預先定義的儲存設備類別原則
+          url: "/reference-storage-class-policies.html"
+        - title: 建立儲存設備類別
+          url: "/task-storage-class-manage.html"
+      - title: 配置儲存設備
+        url: "/task-provisioning-manual.html"
+    - title: 監控儲存設備健全狀況
+      entries:
+      - title: 了解如何在 NetApp Console 中監控儲存設備健全狀況
+        url: "/concept-monitor-storage.html"
+      - title: 使用儀表板進行監控
+        entries:
+        - title: 檢視首頁計量
+          url: "/task-storage-dashboard.html"
+        - title: 使用自訂儀表板
+          entries:
+          - title: 了解自訂儀表板
+            url: "/concept-custom-dashboards.html"
+          - title: 開始使用儀表板
+            url: "/task-dashboard-get-started.html"
+          - title: 建立自訂儀表板
+            url: "/task-dashboard-create.html"
+          - title: 自訂儀表板卡片
+            url: "/task-customize-dashboard-cards.html"
+          - title: 自訂儀表板卡片和計量參考
+            url: "/reference-dashboard-card-templates.html"
+        - title: 管理自訂儀表板
+          entries:
+          - title: 管理自訂儀表板
+            url: "/task-dashboard-manage.html"
+      - title: 使用庫存監控機組
+        url: "/concept-monitor-fleets-inventory.html"
+      - title: 修復警報
+        entries:
+        - title: 了解警報
+          url: "/concept-console-alerts.html"
+        - title: 檢視警示
+          url: "/task-alerts-monitor.html"
+        - title: 設定警報通知規則
+          url: "/task-alert-rules-manage.html"
+        - title: 修復儲存設備類別漂移
+          url: "/task-storage-class-drift-remediate.html"
+        - title: 警報補救措施
+          url: "/reference-alert-remediation.html"
+      - title: 調查效能問題
+        entries:
+        - title: 了解工作負載分析器
+          url: "/concept-workload-analyzer.html"
+        - title: 調查 Volume 上的高延遲
+          url: "/task-analyzer-volume-latency-investigate.html"
+        - title: 調查 Volume 的高處理量需求
+          url: "/task-analyzer-volume-throughput-investigate.html"
+        - title: 調查 Volume 的容量成長
+          url: "/task-analyzer-volume-capacity-investigate.html"
+        - title: 工作負載分析器計量參考
+          url: "/reference-workload-analyzer-metrics.html"
+    - title: 管理和監控 NetApp Console 本地部署
+      entries:
+      - title: 了解如何管理 NetApp Console 本機部署
+        url: "/concept-administer-netapp-console-local.html"
+      - title: 稽核 NetApp Console 本機部署作業
+        url: "/task-audit-console-activity.html"
+      - title: Licenses and subscriptions
+        url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
+      - title: 維護 NetApp Console
+        entries:
+        - title: 維護 NetApp Console VM
+          url: "/task-console-local-vm-config.html"
+      - title: 管理使用者和存取
+        entries:
+        - title: 管理成員存取（以成員為中心）
+          url: "/task-iam-manage-roles.html"
+        - title: 管理機組存取分配（以機組為中心）
+          url: "/task-iam-users-fleets-assign.html"
+        - title: 管理成員安全性
+          url: "/task-manage-member-security.html"
+    - title: 參考
+      entries:
+      - title: NetApp Console 本地部署 API
+        entries:
+        - title: 組織和機組 ID
+          url: "/task-iam-rename-organization.html"
+        - title: 身分與存取管理 API 參考
+          url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
+      - title: 支援的 LLM 提供者和模型
+        url: "/reference-llm-supported-models.html"
+      - title: ONTAP 警報參考
+        url: "/reference-ontap-alerts.html"
+      - title: 叢集安全性法規遵循類別
+        url: "/reference-cluster-compliance-categories.html"
+      - title: 儲存虛擬機器安全性法規遵循類別
+        url: "/reference-svm-compliance-categories.html"
+    - title: 知識與支援
+      entries:
+      - title: 註冊以取得支援
+        url: "/task-support-registration.html"
+      - title: 取得協助
+        url: "/task-get-help.html"
+  - title: 法律聲明
+    url: "/legal-notices.html"

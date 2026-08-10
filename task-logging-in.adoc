@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-logging-in.html 
+keywords: logging in, log in, sign in, signing in, user account, MFA, multi-factor authentication, AD, Active Directory, directory services, local user, Console local deployment access 
+summary: 註冊 NetApp Console 本地部署後，您可以從網路型控制台登入，開始管理您的資料和儲存基礎架構。 
+---
+= 登入 NetApp Console 本機部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在您的組織系統管理員邀請您加入 NetApp Console 本機部署組織使用者帳戶後，您即可登入 Console 本機部署。登入時，您需要使用與您的登入帳號關聯的電子郵件地址。
+
+如果您登入後看不到任何資源，請聯絡您的組織管理員。link:task-user-settings.html#contact-admin["請聯絡您的組織管理員"]。
+
+.步驟
+. 開啟網頁瀏覽器，前往安裝 Console 本機部署的 IP 位址。
+. 在「登入」頁面上，輸入與您登入帳戶相關聯的電子郵件地址。
+. 根據與您登入相關的驗證方法，系統會提示您輸入憑證。
++
+** 使用您的電子郵件地址和密碼建立的 NetApp Console 帳戶
+
+
++
+[NOTE]
+====
+** 如果啟用了 MFA：輸入密碼後，系統會提示您輸入 TOTP 代碼（來自您的驗證器應用程式）或使用恢復代碼。
+** 如果您使用恢復代碼登入，請按照恢復代碼提示期間使用者介面中顯示的順序使用它們。
+
+
+====
++
+** 使用您的電子郵件地址和密碼建立 Active Directory 帳戶
+
+
+

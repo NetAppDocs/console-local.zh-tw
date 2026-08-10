@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: concept-monitor-storage.html 
+keywords: monitor, health, performance, alerts, workload analyzer, remediation, netapp console local, console local 
+summary: NetApp Console 本機部署提供機組範圍的健全狀況儀表板、深入的 Volume 分析、可設定的警示，以及引導式或自動化修復，讓您能夠在儲存設備問題影響工作負載之前加以識別並解決。 
+---
+= NetApp Console 本地部署中的儲存設備監控
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本機部署可協助您透過儀表板、警示、深度分析和修復來監控跨機組的儲存設備，以便您可以在問題影響工作負載之前發現並解決問題。
+
+
+
+[[monitor-fleet-wide-health-with-dashboards]]
+== 透過儀表板監控整個機組的健全狀況
+
+首先使用儀表板快速檢視儲存設備健全狀況和效能。使用首頁查看計量，開啟儀表板表格查看預先定義和自訂儀表板，需要更多詳細資訊時，可進入警示、調查和修復頁面。
+
+* link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]
+* link:task-dashboard-manage.html["保持 NetApp Console 本地部署中的儀表板為最新狀態"]
+* link:concept-custom-dashboards.html["了解 NetApp Console 本機部署中的自訂儀表板"]
+
+
+
+
+[[investigate-performance-issues]]
+== 調查效能問題
+
+使用工作負載分析器來調查單一 Volume 的效能問題。它會將延遲、處理量、IOPS 和組態變更關聯起來，以便您可以精確找出根本原因。
+
+* link:concept-workload-analyzer.html["了解 NetApp Console 本機部署工作負載分析器"]
+* link:task-analyzer-volume-latency-investigate.html["調查 NetApp Console 本機部署中 Volume 的高延遲"]
+* link:task-analyzer-volume-throughput-investigate.html["調查 NetApp Console 本機部署中 Volume 的高處理量需求"]
+* link:reference-workload-analyzer-metrics.html["了解 NetApp Console 本機部署中的工作負載分析器計量"]
+
+
+
+
+[[configure-alerts-and-notifications]]
+== 設定警示與通知
+
+設定警示原則和通知管道，確保相關人員能隨時了解需要注意的儲存設備狀況。例如，將容量警告路由至儲存設備團隊，將保護警示路由至可採取行動的備份管理員。
+
+link:task-alert-rules-manage.html["在 NetApp Console 本機部署中設定通知和警示原則"]。link:task-alerts-monitor.html["在 NetApp Console 本機部署中檢視儲存設備警示"]。
+
+
+
+[[remediate-issues]]
+== 解決問題
+
+偵測到問題時，請直接從 NetApp Console 本機部署進行修正：
+
+* *自動修復* — NetApp Console 本機部署會根據預先定義的規則自動套用修正措施。
+* *指導式補救* — 依照逐步建議解決問題，並完全控制每個行動。
+

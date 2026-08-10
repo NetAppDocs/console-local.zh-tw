@@ -1,0 +1,8 @@
+---
+permalink: task-upgrade-agent.html 
+redirect: console-local/task-upgrade-console-local.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: reference-alert-remediation.html 
+keywords: alert remediation, fix-it, guided remediation, automated remediation, ONTAP alerts, storage alerts, compliance alerts, remediate drift, alert actions, netapp console local 
+summary: 參考 NetApp Console 本地部署中可用的補救行動，包括相關警示、影響區域和行動總結。 
+---
+= NetApp Console 本機部署中的警示補救行動
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用此參考資料了解 NetApp Console 本機部署中「Fix it」功能提供的修復行動。表格中描述了每個行動的具體內容及相關警報。執行行動前，請在確認對話方塊中審查行動詳情。
+
+
+
+[[remediation-actions]]
+== 補救措施
+
+[cols="20,17,28,12,23"]
+|===
+| 補救行動 | 警報名稱 | 警報執行摘要 | 影響區域 | 補救措施總結 
+
+
+| *啟用自動 Volume 成長功能* | Volume 已滿 | 此 Volume 空間即將耗盡，接近滿載容量。 | 容量 | 自動增加 Volume 的大小（直到達到設定的限制），以降低空間不足的風險。 
+
+
+| *調整 Volume 大小* | Volume 已滿 | 此 Volume 空間即將耗盡，接近滿載容量。 | 容量 | 增加 Volume 的大小，立即提供更多空間。 
+
+
+| *將 Volume 調至線上* | 離線 Volume | 該 Volume 已離線，不提供資料服務。 | 可用性 | 將離線 Volume 恢復線上，以便其能夠恢復提供資料。 
+
+
+| *將 Aggregate 上線* | 彙總離線 | 該彙總未線上，其上託管的 Volume 可能無法存取。 | 可用性 | 將離線 Aggregate 上線，以還原對其託管 Volume 的存取。 
+
+
+| *將 LUN 上線* | LUN 離線 | LUN 已離線，主機無法存取。 | 可用性 | 將離線 LUN 上線，以便主機可以恢復存取和 I/O。 
+
+
+| *解除Volume限制* | Volume 受限 | 該 Volume 處於受限狀態，可能無法正常進行 I/O 操作。 | 可用性 | 將受限 Volume 恢復到線上狀態，以便用戶端可以再次存取。 
+
+
+| *將 NVMe 命名空間上線* | NVMe 命名空間已離線 | NVMe 命名空間已離線，主機無法存取。 | 可用性 | 將離線的 NVMe 命名空間上線，以還原主機存取。 
+
+
+| *啟動叢集間 LIF* | 叢集間 LIF 中斷 | 叢集間 LIF 故障，叢集間通訊可能會受到影響。 | 連接性 | 啟動叢集間 LIF 以還原用於複寫的叢集間連線。 
+
+
+| *重新啟用 MetroCluster AUSO* | MetroCluster 自動非計劃切換已停用 | 此叢集已停用自動非計畫性切換。 | 可用性 | 重新啟用自動非計劃切換 （AUSO），以便 MetroCluster 保護功能能如預期運作。 
+
+
+| *設定 Service Processor 網路* | Service Processor 未設定 | 服務處理器 （SP） 網路未設定。 | 可管理性 | 設定 Service Processor （SP）網路設定以啟用帶外管理存取。 
+
+
+| *指派未指派的磁碟* | 偵測到未指派的磁碟 | 存在未指派的磁碟，可用容量可能未被使用。請將這些磁碟指派給節點，以便用於儲存設備。 | 可用性 | 將目前未分配的磁碟指派給節點，以便將其用於儲存設備。 
+
+
+| *根 Volume 空間恢復* | 節點根 Volume 空間低 | 節點根 Volume 上的可用空間不足，可能會影響系統的正常運作。 | 系統健全狀況 | 透過刪除最大的快照或最大的核心傾印檔案來釋放節點根 Volume 上的空間。刪除操作是永久性的。 
+|===

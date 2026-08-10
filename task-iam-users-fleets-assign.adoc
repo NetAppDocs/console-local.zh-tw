@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-iam-users-fleets-assign.html 
+keywords: assign members, fleet, folder, access control, roles, storage management, netapp console 
+summary: 審核或變更 NetApp Console 本機部署中資料夾和儲存設備機組的成員存取指派。 
+---
+= 在 NetApp Console 本地部署中檢視或變更機組存取指派
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+審核或變更 NetApp Console 本機部署中資料夾和儲存設備機組的成員存取權限指派。資料夾和機組管理員通常在此檢視中工作，因為它僅顯示他們管理的範圍。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾管理員或機組管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+或者，您可以管理特定成員在多個資料夾或機組中的所有角色。link:task-iam-manage-roles.html["管理成員存取"]。
+
+
+
+[[how-folder-and-fleet-access-works]]
+== 資料夾和機組存取的工作原理
+
+Console 本地部署使用角色型存取控制 （RBAC）。您在資料夾層級指派的角色將套用於該資料夾內的所有機組和子資料夾；您在機組層級指派的角色僅適用於該機組的資源。link:concept-iam-rbac.html#role-inheritance["了解 NetApp Console 本地部署中的角色繼承"]。
+
+
+NOTE: 如果成員的角色是從資料夾或組織繼承的，則無法在機組層級變更該角色。若要變更繼承的存取，請在較高層級的範圍內變更角色。
+
+
+
+[[view-members-assigned-to-a-folder-or-fleet]]
+== 檢視指派到資料夾或機組的成員
+
+仔細審查哪些使用者可以管理特定資料夾或機組。例如，在將新的生產 ONTAP 叢集與 `Production-US-East`機組建立關聯之前，開啟機組的「存取」索引標籤，確認哪些使用者擁有存取權限。
+
+.步驟
+. 選擇 *Administration* > *Identity and access*。
+. 選擇*組織*。
+. 從「組織」頁面，導覽至表格中的資料夾或機組，選擇image:icon-action.png["一個有三個點的圖示"]，然後選擇「編輯資料夾」或「編輯機組」。
+. 選擇 *Access* 以檢視有權存取資料夾或機組的成員。
+
+
+
+
+[[modify-member-access-from-a-folder-or-fleet]]
+== 從資料夾或機組修改成員存取
+
+調整組織內成員的角色，範圍限定於單一資料夾或機組。例如，當隊友從開發機組遷移到生產機組時，將其在生產機組中的「儲存檢視者」角色提升為「儲存管理員」，而不影響其在其他環境中的存取。
+
+若要新增成員並指派其第一個角色，請改用入職工作。link:task-iam-manage-members-permissions.html["新增成員並分配角色"]。
+
+.步驟
+. 從「組織」頁面，導覽至表格中的資料夾或機組，選擇image:icon-action.png["一個有三個點的圖示"]，然後選擇「編輯資料夾」或「編輯機組」。
+. 選擇 *Access* 以檢視具有存取權限的成員清單。
+. 修改成員存取：
++
+** *更改成員角色*：對於任何角色不是 Organization admin 的成員，請選擇其現有角色並選擇新角色。此變更僅套用於目前權限範圍；從較高權限範圍繼承的角色不會顯示在此。
+** *移除此範圍內的成員存取*：對於在此資料夾或機組中直接定義角色的成員，移除該角色即可撤銷其在此範圍內的存取權。此操作不會將該成員從您的組織中移除，也不會影響其在其他範圍內擁有的角色。
++
+link:task-iam-manage-roles.html#remove-a-member-from-your-organization["從您的組織中移除成員"]。
+
+
+
+. 選擇 *Apply*。
+

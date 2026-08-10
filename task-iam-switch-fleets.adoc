@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-fleets.html 
+keywords: switch fleets, fleets, navigate between fleets, fleet navigation, iam, identity and access management, netapp console local 
+summary: 如果您的組織擁有多個機組，並且您可以存取這些機組，則可以隨時在它們之間切換。 
+---
+= 在 NetApp Console 本地部署中切換機組
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，如果您可以存取多個機組，則可以隨時在它們之間切換。
+
+
+NOTE: 在檢視任何「身分識別與存取」頁面時，您無法切換到其他機組。
+
+.步驟
+. 在 Console 本機部署的頂部標題中，選擇 *Scope*。
+. 瀏覽組織中的機組，選擇所需的機組，然後選擇 *Switch*。
++
+image:screenshot-iam-switch-projects-select.png["這是「範圍」選單的快照，您可以在其中選擇新的機組。"]
+
+

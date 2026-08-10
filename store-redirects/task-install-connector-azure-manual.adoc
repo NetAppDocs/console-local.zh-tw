@@ -1,0 +1,8 @@
+---
+permalink: task-install-connector-azure-manual.html 
+redirect: console-setup-admin/task-install-agent-azure-manual.html 
+---
+= 
+:allow-uri-read: 
+
+

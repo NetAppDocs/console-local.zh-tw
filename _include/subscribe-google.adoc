@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+.步驟
+. 選擇 *Administration > *Credentials*。
+. 選擇*組織憑證*。
+. 選取與 Console 代理程式相關聯之認證組的行動功能表，然後選取 *設定訂閱*。+需要新快照 （TS） image:screenshot_gcp_add_subscription.png["現有憑證集的行動選單快照。"]
+. 若要使用選定的憑證設定現有訂閱，請從下拉清單中選擇 Google Cloud 專案和訂閱，然後選擇 *Configure*。
++
+image:screenshot_gcp_associate.gif["為 Google Cloud 憑證所選的 Google Cloud 專案和訂閱的快照。"]
+
+. 如果您還沒有訂閱，請選擇 *新增訂閱 > 繼續*，然後按照 Google Cloud Marketplace 中的步驟操作。
++
+
+NOTE: 在完成以下步驟之前，請確保您擁有 Google Cloud 帳戶的帳單管理員權限以及 NetApp Console 登入權限。
+
++
+.. 跳轉至 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["NetApp Intelligent Services 在 Google Cloud Marketplace 上的頁面"^]後，請確認頂部導覽功能表中已選取正確的專案。
++
+image:screenshot_gcp_cvo_marketplace.png["Google Cloud 中 Cloud Volumes ONTAP 市場頁面的快照。"]
+
+.. 選擇*訂閱*。
+.. 選擇合適的帳單帳戶並同意相關條款和條件。
+.. 選擇*訂閱*。
++
+此步驟會將您的轉帳請求傳送到 NetApp。
+
+.. 在彈出的對話方塊中，選擇 *向 NetApp, Inc. 註冊*。
++
+必須完成此步驟才能將 Google Cloud 訂閱與您的 Console 組織或帳戶連結。只有在您從此頁面重新導向並登入 Console 後，連結訂閱的程序才會完成。
+
++
+image:screenshot_gcp_marketplace_register.png["註冊彈跳窗的快照。"]
+
+.. 請完成「訂閱分配」頁面上的步驟：
++
+
+NOTE: 如果您的組織中已有成員透過您的結算帳戶訂閱了 Google 應用程式市場，您將被重新導向至 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console 中的 Cloud Volumes ONTAP 頁面"^]。如果您對此感到意外，請聯絡您的 NetApp 銷售團隊。Google 每個 Google 結算帳戶僅允許一個訂閱。
+
++
+*** 選擇要與此訂閱建立關聯的 Console 組織或帳戶。
+*** 在「*取代現有訂閱*」欄位中，選擇是否要以此新訂閱自動取代某個組織或帳戶的現有訂閱。
++
+Console 會將組織或帳戶中所有憑證的現有訂閱替換為此新訂閱。如果某組憑證之前從未與任何訂閱關聯，則此新訂閱也不會與這些憑證關聯。
+
++
+對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
+
+*** 選擇 *Save*。
++
+以下影片展示了從 Google Cloud Marketplace 訂閱的步驟：
+
++
+.從 Google Cloud Marketplace 訂閱
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. 此程序完成後，請返回 Console 中的「憑證」頁面，並選取此新訂閱。
++
+image:screenshot_gcp_associate.gif["訂閱分配頁面的快照。"]
+
+
+
+

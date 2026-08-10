@@ -1,0 +1,82 @@
+= 
+:allow-uri-read: 
+
+
+從 Console 代理程式聯繫的端點:: Console 代理程式需要傳出網際網路存取，才能聯絡以下端點，以管理公有雲環境中的資源和流程，以便進行日常操作。
++
+--
+以下列出的端點均為 CNAME 條目。
+
+--
+
+
+| AWS 服務 (amazonaws.com)：
+
+* CloudFormation
+* Elastic Compute Cloud (EC2)
+* 身分和存取管理 (IAM)
+* 關鍵管理服務 (KMS)
+* 安全性令牌服務 (STS)
+* Simple Storage Service (S3)
+
+
+用於管理 AWS 資源。終端節點取決於您的 AWS 區域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳情請參閱 AWS 文件"^]
+
+| \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+
+| 管理 Azure 公有雲區域中的資源。
+
+| \https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud
+
+| 管理 Azure IL6 區域中的資源。
+
+| \https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+
+| 用於管理 Azure 政府區域中的資源。
+
+| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+
+| 管理 Azure 中國區域的資源。
+
+| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+
+| 用於管理 Google Cloud 中的資源。
+
+| \https://mysupport.netapp.com | 用於取得授權資訊，以及傳送 AutoSupport 訊息給 NetApp 支援部門。| \https://signin.b2c.netapp.com | 用於更新 NetApp 支援網站 （NSS） 認證，或將新的 NSS 認證新增至 NetApp Console。| \https://support.netapp.com | 用於取得授權資訊、傳送 AutoSupport 訊息給 NetApp 支援部門，以及接收 Cloud Volumes ONTAP 的軟體更新。
+
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在 NetApp Console 中提供功能和服務。
+
+a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| 取得 Console 代理程式升級的「映像」。
+
+* 部署新代理程式時，驗證檢查會測試與現有端點的連線性。如果使用 link:reference-networking-saas-console-previous.html["先前的端點"]，則驗證檢查會失敗。為避免此故障，請跳過驗證檢查。
++
+雖然仍支援先前的端點，但 NetApp 建議您儘快將防火牆規則更新為目前的端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新端點列表"]。
+
+* 當您將防火牆中的端點更新至目前的端點時，現有的代理程式將繼續運作。
+
+
+^1^ NetApp 建議您在防火牆中允許選項 1 的端點，因為它們更安全，並禁止選項 2 的端點。請注意以下關於這些端點的事項：
+
++ * 從 Console 代理程式 3.9.47 版本開始，系統支援選項 1 中列出的端點。先前的 Console 代理程式版本不支援向後相容。* Console 代理程式首先聯絡選項 2 中的端點。如果這些端點無法存取，則會自動聯絡選項 1 中的端點。* 如果您將 Console 代理程式與 NetApp Backup and Recovery 或 Ransomware Resilience 搭配使用，則系統不支援選項 1 中的端點。請允許選項 2 中的端點，並禁止選項 1 中的端點。
+
+如果 Console 代理程式位於 AWS 政府區域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+| 當 Console 代理程式安裝在 AWS Government 區域時，取得用於 Console 代理程式升級的"映像"。
+
+如果 Console 代理程式位於 Azure Government 區域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
+
+| 當 Console 代理程式安裝在 Azure Government 區域時，取得用於 Console 代理程式升級的"映像"。
+
+a| 如果 Console 代理程式位於商業區域或主權區域，您可以從兩組端點中進行選擇：
+
+* 選項 1（推薦）^1^
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+
+* 選項 2
++
+\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+
+
+| 當 Console 代理程式安裝在商業區域或主權區域時，取得用於 Console 代理程式升級的"映像"。

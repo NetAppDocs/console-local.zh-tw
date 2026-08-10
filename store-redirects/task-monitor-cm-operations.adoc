@@ -1,0 +1,8 @@
+---
+permalink: task-monitor-cm-operations.html 
+redirect: console-local/task-audit-console-activity.html 
+---
+= 
+:allow-uri-read: 
+
+

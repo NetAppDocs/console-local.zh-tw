@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-storage-class-drift-remediate.html 
+keywords: storage class drift, drift remediation, compliance, fix-it, guided remediation, automated remediation, drift detection, storage governance, storage standards, netapp console local 
+summary: 尋找、分析和修復 NetApp Console 本地部署中的儲存設備類別漂移。 
+---
+= 修正 NetApp Console 本機部署中的儲存設備類別漂移問題
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，尋找與漂移相關的警報，分析漂移結果，並修復不再與其儲存設備類別意圖相符的工作負載。
+
+.所需角色
+儲存管理員
+
+
+NOTE: 您只能檢視和修復您擁有權限的機組中的工作負載。
+
+
+
+[[remediate-drift]]
+== 糾正漂移
+
+當工作負載不再符合其儲存設備類別預期時，NetApp Console 本機部署會發出警報。請使用此警報分析偏差並套用建議的修復措施。
+
+您可以直接從警示套用部分修復措施。對於其他問題，請更新工作負載組態或指派不同的儲存設備類別以還原法規遵循。修復工作流程會在您套用變更之前顯示預期影響。
+
+.步驟
+. 選擇 *Storage > Storage classes*。
++
+「按儲存設備類別劃分的漂移」區域顯示了儲存設備類別漂移的總結。完整清單顯示於表格中。
+
+. 在「*漂移*」欄中，為相關的儲存設備類別選擇「*檢視*」。
++
+「警報 > 概覽」頁面開啟後，會套用一些篩選條件。
+
+. 選取警示以開啟警示詳細資料頁面。
+. 選擇 *Analyze*。
+. 審查 *Workload analyzer* 中的分析結果。
++
+若要尋找組態漂移問題，請比較預期設定和實際設定，以確定發生了哪些變更。
+
+. 選擇建議的補救行動，例如 *Fix it*。
+. 審查擬議的變更並實施補救措施。
+. 返回「儲存設備 > 儲存類別」，並確認工作負載是否不再顯示為偏移。
++
+法規遵循評估可能需要幾分鐘才能反映最近的組態變更。如果工作負載仍然顯示為偏離，請返回警示詳細資料頁面並選取 *Analyze* 以審查任何剩餘的發現。
+
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:concept-storage-classes.html#storage-class-drift-and-compliance["了解 NetApp Console 本地部署中的儲存設備類別漂移和法規遵循"]
+* link:concept-console-alerts.html["了解儲存設備警報"]
+* link:task-alerts-monitor.html["檢視警示"]
+

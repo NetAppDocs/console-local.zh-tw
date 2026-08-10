@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: concept-data-services.html 
+keywords: data services, data protection, data mobility, backup, replication, netapp console 
+summary: 了解如何在 NetApp Console 本機部署中使用 NetApp Backup and Recovery 來保護和管理您的資料。 
+---
+= 了解 NetApp Console 本地部署中的 NetApp Backup and Recovery
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 是一項資料服務，可為您的所有 ONTAP 工作負載（包括 Volume、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全的且具成本效益的資料保護。
+
+工作負載是指系統內資源的邏輯分組，作為一個整體進行管理，以實現保護、治理、偵測和復原。在 Backup and Recovery 中，工作負載就是您需要保護的單元。其意義取決於資料來源：對於 Kubernetes，工作負載指的是應用程式；對於虛擬機器環境，它指的是虛擬機器；對於資料庫環境，它指的是資料庫。
+
+所有 ONTAP 系統都已內建備份與還原支援，因此無需額外的硬體或媒體閘道器。這使備份作業變得簡單且具成本效益。NetApp Console 簡化了任何備份策略的實施，包括涵蓋 3-2-1 備份變體的完整範圍，無需多個資源管理器或專業人員。
+
+
+NOTE: NetApp Backup and Recovery 目前處於 NetApp Console 本機部署的預覽模式。此服務尚未正式上市，其特性與功能可能會有所變更。
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["了解更多關於 NetApp Backup and Recovery 的資訊。"^]。

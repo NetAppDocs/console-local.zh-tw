@@ -1,0 +1,8 @@
+---
+permalink: reference-agent-operating-system-changes.html 
+redirect: console-setup-admin/task-install-agent-on-prem-html#os-req-agent 
+---
+= 
+:allow-uri-read: 
+
+

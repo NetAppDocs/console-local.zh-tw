@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+若要授予 Console 代理程式管理 Google Cloud 資源所需的權限，需要一個 Google Cloud 服務帳戶。建立 Console 代理程式時，需要將此服務帳戶與 Console 代理程式虛擬機器關聯。
+
+您有責任在後續版本中新增權限時更新自訂角色。如果需要新權限，則會在版本說明中列出。
+
+.步驟
+. 在 Google Cloud 中建立自訂角色：
++
+.. 建立一個包含 link:reference-permissions-gcp.html["控制台代理程式的服務帳戶權限"] 內容的 YAML 檔案。
+.. 從 Google Cloud 啟動雲端 Shell。
+.. 上傳包含所需權限的 YAML 檔案。
+.. 使用 `gcloud iam roles create`命令建立自訂角色。
++
+以下範例在專案層級建立一個名為「connector」的角色：
+
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文件：建立和管理自訂角色"^]
+
+
+
+. 在 Google Cloud 中建立服務帳戶，並將角色指派給該服務帳戶：
++
+.. 從 IAM & Admin 服務中，選擇 *Service Accounts > Create Service Account*。
+.. 輸入服務帳戶詳細資訊，然後選擇 *Create and Continue*。
+.. 選擇您剛剛建立的角色。
+.. 完成建立角色的其餘步驟。
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文件：建立服務帳戶"^]
+
+
+
+. 如果您打算在與 Console 代理程式所在專案不同的專案中部署 Cloud Volumes ONTAP 系統，則需要為 Console 代理程式的服務帳戶提供這些專案的存取權限。
++
+例如，假設 Console 代理程式位於專案 1 中，而您想要在專案 2 中建立 Cloud Volumes ONTAP 系統。您需要授予專案 2 中服務帳戶的存取權。
+
++
+.. 從 IAM & Admin 服務中，選擇要建立 Cloud Volumes ONTAP 系統的 Google Cloud 專案。
+.. 在 *IAM* 頁面上，選取 *Grant Access* 並提供所需的詳細資訊。
++
+*** 輸入 Console 代理程式服務帳戶的電子郵件地址。
+*** 選擇 Console 代理程式的自訂角色。
+*** 選擇 *Save*。
+
+
+
+
++
+如需更多詳細資訊，請參閱 https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud 文件"^]
+
+

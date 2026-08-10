@@ -1,0 +1,8 @@
+---
+permalink: reference-host-requirements-on-prem.html 
+redirect: console-setup-admin/task-install-connector-on-prem.html 
+---
+= 
+:allow-uri-read: 
+
+

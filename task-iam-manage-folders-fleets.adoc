@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-folders-fleets.html 
+keywords: folders, fleets, resource hierarchy, create folders, create fleets, iam, identity and access management, fleet id, initial iam setup, fleet hierarchy design, folder hierarchy configuration, rbac setup, tenancy setup, organizational onboarding, team structure alignment, delegated administration model, access governance planning, operational readiness 
+summary: 新增資料夾和機組以符合您的業務結構。建立資料夾和機組後，您可以將資源與它們關聯，並管理成員對這些機組的存取。 
+---
+= 將資料夾和機組新增至 NetApp Console 本機部署組織
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本地部署中建立資料夾和機組，以符合您的業務結構、控制存取並組織資源。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾管理員或機組管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+NetApp Console 本機部署會在建立組織時建立一個預設機組。您可以新增更多機組並使用資料夾對其進行分組。link:concept-identity-and-access-management.html["了解 NetApp Console 中的資源層級結構"]。
+
+
+
+[[using-folders-and-fleets-to-organize-resources]]
+== 使用資料夾和機組來組織資源
+
+資料夾和機組是建立組織架構的兩個基本要素，您可以根據團隊的實際工作方式來調整組織。例如，每個區域建立一個資料夾，每個資料夾內包含一個生產機組和一個開發機組。
+
+* 資料夾將相關機組分組，並支援委派管理和角色繼承。
+* 機組是您關聯管理資源以及授予使用者操作存取的地方。
+
+
+您可以先建立資料夾和機組，然後再新增資源和成員存取。這樣，您就可以在 Console 本機部署中新增使用者和資源之前規劃資源層級結構。如果您的結構已定義完成，則可以在建立機組時新增資源並指派存取。您可以隨時更新機組。
+
+例如，將生產叢集放在生產機組中，將測試叢集放在測試機組中，並僅授予每個團隊對其所擁有機組的存取權限。
+
+
+
+[[folders]]
+=== 資料夾
+
+資料夾按業務結構（例如業務單位、區域或團隊）組織機組。您可以嵌套資料夾以鏡射您的組織。
+
+在資料夾層級分配的角色會由子資料夾和機組繼承。您也可以使用資料夾將機組指派任務委派給該層級結構中的資料夾或機組管理員。
+
+
+NOTE: 成員以機組而非資料夾為單位進行工作。僅與資料夾關聯的資源，必須關聯到機組後才能由成員管理。
+
+例如，區域性企業可以使用資料夾按業務單位和工作負載組織 ONTAP 儲存設備。它可以建立一個北美頂層資料夾、生產和開發子資料夾，以及用於主機 SAP、VMware 和備份磁碟區的 ONTAP 叢集的機組。指派到北美資料夾的儲存管理員將繼承對所有子機組的存取，而應用程式團隊只能存取他們管理的機組。
+
+
+
+[[fleets]]
+=== 機組
+
+將資源與機組建立關聯，以便成員可以管理這些資源。機組可以直接存在於組織下，也可以存在於資料夾內。
+
+例如，一家醫療公司在分隔的生產機組和開發機組中使用 ONTAP 儲存設備。生產機組運行臨床應用程式和病歷資料庫，而開發機組則用於支援測試和驗證。這種分隔方式可保護即時資料、加強生產環境的存取控制、支援稽核與最小權限原則，並讓開發團隊能夠在不影響面向患者的工作負載的情況下開展工作。
+
+使用者在「系統」頁面上的已分配機組之間導覽，以管理與每個機組關聯的資源。
+
+
+
+[[add-a-folder-or-fleet]]
+== 新增資料夾或機組
+
+當您需要為資源和成員存取權限劃定新的邊界時，可以新增一個機組；當您想要對相關機組進行分組並委派其管理時，可以新增一個資料夾。例如，新增一個 `Production`資料夾，其中包含一個 `Production-US-East`機組和一個 `Production-EU-West`機組，然後將資料夾或機組管理員角色指派給區域商機，使其僅管理自己的機組。
+
+您最多可以建立七個層級。
+
+建立機組或資料夾時，您可以新增資源並指派成員存取，也可以稍後進行。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*組織*。
+. 在「組織」頁面中，選擇「新增資料夾或機組」。
+. 選擇*資料夾*或*機組*。
+. 在 *Name and location* 中：輸入資料夾或機組的名稱並選擇位置。
+
+
+[[associate-resource-folder]]
+. 可選：展開 *Resources* 區段，將資源與機組或資料夾建立關聯。
++
+.. 選取要關聯的資源旁的核取方塊，然後選擇「與機組關聯」。如果您尚未將系統新增至 Console 本機部署，則可以稍後執行此步驟。
++
+
+NOTE: 只有當資料夾中的資源指派給機組後，成員才能存取這些資源。
+
+
+
+. 可選：展開 *存取* 區段，為成員指派存取。選取 *新增成員* 以指派存取和角色。預設情況下，建立機組的使用者擁有存取權限。
++
+link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+. 選擇 *Add* 。
+
+
+
+
+[[rename-a-folder-or-fleet]]
+== 重新命名資料夾或機組
+
+根據需要重新命名資料夾或機組。重新命名不會影響關聯資源或成員存取。
+
+.步驟
+. 從 *Organization* 頁面，導覽至表格中的機組或資料夾，選擇 image:icon-action.png["一個有三個點的圖示"]，然後選擇 *Edit folder* 或 *Edit fleet*。
+. 在 *Edit* 頁面上，輸入新名稱並選擇 *Apply*。
+
+
+
+
+[[delete-a-folder-or-fleet]]
+== 刪除資料夾或機組
+
+刪除不再需要的資料夾和機組，例如團隊重組或機組完成之後。
+
+刪除資料夾或機組之前，請完成以下檢查：
+
+* 請確認資料夾或機組不包含任何資源。link:task-iam-manage-resources.html#remove-resource["了解如何移除資源關聯"]。
+* 審查哪些成員仍然有權存取該資料夾或機組。link:task-iam-users-fleets-assign.html["檢視成員存取指派"]。
+* 根據需要移除或更新成員存取。link:task-iam-users-fleets-assign.html["修改成員存取指派"]。
+* 如果要刪除機組，請先將資源轉移到目標機組。link:task-iam-manage-resources.html["了解如何在機組之間移動資源"]。
+
+
+.步驟
+. 從「組織」頁面，導覽至表格中的某個機組或資料夾，選擇 image:icon-action.png["一個有三個點的圖示"]，然後選擇「刪除」。
+. 確認是否要刪除資料夾或機組。
+
+
+
+
+[[manage-fleets-and-folders-in-netapp-console-local-deployment]]
+== 在 NetApp Console 本機部署中管理機組和資料夾
+
+完成初始設定後，您可以執行以下操作：
+
+* *管理資料夾和機組的資源關聯*：link:task-iam-manage-resources.html["了解如何將資源與機組和資料夾建立關聯"]。
+* *檢視或更新單一資料夾或機組的存取*：link:task-iam-users-fleets-assign.html["了解如何授予使用者對機組的存取"]。
+* *跨多個資料夾和機組管理一個成員*：link:task-iam-manage-roles.html["了解如何管理成員存取"]。
+* *新增其他成員並指派初始權限*：link:task-iam-manage-members-permissions.html["了解如何管理成員和權限"]。
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:concept-identity-and-access-management.html["了解 NetApp Console 中的身分識別與存取管理"]
+* link:task-iam-fleet-mgmt-get-started.html["在 NetApp Console 中開始使用身分識別與存取"]
+* link:task-iam-users-fleets-assign.html["管理機組存取分配"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分識別與存取 API"^]
+

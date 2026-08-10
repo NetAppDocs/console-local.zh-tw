@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-get-help.html 
+keywords: help, ticket, open support case, support, netapp support, technical support, call support, phone number, open ticket, web ticket, open an issue 
+summary: 'NetApp 以多種方式為 NetApp Console 本地部署提供支援。豐富的免費自助支援選項全年無休均可使用，例如知識庫 (KB) 文章和社群論壇。您的支援註冊包含透過線上工單系統提供的遠端技術支援。' 
+---
+= 取得 NetApp Console 本機部署的協助
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 此工作的本機部署資訊。NetApp 以多種方式為 NetApp Console 及其雲端服務提供支援。全年無休提供豐富的免費自助支援選項，例如知識庫 （KB） 文章和社群論壇。您的支援註冊包含透過線上工單系統提供的遠端技術支援。
+
+
+
+[[get-support-for-a-cloud-provider-file-service]]
+== 取得雲端供應商檔案服務的支援
+
+如需雲端供應商檔案服務、其基礎架構或使用該服務之任何解決方案的相關技術支援，請參閱該產品的說明文件。
+
+* link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html#getting-help["Amazon FSx for ONTAP"^]
+* link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/concept-azure-netapp-files.html#getting-help["Azure NetApp Files"^]
+* link:https://docs.netapp.com/us-en/storage-management-google-cloud-netapp-volumes/concept-gcnv.html#getting-help["Google Cloud NetApp Volumes"^]
+
+
+若要獲得針對 NetApp 及其儲存解決方案和資料服務的特定技術支援，請使用下面描述的支援選項。
+
+
+
+[[use-self-support-options]]
+== 使用自助選項
+
+這些選項全天候 24 小時、每週 7 天免費提供：
+
+* 文件
++
+您目前正在檢視的 NetApp Console 文件。
+
+* https://kb.netapp.com/Cloud/BlueXP["知識庫"^]
++
+搜尋 NetApp 知識庫，尋找有助於疑難排解問題的文章。
+
+* http://community.netapp.com/["社群"^]
++
+加入 NetApp Console 社群，參與現有討論或建立新討論。
+
+
+
+
+
+[[create-a-case-with-netapp-support]]
+== 建立 NetApp 支援案例
+
+除了上述自助支援選項外，您可以在啟動支援後與 NetApp 支援專家合作解決任何問題。
+
+.開始之前
+* 若要使用「建立案例」功能，您必須先將 NetApp 支援網站憑證與 Console 登入資訊關聯 https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-user-credentials.html["了解如何管理與您的 Console 登入相關的認證資料"^]。
+* 如果您要為具有序號的 ONTAP 系統開立案例，則您的 NSS 帳戶必須與該系統的序號關聯。
+
+
+.步驟
+. 在 NetApp Console 中，選取 *說明 > 支援*。
+. 在「資源」頁面上，選擇「技術支援」下的可用選項之一：
++
+.. 如果您想透過電話與我們聯繫，請選擇「致電」。您將被引導至 netapp.com 上的頁面，該頁面列出您可以撥打的電話號碼。
+.. 選擇「建立案例」以向 NetApp 支援專家開啟工單：
++
+*** *服務*：選擇與問題相關的服務。例如，當問題具體涉及 Console 內的工作流程或功能的技術支援問題時，請選擇 *NetApp Console*。
+*** *系統*：如果適用於儲存設備，請選擇 *Cloud Volumes ONTAP* 或 *內部部署*，然後選擇相關的工作環境。
++
+系統清單位於 Console 組織和您在頂部橫幅中選擇的 Console 代理程式的範圍內。
+
+*** *案例優先順序*：選擇案例的優先順序，可以是低、中、高或關鍵。
++
+若要深入瞭解這些優先順序的詳細資訊，請將滑鼠懸停在欄位名稱旁邊的資訊圖示上。
+
+*** *問題執行摘要*：請詳細描述您的問題，包括任何適用的錯誤訊息或您執行的疑難排解步驟。
+*** *其他電子郵件地址*：如果您想讓其他人知悉此問題，請輸入其他電子郵件地址。
+*** *附件（選購）*：一次最多可上傳五個附件。
++
+每個檔案的大小限制為 25 MB。支援的檔案副檔名有：txt、log、pdf、jpg/jpeg、rtf、doc/docx、xls/xlsx 和 csv。
+
+
+
+
+
++
+image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/screenshot-create-case.png["這是「建立案例」表單的快照，您可以透過該表單向 NetApp 支援部門建立案例。"]
+
+
+
+.完成後
+螢幕上會彈出一個窗口，顯示您的支援案例編號。NetApp 支援專員將審查您的案例，並儘快與您聯繫。
+
+若要查看您的支援案例歷史記錄，您可以選擇 *Settings > Timeline*，然後尋找名為「create support case」的行動。最右側的按鈕可讓您展開該行動以查看詳細資訊。
+
+建立案例時，您可能會遇到以下錯誤訊息：
+
+「您無權針對所選服務建立案例。」
+
+此錯誤可能表示 NSS 帳戶及其關聯的註冊公司與 NetApp Console 帳戶序號（例如960xxxx）或工作環境序號對應的註冊公司不一致。您可以透過以下方式尋求協助：
+
+* 提交非技術性案例，請至 https://mysupport.netapp.com/site/help[]
+
+
+
+
+[[manage-your-support-cases]]
+== 管理您的支援案例
+
+您可以直接透過 Console 查看和管理正在進行和已解決的支援案例。您可以管理與您的 NSS 帳戶和公司關聯的案例。
+
+請注意下列事項：
+
+* 頁面頂端的案例管理儀表板提供兩種檢視：
++
+** 左側檢視顯示您提供的使用者 NSS 帳戶在過去 3 個月內開啟的案例總數。
+** 右側檢視顯示過去 3 個月內，根據您的使用者 NSS 帳戶，您公司層級開立的案件總數。
+
+
++
+表格中的結果反映了與您選擇的檢視相關的案例。
+
+* 您可以新增或移除感興趣的欄，也可以篩選諸如「優先順序」和「狀態」等欄的內容。其他欄位僅提供排序功能。
++
+請查看以下步驟以了解更多詳情。
+
+* 在每個案件層級，我們提供更新案件備註或結案尚未處於「已結案」或「待結案」狀態的案件的功能。
+
+
+.步驟
+. 在 NetApp Console 中，選取 *說明 > 支援*。
+. 選擇 *Case Management* ，如果系統提示，請將您的 NSS 帳戶新增至 Console 。
++
+* 案例管理 * 頁面顯示與您的 Console 使用者帳戶相關聯的 NSS 帳戶相關的未結案例。這與 *NSS 管理 * 頁面頂端顯示的 NSS 帳戶相同。
+
+. 您可以選擇修改表格中顯示的資訊：
++
+** 在「組織案例」下，選擇「檢視」以檢視與貴公司相關的所有案例。
+** 您可以選擇確切的日期範圍或選擇不同的時間範圍來修改日期範圍。
+** 篩選各列的內容。
+** 選取 image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-columns.png["表格中出現的加號圖示"]，然後選擇要顯示的欄，即可變更表格中顯示的欄。
+
+
+. 透過選取 image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-action.png["表格最後一列出現的一個有三個點的圖示"] 並選取其中一個可用選項來管理現有案例：
++
+** *檢視案例*：檢視特定案例的完整詳細資訊。
+** *更新案例記錄*：提供有關您問題的更多詳細資料，或選擇 *Upload files* 以附加最多五個檔案。
++
+每個檔案的大小限制為 25 MB。支援的檔案副檔名有：txt、log、pdf、jpg/jpeg、rtf、doc/docx、xls/xlsx 和 csv。
+
+** *結案*：提供有關您結案原因的詳細資訊，然後選擇 *結案*。
+
+
+

@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task-analyzer-volume-capacity-investigate.html 
+keywords: capacity, snapshot, storage efficiency, forecast, almost full, workload analyzer, netapp console local deployment 
+summary: 使用工作負載分析器調查 Volume 的容量和 Snapshot 快照技術成長情況，以了解實體空間、儲存效率和 Snapshot 快照技術保留趨勢。 
+---
+= 在 NetApp Console 本地部署中調查 Volume 的容量增長情況
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中使用 Workload Analyzer 來調查 Volume 空間不足的原因。
+
+當 Volume 即將用完或 Snapshot 快照技術副本佔用的空間超出預期時，請檢查容量和 Snapshot 快照技術隨時間變化的趨勢。容量分析部分會顯示實體空間和可用空間的變化情況，詳細分析儲存效率提升所帶來的節省，並預測 Volume 何時達到容量臨界值。
+
+如果從警報或 Volume 清單中開啟分析器，則 Volume 已被選取，您可以專注於容量趨勢和預測視窗。
+
+.步驟
+. 使用下列方法之一開啟工作負載分析器：
++
+** 從 *健全狀況* 功能表中，選擇 *工作負載分析器*，然後在 *Volume* 欄位中搜尋並選擇要調查的 Volume。
+** 從「儲存設備 > 機組 > 清單」頁面，導覽至要分析的 Volume，然後從行動選單中選擇「分析」。
+** 從「警報 > 概覽」頁面中，選擇要調查的 Volume 的警報，然後從警報詳細資料中選擇「分析」。
+
+
+. 將*時間範圍*設定為涵蓋容量增長期，然後選擇*分析*。
+. 捲動至*容量分析*部分。
+. 從 *View* 下拉式選單中選擇 *Capacity view*。
++
+圖表底部堆疊區域代表實體容量，頂部堆疊區域代表可用容量。兩者合計等於 Volume 總大小，由此可見可用空間減少的速度有多快。
+
+. 將滑鼠停留在圖表上的某個點，即可查看儲存效率細分，包括重複資料刪除、壓縮和資料精簡節省，以及整體儲存效率比率。
++
+物理容量增加而效率比率下降，可能表示新寫入的資料去重複資料或壓縮效果不如現有資料。
+
+. 若要調查 Snapshot 快照技術使用情況，請從「檢視」下拉式功能表中選擇「Snapshot 快照技術檢視」。
++
+圖表中，水平參考線代表 Snapshot 快照技術保留空間，下方區域代表 Snapshot 快照技術已使用容量。滑鼠懸停即可查看已使用的 Snapshot 快照技術空間及其占保留空間的百分比、Snapshot 快照技術總數以及最早 Snapshot 快照技術的建立時間。
+
++
+當 Snapshot 快照技術消耗超過保留時，Snapshot 快照技術會開始佔用 Volume 資料區的空間，從而減少可用於新寫入的空間。
+
+. 如果 Volume 將資料分層儲存到雲端，請從 *View* 下拉清單中選擇 *Cloud Tier View*，以比較本機效能分層與雲端容量分層的容量。
+. 啟用「顯示預測」功能，即可預測 Volume 何時達到警告或關鍵容量臨界值。
++
+容量預測至少需要 10 天的歷史資料。當 Volume 滿載前剩餘不足 30 天的容量時，分析器會將儲存設備識別為接近滿載。預測結果會顯示一則包含預計突破臨界值時間的提示訊息。
+
+
+
+.完成後
+利用您觀察到的容量趨勢來決定下一步：
+
+* 如果可用容量趨近飽和，請考慮增加 Volume 大小、啟用自動成長或將資料移出 Volume。
+* 如果 Snapshot 快照技術已使用容量超過保留，請審查您的 Snapshot 快照技術原則和保留期限，以回收空間。
+* 如果儲存效率比率下降，請審查工作負載的資料類型或即時效率設定是否降低了節省的資源。使用 link:reference-workload-analyzer-metrics.html["了解 NetApp Console 本機部署中的工作負載分析器計量"] 取得容量、Snapshot 快照技術和效率計量的詳細執行摘要。
+

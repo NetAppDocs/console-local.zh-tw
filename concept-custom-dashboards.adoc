@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: concept-custom-dashboards.html 
+keywords: dashboards, predefined dashboards, custom dashboards, cards, card templates, metrics, KPI, fleet health, performance monitoring, capacity monitoring, storage visibility, netapp console local, monitoring 
+summary: 了解預先定義的首頁儀表板和自訂儀表板如何在 NetApp Console 本機部署中協同運作。 
+---
+= 了解 NetApp Console 本機部署中的自訂儀表板
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中使用自訂儀表板，可為特定團隊、機組、工作負載和營運目標建立重點監控檢視。自訂儀表板是首頁儀表板的補充，為廣泛且隨時可用的監控提供更具針對性的可見度。
+
+
+
+[[how-dashboard-types-work-together]]
+== 儀表板類型如何協同運作
+
+首頁儀表板:: 提供即用型監控面板，用於查看容量、警示、效能容量、授權和資料保護狀態。檢視已預先設定並自動更新。link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]。
+自訂儀錶板:: 基於預先定義卡片建立的角色特定監控檢視，包括可選擇的範圍、計量、目標資源和時間視窗。
+
+
+兩者結合使用：* 從主頁開始進行日常基線監控。* 使用自訂儀表板，依團隊、機組、工作負載或營運問題進行重點調查。
+
+您一次只能在首頁新增一個自訂儀表板。
+
+
+
+[[understand-custom-dashboards]]
+== 了解自訂儀表板
+
+自訂儀表板是一組已儲存的卡片，您可以將其排列在網格上。每張卡片都基於預先定義的卡片模板，包含計量和圖表類型。新增卡片時，您可設定範圍、目標物件、集合體和時間視窗。
+
+自訂儀表板和卡片僅供您個人使用。每張卡片僅顯示您有權檢視的儲存資源的資料。
+
+您可以根據監控優先順序的變化，從主頁移除自訂儀表板，並新增其他儀表板。
+
+
+
+[[monitor-what-matters]]
+== 關注重要事項
+
+卡片範本按計量類型組織，因此您可以將儀表板的重點放在特定的作業領域。例如，使用容量卡片來監控成長速度超出預期的 Volume，或使用警示卡片來追蹤繁忙叢集上的重複故障：
+
+效能:: 整個機組、系統、SVM、Volume 和 LUN 的延遲、IOPS、處理量、使用率和效能容量。
+容量:: 整個機組、系統、SVM、Volume、LUN 和本機層的已使用容量、可用容量、容量使用百分比和快照容量。
+健全狀況:: 健全狀況、降級或關鍵物件計數、故障磁碟、網路介面錯誤及熱點物件。
+警示:: 關鍵警報數量、按嚴重程度劃分的警報、按影響區域劃分的警報、近期警報以及警報隨時間變化的趨勢。
+
+
+有關預定義卡片和計量的完整目錄，請參閱link:reference-dashboard-card-templates.html["了解 NetApp Console 本地部署中的自訂儀表板卡片和計量"]。
+
+
+
+[[resource-types]]
+== 資源類型
+
+您可以將卡片的範圍限定在 ONTAP 儲存設備層次結構的任意層級：機組、叢集、系統（節點）、SVM、Volume、LUN 和本機分層（彙總）。可用的資源類型取決於您選擇的卡片模板。
+
+
+
+[[plan-dashboard-views]]
+== 規劃儀表板檢視
+
+圍繞儲存設備管理目標（例如工作負載效能分類、容量規劃、健全狀況風險偵測和警報優先順序）組織自訂儀表板。
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:task-dashboard-get-started.html["開始在 NetApp Console 本機部署中使用儀表板"]
+* link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]
+* link:reference-dashboard-card-templates.html["了解 NetApp Console 本地部署中的自訂儀表板卡片和計量"]
+

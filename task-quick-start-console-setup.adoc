@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-console-setup.html 
+keywords: quick start, setup, set up, console local, admin setup, getting started, folders, fleets, rbac, members, data services, netapp console 
+summary: 透過安裝軟體、規劃和建立組織、設定整合以及設定資料服務，設定 NetApp Console 本機部署。 
+---
+= 快速開始設定 NetApp Console 本機部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+安裝 NetApp Console 本機部署後，請設定您的組織，以便合適的團隊能夠安全地管理合適的儲存資源。使用此清單規劃您的結構、組織資源、新增成員、設定整合並啟用資料服務。
+
+.所需存取權限
+超級系統管理員或組織系統管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 安裝 NetApp Console 本機部署
+[role="quick-margin-list"]
+* 審查安裝工作流程，了解部署流程。link:concept-deploy-netapp-console-local.html["了解 NetApp Console 本地部署的安裝工作流程"]。
+* 在您的 vCenter 中安裝 NetApp Console 本機部署。link:task-install-agent-on-prem-ova.html["安裝 NetApp Console 本機部署"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 規劃您的組織
+[role="quick-margin-list"]
+* 了解資料夾和機組如何組織您的資源。link:concept-folders-fleets-overview.html["了解資料夾和機組"]。
+* 了解角色型存取控制（RBAC）如何授予成員所需的存取權限。link:concept-iam-rbac.html["了解 NetApp Console 本地部署中的角色型存取控制"]。
+* 審查身分和存取管理工作流程。link:task-iam-fleet-mgmt-get-started.html["開始使用 IAM 進行機組和資源管理"]。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定您的組織
+[role="quick-margin-list"]
+* 將您的儲存設備系統新增至 NetApp Console 本機部署。link:task-add-systems.html["新增儲存設備系統"]。
+* 建立與您的業務結構相符的資料夾和機組層級結構。link:task-iam-manage-folders-fleets.html["建立資料夾和機組"]。
+* 將資源與正確的資料夾和機組建立關聯。link:task-iam-manage-resources.html["將資源與資料夾和機組建立關聯"]。
+* 新增成員並分配其初始角色。link:task-iam-manage-members-permissions.html["新增成員並分配角色"]。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 設定整合與服務
+[role="quick-margin-list"]
+* 與 Active Directory 整合，以便目錄使用者可以存取 Console 本機部署。link:task-iam-active-directory-integrate.html["與 Active Directory 整合"]。
+* 連接您的大型語言模型 (LLM) 以啟用 Console 助理和 AI 輔助管理。link:task-llm-connect.html["連接您的 LLM"]。
+* 設定 Console 本機部署傳送通知的方式。link:task-console-configure-notifications-delivery.html["設定通知交付"]。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 設定 NetApp Backup and Recovery
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html#use-a-netapp-backup-and-recovery-byol-license["取得 NetApp Backup and Recovery 授權"^]。如果您不需要存取進階備份和復原服務，可以跳過此步驟。
+* 將 NetApp Backup and Recovery 授權新增至 NetApp Console 本機部署。link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["將授權新增至 NetApp Console 本機部署"^]。
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["授予使用者對 NetApp Backup and Recovery 的存取權限"]。
+

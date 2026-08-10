@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: reference-cluster-compliance-categories.html 
+keywords: cluster compliance, security compliance, cluster security, ontap cluster security, compliance categories, netapp console local 
+summary: NetApp Console 本機部署中的叢集安全性法規遵循類別與建議設定參考。 
+---
+= NetApp Console 本地部署中的叢集安全性法規遵循類別
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用此參考資料審查 NetApp Console 本機部署中顯示的叢集安全性法規遵循類別，包括建議值以及每個類別是否會影響整體法規遵循狀態。
+
+這些類別是根據 ONTAP 安全性態勢檢查所建立的。
+
+[cols="20,50,15,15"]
+|===
+| 類別 | 此類別檢查的內容 | 建議值 | 影響整體法規遵循 
+
+
+| 全球 FIPS | 是否啟用 FIPS 140-2 模式。啟用後，TLSv1 和 SSLv3 將停用，僅允許使用 TLSv1.1 和 TLSv1.2。 | 已啟用 | 是的 
+
+
+| Telnet | 是否已啟用 Telnet 存取。SSH 是建議使用的安全遠端存取方法。 | 已停用 | 是的 
+
+
+| 不安全的 SSH 設定 | SSH 是否設定了不安全的密碼套件，例如以 `cbc`開頭的密碼套件。 | 否 | 是的 
+
+
+| 登入橫幅 | 是否已為系統存取設定登入橫幅。 | 已啟用 | 是的 
+
+
+| 叢集對等 | 對等叢集之間的通訊是否已加密。來源和目的地叢集都必須啟用加密。 | 加密 | 是的 
+
+
+| 網路時間協定 | 叢集是否已設定一個或多個 NTP 伺服器。NetApp 建議至少配置三個 NTP 伺服器以提升彈性。 | 已設定 | 是的 
+
+
+| OCSP | 是否已為 SSL/TLS 憑證驗證啟用線上憑證狀態協定驗證。 | 已啟用 | 否 
+
+
+| 遠端稽核記錄 | 記錄轉送（syslog）是否加密。 | 加密 | 是的 
+
+
+| AutoSupport HTTPS 傳輸 | HTTPS 是否作為 AutoSupport 訊息的預設傳輸協定。 | 已啟用 | 是的 
+
+
+| 預設管理員使用者 | 內建預設管理員帳戶是否已停用。 | 已停用 | 是的 
+
+
+| SAML 使用者 | SAML 是否設定為單一登入和支援 MFA 的驗證。 | 否 | 否 
+
+
+| Active Directory 使用者 | 是否已為叢集存取設定 Active Directory 驗證。 | 否 | 否 
+
+
+| LDAP 使用者 | 是否已為叢集存取設定 LDAP 驗證。 | 否 | 否 
+
+
+| 憑證使用者 | 是否已為叢集登入設定憑證型使用者。 | 否 | 否 
+
+
+| 本機使用者 | 是否已配置本機使用者進行叢集登入。 | 否 | 否 
+
+
+| 遠端 shell | 是否啟用 RSH。建議使用 SSH 進行安全的遠端存取。 | 已停用 | 是的 
+
+
+| MD5 使用中 | ONTAP 使用者帳戶是否仍使用 MD5 雜湊，而非更強大的雜湊（例如 SHA-512）。 | 否 | 是的 
+
+
+| 憑證簽發者類型 | 叢集使用的憑證簽發者類型。 | CA 簽署 | 否 
+|===

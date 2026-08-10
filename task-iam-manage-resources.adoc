@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-resources.html 
+keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
+summary: 透過將使用者新增至 NetApp Console 本機部署組織中的機組和資料夾，來控制使用者對資源的存取。在機組層級授予使用者存取權限。 
+---
+= 在 NetApp Console 本機部署中管理資料夾和機組中的資源
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，透過將資源與正確的資料夾或機組建立關聯來管理資源存取，以控制哪些團隊可以存取和管理這些資源。
+
+.所需存取權限
+超級管理員、組織管理員、資料夾管理員或機組管理員。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+將資源放置在適當的團隊可以管理的地方，在所有權變更時轉移資源，並在不再需要時移除關聯。
+
+_資源_ 是指 Console 本機部署可識別的實體，例如儲存資源或備份與還原工作負載。
+
+
+
+[[console-resource-types]]
+== Console 資源類型
+
+Console 本地部署同時支援儲存資源和備份與還原工作負載。可以將任一資源類型與機組關聯，以控制存取和管理。
+
+儲存資源:: 儲存資源是組織中最常見的資源類型。將儲存系統新增至 Console 本機部署時，請將其與機組關聯，以便對應的團隊可以存取和管理它。例如，新增 ONTAP 叢集後，請將其與 `Production-US-East`機組關聯。
+備份與還原工作負載:: 備份和復原工作負載也被視為資源。您可以將工作負載與機組關聯，從而為成員指派存取備份和復原工作負載的權限。例如，要為成員指派對備份和復原工作負載的存取，請將其與該成員可以存取的機組關聯，並授予其對應的備份和復原角色。
+
+
+
+
+[[view-the-resources-in-your-organization]]
+== 查看您組織中的資源
+
+查看組織中的資源，找到特定資源並查看其關聯的機組或資料夾。如果您尚未建立任何資料夾或機組，則所有資源都會直接關聯到組織下的預設機組。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*資源*。
+. 選擇 *Advanced Search & Filtering*。
+. 利用現有選項尋找資源：
++
+** *按資源名稱搜尋*：輸入字串，然後選擇*新增*。
+** *平台*：選擇一個或多個平台，例如 Amazon Web Services。
+** *資源*：選擇一個或多個資源，例如 Cloud Volumes ONTAP。
+** *組織、資料夾或機組*：選擇整個組織、特定資料夾或特定機組。
+
+
+. 選擇 *Search*。
+
+
+
+
+[[associate-a-resource-with-a-folder-or-fleet]]
+[[associate-resource]]
+== 將資源與資料夾或機組關聯
+
+將資源與機組或資料夾建立關聯，以便相應的團隊可以管理它。例如，新增 ONTAP 叢集後，將其與 `Production-US-East`機組建立關聯，以便該機組的區域儲存設備管理員可以管理它。
+
+
+NOTE: 擁有 Organization admin 角色的使用者可以為資料夾新增資源，從而將機組關聯任務委派給該資料夾的 Folder 或 fleet admin。link:task-iam-manage-folders-fleets.html#associate-resource-folder["將資源與資料夾關聯"]。
+
+.步驟
+. 從「資源」頁面，導覽至表格中的資源，選擇 image:icon-action.png["一個由三個並排的點組成的圖示"]，然後選擇「關聯到資料夾或機組」。
+. 選擇資料夾或機組，然後選擇 *Accept*。
+. 若要關聯其他資料夾或機組，請選取 *新增資料夾或機組*，然後選取資料夾或機組。
++
+請注意，您只能從您擁有管理員權限的資料夾和機組中進行選擇。
+
+. 選擇 *Associate resources*。
++
+** 如果您將資源與機組關聯，則擁有這些機組權限的成員現在可以從 Console 存取該資源。
+** 如果您將資源與資料夾關聯，則_資料夾或機組管理員_現在可以存取該資源並將其與資料夾內的機組關聯。link:task-iam-manage-folders-fleets.html#associate-resource-folder["將資源與資料夾關聯"].
+
+
+
+
+
+
+[[view-the-folders-and-fleets-associated-with-a-resource]]
+[[view-folders-and-fleets]]
+== 查看與資源關聯的資料夾和機組
+
+確認資源與哪些機組或資料夾關聯。
+
+
+NOTE: 若要查看哪些成員有權存取該資源，請審查指派給相關資料夾或機組的成員。link:task-iam-users-fleets-assign.html["管理機組存取分配"]。
+
+.步驟
+. 從「資源」頁面，導覽至表格中的資源，選擇 image:icon-action.png["一個由三個並排的點組成的圖示"]，然後選擇「查看詳細資料」。
+
+
+以下範例顯示了與一個機組關聯的資源。
+
+image:screenshot-iam-resource-details.png["資源詳細資料頁面的快照，顯示與直屬組織下方機組關聯的資源。"]
+
+
+NOTE: 若要查看哪些成員可以存取該資源，請審查相關的資料夾或機組。
+
+link:task-iam-users-fleets-assign.html["管理機組存取分配"]。link:task-iam-manage-roles.html["管理成員存取"]。
+
+
+
+[[remove-a-resource-from-a-folder-or-fleet]]
+[[remove-resource]]
+== 從資料夾或機組移除資源
+
+移除資源與資料夾或機組的關聯，以防止成員在其中管理該資源。
+
+
+NOTE: 若要從整個組織中移除儲存系統，請前往「Systems」頁面並移除該系統。
+
+.步驟
+. 從「資源」頁面，導覽至表格中的資源，選擇 image:icon-action.png["一個由三個並排的點組成的圖示"]，然後選擇「查看詳細資料」。
+. 若要從資料夾或機組中移除資源，請選擇資料夾或機組旁的 image:icon-delete.png["垃圾桶圖示"]。
+. 選擇*刪除*以移除關聯。
+
+
+
+
+[[move-a-resource-between-fleets]]
+== 在機組之間移動資源
+
+將資源從一個機組移至另一個機組，方法是先移除資源與目前機組的關聯，然後再與目標機組建立關聯。
+
+
+NOTE: 資源存取權限會隨著關聯關係的改變而立即改變。如果可能，請在一次維護所需時間內完成這兩個步驟。
+
+.步驟
+. 從「資源」頁面，導覽至表格中的資源，選擇 image:icon-action.png["一個由三個並排的點組成的圖示"]，然後選擇「查看詳細資料」。
+. 選擇目前機組旁邊的 image:icon-delete.png["垃圾桶圖示"]，然後選擇 *Delete*。
+. 選擇 *Add folder or fleet*。
+. 選擇目標機組，然後選擇 *Accept*。
+. 選擇 *Associate resources*。
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:concept-identity-and-access-management.html["了解 NetApp Console 中的身分識別與存取管理"]
+* link:task-iam-fleet-mgmt-get-started.html["在 NetApp Console 中開始使用身分識別與存取"]
+* link:task-iam-users-fleets-assign.html["資源遷移後管理機組存取權限分配"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分識別與存取管理 API"^]
+

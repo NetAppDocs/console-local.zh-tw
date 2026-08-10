@@ -1,0 +1,8 @@
+---
+permalink: task-creating-connectors-aws.html 
+redirect: console-setup-admin/concept-install-options-aws.html 
+---
+= 
+:allow-uri-read: 
+
+

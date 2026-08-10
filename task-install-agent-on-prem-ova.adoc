@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: task-install-agent-on-prem-ova.html 
+keywords: install agent, on-premises agent installation, vCenter, ESXi, VMware, OVA, deploy Console local deployment, agent deployment, netapp console local 
+summary: 如果您是 VMware 用戶，可以使用 OVA 在 vCenter 中安裝 Console 代理程式。OVA 下載或 URL 可透過 NetApp Console 本機部署取得。 
+---
+= 在 vCenter 中使用 OVA 部署 NetApp Console 本地部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用 OVA 在 vCenter 中安裝 NetApp Console 本機部署。OVA 下載或 URL 可透過 NetApp 支援網站取得。
+
+
+
+[[prepare-to-install-netapp-console-local-deployment]]
+== 準備安裝 NetApp Console 本機部署
+
+安裝前，請確保您的虛擬機器主機符合要求，並且 NetApp Console 本機部署可以存取網際網路和目標網路。若要使用 NetApp 備份與還原等 NetApp 資料服務，請為 NetApp Console 本機部署建立雲端供應商憑證，以便其代表您執行行動。
+
+
+
+[[review-netapp-console-local-deployment-host-requirements]]
+=== 審查 NetApp Console 本機部署主機需求
+
+在安裝 NetApp Console 本機部署之前，請確保您的主機符合安裝需求。
+
+* CPU：16 個核心或 16 個虛擬 CPU
+* 記憶體：64 GB
+* 磁碟空間：596 GB（建議採用厚置備）
+* vSphere 7.0u3 或更高版本，虛擬硬體版本 19 或更高版本
+
+
+
+NOTE: 在 vCenter 環境中安裝 NetApp Console 本機部署，而非直接在 ESXi 主機上。
+
+
+
+[[set-up-network-access-for-the-netapp-console-local-deployment]]
+[[network-access-agent]]
+=== 為 NetApp Console 本地部署設定網路存取
+
+NetApp Console 本機部署使用固定位址空間進行服務間通訊。IP 位址範圍 10.42.0.0/16 和 10.43.0.0/16 用於內部網路。在部署 Console 本機部署之前，請確保這些 IP 位址範圍未指派給提供給 Console 本機部署的 VLAN 上的其他虛擬機器、DHCP 範圍、DNS 記錄或負載平衡器 VIP 集區。
+
+有關如何變更代理程式介面的 IP 位址的說明，請參閱知識庫文章「代理程式 IP 與現有網路衝突」。
+
+
+
+[[install-netapp-console-local-deployment-in-your-vcenter-environment]]
+== 在您的 vCenter 環境中安裝 NetApp Console 本機部署
+
+NetApp 支援在 vCenter 環境中安裝 NetApp Console 本機部署。OVA 檔案包含一個預先設定的虛擬機器映像，您可以部署到 VMware 環境中。
+
+
+
+[[download-the-ova-or-copy-the-url]]
+=== 下載 OVA 或複製 URL
+
+下載 OVA。
+
+. 從 NetApp 支援網站下載 Console 本機部署軟體。
+
+
+
+
+[[deploy-netapp-console-local-deployment-in-your-vcenter]]
+=== 在 vCenter 中部署 NetApp Console 本機部署
+
+登入您的 VCenter 環境以部署 Console 本機部署。
+
+.步驟
+. 如果您的環境需要，請將自簽名憑證上傳到受信任憑證清單中。安裝後，您可以替換此憑證。
+. 從內容庫或本機系統部署 OVA。
++
+|===
+
+
+| 來自本機系統 | 來自內容庫 
+
+
+| a. 右鍵單擊並選擇 *Deploy OVF template……*。 b. 從 URL 中選擇 OVA 檔案或瀏覽到其位置，然後選擇 *Next*。 | a. 前往您的內容庫並選擇 Console OVA。 b. 選擇 *Actions* > *New VM from this template* 
+|===
+. 完成「部署 OVF 範本」精靈以部署 Console。
+. 選擇虛擬機器的名稱和資料夾，然後選擇 *Next*。
+. 選擇運算資源，然後選擇*下一步*。
+. 審查範本詳細資料，然後選取 *Next*。
+. 接受授權合約，然後選取 *Next*。
+. 選擇要使用的 Proxy 組態類型：明確 Proxy、透明的 Proxy 或無 Proxy。
+. 選擇要部署 VM 的資料存放區，然後選擇「下一步」。請確保其符合主機需求。
+. 選取要連接 VM 的網路，然後選取 *Next*。確保該網路為 IPv4，且具有傳出網際網路存取所需端點的能力。
+. 在「自訂範本」視窗中，填寫以下欄位：
++
+** *Proxy 資訊*
++
+*** 如果您選擇了明確 Proxy，請輸入 Proxy 伺服器主機名稱或 IP 位址和連接埠號，以及使用者名稱和密碼。
+*** 如果您選擇了透明的 Proxy，請上傳對應的憑證。
+
+
+** *虛擬機器組態*
++
+*** *跳過組態檢查*：此核取方塊預設為未勾選，這表示 NetApp Console 本機部署將執行組態檢查以驗證網路存取。
++
+**** NetApp 建議取消選取此核取方塊，以便安裝包含 NetApp Console 本機部署的組態檢查。組態檢查會驗證 NetApp Console 本機部署是否具有所需端點的網路存取。如果部署因連線問題而失敗，您可以從 NetApp Console 本機部署主機存取驗證報告和日誌。在某些情況下，如果您確信 NetApp Console 本機部署具有網路存取，則可以選擇跳過此檢查。
+
+
+*** *維護密碼*：設定 `maint`使用者的密碼，以允許存取 NetApp Console 本機部署維護主控台。
+*** *NTP 伺服器*：指定一個或多個 NTP 伺服器用於時間同步。
+*** *主機名稱*：設定此 VM 的主機名稱。不得包含搜尋網域。例如，FQDN 為 console10.searchdomain.company.com 時，應輸入為 console10。
+*** *主要 DNS*：指定用於名稱解析的主要 DNS 伺服器。
+*** *輔助 DNS*：指定用於名稱解析的輔助 DNS 伺服器。
+*** 搜尋網域：指定解析主機名稱時要使用的搜尋網域名稱。例如，如果 FQDN 為 console10.searchdomain.company.com，則輸入 searchdomain.company.com。
+*** *IPv4 位址*：對應到主機名稱的 IP 位址。
+*** *IPv4 子網路遮罩*：IPv4 位址的子網路遮罩。
+*** *IPv4 gateway address*：IPv4 位址的閘道位址。
+
+
+
+
+. 選取 *下一步*。
+. 查看「準備完成」視窗中的詳細資訊，選擇「完成」。
++
+vSphere 工作列會顯示 NetApp Console 本機部署的部署進度。
+
+. 啟動虛擬機器。
+

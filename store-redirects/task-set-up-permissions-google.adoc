@@ -1,0 +1,8 @@
+---
+permalink: task-set-up-permissions-google.html 
+redirect: console-setup-admin/task-install-agent-google-console-gcloud.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -1,0 +1,133 @@
+= 
+:allow-uri-read: 
+
+
+.開始之前
+您應具備以下條件：
+
+* 安裝代理程式需要 root 權限。
+* 有關 Proxy 伺服器的詳細資訊（如果代理程式需要 Proxy 才能存取網際網路）。
++
+安裝後您可以選擇設定 Proxy 伺服器，但這樣做需要重新啟動代理程式。
+
+* 如果 Proxy 伺服器使用 HTTPS 或 Proxy 是攔截 Proxy，則需要 CA 簽署的憑證。
+
+
+.關於此任務
+NetApp 支援網站上提供的安裝程式可能是早期版本。安裝後，如果有新版本可用，代理程式會自動更新。
+
+.步驟
+. 如果主機上設定了 _http_proxy_ 或 _https_proxy_ 系統變數，請將其移除：
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+如果不移除這些系統變數，安裝將會失敗。
+
+. 從 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp 支援網站"^]下載代理程式軟體，然後將其複製到 Linux 主機。
++
+您應該下載「線上」代理程式安裝程式，該程式可在您的網路或雲端使用。
+
+. 指派執行指令碼的權限。
++
+[source, cli]
+----
+chmod +x NetApp-Console-Agent-<version>
+----
++
+其中 <version> 是您下載的代理程式版本。
+
+. 執行安裝指令碼。
++
+[source, cli]
+----
+ ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+`--proxy` 和 `--cacert` 參數是可選的。如果您有 Proxy 伺服器，則需要按所示輸入這些參數。安裝程式不會提示您提供有關 Proxy 的資訊。
+
++
+以下是使用兩個可選參數的命令範例：
+
++
+[source, cli]
+----
+ ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+--proxy 設定代理程式使用 HTTP 或 HTTPS Proxy 伺服器，格式如下：
+
++
+** \http://位址:連接埠
+** \http://user-name:password@address:port
+** http://domain-name%92user-name:password@address:port
+** \https://address:port
+** \https://user-name:password@address:port
+** \https://domain-name%92user-name:password@address:port
++
+請注意下列事項：
+
++
+*** 使用者可以是本機使用者或網域使用者。
+*** 對於網域使用者，必須使用如上所示的 ASCII 碼表示反斜線 \。
+*** 此代理程式不支援包含 @ 字元的使用者名稱或密碼。
+*** 如果密碼包含以下任何特殊字元，則必須在該特殊字元前加上反斜線以進行跳脫處理：& 或 !
++
+例如：
+
++
+\http://bxpproxyuser:netapp1\!@address:3128
+
+
+
+
+
++
+--cacert 參數指定代理程式和 Proxy 伺服器之間進行 HTTPS 存取時使用的 CA 簽章憑證。只有當您指定 HTTPS Proxy 伺服器或 Proxy 是攔截 Proxy 時，此參數才是必要的。
+
+. 如果您使用了 Podman，則需要調整 aardvark-dns 連接埠。
++
+.. 透過 SSH 連接到代理程式虛擬機器。
+.. 開啟 podman _/usr/share/containers/containers.conf_ 檔案，並修改 Aardvark DNS 服務所選的連接埠。例如，將其變更為 54。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. 重啟代理程式虛擬機器。
+
+
+
+
+. 等待安裝完成。
++
+安裝結束時，如果您指定了 Proxy 伺服器，則代理程式服務 (occm) 將重新啟動兩次。
+
+. 在已連線至代理程式虛擬機器的主機上開啟網頁瀏覽器，並輸入以下網址：
++
+https://_ipaddress_[]
+
+. 登入後，設定代理程式：
++
+.. 指定要與代理程式關聯的 Console 組織。
+.. 請輸入系統名稱。
+.. 在「您是否在安全的環境中運作？」下，保持受限模式停用狀態。
++
+您應該保持受限模式停用狀態，因為以下步驟介紹的是如何以標準模式使用控制台。只有當您擁有安全環境並希望中斷此帳戶與控制台後端服務的連線時，才應啟用受限模式。如果是這種情況，link:task-quick-start-restricted-mode.html["請依照下列步驟，在受限模式下開始使用 NetApp Console。"]。
+
+.. 選擇 *Let's start*。
+
+
+

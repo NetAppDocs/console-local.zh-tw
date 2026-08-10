@@ -1,0 +1,43 @@
+= 
+:allow-uri-read: 
+
+
+.步驟
+. 選擇 *Administration > Credentials*。
+. 選擇*組織憑證*。
+. 選擇與 Console 代理程式關聯的一組憑證的行動選單，然後選擇「設定訂閱」。
++
+您必須選擇與 Console 代理程式關聯的憑證。您無法將市場訂閱與 NetApp Console 關聯的憑證建立關聯。
+
+. 若要將憑證與現有訂閱關聯，請從下拉清單中選擇訂閱，然後選擇 *Configure*。
+. 若要將憑證與新訂閱關聯，請選取 *新增訂閱 > 繼續*，然後依照 Azure Marketplace 中的步驟操作：
++
+.. 如果出現提示，請登入您的 Azure 帳戶。
+.. 選擇*訂閱*。
+.. 填寫表格並選擇 *Subscribe*。
+.. 訂閱流程完成後，選擇 *Configure account now*。
++
+您將被重新導向至 NetApp Console。
+
+.. 來自「訂閱分配」頁面：
++
+*** 選擇要與此訂閱建立關聯的 Console 組織或帳戶。
+*** 在「*取代現有訂閱*」欄位中，選擇是否要以此新訂閱自動取代某個組織或帳戶的現有訂閱。
++
+Console 會將組織或帳戶中所有憑證的現有訂閱替換為此新訂閱。如果某組憑證之前從未與任何訂閱關聯，則此新訂閱也不會與這些憑證關聯。
+
++
+對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
+
+*** 選擇 *Save*。
++
+以下影片展示了從 Azure Marketplace 訂閱的步驟：
+
++
+.從 Azure Marketplace 訂閱 NetApp Intelligent Services
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
+
+
+
+
+

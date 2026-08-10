@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-roles.html 
+keywords: fleets, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles, directory users, AD, Active Directory, directory services 
+summary: 管理 Console 組織中的成員存取。指派角色以設定權限。成員離職時將其移除。 
+---
+= 在 NetApp Console 本機部署中管理成員存取
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，審查或變更使用者在多個資料夾或機組中的角色，例如檢查儲存設備工程師可以存取的所有內容、在另一個區域新增角色，或在職責變更時移除該使用者的存取。
+
+.所需存取權限
+超級管理員、組織管理員或資料夾/機組管理員（針對他們所管理的資料夾和機組）。link:reference-iam-predefined-roles.html["了解存取角色"]。
+
+您可以根據需要透過兩種方式檢視和管理存取。如果您想檢視特定使用者在組織內所有機組中擁有的角色，請使用「成員」頁面。
+
+如果您想確認哪些人可以存取特定機組，請改為審查指派給該機組的成員。link:task-iam-users-fleets-assign.html["管理機組存取分配"]。
+
+若要新增成員、服務帳戶或目錄使用者並指派其第一個角色，請改用入職工作。link:task-iam-manage-members-permissions.html["新增成員並分配角色"]。
+
+
+
+[[understand-how-access-is-granted-in-netapp-console]]
+== 了解如何在 NetApp Console 中授予存取權
+
+NetApp Console 使用角色型存取控制 （RBAC） 來管理成員權限。您可以根據成員所需的存取範圍，在組織、資料夾或機組層級指派預先定義的角色。
+
+
+
+[[using-role-inheritance]]
+[[role-inheritance]]
+=== 使用角色繼承
+
+在組織或資料夾層級指派的角色會被其下的子範圍繼承，因此，請在最初授予該角色的較高範圍內變更繼承的指派。
+
+link:concept-iam-rbac.html#role-inheritance["了解 NetApp Console 本地部署中的角色繼承"]。
+
+
+
+[[view-roles-assigned-to-a-member]]
+[[manage-permissions]]
+== 檢視指派給成員的角色
+
+在進行任何變更之前，請務必確認成員所擁有的特定角色及其範圍。例如，請檢查隊友是否已在 `Production-EU-West`機組上擁有 Storage admin 角色。
+
+如果您擁有「資料夾」或「機組」管理員角色，則該頁面會顯示組織中的所有成員。但是，您只能檢視和管理您所管理的資料夾和機組的權限。link:reference-iam-predefined-roles.html["了解 NetApp Console 本機部署中的資料夾或機組管理員行動"]。
+
+. 從「成員」頁面，導覽至表格中的某個成員，選擇 image:icon-action.png["一個由三個並排的點組成的圖示"]，然後選擇「檢視詳細資料」。
+. 在表格中，展開要檢視成員指派角色的組織、資料夾或機組的對應列，然後在 *角色* 欄中選取 *檢視*。
+
+
+
+
+[[assign-or-modify-member-access]]
+== 分配或修改成員存取
+
+當成員的職責發生變化時，您可以調整其存取權限。例如，當隊友承擔第二個區域的備份職責時，可以在不影響其現有儲存設備角色的情況下，為其在該區域的機組上新增 Backup and Recovery 管理員角色。
+
+如果您需要新增成員並為其指派第一個角色，請參閱link:task-iam-manage-members-permissions.html#add-members["新增成員並分配角色"]。
+
+
+
+[[add-an-access-role-to-an-existing-member]]
+=== 為現有成員新增存取角色
+
+當成員的職責範圍擴充時，可以在組織、資料夾或機組層級為其授予額外的角色。例如，可以授予 Storage admin 組織層級的 Backup and recovery admin 角色，使其能夠在不遺失現有儲存設備權限的情況下，管理所有機組的備份與還原工作。
+
+您可以為組織、資料夾或機組的成員指派存取角色。
+
+成員可以在同一機組內以及不同機組中擔任多個角色。例如，規模較小的組織可以將所有可用的存取角色指派給相同使用者，而規模較大的組織則可能讓使用者執行更專業的工作。此外，您還可以為一位使用者指派組織層級的勒索軟體彈性管理員角色。在這種情況下，該使用者將能夠對組織內的所有機組執行勒索軟體彈性工作。
+
+您的存取角色策略應與您組織 NetApp 資源的方式遵守。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*成員*。
+. 選擇成員標籤之一：*使用者*、*目錄使用者*或*服務帳戶*。
+. 選擇要指派角色的成員旁邊的行動選單 image:icon-action.png["一個有三個垂直點的圖示"]，然後選擇 *新增角色*。
+. 若要新增角色，請完成對話方塊中的步驟：
++
+** *選擇組織、資料夾或機組*：選擇成員應具有權限的資源層級。
++
+如果選擇組織或資料夾，該成員將擁有該組織或資料夾中所有內容的權限。
+
+** *選擇一個類別*：選擇一個角色類別。link:reference-iam-predefined-roles.html["了解存取角色"^]。
+** 選擇 *Role*：選擇一個角色，為成員提供與您所選組織、資料夾或機組相關聯資源的權限。
+** *新增角色*：如果您想提供組織內其他資料夾或機組的存取，請選擇 *新增角色*，指定另一個資料夾或機組或角色類別，然後選擇角色類別和對應的角色。
+
+
+. 選擇 *Add new roles*。
+
+
+
+
+[[change-a-members-assigned-role]]
+=== 更改成員的指定角色
+
+當成員的職責發生變化時，應將其現有角色替換為其他角色。例如，當 `Production-US-East`機組中的 Storage viewer 需要 Storage admin 角色時。
+
+
+NOTE: 每個使用者必須至少擁有一個角色。您無法移除使用者的所有角色。如果您需要移除所有角色，請將該使用者從您的組織中刪除。
+
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*成員*。
+. 選擇成員標籤之一：*使用者*、*目錄使用者*或*服務帳戶*。
+. 從「成員」頁面，導覽至表格中的某個成員，選擇 image:icon-action.png["一個由三個並排的點組成的圖示"]，然後選擇「檢視詳細資料」。
+. 在表格中，展開要變更成員指派角色的組織、資料夾或機組的對應列，然後在 *角色* 欄中選取 *檢視*，以檢視指派給該成員的角色。
+. 您可以變更成員的現有角色或移除角色。
++
+.. 若要變更成員的角色，請選擇要變更的角色旁邊的 *Change*。您只能將角色變更為同一角色類別內的角色。例如，您可以從一個資料服務角色變更為另一個資料服務角色。確認變更。
+.. 若要取消指派成員的角色，請選擇角色旁邊的 image:icon-delete.png["一個類似垃圾桶的圖示"] 以取消指派成員的對應角色。系統會要求您確認移除。
+
+
+
+
+
+
+[[remove-a-member-from-your-organization]]
+=== 從您的組織中移除成員
+
+當成員離開組織或角色變更導致其不再需要 Console 存取時，應將其移除。例如，當承包商的合約結束或員工調任到 Console 組織以外的團隊。
+
+[NOTE]
+====
+.目錄使用者
+從目錄中移除使用者將防止該使用者進行驗證。您也應該從 Console 組織中移除該使用者，以保持成員清單的準確性，並移除在 Console 本機部署中指派的所有角色。
+
+====
+.步驟
+. 選擇 *Administration > Identity and access*。
+. 選擇*成員*。
+. 選擇成員標籤之一：*使用者*、*目錄使用者*或*服務帳戶*。
+. 從「成員」頁面，導覽至表格中的某個成員，選取 image:icon-action.png["一個由三個並排的點組成的圖示"] 然後選取「刪除使用者」。
+. 請確認您要將該成員從您的組織中移除。
+

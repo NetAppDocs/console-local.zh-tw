@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-predefined-roles.html 
+keywords: predefined roles, iam roles, Organization admin, Folder or fleet admin, Super admin, storage roles, analyst roles, backup and recovery roles, role categories, rbac, identity and access management, access roles, netapp console local 
+summary: NetApp Console 本機部署身分識別與存取管理包括預先定義的角色，您可以將這些角色指派給組織成員。 
+---
+= NetApp Console 本機部署存取角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本機部署中的身分識別與存取管理 （IAM） 提供預先定義的角色，您可以將這些角色指派給組織中不同資源層次結構層級的成員。在指派這些角色之前，您應該了解每個角色所包含的權限。角色分為以下幾類：平台、應用程式和資料服務。
+
+
+
+[[platform-roles]]
+== 平台角色
+
+平台角色授予 NetApp Console 本機部署管理權限，包括角色指派和使用者管理。Console 本機部署包含多個平台角色。
+
+[cols="1,2"]
+|===
+| 平台角色 | 職責 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"] | 允許使用者不受限制地存取組織內的所有機組和資料夾，向任何機組或資料夾新增成員，以及執行任何工作並使用任何未明確關聯角色的資料服務。擁有此角色的使用者可透過建立資料夾和機組、指派角色、新增使用者以及管理系統（如果他們擁有適當的憑證）來管理您的組織。 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或機組管理員"] | 允許使用者無限制地存取已指派的機組和資料夾。使用者可以在其管理的資料夾或機組中新增成員，也可以對其指派的資料夾或機組內的資源執行任何工作並使用任何資料服務或應用程式。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["聯盟管理員"] | 允許使用者透過 Console 建立和管理目錄服務聯盟，以便使用者可以使用其現有的目錄憑證進行驗證。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["Federation 檢視者"] | 允許使用者透過 Console 檢視現有的目錄服務聯盟。無法建立或管理聯盟。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["超級管理員"] | 賦予使用者所有管理員角色。此角色專為規模較小的組織設計，這些組織可能不需要將 Console 職責分配給多個使用者。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["超級檢視器"] | 賦予使用者所有檢視者角色。此角色專為規模較小的組織設計，這些組織可能不需要將 Console 職責分配給多個使用者。 
+|===
+
+
+[[application-roles]]
+== 應用程式角色
+
+以下是應用程式類別中的角色清單。每個角色在其指定範圍內擁有特定的權限。沒有所需應用程式或平台角色的使用者無法存取相應的應用程式。
+
+[cols="1,2"]
+|===
+| 應用程式角色 | 職責 
+
+
+| link:reference-iam-analyst-roles.html["營運支援分析師"] | 提供警報和監控工具（例如稽核頁面）的存取。 
+
+
+| link:reference-iam-storage-roles.html["儲存管理員"] | 管理儲存設備健全狀況和治理功能，發現儲存資源，以及修改和刪除現有系統。 
+
+
+| link:reference-iam-storage-roles.html["儲存檢視器"] | 檢視儲存設備健全狀況和治理功能，以及檢視先前探索到的儲存資源。無法探索、修改或刪除現有儲存系統。 
+
+
+| link:reference-iam-storage-roles.html["系統健全狀況專家"] | 管理儲存設備、健全狀況和治理功能，擁有儲存管理員的所有權限，但不能修改或刪除現有系統。 
+|===
+
+
+[[data-service-roles]]
+== 資料服務角色
+
+以下是資料服務類別中的角色清單。每個角色在其指定範圍內擁有特定的權限。沒有所需資料服務角色或平台角色的使用者將無法存取資料服務。
+
+[cols="1,2"]
+|===
+| 資料服務角色 | 職責 
+
+
+| link:reference-iam-backup-rec-roles.html["備份與恢復超級管理員"] | 在 NetApp Backup and Recovery 中執行任何行動。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份與恢復管理員"] | 將備份執行到本機快照、複寫到次要儲存設備，以及備份到物件儲存。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份與恢復還原管理員"] | 在備份與還原中還原工作負載。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份與恢復 Clone 管理員"] | 在 Backup and Recovery 中複製應用程式和資料。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份與恢復檢視器"] | 檢視 Backup and Recovery 資訊。 
+
+
+| 分類檢視器 | 允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存區或資料庫架構的掃描。Data Classification 沒有管理員角色。 
+
+
+| SnapCenter 管理員 | 提供使用 NetApp Backup and Recovery 備份應用程式的內部部署 ONTAP 叢集快照的功能。擁有此角色的成員可以完成以下行動：* 完成 Backup and Recovery > Applications 中的任何行動 * 管理其擁有權限的機組和資料夾中的所有系統 * 使用所有 NetApp Console 服務 SnapCenter 不具備檢視者角色。 
+|===
+
+
+[[related-links]]
+== 相關連結
+
+* link:concept-identity-and-access-management.html["了解 NetApp Console 身分與存取管理"]
+* link:task-iam-fleet-mgmt-get-started.html["在 NetApp Console 中開始使用身分識別與存取"]
+* link:task-iam-manage-members-permissions.html["在 NetApp Console 組織中新增成員並指派角色"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解 NetApp Console IAM 的 API"^]
+

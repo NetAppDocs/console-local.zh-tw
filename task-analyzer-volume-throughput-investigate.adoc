@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: task-analyzer-volume-throughput-investigate.html 
+keywords: throughput, IOPS, MB per second, read write, workload demand, QoS, resource utilization, workload analyzer, performance troubleshooting, netapp console local 
+summary: 使用工作負載分析器調查 Volume 上的高處理量需求，以了解 IOPS 和每秒 MB 模式，並識別讀取寫入不平衡。 
+---
+= 調查 NetApp Console 本機部署中 Volume 的高處理量
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中使用 Workload Analyzer 來檢查 Volume 的 IOPS 和處理量需求隨時間的變化。
+
+當 Volume 的工作負載消耗的 IOPS 或處理量超出預期時，請確定導致需求增加的原因。處理量分析部分會顯示 IOPS 和 MB/s 值，並可選擇顯示讀取、寫入和其他類型的細分資料，以便您確定哪種類型的 I/O 導致了要求嚴苛，以及該需求是否正在逼近 QoS 限制。
+
+如果從警報或 Volume 清單中開啟分析器，Volume 已被選取，您可以專注於時間範圍和處理量圖表。
+
+.步驟
+. 使用下列方法之一開啟工作負載分析器：
++
+** 從 *健全狀況* 功能表中，選擇 *工作負載分析器*，然後在 *Volume* 欄位中搜尋並選擇要調查的 Volume。
+** 從「儲存設備 > 機組 > 清單」頁面，導覽至要分析的 Volume，然後從行動選單中選擇「分析」。
+** 從「警報 > 概覽」頁面中，選擇要調查的 Volume 的警報，然後從警報詳細資料中選擇「分析」。
+
+
+. 將*時間範圍*設定為涵蓋要求嚴苛期，然後選擇*分析*。
+. 捲動至*處理量分析*部分。
+. 開啟 *View* 下拉選單，然後選取 *Breakdown (RWO)*。
++
+圖表將 IOPS 和 MB/s 分割為讀取、寫入和其他組成部分。這可讓您判斷是讀取密集型存取模式、寫入密集型存取模式，還是兩者的組合推動了需求。
+
+. 使用元件選擇器啟用或停用要檢查的計量：
++
+** *讀取 IOPS* 和 *寫入 IOPS* — 按 I/O 方向劃分的每秒作業數
+** *讀取 MB/s* 和 *寫入 MB/s* — 按 I/O 方向劃分的處理量（單位：MB/s）
+** *其他 IOPS* 和 *其他 MB/s* — 中繼資料和其他非資料操作
+** *QoS IOPS Limit* 和 *QoS MB/s Limit* — 僅當 Volume 使用 QoS 原則時才會顯示的原則上限
+** *雲端處理量* — 寫入和讀取雲端的 MB/s，僅顯示透過 FabricPool 將容量分層至雲端的工作負載
+
+
+. 將滑鼠懸停在圖表中的峰值上，即可查看該時間點每個元件的確切值和百分比細項。
++
+懸停提示框也會顯示每個類別的平均 I/O 大小（處理量除以 IOPS），這可以指示工作負載是在執行大型連續的 I/O 還是小型隨機 I/O。
+
+. 啟用「顯示預測」功能，以預測目前處理量趨勢是否會達到 QoS IOPS 或 MB/s 限制。
++
+如果預測線接近 QoS 限制線，ONTAP 可能很快就會限制工作負載。
+
+. 如果要查看彙總需求而不查看細分需求，請開啟「檢視」下拉式功能表並選擇「總計」。
++
+總計檢視顯示單一 IOPS 行和單一 MB/s 行，這對於快速了解整體需求總結非常有用。
+
+
+
+.完成後
+利用觀察到的處理量模式來決定下一步該怎麼做：
+
+* 如果讀取 IOPS 相對於寫入 IOPS 非常高，請考慮預讀設定或快取是否可以降低 Volume 的負載。
+* 如果工作負載接近或已達到 QoS IOPS 或 MB/s 限制，請使用 QoS 限制線和相關計量定義來確認節流，並決定是否需要調整限制。
+* 如果處理量高且延遲也高，請檢查「資源使用率」部分，以確定底層節點或彙總是否存在資源爭用。比較同一時期內的處理量峰值、延遲峰值和資源使用率。
+* 如果分析器顯示容量或快照成長迅速，且需求持續增加，請審查容量和快照計量，以了解此成長可能對 Volume 造成的影響。
+
+
+link:task-analyzer-volume-latency-investigate.html["調查 Volume 上的高延遲"]。link:reference-workload-analyzer-metrics.html["了解 NetApp Console 本機部署中的工作負載分析器計量"]。

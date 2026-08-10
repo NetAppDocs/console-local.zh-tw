@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: concept-identity-and-access-management.html 
+keywords: iam overview, overview, how iam works, iam example, organization, folders, fleets, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, authentication, directory users, AD, Active Directory, directory services 
+summary: '使用 NetApp Console 本地部署的身分識別與存取管理 (IAM)，根據您的業務層級結構（例如按位置、部門或機組）來建置和控制資源存取。' 
+---
+= 了解 NetApp Console 本地部署身分識別與存取管理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本機部署中的身分識別與存取管理 （IAM） 可控制誰能登入、如何驗證身分、使用者可以存取哪些資源，以及可以執行哪些動作。在 NetApp Console 本機部署中，IAM 包括角色型存取控制 （RBAC）、多因素驗證 （MFA） 和目錄支援的驗證，以及支援委派管理的階層與稽核模型。
+
+此頁面用於概述 NetApp Console 本機部署 IAM 模型。有關詳細的階層規劃範例，link:concept-folders-fleets-overview.html["了解 NetApp Console 本地部署中的資料夾和機組"]。
+
+
+NOTE: 您必須擁有 _Super admin_、_Organization admin_ 或 _Folder or fleet admin_ 角色，才能在 NetApp Console 中管理 IAM。
+
+
+
+[[what-iam-means-in-netapp-console-local-deployment]]
+== IAM 在 NetApp Console 本機部署中的意義
+
+NetApp Console 本地部署 IAM 結合了身分驗證、存取控制、委派和可稽核性：
+
+* _Authentication_ 決定使用者如何登入，是使用本機認證資料還是透過您的目錄組態。
+* _授權_ 根據預先定義的角色和您指派角色的範圍，決定成員登入後可以執行哪些動作。
+* 層級和範圍決定了成員可以存取哪些資料夾、機組和資源。
+* 成員與認證資料管理決定如何新增使用者、服務帳戶，以及如何管理 MFA 和服務帳戶金鑰。
+* _稽核與法規遵循追蹤_記錄 IAM 相關的活動，以便您可以審查誰變更了存取以及何時變更的。
+
+
+
+
+[[how-authentication-works]]
+== 驗證的工作原理
+
+NetApp Console 本機部署同時支援本機身分識別和外部身分識別整合。
+
+您可以將 NetApp Console 本機部署與 Active Directory 整合，讓使用者使用現有的企業認證資料登入。這樣就無需在 Console 本機部署中設定個別密碼，並讓管理員在指派存取權限時可以直接查詢目錄使用者。
+
+對於本機使用者而言，MFA 增加了一個額外的驗證步驟，以降低認證資料外洩時未經授權存取的風險。
+
+要深入瞭解驗證和安全登入選項，link:concept-secure-access.html["了解 NetApp Console 本地部署中的安全存取"]。
+
+
+
+[[how-authorization-works]]
+== 授權的運作方式
+
+使用者登入後，NetApp Console 本機部署使用角色型存取控制 （RBAC） 來決定該使用者可以看到什麼以及可以執行什麼操作。
+
+Active Directory 或 LDAP 整合負責驗證。NetApp Console 本機部署授權仍保持分隔：管理員在組織、資料夾或機組層級指派預先定義的角色，以控制每個成員可以存取的內容。
+
+同一角色根據其指派範圍的不同，可獲得不同的有效存取。此模式可讓您賦予中央管理員廣泛的存取，同時將區域或團隊層級管理員的權限限制在其管理的機組範圍內。
+
+您在組織或資料夾層級指派的角色會由子作用域繼承。這種繼承模型是 NetApp Console 如何在資料夾和機組之間委派存取的關鍵所在。
+
+NetApp 設計 NetApp Console 本機部署角色時遵循最小權限原則，因此每個角色只包含其任務所需的權限。
+
+link:concept-iam-rbac.html#role-inheritance["了解 NetApp Console 本地部署中的角色型存取控制和角色繼承"]。
+
+
+
+[[how-the-iam-hierarchy-works]]
+== IAM 層級結構的工作原理
+
+NetApp Console 本機部署使用階層來分組資源並限定存取範圍。組織位於頂層，其次是資料夾，再其次是機組，最後是與這些機組相關聯的資源（包括可能的子資料夾）。
+
+這種層級結構使得委派成為可能。例如，組織管理員可以管理整個組織的存取，而 Folder 或機組管理員只能管理其所屬層級內的資源和成員。
+
+NetApp Console IAM 由三種類型的元件構成：定義層次結構的組織元件、在該層次結構中指派的資源，以及控制誰可以存取什麼的成員和角色。
+
+由於角色會透過此層級結構繼承，因此您的資料夾和機組設計會直接影響每個存取指派的套用範圍。
+
+link:task-iam-manage-folders-fleets.html["了解如何將機組加入您的組織。"^]。
+
+
+
+[[member-security-and-credentials]]
+== 成員安全性和認證資料
+
+NetApp Console 本機部署中的 IAM 還包括在帳戶存在後保護成員存取的作業控制。
+
+對於本機使用者，管理員可以透過指導使用者重設密碼、移除或暫時停用多因素驗證 （MFA） 以及審查本機使用者的 MFA 行為來協助使用者恢復存取。對於服務帳戶，管理員可以在金鑰遺失或輪調時重新建立認證資料。
+
+這些控制措施是 IAM 的一部分，因為它們決定了身分識別如何隨著時間的推移保持安全，而不僅僅是最初如何指派存取權限。
+
+link:task-manage-member-security.html["了解如何管理成員安全性"]。
+
+
+
+[[audit-iam-activity]]
+== 稽核 IAM 活動
+
+NetApp Console 本機部署中的 IAM 包括審查和匯出與存取相關的活動的功能。
+
+在「稽核」頁面，您可以審查與管理組織相關的行動，例如新增成員、建立機組和關聯資源。您也可以依 Tenancy 服務篩選稽核記錄，以專注於 IAM 相關變更，或將稽核日誌匯出至外部系統。
+
+可稽核性是 IAM 的一項重要原則，因為它可讓您驗證誰變更了存取權限、變更發生的時間，以及變更是否成功。
+
+link:task-audit-console-activity.html["了解如何稽核 NetApp Console 本機部署活動"]。
+
+
+
+[[next-steps-with-iam-in-netapp-console]]
+== 在 NetApp Console 中使用 IAM 的後續步驟
+
+* link:task-iam-fleet-mgmt-get-started.html["在 NetApp Console 中開始使用身分識別與存取"]
+* link:concept-secure-access.html["了解 NetApp Console 本地部署中的安全存取"]
+* link:concept-iam-rbac.html["了解 NetApp Console 本機部署中的 RBAC"]
+* link:task-audit-console-activity.html["監控或稽核 Console 本地部署活動"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解 NetApp Console IAM 的 API"^]
+

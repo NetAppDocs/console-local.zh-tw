@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: concept-iam-rbac.html 
+keywords: roles, permissions, role-based access control, rbac, iam, identity and access management, least privilege, access control, NetApp Console local access, organization access, folder access, fleet access, resource access, directory users, AD, Active Directory, directory services 
+summary: '使用角色型存取控制 (RBAC) 管理使用者對 NetApp Console 本機部署的存取，在組織、資料夾或機組層級指派預先定義的角色。每個角色都會授予特定權限，定義使用者在其指派範圍內可執行的動作。' 
+---
+= 了解 NetApp Console 本地部署中的角色型存取控制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用角色型存取控制 (RBAC) 管理使用者對 NetApp Console 本機部署的存取，在組織、資料夾或機組層級指派預先定義的角色。每個角色都會授予特定權限，定義使用者在其指派範圍內可執行的動作。
+
+NetApp Console 本機部署角色採用最小權限原則設計，每個角色僅包含其任務所需的權限。這種方法透過限制每個成員所需的存取來增強安全性。
+
+將資源整理成資料夾和機組後，為組織成員指派特定資料夾或機組的一個或多個角色，以便他們只能履行自己的職責。
+
+例如，您可以將特定機組層級的備份與恢復管理員角色指派給某個成員，允許其對該機組內的資源執行備份與恢復作業，而無需授予其對整個組織的更廣泛存取。同一使用者可以被授予組織內多個機組的角色。
+
+您可以根據成員的職責，為他們指派相同或不同範圍內的多個角色。例如，規模較小的組織可能會在組織層級為同一成員指派 Storage admin 和 Backup and Recovery admin 角色，而規模較大的組織則可能會在機組層級為每個角色指派不同的成員。
+
+
+
+[[types-of-console-organization-members]]
+== Console 組織成員的類型
+
+NetApp Console 本地部署支援下列類型的成員：
+
+* _Users_: 使用者可以是您新增至 NetApp Console 本機部署的本機使用者（使用本機認證資料），也可以是透過整合的 Active Directory 或 LDAP 服務進行驗證的目錄使用者。兩種類型的使用者都可以在 NetApp Console 本機部署中被指派角色以存取資源。
+* _服務帳戶_：應用程式或服務用於透過 API 與 NetApp Console 本地部署互動的非人類帳戶。您可以將服務帳戶直接新增至 Console 本地部署組織。
+
+
+link:task-iam-manage-members-permissions.html#add-members["了解如何為您的組織新增成員。"]
+
+
+
+[[predefined-roles-in-netapp-console-local-deployment]]
+== NetApp Console 本機部署中的預定義角色
+
+NetApp Console 本機部署包含預先定義的角色，您可以將其指派給組織成員。每個角色都包含權限，用於指定成員在其指派的範圍（組織、資料夾或機組）內可以執行的動作。
+
+NetApp Console 本機部署角色採用最小權限原則，確保成員僅擁有完成任務所需的權限，並按角色提供的存取類型對其進行分類：
+
+* 平台角色：提供 Console 本機部署管理權限
+* 資料服務角色：提供管理特定資料服務的權限，例如勒索軟體 Resilience 和備份與恢復
+* 應用程式角色：提供管理儲存設備以及稽核 Console 本機部署事件和警示的權限
+
+
+您可以根據成員的職責為其指派多個角色。例如，您可以為特定機組的成員同時指派 Storage admin 角色和 Backup and Recovery admin 角色。
+
+若要為成員選擇存取，請將角色類別與成員的職責相匹配，然後根據成員應擁有的存取廣泛程度，在相應的範圍（組織、資料夾或機組）指派角色。link:concept-folders-fleets-overview.html#organization-design-examples["了解不同組織如何在 NetApp Console 本地部署中建置角色和範圍"].
+
+link:reference-iam-predefined-roles.html["了解您可以在 NetApp Console 本機部署中指派給成員的預先定義角色"]。
+
+
+
+[[how-role-inheritance-works]]
+[[role-inheritance]]
+== 角色繼承機制
+
+在組織或資料夾層級指派角色時，該角色將由該層級結構中的子範圍繼承。這意味著組織層級角色適用於整個組織，資料夾層級角色適用於該資料夾中的所有子資料夾和機組，而機組層級角色僅適用於該機組中的資源。
+
+使用與您希望成員保留的存取權限相符的範圍。例如，如果成員需要在同一區域的多個機組中擁有相同的存取，則在資料夾層級指派角色。如果成員只需存取一個機組，則在機組層級指派角色。
+
+您無法在較低層級置換繼承的存取。如果成員從組織或資料夾繼承了角色，請在最初授予該角色的較高層級變更該指派。
+
+link:concept-folders-fleets-overview.html["了解 NetApp Console 本地部署中的資料夾和機組"]。link:task-iam-manage-roles.html["管理成員存取"]。link:task-iam-users-fleets-assign.html["管理機組存取分配"]。

@@ -1,0 +1,39 @@
+= 
+:allow-uri-read: 
+
+
+. 複製 link:reference-permissions-azure.html["連接器的自訂角色權限"] 的內容，並將其儲存至 JSON 檔案中。
+. 修改 JSON 檔案，將 Azure 訂閱 ID 新增至可指派範圍。
++
+您應該為每個要與 NetApp Console 搭配使用的 Azure 訂閱新增 ID。
+
++
+*範例*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. 使用 JSON 檔案在 Azure 中建立自訂角色。
++
+以下步驟說明如何使用 Azure Cloud Shell 中的 Bash 建立角色。
+
++
+.. 啟動 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^]並選擇 Bash 環境。
+.. 上傳 JSON 檔案。
++
+image:screenshot_azure_shell_upload.png["這是 Azure Cloud Shell 的螢幕擷取畫面，您可以在其中選擇上傳檔案的選項。"]
+
+.. 使用 Azure CLI 建立自訂角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-add-systems.html 
+keywords: add storage systems, ONTAP, cluster, discover storage, fleet, storage discovery, centralized monitoring, storage management, netapp console local 
+summary: 將儲存系統新增至 NetApp Console 本機部署。 
+---
+= 將儲存系統新增至 NetApp Console 本機部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將儲存系統新增至 NetApp Console 本機部署，即可啟用對儲存基礎架構的監控、庫存管理和管理。新增儲存系統後，Console 本機部署會自動探索系統，並開始收集可用於監控和管理工作的資訊。
+
+開始之前，請確保您擁有新增儲存系統的必要權限，且儲存系統可從 Console 本機部署存取。
+
+.步驟
+. 選擇 *Storage > Management*。
+. 從「範圍」下拉清單中，選擇要新增儲存系統的機組。
+. 選擇 *新增系統*。
+. 請輸入所需的儲存系統詳細資訊，包括連線資訊和憑證。
+. 請審查您輸入的資訊，然後選擇 *新增*。
++
+儲存系統已新增至選定的機組。Console 本地部署開始探索並監控該系統。視環境和網路連線狀況而定，系統可能需要幾分鐘才能完全顯示為代管。
+
+
+
+
+NOTE: 您也可以透過選擇 *Add system* 並提供所需的系統資訊，從 *Administration > Identity and access* 頁面新增儲存系統。

@@ -1,0 +1,8 @@
+---
+permalink: task-iam-get-started.html 
+redirect: console-local/task-iam-fleet-mgmt-get-started.html 
+---
+= 
+:allow-uri-read: 
+
+

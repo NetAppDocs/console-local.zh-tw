@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept-deploy-netapp-console-local.html 
+keywords: deploy, install, vCenter, Linux, high availability, deployment options, netapp console local 
+summary: 了解 NetApp Console 本機部署的部署選項，包括 vCenter 和 Linux 安裝。 
+---
+= NetApp Console 本地部署的部署選項
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在您的 vCenter 環境中安裝 NetApp Console 本地部署。
+
+
+
+[[install-in-your-vcenter-environment]]
+=== 安裝到您的 vCenter 環境中
+
+使用預先設定的 OVA 映像，將 NetApp Console 本機部署部署為 VMware vCenter 環境中的虛擬應用裝置。
+
+link:task-install-agent-on-prem-ova.html["在您的 vCenter 環境中安裝 NetApp Console 本地部署"]。
+
+
+
+[[next-steps]]
+== 後續步驟
+
+部署完成後，請完成以下工作以開始使用：
+
+* link:task-add-systems.html["將儲存系統新增至 NetApp Console 本機部署"]
+* link:task-iam-manage-members-permissions.html["在 NetApp Console 本機部署中新增成員並指派角色"]
+

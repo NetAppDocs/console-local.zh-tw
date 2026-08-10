@@ -1,0 +1,8 @@
+---
+permalink: task-set-up-permissions-aws.html 
+redirect: console-setup-admin/task-install-cagent-aws-console.html 
+---
+= 
+:allow-uri-read: 
+
+

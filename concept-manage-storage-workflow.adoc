@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: concept-manage-storage-workflow.html 
+keywords: storage management workflow, storage classes, provisioning, storage class policies, ONTAP, fleet, drift detection, compliance monitoring, storage governance, operational efficiency, netapp console local 
+summary: 了解如何在 NetApp Console 本機部署中管理儲存設備，包括儲存設備類別、原則和資源配置方法。 
+---
+= NetApp Console 本機部署中的儲存管理工作流程總覽
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，netApp Console （local） 可協助您使用一致且可重複使用的標準大規模管理 ONTAP 儲存設備。您無需為每個 Volume 或 LUN 單獨做出決策，只需定義一次已核准的行為，即可將其套用至整個機組——無論您是手動資源配置、使用自動放置，還是使用 AI 輔助的規劃與審查工作流程。
+
+本頁面是儲存設備管理員使用機組、儲存設備類別原則和儲存設備類別管理 ONTAP 儲存設備的起點。本頁面整理了端對端工作流程，並連結至詳細程序。
+
+如果您不熟悉這些概念，請從 [瞭解如何使用 NetApp Console 本機部署管理儲存設備](concept-manage-storage.html) 開始。
+
+
+
+[[prerequisites-and-dependencies]]
+== 先決條件與相依性
+
+組織管理員需確保儲存設備系統已被探索並指派到正確的機組。儲存管理員只有在系統已新增至該機組且透過 RBAC 取得存取權限後，才能套用標準或將資源配置到該機組。
+
+需要 RBAC 存取 請確認您有權存取您將定義標準和資源配置儲存設備的機組。
+
+
+
+[[typical-workflow]]
+== 典型工作流程
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 審查機組和存取
+[role="quick-margin-list"]
+* 審查可用機組，並確認您有權存取您想要管理儲存設備的機組。
+* 在建立或指派儲存設備標準之前，請先驗證權限和範圍。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 定義儲存設備類別原則
+[role="quick-margin-list"]
+* 定義符合您標準的儲存設備類別原則。
+* 將需求（效能、保護、放置）轉化為可重複使用的原則。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 建立儲存設備類別
+[role="quick-margin-list"]
+* 透過將原則組合到工作負載範本中來建立儲存設備類別。
+* 使用一致的範本，確保工作負載依照您的標準進行資源配置。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"]將儲存設備類別與機組建立關聯
+[role="quick-margin-list"]
+* 將儲存設備類別與適用的機組建立關聯。
+* 將範圍類別指派給正確的機組，以便在資源配置過程中顯示正確的選項。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 資源配置 Volume 或 LUN
+[role="quick-margin-list"]
+* 使用與您的營運模式相符的方法佈建 Volume 或 LUN。
+* 選擇與團隊請求、核准及交付儲存設備的方式一致的工作流程。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] 監控工作負載並修正偏差
+[role="quick-margin-list"]
+* 監控工作負載，以偵測是否偏離既定原則。
+* 修復不合規的組態，以還原原則一致性。
+

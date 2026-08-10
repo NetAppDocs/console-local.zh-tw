@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.步驟
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["NetApp Console 代理程式列於 AWS Marketplace"^]
+. 在 Marketplace 頁面上，選擇 *Continue to Subscribe*。
+. 若要訂閱軟體，請選擇*接受條款*。
++
+訂閱過程可能需要幾分鐘。
+
+. 訂閱流程完成後，選擇「繼續設定」。
+. 在「設定此軟體」頁面上，請確保您已選擇正確的區域，然後選擇「繼續啟動」。
+. 在「啟動此軟體」頁面上的「選擇行動」下，選擇「透過 EC2 啟動」，然後選擇「啟動」。
++
+請使用 EC2 Console 產品發表執行個體並附加 IAM 角色。使用 *Launch from Website* 行動無法執行此操作。
+
+. 依照提示設定並部署執行個體：
++
+** *名稱和標籤*：輸入執行個體的名稱和標籤。
+** *應用程式和作業系統映像*：跳過此部分。Console 代理程式 AMI 已選取。
+** *執行個體類型*：根據區域可用度，選擇符合 RAM 和 CPU 要求的執行個體類型（已預先選擇並建議 t3.2xlarge）。
+** *金鑰對（登入）*：選擇要用於安全連線到執行個體的金鑰對。
+** *網路設定*：依需求編輯網路設定：
++
+*** 選擇所需的 VPC 和子網路。
+*** 指定執行個體是否應具有公用 IP 位址。
+*** 指定安全性群組設定，以啟用 Console 代理程式執行個體所需的連線方法：SSH、HTTP 和 HTTPS。
++
+link:reference-ports-aws.html["查看 AWS 的安全性群組規則"]。
+
+
+
+** *Configure storage*：保持根 Volume 的預設大小和磁碟類型。
++
+如果要對根 Volume 啟用 Amazon EBS 加密，請選擇 *Advanced*，擴充 *Volume 1*，選擇 *Encrypted*，然後選擇 KMS 金鑰。
+
+** *進階詳細資料*：在 *IAM 執行個體設定檔* 下，選擇包含 Console 代理程式所需權限的 IAM 角色。
+** *摘要*：查看總結並選擇 *Launch instance*。
+
+
+

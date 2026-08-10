@@ -1,0 +1,8 @@
+---
+permalink: reference-connector-default-config.html 
+redirect: console-setup-admin/reference-agent-default-config.html 
+---
+= 
+:allow-uri-read: 
+
+

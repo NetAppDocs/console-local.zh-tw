@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. 登入 AWS 主控台並導覽至 IAM 服務。
+. 建立原則：
++
+.. 選擇 *Policies > Create policy*。
+.. 選擇 *JSON* 並複製貼上 link:reference-permissions-aws.html["Console 代理程式的 IAM 原則"] 的內容。
+.. 完成剩餘步驟以建立原則。
+
+
+
+
+. 建立 IAM 角色：
++
+.. 選擇 *Roles > Create role* 。
+.. 選擇*AWS service > EC2*。
+.. 透過附加您剛剛建立的原則來新增權限。
+.. 完成建立角色的其餘步驟。
+
+
+
+
+. 將原則附加至 IAM 使用者。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS 文件：建立 IAM 角色"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 原則"^]
+
+
+. 請確保使用者擁有存取金鑰，以便您在安裝 NetApp Console 代理程式後，將其新增至 NetApp Console。
+

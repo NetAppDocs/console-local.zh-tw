@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: concept-secure-access.html 
+keywords: security, access control, MFA, multi-factor authentication, AD, Active Directory, LDAP, LDAPS, directory services, authentication, zero trust, secure access governance, reduce attack surface, netapp console local 
+summary: 了解 NetApp Console 本機部署中可用的安全性選項，包括 Active Directory 整合和多因素驗證。 
+---
+= 了解如何安全存取 NetApp Console 本機部署
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 本機部署提供多層安全性，以保護您的儲存管理環境並控制誰可以存取它。
+
+
+
+[[active-directory-integration]]
+== Active Directory 整合
+
+將 NetApp Console 本機部署連線到您的 Active Directory，以便使用者可以使用其現有的企業憑證登入。這樣就無需在 Console 本機部署中設定個別密碼，並支援您新增至組織中的使用者使用目錄備份登入。
+
+link:task-iam-active-directory-integrate.html["將 Active Directory 與 NetApp Console 本機部署整合"]。
+
+
+
+[[multi-factor-authentication]]
+== 多因素驗證
+
+使用者可以啟用多因素驗證 （MFA） 以增加額外的驗證階層，防止未經授權的存取，即使憑證遭到洩露。
+
+link:task-user-settings.html["為 NetApp Console 本機部署啟用 MFA"]。
+
+
+
+[[identity-and-access-management]]
+== 身分和存取管理
+
+在驗證使用者身分後，控制和監控他們在 NetApp Console 本機部署中可以執行的操作。
+
+使用角色型存取控制來定義每個成員可以查看和管理的內容。將成員指派到特定的機組，以便他們只能存取與其職責相關的儲存資源。
+
+* link:concept-identity-and-access-management.html["了解 NetApp Console 本地部署身分識別與存取管理"]
+* link:concept-iam-rbac.html["了解 NetApp Console 本機部署角色型存取控制"]
+* link:task-iam-manage-members-permissions.html["在 NetApp Console 本機部署中新增成員並指派角色"]
+* link:task-iam-users-fleets-assign.html["在 NetApp Console 本機部署中管理機組存取指派"]
+
+
+
+
+[[audit-logging]]
+== 稽核日誌
+
+追蹤 NetApp Console 本機部署中的所有使用者活動（包括 API 和服務帳戶使用者），以進行法規遵循和安全性調查。
+
+link:task-audit-console-activity.html["查看 NetApp Console 本機部署的稽核日誌"]。

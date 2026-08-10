@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-analyst-roles.html 
+keywords: operations support analyst, analyst roles, read-only access, monitoring access, alert access, audit access, identity and access management, access roles, rbac, netapp console local 
+summary: 您可以將「維運支援分析師」角色指派給用戶，以便他們能夠存取警示和監控。擁有此角色的用戶還可以開啟支援案例。 
+---
+= 營運支援分析師在 NetApp Console 本地部署中的存取角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，您可以將營運支援分析師角色指派給使用者，以便他們存取警示和監控。
+
+
+
+[[operational-support-analyst]]
+== 營運支援分析師
+
+[cols="1,2"]
+|===
+| 任務 | 可以執行 
+
+
+| 檢視儲存設備系統 | 是的 
+
+
+| 查看稽核頁面和通知 | 是的 
+
+
+| 查看、下載和設定警報 | 是的 
+|===

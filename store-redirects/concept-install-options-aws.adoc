@@ -1,0 +1,8 @@
+---
+permalink: concept-install-options-aws.html 
+redirect: console-setup-admin/concept-agent-install-options.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard-get-started.html 
+keywords: dashboards, quick start, get started, custom dashboards, predefined dashboards, monitoring, netapp console local 
+summary: 透過審查首頁和預先定義的儀表板、建立自訂儀表板並保持其最新狀態，即可開始在 NetApp Console 本機部署中使用儀表板。 
+---
+= 開始在 NetApp Console 本機部署中使用儀表板
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中，請按照以下工作流程從廣泛到聚焦地進行監控：審查首頁儀表板、審查預先定義的儀表板、建立自訂儀表板並保持儀表板的最新狀態。
+
+.所需存取權限
+所有角色。儀表板僅顯示您有權檢視的資源。如果您在可用資源清單中看不到某個資源，則表示您沒有檢視該資源的權限。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 在首頁查看基線健全狀況
+[role="quick-margin-para"]
+使用主頁儀表板審查組織層級的容量、警示、效能和資料保護狀態。
+
+[role="quick-margin-list"]
+* link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]
+* link:concept-monitor-storage.html["了解 NetApp Console 本機部署中的儲存設備監控"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 審查其他預先定義的儀表板
+[role="quick-margin-para"]
+開啟「儲存設備 > 儀表板」以審查預先定義的儀表板，以了解更多特定角色的檢視。
+
+[role="quick-margin-list"]
+* link:task-dashboard-manage.html["在 NetApp Console 本機部署中管理儀表板"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 建立自訂儀表板以進行重點監控
+[role="quick-margin-para"]
+當您需要針對選定的資源、計量和時間視窗建立特定檢視時，請建立自訂儀表板。
+
+[role="quick-margin-list"]
+* link:task-dashboard-create.html["建立自訂儀表板"]
+* link:task-customize-dashboard-cards.html["在 NetApp Console 本機部署中自訂儀表板卡片"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"]保持儀表板最新
+[role="quick-margin-para"]
+根據優先順序變化，透過編輯、複製或刪除自訂儀表板來更新儀表板。
+
+[role="quick-margin-list"]
+* link:task-dashboard-manage.html["在 NetApp Console 本機部署中管理儀表板"]
+* link:reference-dashboard-card-templates.html["了解 NetApp Console 本地部署中的自訂儀表板卡片和計量"]
+
+
+.相關資訊
+* link:concept-custom-dashboards.html["了解 NetApp Console 本機部署中的自訂儀表板"]
+* link:task-storage-dashboard.html["在 NetApp Console 本機部署中檢視首頁計量"]
+
