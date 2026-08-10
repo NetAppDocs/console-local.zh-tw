@@ -616,7 +616,6 @@
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">如果您（客戶）需要停止然後啟動 Console 代理程式 VM，則應從雲端供應商的主控台或使用內部部署管理的標準程序進行操作。</block>
   <block id="2402a0b8d9aa0c3e1beaccf0071277cc" category="doc">介紹 NetApp Console 本地部署</block>
   <block id="258ea65dfbe28db96b93f873d22fbf91" category="inline-link">學習 NetApp Console 本機部署</block>
-  <block id="ce81420610b8020a6acb739f0390a18d" category="paragraph"><block ref="2fadf269e2027f86d038dabc5375655c" category="inline-link-rx"></block>。</block>
   <block id="01d7fad8bf6934be5b2c4a94892a6089" category="summary">了解如何管理和監控 NetApp Console 本地部署，包括稽核活動、訂閱、維護、疑難排解和成員存取。</block>
   <block id="c6c906d845365b31f1a3d974e79792f1" category="doc">了解 NetApp Console 本地部署的管理與監控</block>
   <block id="670ed77781e2c20b187adbc14ae28dad" category="paragraph">部署 NetApp Console 本地部署後，使用管理和監控工具來審查活動、維護 VM，以及管理成員存取。</block>
@@ -1358,7 +1357,6 @@
   <block id="2d7f2870497453a86a12da6f94cb0a9f" category="paragraph"><block ref="f7c67828ff7f607ca1bc8919fb69ebbf" category="inline-link-macro-rx"></block>。<block ref="e01d44fc54d486a034f841e933fc70ed" category="inline-link-macro-rx"></block>。<block ref="4c3b986ebd4373d4b40bb3283f715233" category="inline-link-macro-rx"></block>。<block ref="9e153fbb74c19e5f630133420be99e05" category="inline-link-macro-rx"></block>。</block>
   <block id="ac63bb5663971c98e9ad66f59e257a30" category="summary">NetApp Console 是一款 SaaS 應用程式，使用 Console 代理來管理雲端和內部部署儲存設備系統。NetApp Console 本地部署是一種自我託管的無代理虛擬機器，用於企業級 ONTAP 機組管理，具備原則執行、漂移修復和完整資料主權等功能。</block>
   <block id="267558ffb45143b1115e7dd8dede4d71" category="doc">比較 NetApp Console 本機部署和 NetApp Console</block>
-  <block id="b62b0cb68edb564847cb923dcc89b9ec" category="paragraph">未解析的指令位於 &lt;stdin&gt; - include::https://raw.githubusercontent.com/NetAppDocs/console-all-family/main/intro-family.adoc[lines=15..-1]</block>
   <block id="78ce23a07fc5f5c4c30ea7cb2384f4ec" category="summary">關於 NetApp Console 本地部署的常見問題，包括部署、儲存設備類別、機組、RBAC、監控、AI 輔助管理和資料保護。</block>
   <block id="cecce547077372cc84d04ba0fa938934" category="doc">NetApp Console 本地部署常見問題</block>
   <block id="835a92e241911a3a63a77e05ba970d63" category="paragraph">本常見問題集解答有關 NetApp Console 本地部署的常見問題。本文著重說明在部署、設定及管理 Console 本地部署時實用的概念、先決條件及系統行為。</block>
@@ -3688,7 +3686,6 @@
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考</block>
   <block id="7ba642558e7e1d23e0a4b6d723fe8cb1" category="sidebar">NetApp Console 本地部署 API</block>
   <block id="454d0fa294eacaf6687d76609e9d2de5" category="sidebar">組織和機組 ID</block>
-  <block id="48a692835317bf23f0c6c5786de2ed91" category="sidebar">身分與存取管理 API 參考</block>
   <block id="cddab4871d91f1348299c2439e79e2c8" category="sidebar">ONTAP 警報參考</block>
   <block id="4bb64a663d2c295916c54bfd11eb3986" category="sidebar">叢集安全性法規遵循類別</block>
   <block id="6833b9c301b8c18695d73d7766de5136" category="sidebar">儲存虛擬機器安全性法規遵循類別</block>
@@ -3696,4 +3693,67 @@
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="sidebar">註冊以取得支援</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="sidebar">取得協助</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">法律聲明</block>
+  <block id="d84803ce394c9284844fcf1a08967ee4" category="paragraph"><block ref="a11bdddbf642d1f60f3b9997ef8c00d9" category="inline-link-rx"></block>。</block>
+  <block id="8e3ec462216d5097444b77ca00f80473" category="admonition">如果您管理雲端和本機環境，並且希望 NetApp 管理平台基礎架構，請選擇 NetApp Console。如果您管理大型本機 ONTAP 環境，並且需要完整的資料主權和原則驅動型儲存管理，請選擇 NetApp Console 本機部署。</block>
+  <block id="d7500dc8af696cd476663bebb9d0fcb4" category="paragraph">NetApp 以 SaaS 應用程式的形式託管和維護 NetApp Console。您註冊後即可立即開始管理儲存設備。若要管理儲存設備系統，您需要在雲端或本機環境中部署輕量級的 Console 代理程式。代理程式會傳出連線至 NetApp Console 平台，NetApp 則會自動處理平台驗證、升級和可用度。</block>
+  <block id="773ad4889739d9b22df6b5f152501006" category="paragraph">NetApp Console 還支援受限模式（安裝在您自己的公有雲中，傳出連線受限）和私有模式（安裝在內部部署或您的雲端中，與 NetApp Console 平台沒有連線，包括實體隔離環境）。</block>
+  <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">瞭解 NetApp Console 部署模式</block>
+  <block id="5ceffe99385ecce35b5a538a16ca57cb" category="paragraph"><block ref="dc7c11e9da585b9fa1e35ca44da95ccc" category="inline-link-rx"></block>。</block>
+  <block id="6bc8e262d6c87c1cc67ba2e2ef69c080" category="paragraph">NetApp Console 支援最廣泛的儲存設備系統，包括雲端儲存（例如 Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、E 系列、StorageGRID）以及內部部署 ONTAP 叢集。它提供對完整 NetApp 資料服務套件的存取，包括 NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync 以及 NetApp Data Classification。NetApp Console 也提供支援合約功能，例如 Digital Advisor、生命週期規劃及永續性儀表板。</block>
+  <block id="abd3ebf1d0176fca066a577a665824f3" category="paragraph">NetApp Console 最適合管理混合雲環境的組織，這些組織希望獲得最多的功能、更少的維護工作量以及靈活的授權。</block>
+  <block id="78c9351d6bfa969cec1e259c5314fb98" category="inline-link">了解 NetApp Console^。</block>
+  <block id="a005dfa7e9da2ab070c9b2a2cc506605" category="paragraph"><block ref="a005dfa7e9da2ab070c9b2a2cc506605" category="inline-link-rx"></block></block>
+  <block id="fcc4637d90c046c4a4ef32a9afdaa6fc" category="paragraph">NetApp Console 本機部署可讓您在本機基礎架構中完全執行 NetApp Console 控制平面，無需任何管理流量離開您的環境。您可以使用虛擬應用裝置映像將 Console 部署為虛擬機器，並像管理 vCenter 環境中的任何其他虛擬機器一樣管理它。無需 Console 代理程式。虛擬機器直接與您的 ONTAP 叢集通訊。</block>
+  <block id="5fb781e175de9970e2718bb94cc3d721" category="paragraph">雖然 NetApp Console 私有模式也支援實體隔離和本地部署，但 Console 本地部署專為企業級 ONTAP 機組管理而設計。它新增了任何 NetApp Console 部署模式都不具備的功能：</block>
+  <block id="0d7759ae1f20023b009816231b4ec556" category="list-text">儲存類別原則</block>
+  <block id="704be31d8e2a42e0c7ff6b6f16b73c3e" category="list-text">只需定義一次儲存設備標準，即可將其作為可重複使用的模板，這些模板套裝組合了效能、容量和分層要求。所有資源配置均使用已核准的類別，Console 本地部署會持續監控工作負載的法規遵循情況並識別偏差。</block>
+  <block id="6d84cd31d161fe86d10b8600c9e49fd4" category="list-text">機組管理</block>
+  <block id="7385a9be1dc0677e5961772473ab82cd" category="list-text">將叢集整理成反映您業務結構的資料夾和機組，然後在組織、資料夾或機組範圍內委派管理。</block>
+  <block id="26f4e34d0f8df693380313a828150255" category="list-text">工作負載分析器</block>
+  <block id="48fa264a7a3c3c0d64a82ae09d190200" category="list-text">隨著時間推移，將延遲、處理量、每秒輸入 / 輸出作業次數和組態變更相互關聯，以便在效能問題影響工作負載之前加以發現。</block>
+  <block id="f54523e7e9970026552c0beada420de7" category="list-text">大型語言模型整合</block>
+  <block id="dbebae0d47896a2bb083de1589f27131" category="list-text">連接到您自己的大型語言模型，以使用自然語言進行儲存設備資源配置、調查警報，並取得有關儲存環境的情境式答案。</block>
+  <block id="8375d985c183af61065e987103e69be9" category="list-text">引導式和自動化修復</block>
+  <block id="2d9389b28f495b8afdcdf8f214f11df3" category="list-text">當工作負載偏離其儲存設備類別或觸發警報時，Console 本機部署會提供修復建議。使用引導步驟或一鍵式自動修復功能，無需手動操作即可還原法規遵循。</block>
+  <block id="73c797fde7608d30c65279e6ca248835" category="list-text">透過電子郵件和 Webhook 發送警報</block>
+  <block id="69c0257b1ba8a3ba7687d4f7a9883d7f" category="list-text">設定電子郵件和 Webhook 通知管道，以便在儲存設備條件變更時，警報能夠及時送達相關團隊。Webhook 可與您現有的監控和事件管理工具整合。</block>
+  <block id="00c24ecc0e9a6f1c6a5202f40e8c96c1" category="paragraph">Console 本機部署支援內部部署 ONTAP 叢集及 NetApp Backup and Recovery。它與 Active Directory 整合以實現聯合驗證，並支援本機使用者的多因素驗證。</block>
+  <block id="be6ca74d1ea996c7c4fe59d3f22d39a4" category="paragraph">Console 本地部署最適合擁有大型本地 ONTAP 環境且需要原則驅動型資源配置、自動法規遵循檢查和完整資料主權的組織。</block>
+  <block id="70b86d6aa7fb00fd1d760b33b8607159" category="inline-link-macro">了解 NetApp Console 本機部署^。</block>
+  <block id="f64bf1d04df251b82d06554b478f9ae4" category="paragraph"><block ref="f64bf1d04df251b82d06554b478f9ae4" category="inline-link-macro-rx"></block></block>
+  <block id="0161e3d40bdbea6ca6998c8c60165b33" category="section-title">功能比較</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
+  <block id="23dad8eedc041cc12dbd56726f7f5a94" category="cell">是（需要 Console 代理程式）</block>
+  <block id="f92b8f818d9b311ddfe493bf8fd9d4d1" category="cell">是（透過 Console 虛擬機器直接通訊）</block>
+  <block id="5a33f8c167d1b84a718d0a9ab656e684" category="cell">雲端儲存設備系統（Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3 等）</block>
+  <block id="5caa8b77e08ebd3908f7b342222cc4f7" category="cell">E 系列和 StorageGRID</block>
+  <block id="cc6088539286339733631d73fb51774b" category="cell">NetApp Backup and Recovery</block>
+  <block id="19cbafc0246850c97323cac4fb786794" category="cell">NetApp Disaster Recovery</block>
+  <block id="9a0927d2ec4654dfab564a09f0cadbf9" category="cell">NetApp Ransomware Resilience</block>
+  <block id="4b3238b2edd994dbf80a66b2fce8841e" category="cell">NetApp Copy and Sync</block>
+  <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp Data Classification</block>
+  <block id="b003a63279cc18b6fb1177d6fe5ae8b8" category="cell">Digital Advisor、生命週期規劃、永續性</block>
+  <block id="f2f74222833c136454ac1c309093ce22" category="cell">儲存類別原則與法規遵循監控</block>
+  <block id="99a7a1aa741fd89b57934cd02731f4af" category="cell">機組管理（資料夾和機組）</block>
+  <block id="d7ae72f8784c3d332b0fa036311ef934" category="cell">用於 AI 輔助作業的大型語言模型整合</block>
+  <block id="c72a03504491ce72b87c21f210031a3e" category="section-title">Console 設定和安全性</block>
+  <block id="a0e3089d312c100208595d685b4104d2" category="cell">部署模型</block>
+  <block id="9e2f8f0cf1d9ef87b70b0927b7aa6315" category="cell">軟體以服務形式，由 NetApp 託管（提供不同的部署模式）</block>
+  <block id="e94cfdb1bcf6790d1866d9d05ab27a2c" category="cell">在您自己的基礎架構中自架虛擬機器</block>
+  <block id="ab73a743c1f5fee13984f7219394896a" category="cell">需要 Console 代理</block>
+  <block id="85ed230bbcc941c129c9222b688edfe4" category="cell">軟體升級</block>
+  <block id="18989411927d889b19d609bcc0020172" category="cell">自動，由 NetApp 代管</block>
+  <block id="e1ba155a9f2e8c3be94020eef32a0301" category="cell">手動</block>
+  <block id="bd521aa973861d923b4649240bf09964" category="cell">使用者介面存取</block>
+  <block id="860d51de2751d60b75aa2bf4908d091f" category="cell">NetApp Console 應用程式（透過網際網路或虛擬機器存取）</block>
+  <block id="04628071892bff31fcda3d0180ce0e14" category="cell">主控台虛擬機器（本機，無需網際網路）</block>
+  <block id="a492925ae64557e89b32f29da418b5eb" category="cell">資料主權</block>
+  <block id="8128bb2b2b16d567cc51992879a88b83" category="cell">管理流量流向 NetApp Console 平台</block>
+  <block id="9a85d1c8f123f061c5e7f2ebb079e094" category="cell">沒有任何資料或管理流量離開您的環境</block>
+  <block id="eed7d7eea79968152bcb0157d198eeea" category="cell">身分聯合</block>
+  <block id="53a3be21a870370dce986e82b79657cb" category="cell">多因素驗證 （本機使用者）</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="cell">授權</block>
+  <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">Marketplace 訂閱及自帶授權</block>
+  <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">自帶授權</block>
+  <block id="955bb7127a670884e7aac906d810238a" category="sidebar">控制台本地部署 API 參考</block>
 </blocks>

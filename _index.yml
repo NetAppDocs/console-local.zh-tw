@@ -82,13 +82,13 @@ indexpage:
   - title: API 文件
     links:
     - title: Agentic Platform
-      url: "/agentic/get-configs.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/agentic/get-configs.html
     - title: 資產
-      url: "/asset/get-organizations-aggregates.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/asset/get-organizations-aggregates.html
     - title: 身分和存取管理
-      url: "/tenancyv4/get-fleets.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/tenancyv4/get-fleets.html
     - title: 儲存管理
-      url: "/storage-management/get-v1-organizations-capacitypolicies.html"
+      url: https://docs.netapp.com/us-en/console-local-automation/storage-management/get-v1-organizations-capacitypolicies.html
   - title: 部落格與社群
     links:
     - title: NetApp Console 本地部署

@@ -185,8 +185,8 @@ sidebar:
         entries:
         - title: 組織和機組 ID
           url: "/task-iam-rename-organization.html"
-        - title: 身分與存取管理 API 參考
-          url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
+        - title: 控制台本地部署 API 參考
+          url: https://docs.netapp.com/us-en/console-local-automation/index.html
       - title: 支援的 LLM 提供者和模型
         url: "/reference-llm-supported-models.html"
       - title: ONTAP 警報參考

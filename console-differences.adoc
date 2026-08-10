@@ -13,4 +13,141 @@ summary: NetApp Console 是一款 SaaS 應用程式，使用 Console 代理來�
 :imagesdir: ./media/
 
 
-未解析的指令位於 <stdin> - include::https://raw.githubusercontent.com/NetAppDocs/console-all-family/main/intro-family.adoc[lines=15..-1]
+
+NOTE: 如果您管理雲端和本機環境，並且希望 NetApp 管理平台基礎架構，請選擇 NetApp Console。如果您管理大型本機 ONTAP 環境，並且需要完整的資料主權和原則驅動型儲存管理，請選擇 NetApp Console 本機部署。
+
+
+
+[[netapp-console]]
+== NetApp Console
+
+NetApp 以 SaaS 應用程式的形式託管和維護 NetApp Console。您註冊後即可立即開始管理儲存設備。若要管理儲存設備系統，您需要在雲端或本機環境中部署輕量級的 Console 代理程式。代理程式會傳出連線至 NetApp Console 平台，NetApp 則會自動處理平台驗證、升級和可用度。
+
+NetApp Console 還支援受限模式（安裝在您自己的公有雲中，傳出連線受限）和私有模式（安裝在內部部署或您的雲端中，與 NetApp Console 平台沒有連線，包括實體隔離環境）。
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["瞭解 NetApp Console 部署模式"]。
+
+NetApp Console 支援最廣泛的儲存設備系統，包括雲端儲存（例如 Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、E 系列、StorageGRID）以及內部部署 ONTAP 叢集。它提供對完整 NetApp 資料服務套件的存取，包括 NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync 以及 NetApp Data Classification。NetApp Console 也提供支援合約功能，例如 Digital Advisor、生命週期規劃及永續性儀表板。
+
+NetApp Console 最適合管理混合雲環境的組織，這些組織希望獲得最多的功能、更少的維護工作量以及靈活的授權。
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["了解 NetApp Console^。"]
+
+
+
+[[netapp-console-local-deployment]]
+== NetApp Console 本地部署
+
+NetApp Console 本機部署可讓您在本機基礎架構中完全執行 NetApp Console 控制平面，無需任何管理流量離開您的環境。您可以使用虛擬應用裝置映像將 Console 部署為虛擬機器，並像管理 vCenter 環境中的任何其他虛擬機器一樣管理它。無需 Console 代理程式。虛擬機器直接與您的 ONTAP 叢集通訊。
+
+雖然 NetApp Console 私有模式也支援實體隔離和本地部署，但 Console 本地部署專為企業級 ONTAP 機組管理而設計。它新增了任何 NetApp Console 部署模式都不具備的功能：
+
+儲存類別原則:: 只需定義一次儲存設備標準，即可將其作為可重複使用的模板，這些模板套裝組合了效能、容量和分層要求。所有資源配置均使用已核准的類別，Console 本地部署會持續監控工作負載的法規遵循情況並識別偏差。
+機組管理:: 將叢集整理成反映您業務結構的資料夾和機組，然後在組織、資料夾或機組範圍內委派管理。
+工作負載分析器:: 隨著時間推移，將延遲、處理量、每秒輸入 / 輸出作業次數和組態變更相互關聯，以便在效能問題影響工作負載之前加以發現。
+大型語言模型整合:: 連接到您自己的大型語言模型，以使用自然語言進行儲存設備資源配置、調查警報，並取得有關儲存環境的情境式答案。
+引導式和自動化修復:: 當工作負載偏離其儲存設備類別或觸發警報時，Console 本機部署會提供修復建議。使用引導步驟或一鍵式自動修復功能，無需手動操作即可還原法規遵循。
+透過電子郵件和 Webhook 發送警報:: 設定電子郵件和 Webhook 通知管道，以便在儲存設備條件變更時，警報能夠及時送達相關團隊。Webhook 可與您現有的監控和事件管理工具整合。
+
+
+Console 本機部署支援內部部署 ONTAP 叢集及 NetApp Backup and Recovery。它與 Active Directory 整合以實現聯合驗證，並支援本機使用者的多因素驗證。
+
+Console 本地部署最適合擁有大型本地 ONTAP 環境且需要原則驅動型資源配置、自動法規遵循檢查和完整資料主權的組織。
+
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["了解 NetApp Console 本機部署^。"]
+
+
+
+[[feature-comparison]]
+== 功能比較
+
+
+
+[[storage-management]]
+=== 儲存管理
+
+[cols="3,2,2"]
+|===
+| 功能 | NetApp Console | NetApp Console 本地部署 
+
+
+| 內部部署 ONTAP 叢集 | 是（需要 Console 代理程式） | 是（透過 Console 虛擬機器直接通訊） 
+
+
+| 雲端儲存設備系統（Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3 等） | 是的 | 否 
+
+
+| E 系列和 StorageGRID | 是的 | 否 
+
+
+| NetApp Backup and Recovery | 是的 | 是的 
+
+
+| NetApp Disaster Recovery | 是的 | 否 
+
+
+| NetApp Ransomware Resilience | 是的 | 否 
+
+
+| NetApp Copy and Sync | 是的 | 否 
+
+
+| NetApp Data Classification | 是的 | 否 
+
+
+| Digital Advisor、生命週期規劃、永續性 | 是的 | 否 
+
+
+| 儲存類別原則與法規遵循監控 | 否 | 是的 
+
+
+| 引導式和自動化修復 | 否 | 是的 
+
+
+| 機組管理（資料夾和機組） | 否 | 是的 
+
+
+| 工作負載分析器 | 否 | 是的 
+
+
+| 用於 AI 輔助作業的大型語言模型整合 | 否 | 是的 
+|===
+
+
+[[console-setup-and-security]]
+=== Console 設定和安全性
+
+[cols="3,2,2"]
+|===
+| 功能 | NetApp Console | NetApp Console 本地部署 
+
+
+| 部署模型 | 軟體以服務形式，由 NetApp 託管（提供不同的部署模式） | 在您自己的基礎架構中自架虛擬機器 
+
+
+| 需要 Console 代理 | 是的 | 否 
+
+
+| 軟體升級 | 自動，由 NetApp 代管 | 手動 
+
+
+| 使用者介面存取 | NetApp Console 應用程式（透過網際網路或虛擬機器存取） | 主控台虛擬機器（本機，無需網際網路） 
+
+
+| 資料主權 | 管理流量流向 NetApp Console 平台 | 沒有任何資料或管理流量離開您的環境 
+
+
+| Active Directory 整合 | 否 | 是的 
+
+
+| 身分聯合 | 是的 | 否 
+
+
+| 多因素驗證 （本機使用者） | 是的 | 是的 
+
+
+| 稽核日誌 | 是的 | 是的 
+
+
+| 授權 | Marketplace 訂閱及自帶授權 | 自帶授權 
+|===

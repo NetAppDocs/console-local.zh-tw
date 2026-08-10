@@ -7,4 +7,4 @@
 [[introducing-netapp-console-local-deployment]]
 === 介紹 NetApp Console 本地部署
 
-https://docs.netapp.com/us-en/console-local/netapp-console-local.html["學習 NetApp Console 本機部署"]。
+https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["學習 NetApp Console 本機部署"]。
