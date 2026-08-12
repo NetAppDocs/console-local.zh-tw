@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-llm-integration.html 
-keywords: LLM, AI, artificial intelligence, AI-assisted management, large language model, proxy, openai-compatible, netapp console 
-summary: 了解 NetApp Console 本地部署如何與 OpenAI 和 OpenAI 相容模型整合，包括供應商、Proxy 和安全性決策。 
+keywords: LLM, AI, artificial intelligence, AI-assisted management, large language model,  openai-compatible, netapp console 
+summary: 了解 NetApp Console 本地部署如何與 OpenAI 和 OpenAI 相容模型整合，包括供應商和安全性決策。 
 ---
 = 了解 LLM 在 NetApp Console 本機部署中的整合
 :hardbreaks:
@@ -67,7 +67,7 @@ NetApp Console 本機部署支援以下 LLM 供應商類型：
 
 * *OpenAI* 用於直接存取 OpenAI 模型。
 * *相容於 OpenAI*，適用於相容的端點，例如企業閘道或 Proxy 服務。
-* Anthropic 適用於 Anthropic 的 Claude 模型。
+* *Anthropic* 適用於 Anthropic 的 Claude 模型。
 
 
 模型可用度取決於您設定的端點。請從 Console 本機部署的清單中選取模型。

@@ -40,7 +40,6 @@ NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能�
 * 您的供應商類型選擇：OpenAI 或 OpenAI 相容型。link:concept-llm-integration.html["了解供應商的選擇。"]
 * 您所選供應商路徑的有效 API 金鑰。
 * 您的供應商路徑的端點 URL。
-* 如果您的組織需要，請提供您的 Proxy 或閘道 URL。
 * 如果需要，請提供您的 LLM 供應商帳戶的使用者名稱或單一登入 （SSO） ID。
 * 從 Console 本機部署到所選端點的網路存取。
 * 儲存類別和角色型存取控制，適用於您計劃允許的助手行動。

@@ -897,7 +897,6 @@
   <block id="371acb072fb244306a15b7ff5193bce9" category="list-text"><block ref="371acb072fb244306a15b7ff5193bce9" category="inline-link-macro-rx"></block></block>
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">了解 NetApp Console IAM 的 API</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
-  <block id="823d0c76da1241a2b4bacad6a700ad94" category="summary">了解 NetApp Console 本地部署如何與 OpenAI 和 OpenAI 相容模型整合，包括供應商、Proxy 和安全性決策。</block>
   <block id="aaa31fb12388ee6f380920310c04b753" category="doc">了解 LLM 在 NetApp Console 本機部署中的整合</block>
   <block id="345b50b0707634d277d7a44851e59fe4" category="paragraph">NetApp Console 本機部署連線至大型語言模型 （LLM），用於 AI 輔助的儲存管理。設定後，使用者可以使用自然語言來進行儲存設備資源配置、調查警示並取得儲存設備指引。</block>
   <block id="4f9d5100edf765a8f2ae1c53a1a257cc" category="paragraph">AI 輔助管理讓使用者能以簡單的語言描述請求，而 Console 本機部署則套用您的儲存設備原則。</block>
@@ -920,7 +919,6 @@
   <block id="fcc55126fd45a515695466fda4602164" category="paragraph">NetApp Console 本機部署支援以下 LLM 供應商類型：</block>
   <block id="873109553cafbb3e957f0cc91186aa99" category="list-text">*OpenAI* 用於直接存取 OpenAI 模型。</block>
   <block id="fee6af50bc6105fefb846f7e518fb7cf" category="list-text">*相容於 OpenAI*，適用於相容的端點，例如企業閘道或 Proxy 服務。</block>
-  <block id="9b5550554d175b4703c9783519160fad" category="list-text">Anthropic 適用於 Anthropic 的 Claude 模型。</block>
   <block id="7de1d980a668ed0c9d00649c3750c5d1" category="paragraph">模型可用度取決於您設定的端點。請從 Console 本機部署的清單中選取模型。</block>
   <block id="64c716e8b3c375cb10518555f2cc559d" category="inline-link-macro">了解 NetApp Console 本機部署中支援的 LLM 供應商和模型</block>
   <block id="42e3047ea36dd2b663d0f3f5d7b20152" category="paragraph">有關支援的型號詳情，請參閱<block ref="1a3a7e8df14b08dab1953f3a058a454f" category="inline-link-macro-rx"></block>。</block>
@@ -3169,7 +3167,6 @@
   <block id="3730b696052b51ae22af2269ff6edfbd" category="paragraph">NetApp 支援在 vCenter 環境中安裝 NetApp Console 本機部署。OVA 檔案包含一個預先設定的虛擬機器映像，您可以部署到 VMware 環境中。</block>
   <block id="15e605ee974fa55f027726848cc8afff" category="section-title">下載 OVA 或複製 URL</block>
   <block id="0581616b53582ac26aae5d26a64dd995" category="paragraph">下載 OVA。</block>
-  <block id="e1a2daca3267d204edcee05245d2283c" category="list-text">從 NetApp 支援網站下載 Console 本機部署軟體。</block>
   <block id="fbf739c4dddaccc70b331772ffa91a55" category="section-title">在 vCenter 中部署 NetApp Console 本機部署</block>
   <block id="2dc9f6815a8338fe4cef7c144fd9501e" category="paragraph">登入您的 VCenter 環境以部署 Console 本機部署。</block>
   <block id="19070c8313a6999045690aa5c39cd703" category="list-text">如果您的環境需要，請將自簽名憑證上傳到受信任憑證清單中。安裝後，您可以替換此憑證。</block>
@@ -3218,7 +3215,6 @@
   <block id="336e4351e57a856f458961abc5062751" category="list-text">您的供應商類型選擇：OpenAI 或 OpenAI 相容型。<block ref="78f935c14127e9543a594b2e8112c798" category="inline-link-macro-rx"></block></block>
   <block id="d8bd49d8fe4a0de7a2b03c1aec99e88b" category="list-text">您所選供應商路徑的有效 API 金鑰。</block>
   <block id="12415726cf97af159e3e05710842f040" category="list-text">您的供應商路徑的端點 URL。</block>
-  <block id="761c475526d6aca6a6c425ee949f082a" category="list-text">如果您的組織需要，請提供您的 Proxy 或閘道 URL。</block>
   <block id="0a3c869dbd390ca2cdefafd338d2cf3d" category="list-text">如果需要，請提供您的 LLM 供應商帳戶的使用者名稱或單一登入 （SSO） ID。</block>
   <block id="cfe024af8356a3decd0f09b47eff88fa" category="list-text">從 Console 本機部署到所選端點的網路存取。</block>
   <block id="1f3d7608a574b42ba681dcef64704661" category="list-text">儲存類別和角色型存取控制，適用於您計劃允許的助手行動。</block>
@@ -3633,7 +3629,6 @@
   <block id="bfd15aa26ba0ced782240c4a8b7e517e" category="sidebar">儲存管理</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格與社群</block>
   <block id="fae210aa9f9d8906ee39264d97001f11" category="sidebar">NetApp Console 本地部署</block>
-  <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社群</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
@@ -3756,4 +3751,8 @@
   <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">Marketplace 訂閱及自帶授權</block>
   <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">自帶授權</block>
   <block id="955bb7127a670884e7aac906d810238a" category="sidebar">控制台本地部署 API 參考</block>
+  <block id="c88543bdef944177133ea29faedf50df" category="summary">了解 NetApp Console 本地部署如何與 OpenAI 和 OpenAI 相容模型整合，包括供應商和安全性決策。</block>
+  <block id="7886cf4f03a683503e8235a0eef59e73" category="list-text">*Anthropic* 適用於 Anthropic 的 Claude 模型。</block>
+  <block id="dc666edc3ed6edcb6babcae67d26fcd2" category="list-text">從 <block ref="5574d9b8352359225831a51c7e6c17ee" category="inline-link-macro-rx"></block> 下載 Console 本機部署軟體。</block>
+  <block id="ad8f5be1c708f8e891508a0a9c643e0a" category="sidebar">NetApp 信任中心</block>
 </blocks>

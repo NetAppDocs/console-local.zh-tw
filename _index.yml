@@ -93,7 +93,7 @@ indexpage:
     links:
     - title: NetApp Console 本地部署
       url: https://www.netapp.com/console
-    - title: NetApp Data Services
-      url: https://www.netapp.com/data-services/
     - title: NetApp 社群
       url: https://community.netapp.com/
+    - title: NetApp 信任中心
+      url: https://trust.netapp.com/
