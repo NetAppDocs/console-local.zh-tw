@@ -19,7 +19,7 @@ summary: 在 NetApp Console 本機部署的警報總覽頁面中，查看整個�
 您可以查看整個組織或特定機組的作用中警報，按嚴重程度和影響範圍進行優先排序，並調查根本原因，以便在問題提報之前加以解決。如果警報包含建議的行動或 Fix It 選項，您可以直接從調查階段進入修復階段。
 
 .所需存取權限
-除 Federation admin 和 Federation viewer 角色外的所有角色。擁有 Federation admin 或 Federation viewer 角色的使用者無法檢視警報。link:reference-iam-predefined-roles.html["了解存取角色"]。
+所有角色。警報僅顯示您有權檢視的資源。如果您在可用資源清單中看不到某個資源，則表示您沒有檢視其警報的權限。link:reference-iam-predefined-roles.html["了解存取角色"]。
 
 對於 ONTAP 警報，您可以直接從警報頁面存取 System Manager 和 Workload Analyzer 等工具，以調查和解決問題。
 
@@ -60,7 +60,8 @@ NetApp Console 本地部署支援 ONTAP 和 NetApp Backup and Recovery 的警示
 +
 ** 嚴重程度（關鍵、警告或資訊）
 ** 按影響區域分組的關鍵警報
-** 影響領域（安全性、保護、可用性、效能、容量或配置）
+** 影響領域（可用性、容量、組態、效能、保護或安全性）
+** Drift 警示，僅查看由組態漂移引起的警示
 
 
 
@@ -111,7 +112,7 @@ image:screenshot-alerts-search.png["按名稱或執行摘要搜尋提醒"]
 [[investigate-an-alert]]
 == 調查警報
 
-您可以調查警報，查看觸發警報的原因以及收到通知的人員。
+您可以調查警報，查看是什麼觸發了它。
 
 在調查 ONTAP 警報時，您也可以直接前往產生警報之系統的 System Manager 介面，檢視其他詳細資訊並採取行動。
 

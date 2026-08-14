@@ -75,21 +75,6 @@ SMTPS（連接埠 465）可立即建立加密連線，建議在安全性要求�
 
 
 
-[[remove-an-email-server-configuration]]
-=== 移除電子郵件伺服器組態
-
-如果您不再希望 Console 本機部署傳送電子郵件，則可以移除電子郵件伺服器組態。
-
-.步驟
-. 選擇「Administration > Console」。
-. 選擇 *Configuration* 以開啟系統組態頁面。
-. 在「電子郵件伺服器」部分，選擇「設定」。
-. 選擇 *Clear fields* 以清除現有組態。
-. 選擇「儲存」以儲存已清除的組態，這將從 Console 本機部署中移除電子郵件伺服器組態。
-
-
-
-
 [[configure-a-webhook]]
 == 設定 Webhook
 

@@ -16,7 +16,7 @@ summary: 了解 NetApp Console 本地部署中的儲存設備警示如何協助�
 [role="lead"]
 NetApp Console 本機部署會產生警示，以識別內部部署 ONTAP 叢集的健全狀況問題以及 NetApp Backup and Recovery 作業。
 
-Console 本地部署將來自 ONTAP 叢集和 Backup and Recovery 作業的警示整合到單一檢視中。「警示」頁面包含儀表板、警示清單和系統檢視，可供您審查整個組織的警示，或將範圍限定至特定機組或系統。每個警示都會識別受影響的系統、嚴重程度及影響範圍。
+主控台本地部署將來自 ONTAP 叢集和備份與復原作業的警示整合到單一檢視中。「警示」頁面包含儀表板、警示清單以及顯示組織中所有系統警示的檢視。每個警示都會識別受影響的系統、其嚴重程度及其影響範圍。
 
 在 Console 本地部署中使用警示可以：
 
@@ -34,8 +34,8 @@ Console 本地部署將來自 ONTAP 叢集和 Backup and Recovery 作業的警�
 
 每個警報都包含嚴重程度和影響範圍：
 
-* *嚴重程度*表示緊急程度，從最高到最低：危急、嚴重、輕微、警告和訊息。
-* *影響區域* 指明受影響的領域：容量、連線性、資料保護、效能和安全性。
+* *嚴重程度*表示緊急程度，從最高到最低：關鍵、警告、通知。
+* *影響區域* 指明受影響的領域：可用性、容量、組態、效能、保護和安全性。
 
 
 
@@ -43,7 +43,7 @@ Console 本地部署將來自 ONTAP 叢集和 Backup and Recovery 作業的警�
 [[alert-sources-and-scope]]
 == 警報來源和範圍
 
-* *ONTAP alerts* 源自 NetApp Console 本機部署所探索的內部部署叢集上的 ONTAP 事件管理系統 （EMS）。link:https://docs.netapp.com/us-en/ontap-ems/acp-auto-events.html["深入瞭解 ONTAP EMS 和可用警示。"^]
+* *ONTAP alerts* 源自 Console 本機部署所探索的內部部署叢集上的 ONTAP 事件管理系統 （EMS），以及從 ONTAP 收集的監控計量。link:https://docs.netapp.com/us-en/ontap-ems/acp-auto-events.html["深入瞭解 ONTAP EMS 和可用警示。"^]
 * *NetApp Backup and Recovery alerts* 源自備份與還原作業。link:https://docs.netapp.com/us-en/data-services-backup-recovery/reference-audit-actions.html["了解更多關於 NetApp Backup and Recovery 警報的資訊。"^]
 * 您的權限決定了您可以檢視哪些機組。將檢視範圍限定為整個組織、特定機組或單一系統。「系統健全狀況」標籤顯示每個系統的狀態，「警報」標籤顯示所選範圍的目前警報清單。
 * CSV 匯出反映了目前範圍、搜尋文字和篩選條件。
@@ -51,14 +51,14 @@ Console 本地部署將來自 ONTAP 叢集和 Backup and Recovery 作業的警�
 
 
 
-[[alert-notification-rules]]
-== 警報通知規則
+[[notification-rules]]
+== 通知規則
 
 建立通知規則，以確定哪些警報會產生通知以及誰會收到通知。通知規則具有以下特徵：
 
 * 它會比對服務（例如 ONTAP 管理或 Backup and Recovery）、嚴重性、影響區域和目標系統上的警示。
 * 對於電子郵件發送，它會將通知發送給具有指定存取角色的使用者。對於 Webhook 發送，它會將警報資料發送到已設定的端點——對該資料的存取由接收應用程式控制，而非由 Console 本地部署控制。
-* 它適用於特定系統，不適用於機組。
+* 它適用於組織內的所有系統。
 * 在計劃維護所需時間期間，可以將其靜音，以抑制預期的警示。
 
 
@@ -68,6 +68,6 @@ Console 本機部署包含一條預設通知規則，該規則在安裝後立即
 
 .相關資訊
 * link:task-alerts-monitor.html["監控和調查警報"]
-* link:task-alert-rules-manage.html["建立和管理警報通知規則"]
+* link:task-alert-rules-manage.html["建立和管理通知規則"]
 * link:reference-ontap-alerts.html["了解 NetApp Console 本地部署中的 ONTAP 警示"]
 

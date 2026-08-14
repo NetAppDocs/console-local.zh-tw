@@ -40,7 +40,7 @@ NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能�
 * 您的供應商類型選擇：OpenAI 或 OpenAI 相容型。link:concept-llm-integration.html["了解供應商的選擇。"]
 * 您所選供應商路徑的有效 API 金鑰。
 * 您的供應商路徑的端點 URL。
-* 如果需要，請提供您的 LLM 供應商帳戶的使用者名稱或單一登入 （SSO） ID。
+* 如果需要，請提供您的 LLM 供應商帳戶使用者名稱或 ID。
 * 從 Console 本機部署到所選端點的網路存取。
 * 儲存類別和角色型存取控制，適用於您計劃允許的助手行動。
 
@@ -83,9 +83,8 @@ link:task-llm-troubleshoot-integration.html["追蹤 LLM 整合問題"]。
 儲存組態後，驗證助手的可用度和行為。
 
 .步驟
-. 確認「Console assistant」按鈕出現在 NetApp Console 本機部署儀表板上。
-. 以*唯讀*模式開啟助理並執行基本查詢。
-. 以*讀取/寫入*模式開啟助手，並確認變更儲存設備的行動在執行前需要使用者確認。
+. 以*唯讀*模式開啟 *Console assistant* 並執行基本查詢。
+. 在*讀取/寫入*模式下開啟 *Console assistant*，並確認變更儲存設備的操作在執行前需要使用者確認。
 . 確認需要行動工作流程的使用者是否擁有必要的角色型存取控制權限。
 
 
