@@ -36,9 +36,15 @@ summary: 如果您是 VMware 用戶，可以使用 OVA 在 vCenter 中安裝 Con
 * vSphere 7.0u3 或更高版本，虛擬硬體版本 19 或更高版本
 
 
+[NOTE]
+====
+* 虛擬機器啟動時，ESXi 主機上的 CPU 和記憶體容量會被預留，而不僅僅是分配。請確保目標主機至少有 16 個 CPU 核心和 64 GB 的可用未預留容量。主機上已有的虛擬機器預留會減少可用容量。
+* 資料儲存必須符合最低磁碟寫入效能要求：fsync p99 寫入延遲 ≤ 20 毫秒，4K 隨機寫入 IOPS ≥ 200。延遲超過 50 毫秒或 IOPS 低於 30 會導致部署故障。
+* 不支援 IPv6。需要靜態 IPv4 位址。
+* 在 vCenter 環境中安裝 NetApp Console 本機部署，而非直接在 ESXi 主機上。
 
-NOTE: 在 vCenter 環境中安裝 NetApp Console 本機部署，而非直接在 ESXi 主機上。
 
+====
 
 
 [[set-up-network-access-for-the-netapp-console-local-deployment]]

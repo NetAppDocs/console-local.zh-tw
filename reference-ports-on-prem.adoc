@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network requirements, ports, on-premises, TCP, HTTP, HTTPS, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local 
-summary: Console 代理程式在手動安裝於內部部署 Linux 主機上時，會使用_傳入_連接埠。請參考這些連接埠以供規劃之用。 
+keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local, inbound ports, OVA 
+summary: NetApp Console 本機部署 OVA 管理其自身的內部防火牆。如果您的環境在虛擬機器上強制執行外部防火牆原則，請確保以下傳入連接埠可從您的管理主機存取。 
 ---
-= NetApp Console 本地部署中內部部署 Console 代理程式的連接埠
+= 用於 NetApp Console 本機部署的傳入連接埠
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,39 @@ summary: Console 代理程式在手動安裝於內部部署 Linux 主機上時�
 
 
 [role="lead"]
-在 NetApp Console 本機部署中，手動安裝在內部部署 Linux 主機上的 Console 代理程式會使用_傳入_連接埠。請參考這些連接埠以供規劃之用。
-
-這些傳入規則適用於所有 NetApp Console 部署模式。
+NetApp Console 本機部署 OVA 管理其自身的內部防火牆。如果您的環境在虛擬機器上強制執行外部防火牆原則，請確保以下傳入連接埠可從您的管理主機存取。
 
 [cols="10,10,80"]
 |===
-| 傳輸協定 | 連接埠 | 目的 
+| 連接埠 | 傳輸協定 | 目的 
 
 
-| HTTP | 80  a| 
-* 提供從用戶端 Web 瀏覽器到本機使用者介面的 HTTP 存取
-* 在 Cloud Volumes ONTAP 升級過程中使用
+| 22 | TCP | SSH 用於遠端維護和診斷 shell 存取 
 
 
+| 123 | UDP | 用於時間同步的 NTP 
 
 
-| HTTPS | 443 | 提供從用戶端 Web 瀏覽器到本機使用者介面的 HTTPS 存取 
+| 2379 | TCP | 用於 RKE2 控制平面 etcd 用戶端 API 的 etcd 用戶端流量 
+
+
+| 2380 | TCP | 用於 etcd 成員間複寫的 etcd 對等連接埠 
+
+
+| 6443 | TCP | 用於 kubectl 和 RKE2 API 存取的 Kubernetes API 伺服器 
+
+
+| 8472 | UDP | Canal/Flannel VXLAN 覆蓋層，用於 RKE2 節點之間的 pod 對 pod 流量 
+
+
+| 9091 | TCP | Calico Felix CNI 健全狀況和計量的端點 
+
+
+| 9100 | TCP | Prometheus node_exporter 用於主機計量抓取 
+
+
+| 9345 | TCP | RKE2 監督器與伺服器註冊端點 
+
+
+| 10250 | TCP | kubelet API 用於 metrics-server 和 kube-apiserver 到 kubelet 
 |===

@@ -2160,19 +2160,8 @@
   <block id="16b1391fb12c1729b459d4078411bff9" category="cell">用戶端嘗試連線至特權 ONTAP_ADMIN$ 共享，但登入使用者不屬於此 SVM 上的任何作用中 Vscan 掃描器資源池。</block>
   <block id="ffeaca4f7d6a46d7049fc8e2b7f0b27b" category="cell">Volume 反勒索軟體監控</block>
   <block id="f36dfd228964cdbde57b7f8b77815fd4" category="cell">Volume 的反勒索軟體狀態已變更。</block>
-  <block id="8750ee5b8e03e45a2b63152d73f5465c" category="summary">Console 代理程式在手動安裝於內部部署 Linux 主機上時，會使用_傳入_連接埠。請參考這些連接埠以供規劃之用。</block>
-  <block id="741d67235c3ef4adaff2b42902e2d185" category="doc">NetApp Console 本地部署中內部部署 Console 代理程式的連接埠</block>
-  <block id="970d420fc1a295c82b114cc434d08e14" category="paragraph">在 NetApp Console 本機部署中，手動安裝在內部部署 Linux 主機上的 Console 代理程式會使用_傳入_連接埠。請參考這些連接埠以供規劃之用。</block>
-  <block id="186772c5d8658de6d80f0ce647f8b68c" category="paragraph">這些傳入規則適用於所有 NetApp Console 部署模式。</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">傳輸協定</block>
   <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">連接埠</block>
-  <block id="293c9ea246ff9985dc6f62a650f78986" category="cell">HTTP</block>
-  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
-  <block id="63b34d7f22329c0eb7915fca7a346007" category="list-text">提供從用戶端 Web 瀏覽器到本機使用者介面的 HTTP 存取</block>
-  <block id="7e0ccd7729abca8ae58e9ceff3fd0b87" category="list-text">在 Cloud Volumes ONTAP 升級過程中使用</block>
-  <block id="0e8433f9a404f1f3ba601c14b026d321" category="cell">HTTPS</block>
-  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
-  <block id="2f0c197eb73a7c6da10b03384f241025" category="cell">提供從用戶端 Web 瀏覽器到本機使用者介面的 HTTPS 存取</block>
   <block id="67ff18000868836147456b90ed3c09d8" category="summary">參考 NetApp Console 本機部署中可用的系統定義儲存設備類別原則。</block>
   <block id="e5c10406aeb9ecc88bc3d6ff3824ca76" category="doc">審查 NetApp Console 本機部署中預先定義的儲存設備類別原則</block>
   <block id="06870dc681e77e4ce51cc638cf6d849a" category="paragraph">NetApp Console 本機部署包含所有四種原則類型的系統定義原則。在建立或自訂儲存設備類別時，請使用此參考來識別哪種原則最符合您的工作負載需求。</block>
@@ -2600,10 +2589,7 @@
   <block id="7cdb1f2af961d23797553a855f761e28" category="list-text">測試成功後，選擇 *Save* 以建立 webhook。</block>
   <block id="ff67c1e8def8da7cf2d07b0c822de82b" category="inline-link-macro">了解如何建立警示規則並指派用於傳送警示的 Webhook。</block>
   <block id="0f877db416e2ad40a2e559c42f1ce5cf" category="paragraph">儲存 webhook 後，使用者可在支援 webhook 的位置選取該 webhook，例如警示傳送選項。<block ref="669ccaec6c1dcee5862e49b40f39ec42" category="inline-link-macro-rx"></block></block>
-  <block id="086ed22d27145a0af40cfd83a074e87c" category="summary">部署 Console 本機部署後，您可以對現有的 vCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 本機部署的 VM 執行個體的 CPU 或 RAM。</block>
-  <block id="4eea2d45bb5749e6b54f45f112048c3f" category="paragraph">在 NetApp Console 本機部署中，您可以在部署 Console 本機部署後，對現有的 VCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 本機部署的 VM 執行個體的 CPU 或 RAM。</block>
   <block id="94e57c616c0770ea6904ed2397bb0c43" category="paragraph">使用虛擬機器 Web 控制台執行下列維護任務：</block>
-  <block id="9a3ecb0cd9521bfd7a2e3a2834d9a866" category="list-text">增加磁碟大小</block>
   <block id="aa9d9bd66060cd759418870198f87aa2" category="list-text">重新啟動 Console 本機部署</block>
   <block id="eaa97a74be674590f501aafbddcdc12b" category="list-text">更新靜態路由</block>
   <block id="4f366b69ce0f39237eb284d461ee957a" category="list-text">更新搜尋網域</block>
@@ -2619,19 +2605,6 @@
   <block id="d93984b8c2a8824c883a08022dc2371b" category="paragraph">您可以變更該<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>使用者的密碼。</block>
   <block id="dfc06183e38ae0a25b4ca48c3a849dc3" category="list-text">點擊<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>以檢視<block ref="9b685fecb65f77899f1ea4fd1e767722" prefix=" " category="inline-code"></block>功能表。</block>
   <block id="f8d68d435a716537321667f6d83873ef" category="list-text">輸入<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>以變更維護使用者密碼，並按照螢幕提示操作。</block>
-  <block id="7bdccee6307bdfcab6b328e3b58873ac" category="section-title">增加虛擬機器執行個體的 CPU 或記憶體</block>
-  <block id="8ab8872d165876c227474a223e048a96" category="paragraph">您可以增加託管 Console 本機部署的虛擬機器執行個體的 CPU 或 RAM。</block>
-  <block id="9c1e3b597971db8490ccfbe471a560c0" category="paragraph">在 vCenter 或 ESXi 主機中編輯 VM 執行個體設定，然後使用維護 Console 套用變更。</block>
-  <block id="32011cb24074435157601af044ce5663" category="list-title">vSphere 用戶端中的步驟</block>
-  <block id="4cb240d37182d6c74e799680ccf1db95" category="list-text">右鍵單擊 VM 執行個體，然後選擇 *Edit Settings*。</block>
-  <block id="888d5124c37691bc77f9fd61458331aa" category="list-text">增加 /opt 或 /var 分割區使用的硬碟機空間。</block>
-  <block id="e4e53d6b5475fac95593fb46c84ee67f" category="list-text">選擇 *Hard Disk 2* 以增加 /opt 使用的硬碟機空間。</block>
-  <block id="c12cae49029925639b6d7b94b5bd87e6" category="list-text">選擇 *Hard Disk 3* 以增加 /var 使用的硬碟機空間。</block>
-  <block id="345e93a96b6e66cb9274dbad975c0db2" category="list-text">儲存變更。</block>
-  <block id="2f263f0d1841855ba6685c895ba3db8b" category="list-title">維護主控台中的步驟</block>
-  <block id="0a733be0407678405ecc94d2553d3cb4" category="list-text">選擇託管 Console 本機部署的虛擬機器執行個體。</block>
-  <block id="a5527426dfe9b3215c0fe0144430c64c" category="list-text">進入<block ref="feddfc071bb4b3e59bcd10161dac21cc" prefix=" " category="inline-code"></block>功能表。</block>
-  <block id="3d80ea8b1dbf4ad9b1fb81c54b3f4126" category="list-text">輸入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>並依照螢幕提示操作。主控台會掃描新設定並增加分割區大小。</block>
   <block id="e8fa8fc0b3796a7fce5b9307b50ed032" category="section-title">檢視 Console 本地部署虛擬機器的網路設定</block>
   <block id="427a252546c64ee615ec86ef47dc9126" category="paragraph">在 vSphere 用戶端中檢視 Console 本機部署虛擬機器的網路設定，以確認或疑難排解網路問題。您只能檢視（不能更新）以下網路設定： IP 位址和 DNS 詳細資料。</block>
   <block id="57bc91c2ba2fc0985ecadad76ce00906" category="list-text">點擊<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>以檢視<block ref="dce011ea921230b4e3061bb70569c598" prefix=" " category="inline-code"></block>功能表。</block>
@@ -3748,4 +3721,33 @@
   <block id="30ed16d592d987bc97f9c257fb0d026c" category="list-text">如果需要，請提供您的 LLM 供應商帳戶使用者名稱或 ID。</block>
   <block id="e90cfbea605d047e2c768be5cc0d5d90" category="list-text">以*唯讀*模式開啟 *Console assistant* 並執行基本查詢。</block>
   <block id="ddbbb4fd6daa8474cc88e6beb3919a85" category="list-text">在*讀取/寫入*模式下開啟 *Console assistant*，並確認變更儲存設備的操作在執行前需要使用者確認。</block>
+  <block id="f9fe4a5426c609bf7ec63303066954e3" category="list-text">虛擬機器啟動時，ESXi 主機上的 CPU 和記憶體容量會被預留，而不僅僅是分配。請確保目標主機至少有 16 個 CPU 核心和 64 GB 的可用未預留容量。主機上已有的虛擬機器預留會減少可用容量。</block>
+  <block id="fb2aa2f24e94d02ba0aa39b5b1953b02" category="list-text">資料儲存必須符合最低磁碟寫入效能要求：fsync p99 寫入延遲 ≤ 20 毫秒，4K 隨機寫入 IOPS ≥ 200。延遲超過 50 毫秒或 IOPS 低於 30 會導致部署故障。</block>
+  <block id="bc30837cb3bcee1ef470300a93faccd1" category="list-text">不支援 IPv6。需要靜態 IPv4 位址。</block>
+  <block id="2938c9aef13e6b9e5ef64008f86cbed9" category="summary">NetApp Console 本機部署 OVA 管理其自身的內部防火牆。如果您的環境在虛擬機器上強制執行外部防火牆原則，請確保以下傳入連接埠可從您的管理主機存取。</block>
+  <block id="d640078adcf8eb1ceaf8dbfab6c0720d" category="doc">用於 NetApp Console 本機部署的傳入連接埠</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="0c4e05ccd1abb4e3392fea5423a4af37" category="cell">SSH 用於遠端維護和診斷 shell 存取</block>
+  <block id="202cb962ac59075b964b07152d234b70" category="cell">123</block>
+  <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
+  <block id="d8cd98eaca923c6ca73ac9374b25eaa7" category="cell">用於時間同步的 NTP</block>
+  <block id="add217938e07bb1fd8796e0315b88c10" category="cell">2379</block>
+  <block id="845bf240dea5c57c12b3d03689df0b54" category="cell">用於 RKE2 控制平面 etcd 用戶端 API 的 etcd 用戶端流量</block>
+  <block id="da4902cb0bc38210839714ebdcf0efc3" category="cell">2380</block>
+  <block id="50cdddb418f7b6b7dad830939b422a69" category="cell">用於 etcd 成員間複寫的 etcd 對等連接埠</block>
+  <block id="c03afab54002887e7e1d27a1069e206c" category="cell">6443</block>
+  <block id="e2e22dfc9080b9c68b6dbc84bf406d43" category="cell">用於 kubectl 和 RKE2 API 存取的 Kubernetes API 伺服器</block>
+  <block id="6d1e481bdcf159961818823e652a7725" category="cell">8472</block>
+  <block id="ff130471ec1970c4bda9bde0fb3b8c03" category="cell">Canal/Flannel VXLAN 覆蓋層，用於 RKE2 節點之間的 pod 對 pod 流量</block>
+  <block id="0a7d7a81e8e3a20e4c34748e98ef45f6" category="cell">9091</block>
+  <block id="0f8aa63d0919d42b022ddcfa2e30e1b8" category="cell">Calico Felix CNI 健全狀況和計量的端點</block>
+  <block id="fc1dc4549df0335d7f506edb5d66af16" category="cell">9100</block>
+  <block id="b10328ad2875bbddf4d9d49cacb29474" category="cell">Prometheus node_exporter 用於主機計量抓取</block>
+  <block id="76444b3132fda0e2aca778051d776f1c" category="cell">9345</block>
+  <block id="4d65c397f420cfc0233d2763cea9bffc" category="cell">RKE2 監督器與伺服器註冊端點</block>
+  <block id="183f50a7700982a3ed18ff6d7a5777bf" category="cell">10250</block>
+  <block id="924c6a9c613412a0e4058026aa89a86a" category="cell">kubelet API 用於 metrics-server 和 kube-apiserver 到 kubelet</block>
+  <block id="50a807a194603f6075b05395337e3064" category="summary">部署 Console 本機部署後，您可以對現有的 vCenter 或 ESXi 主機進行變更。</block>
+  <block id="e137fee1052a69e09aea64b66a681285" category="paragraph">在 NetApp Console 本機部署中，您可以在部署 Console 本機部署後，對現有的 VCenter 或 ESXi 主機進行變更。</block>
 </blocks>

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-console-local-vm-config.html 
-keywords: Console local VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, Console local maintenance, Console local operating system, Console local host 
-summary: 部署 Console 本機部署後，您可以對現有的 vCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 本機部署的 VM 執行個體的 CPU 或 RAM。 
+keywords: Console local VM, vcenter, esxi, vm maintenance, Console local maintenance, Console local operating system, Console local host 
+summary: 部署 Console 本機部署後，您可以對現有的 vCenter 或 ESXi 主機進行變更。 
 ---
 = 維護您的 vCenter 或 ESXi 主機以進行 NetApp Console 本機部署
 :hardbreaks:
@@ -14,11 +14,10 @@ summary: 部署 Console 本機部署後，您可以對現有的 vCenter 或 ESXi
 
 
 [role="lead"]
-在 NetApp Console 本機部署中，您可以在部署 Console 本機部署後，對現有的 VCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 本機部署的 VM 執行個體的 CPU 或 RAM。
+在 NetApp Console 本機部署中，您可以在部署 Console 本機部署後，對現有的 VCenter 或 ESXi 主機進行變更。
 
 使用虛擬機器 Web 控制台執行下列維護任務：
 
-* 增加磁碟大小
 * 重新啟動 Console 本機部署
 * 更新靜態路由
 * 更新搜尋網域
@@ -55,37 +54,6 @@ summary: 部署 Console 本機部署後，您可以對現有的 vCenter 或 ESXi
 . 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
 . 點擊 `1`以檢視 `System Configuration`功能表。
 . 輸入 `1`以變更維護使用者密碼，並按照螢幕提示操作。
-
-
-
-
-[[increase-the-cpu-or-ram-of-the-vm-instance]]
-=== 增加虛擬機器執行個體的 CPU 或記憶體
-
-您可以增加託管 Console 本機部署的虛擬機器執行個體的 CPU 或 RAM。
-
-在 vCenter 或 ESXi 主機中編輯 VM 執行個體設定，然後使用維護 Console 套用變更。
-
-.vSphere 用戶端中的步驟
-. 開啟 vSphere 用戶端並登入您的 vCenter。
-. 選擇託管 Console 本機部署的虛擬機器執行個體。
-. 右鍵單擊 VM 執行個體，然後選擇 *Edit Settings*。
-. 增加 /opt 或 /var 分割區使用的硬碟機空間。
-+
-.. 選擇 *Hard Disk 2* 以增加 /opt 使用的硬碟機空間。
-.. 選擇 *Hard Disk 3* 以增加 /var 使用的硬碟機空間。
-
-
-. 儲存變更。
-
-
-.維護主控台中的步驟
-. 開啟 vSphere 用戶端並登入您的 vCenter。
-. 選擇託管 Console 本機部署的虛擬機器執行個體。
-. 選擇 *Launch Web Console*。
-. 使用建立虛擬機器執行個體時指定的使用者名稱和密碼登入虛擬機器執行個體。使用者名稱是 `maint`，密碼是建立虛擬機器執行個體時指定的密碼。
-. 進入 `1 to view the `System Configuration`功能表。
-. 輸入 `2`並依照螢幕提示操作。主控台會掃描新設定並增加分割區大小。
 
 
 
