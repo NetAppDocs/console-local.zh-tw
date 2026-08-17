@@ -2695,76 +2695,11 @@
   <block id="b26a5fa549c938ffb56d20623c3f69c0" category="list-text">確認刪除。</block>
   <block id="538a347b14607c5622b304ba5882cfe7" category="summary">NetApp 以多種方式為 NetApp Console 本地部署提供支援。豐富的免費自助支援選項全年無休均可使用，例如知識庫 (KB) 文章和社群論壇。您的支援註冊包含透過線上工單系統提供的遠端技術支援。</block>
   <block id="26fde32efa74809cd3599eaa1516d39c" category="doc">取得 NetApp Console 本機部署的協助</block>
-  <block id="28de1509a2687ee868de346a484226e5" category="paragraph">NetApp Console 此工作的本機部署資訊。NetApp 以多種方式為 NetApp Console 及其雲端服務提供支援。全年無休提供豐富的免費自助支援選項，例如知識庫 （KB） 文章和社群論壇。您的支援註冊包含透過線上工單系統提供的遠端技術支援。</block>
-  <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">取得雲端供應商檔案服務的支援</block>
-  <block id="317cbd2c4fdbfd06a6c66bcd3f57d7ad" category="paragraph">如需雲端供應商檔案服務、其基礎架構或使用該服務之任何解決方案的相關技術支援，請參閱該產品的說明文件。</block>
-  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSx for ONTAP</block>
-  <block id="359d8b16e442ffaa72e03c95fcd60448" category="list-text"><block ref="359d8b16e442ffaa72e03c95fcd60448" category="inline-link-macro-rx"></block></block>
-  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
-  <block id="153836c062a78213f2aa165322254aa4" category="list-text"><block ref="153836c062a78213f2aa165322254aa4" category="inline-link-macro-rx"></block></block>
-  <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
-  <block id="0d592360c983f234b130127efee38805" category="list-text"><block ref="0d592360c983f234b130127efee38805" category="inline-link-macro-rx"></block></block>
-  <block id="68e6fe8cde496154d24fd032b4262070" category="paragraph">若要獲得針對 NetApp 及其儲存解決方案和資料服務的特定技術支援，請使用下面描述的支援選項。</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">使用自助選項</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項全天候 24 小時、每週 7 天免費提供：</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
-  <block id="5bb94d173380c00577f5e04b6f26bb94" category="paragraph">您目前正在檢視的 NetApp Console 文件。</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
-  <block id="0e20091afcea2d83d0033a933ba85092" category="paragraph">搜尋 NetApp 知識庫，尋找有助於疑難排解問題的文章。</block>
-  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社群</block>
-  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="777d75a90b107e4f18469f82c4f81fe2" category="paragraph">加入 NetApp Console 社群，參與現有討論或建立新討論。</block>
-  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">建立 NetApp 支援案例</block>
-  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述自助支援選項外，您可以在啟動支援後與 NetApp 支援專家合作解決任何問題。</block>
-  <block id="8fece025a1a8fef7018449bf104a2527" category="list-title">開始之前</block>
-  <block id="c406bf0ac8ac87bc5bb7132a7351b2ae" category="inline-link">了解如何管理與您的 Console 登入相關的認證資料</block>
-  <block id="377118f28487e70bd456993144b72fc7" category="list-text">若要使用「建立案例」功能，您必須先將 NetApp 支援網站憑證與 Console 登入資訊關聯<block ref="68c4321a756e3ffe955b62cff6fea46d" category="inline-link-rx"></block>。</block>
-  <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">如果您要為具有序號的 ONTAP 系統開立案例，則您的 NSS 帳戶必須與該系統的序號關聯。</block>
-  <block id="0ab80a63088581d58dcf067051f4c894" category="list-text">在 NetApp Console 中，選取 *說明 &gt; 支援*。</block>
-  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在「資源」頁面上，選擇「技術支援」下的可用選項之一：</block>
-  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">如果您想透過電話與我們聯繫，請選擇「致電」。您將被引導至 netapp.com 上的頁面，該頁面列出您可以撥打的電話號碼。</block>
-  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">選擇「建立案例」以向 NetApp 支援專家開啟工單：</block>
-  <block id="a1123cd59d7bd876c080c33906ae65ce" category="list-text">*服務*：選擇與問題相關的服務。例如，當問題具體涉及 Console 內的工作流程或功能的技術支援問題時，請選擇 *NetApp Console*。</block>
-  <block id="987df7518e2afb50a860647c832afd13" category="list-text">*系統*：如果適用於儲存設備，請選擇 *Cloud Volumes ONTAP* 或 *內部部署*，然後選擇相關的工作環境。</block>
-  <block id="8f8e8a86e5f52b6186a37bdf266c4320" category="paragraph">系統清單位於 Console 組織和您在頂部橫幅中選擇的 Console 代理程式的範圍內。</block>
-  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*案例優先順序*：選擇案例的優先順序，可以是低、中、高或關鍵。</block>
-  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">若要深入瞭解這些優先順序的詳細資訊，請將滑鼠懸停在欄位名稱旁邊的資訊圖示上。</block>
-  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*問題執行摘要*：請詳細描述您的問題，包括任何適用的錯誤訊息或您執行的疑難排解步驟。</block>
-  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*其他電子郵件地址*：如果您想讓其他人知悉此問題，請輸入其他電子郵件地址。</block>
-  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*附件（選購）*：一次最多可上傳五個附件。</block>
-  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">每個檔案的大小限制為 25 MB。支援的檔案副檔名有：txt、log、pdf、jpg/jpeg、rtf、doc/docx、xls/xlsx 和 csv。</block>
-  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">這是「建立案例」表單的快照，您可以透過該表單向 NetApp 支援部門建立案例。</block>
-  <block id="77c89527ec8a9f89b24c5579d19b3b4b" category="paragraph"><block ref="77c89527ec8a9f89b24c5579d19b3b4b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">螢幕上會彈出一個窗口，顯示您的支援案例編號。NetApp 支援專員將審查您的案例，並儘快與您聯繫。</block>
-  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">若要查看您的支援案例歷史記錄，您可以選擇 *Settings &gt; Timeline*，然後尋找名為「create support case」的行動。最右側的按鈕可讓您展開該行動以查看詳細資訊。</block>
-  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">建立案例時，您可能會遇到以下錯誤訊息：</block>
-  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">「您無權針對所選服務建立案例。」</block>
-  <block id="178fdaf97b1d1577437f11ee9d5e5229" category="paragraph">此錯誤可能表示 NSS 帳戶及其關聯的註冊公司與 NetApp Console 帳戶序號（例如960xxxx）或工作環境序號對應的註冊公司不一致。您可以透過以下方式尋求協助：</block>
-  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">提交非技術性案例，請至<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
-  <block id="e1100b46295d42ed50ba7a4630710164" category="section-title">管理您的支援案例</block>
-  <block id="316508a3483178100806a9d44b49aba2" category="paragraph">您可以直接透過 Console 查看和管理正在進行和已解決的支援案例。您可以管理與您的 NSS 帳戶和公司關聯的案例。</block>
-  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">頁面頂端的案例管理儀表板提供兩種檢視：</block>
-  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">左側檢視顯示您提供的使用者 NSS 帳戶在過去 3 個月內開啟的案例總數。</block>
-  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">右側檢視顯示過去 3 個月內，根據您的使用者 NSS 帳戶，您公司層級開立的案件總數。</block>
-  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">表格中的結果反映了與您選擇的檢視相關的案例。</block>
-  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">您可以新增或移除感興趣的欄，也可以篩選諸如「優先順序」和「狀態」等欄的內容。其他欄位僅提供排序功能。</block>
-  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">請查看以下步驟以了解更多詳情。</block>
-  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">在每個案件層級，我們提供更新案件備註或結案尚未處於「已結案」或「待結案」狀態的案件的功能。</block>
-  <block id="9163e8bca6fd93c080d35ab49e3efdfa" category="list-text">在 NetApp Console 中，選取 *說明 &gt; 支援*。</block>
-  <block id="2019fd19051c3ef493dbbb9ca65bab87" category="list-text">選擇 *Case Management* ，如果系統提示，請將您的 NSS 帳戶新增至 Console 。</block>
-  <block id="75e54e3a6fdbf43ed890669e079d7594" category="paragraph">* 案例管理 * 頁面顯示與您的 Console 使用者帳戶相關聯的 NSS 帳戶相關的未結案例。這與 *NSS 管理 * 頁面頂端顯示的 NSS 帳戶相同。</block>
-  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">您可以選擇修改表格中顯示的資訊：</block>
-  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">在「組織案例」下，選擇「檢視」以檢視與貴公司相關的所有案例。</block>
-  <block id="059e856250b59be3069246887b74a23c" category="list-text">您可以選擇確切的日期範圍或選擇不同的時間範圍來修改日期範圍。</block>
-  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">篩選各列的內容。</block>
-  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">表格中出現的加號圖示</block>
-  <block id="8ac6be88c1aa79062825a147fb263b0e" category="list-text">選取 <block ref="500a336e7ba1c54bcffba4e27bda4eb6" category="inline-image-macro-rx" type="image"></block>，然後選擇要顯示的欄，即可變更表格中顯示的欄。</block>
-  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">表格最後一列出現的一個有三個點的圖示</block>
-  <block id="049b7b9fab1242f5e715952973c9474d" category="list-text">透過選取 <block ref="7381d9baeaf62eb099ce84f1a21ed5ca" category="inline-image-macro-rx" type="image"></block> 並選取其中一個可用選項來管理現有案例：</block>
-  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*檢視案例*：檢視特定案例的完整詳細資訊。</block>
-  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*更新案例記錄*：提供有關您問題的更多詳細資料，或選擇 *Upload files* 以附加最多五個檔案。</block>
-  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*結案*：提供有關您結案原因的詳細資訊，然後選擇 *結案*。</block>
   <block id="2a5cdb388480ed91552c15613279cbb3" category="summary">將 NetApp Console 本機部署與 Active Directory 整合，以實現基於目錄的登入和使用者查找。</block>
   <block id="f3cad350d7c37e0feecbb4751891a029" category="doc">將 NetApp Console 本機部署與 Active Directory 整合</block>
   <block id="ad54a5fdf1bb3677ba962b3c7be2a0e7" category="paragraph">將 NetApp Console 本機部署與 Active Directory 整合，以實現基於目錄的登入和使用者查找。使用目錄服務驗證使用者，然後在 NetApp Console 本機部署中為這些使用者指派存取權限。</block>
@@ -3414,77 +3349,6 @@
   <block id="f69b17c091ea2d5f2803015a41e0ea93" category="paragraph">下方的「儀表板」區域可以包含使用者選擇的自訂儀表板，例如選定生產範圍的平均延遲。使用這些卡片可以按團隊、工作負載或目標進行重點監控。</block>
   <block id="851d18085f6eea4f20ac1be5b33ba68c" category="section-title">系統健全狀況</block>
   <block id="df863569aba94a79fad629025184ad0c" category="paragraph">*系統健全狀況狀態* 卡片列出各個系統及其目前的健全狀況狀態。使用此卡片可快速識別狀況不佳的系統，並將狀態變更與警示及效能訊號相互關聯。</block>
-  <block id="da89a2d19e44aa1af8af2cb118017e2e" category="summary">在向 NetApp 技術支援開啟支援案例之前，您需要將 NetApp 支援網站帳戶新增至 NetApp Console 本機部署，然後註冊以取得支援。</block>
-  <block id="7c85fd574f9cb04552296844abe03e0e" category="doc">在 NetApp Console 本機部署中註冊支援</block>
-  <block id="37e5c125192dcc446f87229682054eea" category="paragraph">NetApp Console 此工作的本機部署資訊。需要進行支援註冊，才能獲得針對 NetApp Console 及其儲存解決方案和資料服務的技術支援。此外，若要啟用 Cloud Volumes ONTAP 系統的關鍵工作流程，也需要進行支援註冊。</block>
-  <block id="ba4e23e03f4354a0f1ef2781272c8477" category="paragraph">註冊支援並不代表您能獲得 NetApp 對雲端供應商檔案服務的支援。如需與雲端供應商檔案服務、其基礎架構或任何使用該服務的解決方案相關的技術支援，請參閱該產品文件中的「取得協助」部分。</block>
-  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支援註冊總覽</block>
-  <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">啟動支援資格有兩種註冊方式：</block>
-  <block id="869a868c87f6fb61410cfd773b4f1bab" category="list-text">註冊您的 NetApp Console 帳戶序號（您的 20 位數 960xxxxxxxxx 序號位於 Console 的支援資源頁面上）。</block>
-  <block id="be0b51de4268d87101344aa0368b4403" category="paragraph">這是您在 Console 內使用所有服務的單一支援訂閱 ID。每個 Console 帳戶必須註冊。</block>
-  <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">在雲端供應商的市場中註冊與訂閱關聯的 Cloud Volumes ONTAP 序號（這些是 20 位數的 909201xxxxxxxx 序號）。</block>
-  <block id="3cf9fb70d6921dd90583621f028a395f" category="paragraph">這些序號通常稱為 _PAYGO 序號_，由 NetApp Console 在部署 Cloud Volumes ONTAP 時產生。</block>
-  <block id="bf516b6498e37e816d29ae43ae132f74" category="paragraph">註冊這兩種類型的序號後，即可啟用諸如建立支援工單和自動產生案例等功能。註冊過程需要將 NetApp 支援網站 （NSS） 帳戶新增至 Console，具體步驟如下所述。</block>
-  <block id="ba5983207e417797fefd5b9374ab4a97" category="section-title">註冊 NetApp Console 以取得 NetApp 支援</block>
-  <block id="dcb7105ba6e3d9411b05e726848feb80" category="paragraph">若要註冊支援並啟動支援權限，您 NetApp Console 帳戶中的一位使用者必須將 NetApp 支援網站帳戶與其 Console 登入關聯。註冊 NetApp 支援的方式取決於您是否已擁有 NetApp 支援網站 （NSS） 帳戶。</block>
-  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">已擁有 NSS 帳戶的現有客戶</block>
-  <block id="ed5bddb699a442b85bc1bb8e1516fe57" category="paragraph">如果您是擁有 NSS 帳戶的 NetApp 客戶，只需透過 Console 註冊即可獲得支援。</block>
-  <block id="76bc427c3d9c4b81dc353078b942f991" category="list-text">選擇 *Administration* &gt; *Credentials*。</block>
-  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">選擇 *User Credentials*。</block>
-  <block id="e9451600769b4bf4b20ca941ba9e6d19" category="list-text">選擇 *新增 NSS 認證資料*，然後依照 NetApp 支援網站 (NSS) 驗證提示進行操作。</block>
-  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">若要確認註冊程序是否成功，請選擇「說明」圖示，然後選擇 *支援*。</block>
-  <block id="1d4ea9fd10f6cfcd6f6fe1f861d354a4" category="paragraph">*資源*頁面應顯示您的 Console 帳戶已註冊支援。</block>
-  <block id="afe8240ca62f4b72006980ff64d371b8" category="paragraph">請注意，如果其他 Console 使用者尚未將 NetApp 支援網站帳戶與其登入建立關聯，則他們將看不到相同的支援註冊狀態。但這並不意味著您的帳戶未註冊支援。只要組織中至少有一位使用者完成了這些步驟，您的帳戶就已註冊。</block>
-  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">現有客戶但沒有 NSS 帳戶</block>
-  <block id="42eaca1e1c2d9e1f04e932eeaa6d129d" category="paragraph">如果您是現有 NetApp 客戶，擁有現有授權和序號，但沒有 NSS 帳戶，則需要建立 NSS 帳戶並將其與您的 Console 登入建立關聯。</block>
-  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp 支援網站使用者註冊表</block>
-  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">完成以下步驟即可建立 NetApp 支援網站帳戶<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
-  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">請務必選擇適當的使用者層級，通常為 *NetApp 客戶/終端使用者*。</block>
-  <block id="bd33c4539c7d6985f6edafd4a4f2ba1d" category="list-text">請務必複製上面使用的 Console 帳戶序號（960xxxx）到序號欄位中。這將加快帳戶處理速度。</block>
-  <block id="9b1f48f88cd439b7a50fe3e76eb8a853" category="list-text">請按照 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> 下的步驟，將您的新 NSS 帳戶與您的 Console 登入資訊建立關聯。</block>
-  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">全新接觸 NetApp</block>
-  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">如果您是 NetApp 的全新使用者且還沒有 NSS 帳戶，請依照下列步驟操作。</block>
-  <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">在 Console 右上角，選取「說明」圖示，然後選取 * 支援 *。</block>
-  <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">從支援註冊頁面找到您的帳戶 ID 序號。</block>
-  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">說明選單的快照，其中「支援」是列出的第一個選項。</block>
-  <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">NetApp 的支援註冊網站</block>
-  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">導航至 <block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> 並選取 *我不是已註冊的 NetApp 客戶*。</block>
-  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">請填寫必填項目（標有紅色星號的欄位）。</block>
-  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">在「產品線」欄位中，選擇「Cloud Manager」，然後選擇您適用的計費供應商。</block>
-  <block id="50a1dc01b7312307c34a888071586955" category="list-text">從上面的步驟 2 複製您的帳戶序號，完成安全性檢查，然後確認您已讀取 NetApp 的全球資料隱私政策。</block>
-  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">系統會立即傳送電子郵件至您提供的信箱，以完成此安全的交易。如果幾分鐘後您仍未收到驗證郵件，請務必檢查您的垃圾郵件資料夾。</block>
-  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">請在郵件中確認此行動。</block>
-  <block id="201080500e946070a2e4873042507c77" category="paragraph">確認後，您的請求將提交至 NetApp，並建議您建立 NetApp 支援網站帳戶。</block>
-  <block id="a2454703f88e5bf5b433ae850a87151b" category="list-text">請務必將上方使用的帳戶序號（960xxxx）複製到序號欄位。這將加快處理速度。</block>
-  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp 將在此過程中與您聯繫。這是針對新使用者的一次性引導程序。</block>
-  <block id="629757336278be576456cf315303b178" category="paragraph">擁有 NetApp 支援網站帳戶後，請完成 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> 下的步驟，將該帳戶與您的 Console 登入建立關聯。</block>
-  <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">關聯 NSS 認證資料以支援 Cloud Volumes ONTAP</block>
-  <block id="f22d1a855e255746a6b925a3b22f7838" category="paragraph">將 NetApp 支援網站認證資料與您的 Console 帳戶建立關聯，是啟用 Cloud Volumes ONTAP 下列關鍵工作流程的必要條件：</block>
-  <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">註冊隨用隨付的 Cloud Volumes ONTAP 系統以獲得支援</block>
-  <block id="321aadf78ef73521712291b7aba6411f" category="paragraph">您需要提供您的 NSS 帳戶才能啟動系統支援並存取 NetApp 技術支援資源。</block>
-  <block id="d51b2b497db445a16b1c9583c1abbb59" category="list-text">自帶授權 (BYOL) 時部署 Cloud Volumes ONTAP</block>
-  <block id="f3cd224f9506684fa3b5e2b89b2a566c" category="paragraph">您需要提供 NSS 帳戶，以便 Console 能夠上傳您的授權金鑰並啟用您購買期限的訂閱。這包括期限續訂時的自動更新。</block>
-  <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">將 Cloud Volumes ONTAP 軟體升級至最新版本</block>
-  <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">將 NSS 認證資料與您的 NetApp Console 帳戶建立關聯，與將 NSS 帳戶與 Console 使用者登入建立關聯是不同的。</block>
-  <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">這些 NSS 認證資料與您的特定 Console 帳戶 ID 相關聯。屬於 Console 組織的使用者可以從 *Support &gt; NSS Management* 存取這些認證資料。</block>
-  <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">如果您擁有客戶級帳戶，則可以新增一個或多個 NSS 帳戶。</block>
-  <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">如果您擁有合作夥伴或經銷商帳戶，您可以新增一個或多個 NSS 帳戶，但不能與客戶級帳戶同時新增。</block>
-  <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">選擇 *NSS Management &gt; Add NSS Account*。</block>
-  <block id="85b9386ed443776127e099931d73448a" category="list-text">當系統提示時，選擇 *Continue* 以重新導向至 Microsoft 登入頁面。</block>
-  <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp 使用 Microsoft Entra ID 作為驗證服務的身分識別供應商，專門用於支援和授權。</block>
-  <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登入頁面，提供您在 NetApp 支援網站註冊的電子郵件地址和密碼，以完成驗證流程。</block>
-  <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">這些行動可讓 Console 使用您的 NSS 帳戶執行授權下載、軟體升級驗證及未來支援註冊等作業。</block>
-  <block id="ec084bb25ed5b934c09b361069c246b2" category="list-text">NSS 帳戶必須是客戶層級帳戶（而非訪客或臨時帳戶）。您可以擁有多個客戶層級 NSS 帳戶。</block>
-  <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">如果 NSS 帳戶是合作夥伴等級的帳戶，則只能有一個 NSS 帳戶。如果您嘗試新增客戶層級的 NSS 帳戶，而合作夥伴層級的帳戶已存在，則會收到下列錯誤訊息：</block>
-  <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">"此帳戶不允許使用 NSS 客戶類型，因為已經存在其他類型的 NSS 用戶。"</block>
-  <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">如果您已有客戶等級的 NSS 帳戶，並嘗試新增合作夥伴等級的帳戶，則情況也是如此。</block>
-  <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">登入成功後，NetApp 將儲存 NSS 使用者名稱。</block>
-  <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">三個水平點組成的圖標</block>
-  <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">這是系統產生的與您的電子郵件地址對應的 ID。您可以在 *NSS Management* 頁面的 <block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> 選單中找到您的電子郵件地址。</block>
-  <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">如果您需要刷新登入憑證令牌，<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> 選單中還有一個「更新憑證」選項。</block>
-  <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">使用此選項將提示您重新登入。請注意，這些帳戶的 token 將在 90 天後過期。屆時將發布通知提醒您。</block>
   <block id="ee070c48eba3a60ce6f46beb0f406d92" category="summary">您可以修改您的 Console 個人資料，包括變更密碼、啟用多重要素驗證 （MFA），以及查看您的 Console 系統管理員是誰。</block>
   <block id="47ad55ae93110500b75f17277a8ff367" category="doc">管理您的 NetApp Console 本機部署使用者設定</block>
   <block id="753e8939385e33a2413cd4a01f9275f4" category="paragraph">在 NetApp Console 本機部署中，您可以修改 Console 本機部署設定檔，包括變更密碼、啟用多因素驗證 （MFA），以及查看您的 Console 系統管理員是誰。</block>
@@ -3615,7 +3479,6 @@
   <block id="4bb64a663d2c295916c54bfd11eb3986" category="sidebar">叢集安全性法規遵循類別</block>
   <block id="6833b9c301b8c18695d73d7766de5136" category="sidebar">儲存虛擬機器安全性法規遵循類別</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
-  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="sidebar">註冊以取得支援</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="sidebar">取得協助</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">法律聲明</block>
   <block id="d84803ce394c9284844fcf1a08967ee4" category="paragraph"><block ref="a11bdddbf642d1f60f3b9997ef8c00d9" category="inline-link-rx"></block>。</block>
@@ -3748,4 +3611,19 @@
   <block id="c3bdc6c19998b310e22df96fbe31d526" category="paragraph">NetApp Console 本機部署在您自己的基礎架構中執行，因此您的團隊可以控制部署、連線及日常作業。這讓企業管理員能夠完全控制作業邊界，同時將管理資料保留在環境內部。</block>
   <block id="8797fdac4224deac7f57143811175742" category="paragraph">NetApp Console 本地部署不支援在與其他應用程式共享的虛擬機器上進行。虛擬機器必須專用於 NetApp Console 本地部署。</block>
   <block id="9d22f7f3fcf091469f2515885be2bfb9" category="paragraph">NetApp Console 本地部署虛擬機器不支援第三方代理程式或虛擬機器擴充功能。</block>
+  <block id="ded09755f40d047f476fb65db4412d21" category="paragraph">NetApp 以多種方式為 NetApp Console 本機部署提供支援。豐富的免費自助支援選項全天候 （24x7） 可用，例如知識庫 （KB） 文章和社群論壇。您可以使用與 NetApp Console 本機部署相關聯的任何儲存資源的序號來註冊支援。註冊後，您可以透過線上工單系統獲得遠端技術支援。</block>
+  <block id="008521b39569df19c0f1d3b2426c25ea" category="paragraph">您目前正在檢視的 NetApp Console 本機部署文件。</block>
+  <block id="8242bd4988e5291a75e128ab9cb70237" category="paragraph">搜尋 NetApp 知識庫的文章，協助您疑難排解問題。</block>
+  <block id="90db69922d87d2dee4d89d43065999f0" category="section-title">使用 NetApp Console 本機部署開啟支援案例</block>
+  <block id="7c39b58e8001eca6fc4b1e12f9d7aabd" category="paragraph">使用透過您的 NetApp Console 本機部署環境代管的其中一個 NetApp 儲存系統序號，開立支援案例。</block>
+  <block id="2e0041ca1797407094af2a7727c62076" category="list-text">請前往<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block>並使用您的 NetApp 支援憑證登入。</block>
+  <block id="04abb6a1e56df9ac4a576a74d858a62f" category="list-text">選擇 *Cases and Parts &gt; Create Technical Case*。</block>
+  <block id="1b68dc387b0a59f1a416833fdbe53029" category="list-text">輸入與發生該問題的 Console 本機部署產品相關聯的 NetApp 儲存系統序號。</block>
+  <block id="37dd18f889b521044a58dff59e7affa5" category="list-text">建立新的支援案例，並為 NetApp Console 本地部署選擇適當的類別代碼。</block>
+  <block id="38cbb46a9873b48924dc5f72ed5ee144" category="section-title">下載支援套裝組合</block>
+  <block id="7d78e23efce30593ac2752e005c3d6a1" category="paragraph">支援套裝組合包含最新的日誌和組態資訊。您可以下載最新的套裝組合，並在需要時將其傳送給 NetApp 技術支援。</block>
+  <block id="186d425645f9074825f9d84dcecf5b89" category="list-text">選擇 *Administration &gt; Support* 以檢視支援頁面。</block>
+  <block id="d2102c65ff11954ccbf42346bfdd3f4f" category="list-text">在「支援」卡上，選擇 *建立* 以建立日誌和組態資料的套裝組合。</block>
+  <block id="6d6556399a0b8fc0d6acf274ab50bd15" category="list-text">建立套裝組合後，選擇「下載」。系統會提示您下載 ZIP 檔案。</block>
+  <block id="c5303cf1b99e0c56f64b84d5b1fa0e9a" category="paragraph">系統一次只能保存一個套裝組合。建立新的支援套裝組合會替換先前的套裝組合。</block>
 </blocks>

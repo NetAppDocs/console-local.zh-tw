@@ -48,7 +48,6 @@ summary: 您可以使用 OVA 在 vCenter 中安裝 NetApp Console 本機部署�
 
 
 [[set-up-network-access-for-the-netapp-console-local-deployment]]
-[[network-access-agent]]
 === 為 NetApp Console 本地部署設定網路存取
 
 NetApp Console 本機部署使用固定位址空間進行服務間通訊。IP 位址範圍 10.42.0.0/16 和 10.43.0.0/16 用於內部網路。在部署 Console 本機部署之前，請確保這些 IP 位址範圍未指派給提供給 Console 本機部署的 VLAN 上的其他虛擬機器、DHCP 範圍、DNS 記錄或負載平衡器 VIP 集區。

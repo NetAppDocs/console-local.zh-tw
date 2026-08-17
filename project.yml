@@ -197,8 +197,6 @@ sidebar:
         url: "/reference-svm-compliance-categories.html"
     - title: 知識與支援
       entries:
-      - title: 註冊以取得支援
-        url: "/task-support-registration.html"
       - title: 取得協助
         url: "/task-get-help.html"
   - title: 法律聲明
