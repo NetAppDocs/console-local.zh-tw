@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local, inbound ports, OVA 
+keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console local, Console local connectivity, netapp console local, inbound ports, OVA 
 summary: NetApp Console 本機部署 OVA 管理其自身的內部防火牆。如果您的環境在虛擬機器上強制執行外部防火牆原則，請確保以下傳入連接埠可從您的管理主機存取。 
 ---
 = 用於 NetApp Console 本機部署的傳入連接埠

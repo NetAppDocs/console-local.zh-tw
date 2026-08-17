@@ -16,8 +16,6 @@ summary: NetApp Console 本機部署中已知限制的參考。
 [role="lead"]
 已知限制是指本產品版本不支援或無法與之正確互通的平台、設備或功能。請仔細閱讀這些限制。
 
-這些限制是針對 NetApp Console 和管理設定的特定限制：代理程式、軟體即服務（SaaS）平台等等。
-
 
 
 [[console-vm-limitations]]
@@ -37,11 +35,11 @@ NetApp Console 本機部署使用固定位址空間進行服務間通訊。IP �
 [[shared-linux-hosts-are-not-supported]]
 === 不支援共享的 Linux 主機
 
-該代理程式不支援在與其他應用程式共享的虛擬機器上執行。虛擬機器必須專用於代理程式軟體。
+NetApp Console 本地部署不支援在與其他應用程式共享的虛擬機器上進行。虛擬機器必須專用於 NetApp Console 本地部署。
 
 
 
 [[third-party-agents-and-extensions]]
 === 第三方代理程式和擴充功能
 
-代理程式 VM 不支援第三方代理程式或 VM 擴充功能。
+NetApp Console 本地部署虛擬機器不支援第三方代理程式或虛擬機器擴充功能。
