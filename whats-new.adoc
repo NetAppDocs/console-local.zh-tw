@@ -22,3 +22,5 @@ summary: 了解最新 版本的 NetApp Console 本機部署中的新功能和增
 === 介紹 NetApp Console 本地部署
 
 https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["學習 NetApp Console 本機部署"]。
+
+https://docs.netapp.com/us-en/console-local/console-differences.html["了解 NetApp Console 本地部署、NetApp Console SaaS 和私有模式之間的差異"]。

@@ -18,6 +18,8 @@ NetApp Console 本地部署可讓您在自己的基礎架構中主機和執行 N
 
 您將獲得統一化儲存管理、原則執行、機組規模自動化和 AI 輔助作業。所有資料、中繼資料和管理流量都不會離開您的環境。
 
+link:console-differences.html["了解 NetApp Console 本地部署、NetApp Console SaaS 和私有模式之間的差異"]。
+
 
 
 [[deploy-and-operate-console-in-your-own-infrastructure]]

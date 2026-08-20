@@ -3633,4 +3633,7 @@
   <block id="66ae36e07e30e4c89165201182d037be" category="cell">必須先設定 SMTP 郵件伺服器，才能邀請本機使用者或為本機使用者重設密碼。</block>
   <block id="d433d6de6ccf389e02982430306a440f" category="cell">本機使用者和 Active Directory 使用者不支援重複的電子郵件地址。例如，如果初始本機組織管理員之後將自己新增為 Active Directory 使用者，則必須使用不同的電子郵件地址。</block>
   <block id="3be37f60cf59fb4438b6120b07ffd2e9" category="admonition">本地使用者邀請連結為一次性使用，有效期限為 7 天。如果連結在使用者完成設定之前過期，請移除該使用者並重新新增，以發送新的邀請連結。</block>
+  <block id="d2a0f46558d1ad15a1efcaa26aef1b39" category="inline-link">了解 NetApp Console 本地部署、NetApp Console SaaS 和私有模式之間的差異</block>
+  <block id="fc43c258a671e0d243e8a95a48956300" category="paragraph"><block ref="a79ef635b40614d2cd5c555de517dd6f" category="inline-link-rx"></block>。</block>
+  <block id="4688d87a2acbed67ab6380ef3dbee717" category="paragraph"><block ref="dff1bfa50abe498b973310763c6748f5" category="inline-link-macro-rx"></block>。</block>
 </blocks>
