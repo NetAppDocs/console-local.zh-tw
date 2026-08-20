@@ -3057,8 +3057,6 @@
   <block id="bb1e1ef266584a5a332dfd21a0ceff90" category="list-text">如果您選擇了明確 Proxy，請輸入 Proxy 伺服器主機名稱或 IP 位址和連接埠號，以及使用者名稱和密碼。</block>
   <block id="777fde86c6354cd539ec78cfac87b390" category="list-text">如果您選擇了透明的 Proxy，請上傳對應的憑證。</block>
   <block id="f6b06d7af2e17b031527e55078cf6bda" category="list-text">*虛擬機器組態*</block>
-  <block id="536601d5f2a0ce3000ead0f9e4f4cfc2" category="list-text">*跳過組態檢查*：此核取方塊預設為未勾選，這表示 NetApp Console 本機部署將執行組態檢查以驗證網路存取。</block>
-  <block id="04157edfd56e309364a7442b42b155a9" category="list-text">NetApp 建議取消選取此核取方塊，以便安裝包含 NetApp Console 本機部署的組態檢查。組態檢查會驗證 NetApp Console 本機部署是否具有所需端點的網路存取。如果部署因連線問題而失敗，您可以從 NetApp Console 本機部署主機存取驗證報告和日誌。在某些情況下，如果您確信 NetApp Console 本機部署具有網路存取，則可以選擇跳過此檢查。</block>
   <block id="4dbd3c987fc3c99f4068f93b9ddf0271" category="list-text">*維護密碼*：設定<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>使用者的密碼，以允許存取 NetApp Console 本機部署維護主控台。</block>
   <block id="cb059a17daa0db402273fce83326bc2b" category="list-text">*NTP 伺服器*：指定一個或多個 NTP 伺服器用於時間同步。</block>
   <block id="fea958d8a6639552d2e73dadaab0eb59" category="list-text">*主機名稱*：設定此 VM 的主機名稱。不得包含搜尋網域。例如，FQDN 為 console10.searchdomain.company.com 時，應輸入為 console10。</block>
@@ -3626,4 +3624,13 @@
   <block id="d2102c65ff11954ccbf42346bfdd3f4f" category="list-text">在「支援」卡上，選擇 *建立* 以建立日誌和組態資料的套裝組合。</block>
   <block id="6d6556399a0b8fc0d6acf274ab50bd15" category="list-text">建立套裝組合後，選擇「下載」。系統會提示您下載 ZIP 檔案。</block>
   <block id="c5303cf1b99e0c56f64b84d5b1fa0e9a" category="paragraph">系統一次只能保存一個套裝組合。建立新的支援套裝組合會替換先前的套裝組合。</block>
+  <block id="5a416b505eeb414e2a13458a4f94ecbf" category="admonition">警報會在 NetApp Console 本地部署中保留 7 天，從發出之日起算。</block>
+  <block id="ddd48b069384a5d886b18fc4008bcb18" category="admonition">Console UI 通知保留 24 小時。</block>
+  <block id="3732468e73bd908d56c8b63b5774bb20" category="section-title">身分和存取限制</block>
+  <block id="deec4ff19974f12ed781cb9a59064214" category="cell">區域</block>
+  <block id="f3d9abb903127694db460aa9c7f4d7be" category="cell">限制</block>
+  <block id="16492f4d2028d9a0f96c4e1590b65f2c" category="cell">本地使用者上線與帳戶恢復</block>
+  <block id="66ae36e07e30e4c89165201182d037be" category="cell">必須先設定 SMTP 郵件伺服器，才能邀請本機使用者或為本機使用者重設密碼。</block>
+  <block id="d433d6de6ccf389e02982430306a440f" category="cell">本機使用者和 Active Directory 使用者不支援重複的電子郵件地址。例如，如果初始本機組織管理員之後將自己新增為 Active Directory 使用者，則必須使用不同的電子郵件地址。</block>
+  <block id="3be37f60cf59fb4438b6120b07ffd2e9" category="admonition">本地使用者邀請連結為一次性使用，有效期限為 7 天。如果連結在使用者完成設定之前過期，請移除該使用者並重新新增，以發送新的邀請連結。</block>
 </blocks>

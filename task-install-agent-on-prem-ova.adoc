@@ -108,11 +108,6 @@ NetApp 支援在 vCenter 環境中安裝 NetApp Console 本機部署。OVA 檔�
 
 ** *虛擬機器組態*
 +
-*** *跳過組態檢查*：此核取方塊預設為未勾選，這表示 NetApp Console 本機部署將執行組態檢查以驗證網路存取。
-+
-**** NetApp 建議取消選取此核取方塊，以便安裝包含 NetApp Console 本機部署的組態檢查。組態檢查會驗證 NetApp Console 本機部署是否具有所需端點的網路存取。如果部署因連線問題而失敗，您可以從 NetApp Console 本機部署主機存取驗證報告和日誌。在某些情況下，如果您確信 NetApp Console 本機部署具有網路存取，則可以選擇跳過此檢查。
-
-
 *** *維護密碼*：設定 `maint`使用者的密碼，以允許存取 NetApp Console 本機部署維護主控台。
 *** *NTP 伺服器*：指定一個或多個 NTP 伺服器用於時間同步。
 *** *主機名稱*：設定此 VM 的主機名稱。不得包含搜尋網域。例如，FQDN 為 console10.searchdomain.company.com 時，應輸入為 console10。

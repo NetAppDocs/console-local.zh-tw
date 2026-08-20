@@ -43,3 +43,19 @@ NetApp Console 本地部署不支援在與其他應用程式共享的虛擬機�
 === 第三方代理程式和擴充功能
 
 NetApp Console 本地部署虛擬機器不支援第三方代理程式或虛擬機器擴充功能。
+
+
+
+[[identity-and-access-limitations]]
+== 身分和存取限制
+
+[cols="1,3"]
+|===
+| 區域 | 限制 
+
+
+| 本地使用者上線與帳戶恢復 | 必須先設定 SMTP 郵件伺服器，才能邀請本機使用者或為本機使用者重設密碼。 
+
+
+| Active Directory 整合 | 本機使用者和 Active Directory 使用者不支援重複的電子郵件地址。例如，如果初始本機組織管理員之後將自己新增為 Active Directory 使用者，則必須使用不同的電子郵件地址。 
+|===

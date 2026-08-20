@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-get-help.html 
-keywords: help, ticket, open support case, support, netapp support, technical support, call support, phone number, open ticket, web ticket, open an issue 
+keywords: help, ticket, open support case, support, netapp support, technical support, call support, open ticket, web ticket, open an issue 
 summary: 'NetApp 以多種方式為 NetApp Console 本地部署提供支援。豐富的免費自助支援選項全年無休均可使用，例如知識庫 (KB) 文章和社群論壇。您的支援註冊包含透過線上工單系統提供的遠端技術支援。' 
 ---
 = 取得 NetApp Console 本機部署的協助

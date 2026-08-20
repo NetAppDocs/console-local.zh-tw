@@ -1,0 +1,9 @@
+= 
+:allow-uri-read: 
+
+
+
+NOTE: 警報會在 NetApp Console 本地部署中保留 7 天，從發出之日起算。
+
+
+NOTE: Console UI 通知保留 24 小時。
