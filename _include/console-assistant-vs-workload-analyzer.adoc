@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+使用 Console assistant 可以進行自然語言查詢，並對授權範圍內的資源進行高階分析。當您需要對單一 Volume 進行詳細的時間型分析時，請使用 Workload Analyzer，分析內容包括延遲、處理量、資源使用率、容量、事件和預測。

@@ -1249,7 +1249,6 @@
   <block id="6e1c38ddd586797730ea0df647629a04" category="paragraph">問題分為兩類：</block>
   <block id="b2139b8b3fb4e451508ab9ac2f835837" category="list-text">*Configuration drift*：儲存設備類別原則治理的儲存設定不再與預期組態相符。當直接在 ONTAP 叢集上或在標準資源配置工作流程之外進行變更時，可能會發生這種情況。</block>
   <block id="59072520e4f2616c4b2bcfcd91e655a4" category="list-text">*效能不合規*：工作負載的執行時間行為不再符合儲存設備類別效能意圖（例如，持續接近 QoS 限制或尾端延遲升高）。</block>
-  <block id="8b28c607e89c4d12a57efea503e12786" category="paragraph">分析檢視會解釋發生了哪些變化以及原因。系統可能會提供引導式修復操作（例如，*Fix it*），以協助還原法規遵循。某些修復措施可以就地套用，而其他措施可能需要將工作負載遵守不同的儲存設備類別，才能還原預期行為。</block>
   <block id="9c742348fc7b32cb0b0ddc09ade7c30c" category="paragraph-title">調查地點</block>
   <block id="3177fad58e4e5f42f318d596eaf3515a" category="paragraph">您通常可以從以下位置之一調查偏差和不符合法規遵循的情況（可用度取決於您的部署和權限）：</block>
   <block id="c3c2e403128e14f60d91a1906ccd901f" category="list-text">*儲存類別：* Drift / 法規遵循</block>
@@ -1450,7 +1449,6 @@
   <block id="3f9d40767d631ca1877761df588f20ae" category="paragraph"><block ref="2fdb3c88062031f1ec65eef60690cee3" category="inline-link-macro-rx"></block>。</block>
   <block id="634fb1708a50f4d5e0c983d5692e82f4" category="summary">參考 NetApp Console 本地部署中可用的補救行動，包括相關警示、影響區域和行動總結。</block>
   <block id="c07e34e3413c5d5032d16c1c9c060537" category="doc">NetApp Console 本機部署中的警示補救行動</block>
-  <block id="45d983f965ad7e6aaa785e4257aa7394" category="paragraph">使用此參考資料了解 NetApp Console 本機部署中「Fix it」功能提供的修復行動。表格中描述了每個行動的具體內容及相關警報。執行行動前，請在確認對話方塊中審查行動詳情。</block>
   <block id="16148542ba5ae5056532aab5c669031a" category="section-title">補救措施</block>
   <block id="3d5ac3a0c07be5ecab17905b616f096d" category="cell">補救行動</block>
   <block id="d1e98b80ce256bde51850d0018afe053" category="cell">警報名稱</block>
@@ -1824,7 +1822,6 @@
   <block id="3aba2887bff41f744b43940b1b82080a" category="cell">平台角色</block>
   <block id="460874c7c996eb6762b8a5b10ff2d76f" category="cell">職責</block>
   <block id="ebf2e736fadeb05a39d24aa702faf1b3" category="cell"><block ref="ebf2e736fadeb05a39d24aa702faf1b3" category="inline-link-macro-rx"></block></block>
-  <block id="2375e267010e0dd20db116c9efebfe89" category="cell">允許使用者不受限制地存取組織內的所有機組和資料夾，向任何機組或資料夾新增成員，以及執行任何工作並使用任何未明確關聯角色的資料服務。擁有此角色的使用者可透過建立資料夾和機組、指派角色、新增使用者以及管理系統（如果他們擁有適當的憑證）來管理您的組織。</block>
   <block id="2c7c987872ad47ae35313d90886ee881" category="cell"><block ref="2c7c987872ad47ae35313d90886ee881" category="inline-link-macro-rx"></block></block>
   <block id="835b68ffc816ee8b825d044d18e8b4fd" category="cell">允許使用者無限制地存取已指派的機組和資料夾。使用者可以在其管理的資料夾或機組中新增成員，也可以對其指派的資料夾或機組內的資源執行任何工作並使用任何資料服務或應用程式。</block>
   <block id="e8df21ebe8cfc76c6960895bb0bc899b" category="cell"><block ref="e8df21ebe8cfc76c6960895bb0bc899b" category="inline-link-macro-rx"></block></block>
@@ -3046,7 +3043,6 @@
   <block id="45dcb8347c7045ac1ea1ed3f1fd6f1d3" category="list-text">在*唯讀*模式下，助理會回答問題並提供指導，但不會進行任何變更。</block>
   <block id="3bd3a3686b7176c32e3b12727e98ec87" category="list-text">在 *Read/write* 模式下，助手可以對儲存基礎架構進行操作。每次變更之前，它都會顯示詳細資訊供審查和確認。對於非同步操作（例如建立 Volume），它會建立一個工作，使用者可以從助手檢視該工作。</block>
   <block id="185163aa217fa2fc072c5f14236ca72a" category="paragraph">若要連接您的 LLM，請選擇供應商路徑，輸入端點詳細資訊和 API 金鑰，然後在「管理 &gt; AI 工具」中選擇模型。助手行動將遵守您的儲存設備原則和角色型存取控制。</block>
-  <block id="5fc0a856a394f8c04ef5ff5374c766d3" category="section-title">在連接 LLM 之前，請先準備好所需資料。</block>
   <block id="d8bd49d8fe4a0de7a2b03c1aec99e88b" category="list-text">您所選供應商路徑的有效 API 金鑰。</block>
   <block id="12415726cf97af159e3e05710842f040" category="list-text">您的供應商路徑的端點 URL。</block>
   <block id="cfe024af8356a3decd0f09b47eff88fa" category="list-text">從 Console 本機部署到所選端點的網路存取。</block>
@@ -3229,7 +3225,6 @@
   <block id="1618ab37d780874b04a6f2084be19d80" category="list-text">選擇 *Analyze*。</block>
   <block id="c17bbf96636407e4f3e1d90e7db54e7d" category="list-text">審查 *Workload analyzer* 中的分析結果。</block>
   <block id="3e0572efd2e39415bf33c55a4e66f459" category="paragraph">若要尋找組態漂移問題，請比較預期設定和實際設定，以確定發生了哪些變更。</block>
-  <block id="c11209a5c5b7a8071ad4f5309a43eef6" category="list-text">選擇建議的補救行動，例如 *Fix it*。</block>
   <block id="731f90a1920169d4a0aeadf09e5cd125" category="list-text">審查擬議的變更並實施補救措施。</block>
   <block id="dfe03a61bc074ecf1e2fa920b3de5870" category="list-text">返回「儲存設備 &gt; 儲存類別」，並確認工作負載是否不再顯示為偏移。</block>
   <block id="3a9bfa87650c8ec650e8744f55298c03" category="paragraph">法規遵循評估可能需要幾分鐘才能反映最近的組態變更。如果工作負載仍然顯示為偏離，請返回警示詳細資料頁面並選取 *Analyze* 以審查任何剩餘的發現。</block>
@@ -3615,10 +3610,8 @@
   <block id="01d252d292ef2fa1ec4e87035d62b0ff" category="paragraph">對於無法立即完成的支援作業，助手會建立一個工作，並在您詢問請求時傳回目前狀態。<block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>。</block>
   <block id="0ac7c7f441c2811eca6f1a53e0cc4415" category="summary">審查 NetApp Console 本機部署中 Console 助理所支援的面向客戶操作類別。</block>
   <block id="85bf6002699be71eba50e47fb9bfd4c1" category="doc">在 NetApp Console 本機部署中支援的 Console 助理操作</block>
-  <block id="563f4fbc7c399302e702b396b6962087" category="paragraph">Console 助手支援自然語言查詢和部分儲存設備操作。可用操作取決於版本、已設定的 LLM 端點以及您被指派的權限。</block>
   <block id="e595004f51bd799a728be4e3b594fcd0" category="paragraph">對於無需更改基礎架構的問題和分析，請使用 Console 助手的「唯讀」模式。對於可能變更儲存設備或 ONTAP 系統的支援操作，請使用「讀取/寫入」模式。助手會顯示建議的變更，並在執行寫入作業前要求確認。</block>
   <block id="0c3b317be5b2bb916652eceef25c2446" category="section-title">對話式指導與搜尋</block>
-  <block id="2c377b791aed117e43f0a6c81044bce4" category="paragraph">詢問有關 NetApp Console 本機部署、儲存環境或受支援的 ONTAP 管理工作流程的問題。助理會使用已設定的 LLM 端點以及可用的文件和機組內容來傳回答案或要求更多內容資訊。</block>
   <block id="55490a2d250ada7c70e503e7b86bb3da" category="section-title">計量與分析</block>
   <block id="bb8be897830de5647e5d1894f9ebe3a9" category="paragraph">詢問您權限範圍內資源的儲存容量、效能及其他計量的唯讀問題。如果這些細節與您的問題相關，請提供資源、計量和時間段。</block>
   <block id="56836aa8c36f40ecb89a0e4c2367d066" category="paragraph">助手傳回分析結果，但不會以*唯讀*模式變更儲存設備。</block>
@@ -3627,20 +3620,14 @@
   <block id="100bc2e2a20e7ce958593a0d05afc0c6" category="inline-link-macro">了解如何使用人工智慧輔助工作流程資源配置儲存設備</block>
   <block id="cbdbb49c3c83f87c7341673121c514f1" category="paragraph">批准計劃後，助手將根據您的角色權限和儲存類別原則，佈建受支援的 Volume 或 LUN 作業。<block ref="1b5b8c5997353b7aabbb30633f8a4653" category="inline-link-macro-rx"></block>。</block>
   <block id="ec34af6bd148135244cacb1e26e16b97" category="section-title">警報調查和補救</block>
-  <block id="45867710357b5b0f50631031775b1817" category="paragraph">請助手調查受支援的作用中警報。它會分析警報並可能建議補救行動。當受支援的補救措施會變更儲存設備時，助手會顯示該行動供審查，並在執行前要求您確認。</block>
   <block id="040360382f7205dbe8c14babe21f1f10" category="section-title">ONTAP 管理</block>
-  <block id="79ce2be78836813592ebf411e031cded" category="paragraph">使用自然語言請求對已註冊的 ONTAP 系統執行受支援的管理作業。如果您知道目標叢集、SVM 或資源，請加以識別，以便助理能夠使用正確的內容。</block>
-  <block id="cedb71b26ba4e3df138c7912c7840e34" category="paragraph">助手會區分唯讀請求與寫入作業。在確認寫入作業之前，請審查目標和擬議的變更。可用的作業集取決於 Console 本機部署版本以及指派給您帳戶的權限。</block>
   <block id="58dd82c11548cddba3b3f34021d1584c" category="section-title">權限和範圍</block>
-  <block id="e9ac0af69146f2419ab6d771536a605c" category="paragraph">助理使用已登入使用者的權限和資源範圍：</block>
   <block id="b84f73e57fbeeeec34e2bb90579be4ce" category="list-text">您的角色決定了您可以檢視或變更哪些資源和作業。</block>
-  <block id="37a5812a05e19af3ee627e60c15c7db6" category="list-text">組織、資料夾和機組範圍限制了助理可用的系統和工作負載。</block>
   <block id="df84d67f514675b861778c76b8a6a614" category="list-text">儲存類別原則限制了 AI 輔助的儲存資源配置。</block>
   <block id="d567ccd2ac57ad2a43fa88120c847309" category="list-text">助理不會繞過 Console 本機部署存取控制。</block>
   <block id="109a8ebaf5d17fd52cd0cedbd294848c" category="inline-link-macro">了解 NetApp Console 本機部署存取角色</block>
   <block id="ba6f7f76a855b2fc7d63c83f41c23e52" category="paragraph"><block ref="4560386b07ef22f3583d98e6a67e39c0" category="inline-link-macro-rx"></block>。</block>
   <block id="4546d7c5f1604db2d9865ec0658ee574" category="section-title">非同步作業</block>
-  <block id="610ff444091a8d5a8e4d08c8e34ed1b7" category="paragraph">某些受支援的寫入作業不會立即完成。對於這些作業，助手會建立一個工作。請向助手詢問請求狀態以監控完成情況。</block>
   <block id="ab74dc1a527eb39bc2a75230306dc5a0" category="list-text"><block ref="ab74dc1a527eb39bc2a75230306dc5a0" category="inline-link-macro-rx"></block></block>
   <block id="c8bbfbc1e29e08fb75792570f8da2288" category="list-text"><block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block></block>
   <block id="7770f03f53e256d55b44faa7b5b1c1a3" category="list-text"><block ref="7770f03f53e256d55b44faa7b5b1c1a3" category="inline-link-macro-rx"></block></block>
@@ -3657,7 +3644,6 @@
   <block id="351bf1cee2d203043d7c8694e72832a7" category="list-text">組織管理員或超級管理員必須透過將大型語言模型 (LLM) 連接到 Console 本機部署來啟用 Console 助理。如果您在儀表板上看不到 *Console assistant* 按鈕，請聯絡您的系統管理員以啟用此功能。<block ref="184a90bf2acb5b061c7dc2b4dcb64467" category="inline-link-macro-rx"></block>。</block>
   <block id="58501690578abc96980f69a9f3694b55" category="paragraph">以對話方式請求支援的儲存工作負載，以便在建議的變更影響您的基礎架構之前進行評估。</block>
   <block id="a0f4a83e648fb4aed450e560789131f0" category="section-title">使用助手進行計量和分析</block>
-  <block id="fab19ba8fb5bfe09d2af357771050725" category="paragraph">提出一個唯讀問題，明確您想要了解的資源、範圍、計量和時間段。助手會傳回所支援計量的分析結果，且不會變更您的儲存設備。</block>
   <block id="1d054bfa483e4be3faf418d083bdd3ef" category="section-title">使用助手進行 ONTAP 管理</block>
   <block id="9f6c8c6993979cb1877a9e86b9a8d0ce" category="paragraph">透過審查助理提案來管理受支援的 ONTAP 作業，以確保基礎架構變更保持審慎且受權限控制。</block>
   <block id="d5fc4106714e4828d2904733226a81fc" category="inline-link-macro">了解支援的 Console 助理操作</block>
@@ -3685,4 +3671,48 @@
   <block id="25c218c5bf35c2c497390dbd2a954660" category="list-text">審查建議方案，包括：選定的機組和目標系統部署位置（如適用）。選定或建議的儲存設備等級。將套用的關鍵設定，例如容量行為、保護排程、安全性要求以及與 QoS 相關的意圖（如有顯示）。</block>
   <block id="2d3db212529548d7afc49cfc5cb8bcf1" category="sidebar">支援的 Console 助理操作</block>
   <block id="f6aca2dcfee051b254bbcb878dc70d09" category="sidebar">授權</block>
+  <block id="310fc755e8c25e9b37b2afcf813c40ca" category="paragraph">使用 Console assistant 可以進行自然語言查詢，並對授權範圍內的資源進行高階分析。當您需要對單一 Volume 進行詳細的時間型分析時，請使用 Workload Analyzer，分析內容包括延遲、處理量、資源使用率、容量、事件和預測。</block>
+  <block id="2b5307add304f1c8c92393150946d025" category="paragraph">透過選擇適當的 LLM 供應商和模型、與供應商設定使用限制和警示，以及監控 token 使用情況，來控制 Console 助手的成本。只有向 LLM 發送請求的活動才會使用供應商 token；後端操作則不會。</block>
+  <block id="054ee380a765c9e1038010ff9205d7e1" category="paragraph">分析檢視會解釋發生了哪些變化以及原因。系統可能會提供引導式修復操作（例如，*Fix It*），以協助還原法規遵循。某些修復措施可以立即套用，而其他措施可能需要將工作負載遷移到不同的儲存設備類別才能還原預期行為。</block>
+  <block id="4c004d4211fa2f90ed0be1573cc5ccb2" category="inline-link-macro">了解支援的 Console 助理操作。</block>
+  <block id="840a40a87e4cc31b2e72efea3ecd3915" category="paragraph">對於自然語言問題和跨允許資源的高階分析，請使用 Console 助手。<block ref="e4efdca82358d9cc87f41eee06c8a6e8" category="inline-link-macro-rx"></block></block>
+  <block id="1dbb5d4e508753021ab3e51d05e20069" category="paragraph">使用此參考資料了解 NetApp Console 本機部署中「Fix It」功能提供的修復行動。表格中描述了每個行動的具體內容和相關警報。執行行動前，請在確認對話方塊中審查行動詳情。此參考資料描述的是「警報」工作流程中的行動；它並未說明 Console 助手可以建議哪些行動。</block>
+  <block id="8f5b0338214ee81ee1a65bd1d82429ee" category="paragraph">在 NetApp Console 本機部署中使用 Console 助手，您可以提出自然語言問題並執行選定的儲存設備操作。可用操作取決於您被指派的存取角色。注意：本文件說明如何將 LLM 連接至 Console 助手以啟用 AI 功能，目前僅提供技術預覽版。對於此預覽產品，NetApp 保留在正式發布前修改產品詳情、內容和時間表的權利。</block>
+  <block id="ea4da7c9e30fb1719ea7c84cf0b93119" category="section-title">Console 助手功能</block>
+  <block id="ee0f5f4c072bf12d553bc98bb266882a" category="paragraph">Console 助手支援以下操作類別。可用操作取決於您的版本、已設定的 LLM 端點、指派的角色和資源範圍。</block>
+  <block id="fa97f6975c9b94a252d204cd22159ff4" category="cell">功能</block>
+  <block id="5ab83f35784f154d55ea7ab58c8e503b" category="cell">存取模式</block>
+  <block id="c87fb7d832cb7211d7231582eb48cbb3" category="cell">用它來</block>
+  <block id="358388857b3167886e81189ce45f87ef" category="cell">唯讀</block>
+  <block id="7cdc22d363c4628c002d0531f1a15678" category="cell">詢問有關 NetApp Console 本地部署、儲存環境及支援的 ONTAP 管理工作流程的問題。</block>
+  <block id="4f22c16dbd24a89b3fd4002ed3cf8f3e" category="cell">在允許的範圍內，分析支援的容量、效能和其他計量。</block>
+  <block id="05cc0e531c89a2617c0047161c8a7ddd" category="cell">讀取/寫入</block>
+  <block id="66c09c89f281507e0fb6685cb50059a1" category="cell">在審查並確認擬議作業後，規劃和資源配置支援的 Volume 或 LUN。</block>
+  <block id="0d9ecf438dcacd8b127086940976cfaf" category="cell">唯讀或讀寫</block>
+  <block id="8d09fdd4e99af75c37672b7013a4a86b" category="cell">在更改儲存設備之前，調查作用中警報並審查支援的補救措施。</block>
+  <block id="5afcff55c824eace9a359b2137f2dfc4" category="cell">檢視或對與 Console 關聯的系統執行受支援的管理作業。</block>
+  <block id="af55bc0ef8b5b981a54821e9fefdf333" category="paragraph">使用您指派的角色以及組織、資料夾或機組範圍來確定助理可以存取哪些系統和工作負載。助理不會繞過 Console 本機部署存取控制。</block>
+  <block id="96da7e67f56817e2b919703d8aac899a" category="paragraph">使用 Console 助理可以進行自然語言查詢，並對授權範圍內的資源進行高階分析。當您需要對單一 Volume 進行詳細的時間型分析時，請使用 Workload Analyzer，分析內容包括延遲、處理量、資源使用率、容量、事件和預測。<block ref="8abfd8e6ef83a7a1339d62c46936fd02" category="inline-link-macro-rx"></block></block>
+  <block id="e2e001d117089b3ef000a8132e26faf0" category="paragraph">請助手調查作用中警報。它會分析警報並可能建議補救行動。如果支援的補救措施會更改儲存設備，助手會顯示該行動供審查，並在執行前要求您確認。</block>
+  <block id="7210f33407934a30d7318efa223041cd" category="paragraph">在助理變更儲存設備之前，請審查建議的補救措施詳細資訊並確認該行動。</block>
+  <block id="4dc7e1629902d44fd5c0d723601a7e2f" category="inline-link-macro">了解警報補救措施。</block>
+  <block id="7274e37c4b3c76ff3ba4d1f88eccfa71" category="paragraph"><block ref="7274e37c4b3c76ff3ba4d1f88eccfa71" category="inline-link-macro-rx"></block></block>
+  <block id="6dd1e8e7e2440eadee65b3ef48d74941" category="paragraph">使用自然語言請求對已註冊的 ONTAP 系統執行受支援的管理作業。如果您知道目標叢集、儲存虛擬機器 （SVM） 或資源，請提供相關資訊，以便助理能夠使用正確的內容。</block>
+  <block id="8c11dc99a05bf3815fd072b359243f79" category="paragraph">請審查您的要求是僅讀取資訊還是變更 ONTAP 系統，然後確認任何擬進行的寫入作業。可用的操作集取決於 Console 本機部署版本以及指派給您帳戶的權限。</block>
+  <block id="7fb9babbd7dea197556eda0957b9c97a" category="inline-link-macro">了解如何使用 Console 助手。</block>
+  <block id="6910756915e502f9d6aae5512cd256f0" category="paragraph"><block ref="6910756915e502f9d6aae5512cd256f0" category="inline-link-macro-rx"></block></block>
+  <block id="0dc9ffe7d4afc6e9aaa9c89368a2823f" category="paragraph">助理使用已登入使用者的權限和資源範圍。您指派的組織、資料夾或機組範圍決定了助理可以存取哪些系統和工作負載。</block>
+  <block id="1dc99a23e6bcad5455c3d2709cd052bf" category="paragraph">向助手查詢非同步執行的受支援寫入作業的狀態。助手會為不會立即完成的作業建立一個工作。</block>
+  <block id="623f362360f5cceef39f971b792bd357" category="cell">允許使用者不受限制地存取組織內的所有機組和資料夾，向任何機組或資料夾新增成員，以及執行任何工作並使用任何未明確關聯角色的資料服務。擁有 Org admin 角色的使用者還可以設定 LLM 整合、電子郵件伺服器設定並新增 Webhook。擁有此角色的使用者可以透過建立資料夾和機組、指派角色、新增使用者以及管理系統（如果他們擁有適當的憑證）來管理您的組織。</block>
+  <block id="7ea7b36ac0da3e4d88bf08816b2c49b4" category="section-title">Console assistant 存取</block>
+  <block id="d0d7aafd8ba4e397c62335e6963210a9" category="paragraph">組織管理員或超級管理員必須先設定 LLM 整合，成員才能使用 Console 助手。每個成員只能檢視或變更其指派的角色以及組織、資料夾或機組範圍內的資源。<block ref="e4efdca82358d9cc87f41eee06c8a6e8" category="inline-link-macro-rx"></block></block>
+  <block id="cc0c180b880d732044a7ee8a1c2a3aff" category="paragraph">使用 Workload Analyzer 對受影響的 Volume 進行詳細的時間型分析。若要進行自然語言問題或跨允許資源的高階分析，請使用 Console 助手。<block ref="e4efdca82358d9cc87f41eee06c8a6e8" category="inline-link-macro-rx"></block></block>
+  <block id="09010f6464000c516397f38442e92b49" category="section-title">使用提示程式庫中的提示</block>
+  <block id="332dd967753e852ca2532d5b18cb4611" category="paragraph">瀏覽提示程式庫，找到有關儲存管理和機組狀況問題的合適切入點。</block>
+  <block id="a63ed3a501b21622c504e2682f6b5dae" category="list-text">開啟 Console 助手。</block>
+  <block id="7ddd4458be421a9f9f12dd578da390d7" category="list-text">從助手標題列的按鈕開啟提示程式庫。</block>
+  <block id="b24605f30ca0232c8b68c77c61fcec7e" category="list-text">從程式庫中選擇提示，審查後提交請求。</block>
+  <block id="beb0e01e7e36ff62ee977dd31ad8b0c7" category="list-text">請依照助理的回應操作。根據請求內容，助理可能會返回資訊、詢問更多細節，或在執行行動前請求確認。</block>
+  <block id="69200085693b2c07a9fd57550280affd" category="paragraph">在不更改儲存環境的前提下，調查您允許範圍內的容量和效能狀況。提出一個唯讀問題，明確您要了解的資源、範圍、計量和時間段。助手會傳回所支援計量的分析結果，且不會變更您的儲存設備。</block>
+  <block id="a320b4ddc74c3e0d5cf1e99a74a477c7" category="list-text">選擇建議的補救行動，例如 *Fix It*。</block>
 </blocks>

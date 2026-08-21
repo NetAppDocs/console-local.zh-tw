@@ -39,7 +39,7 @@ sidebar:
     entries:
     - title: 快速開始設定 NetApp Console
       url: "/task-quick-start-console-setup.html"
-    - title: 安裝 NetApp Console
+    - title: 安裝 NetApp Console 本機部署
       entries:
       - title: 安裝 NetApp Console
         url: "/task-install-agent-on-prem-ova.html"

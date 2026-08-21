@@ -16,6 +16,8 @@ summary: 了解工作負載分析器如何協助您調查 Volume 層級的效能
 [role="lead"]
 使用 NetApp Console 本機部署工作負載分析器，可以檢視單一 Volume 隨時間推移的行為。您可以從 Volume 本身、警示或清單中調查效能減低、容量趨勢和資源爭用問題。
 
+對於自然語言問題和跨允許資源的高階分析，請使用 Console 助手。link:reference-console-assistant-operations.html["了解支援的 Console 助理操作。"]
+
 
 
 [[how-workload-analyzer-identifies-root-causes]]

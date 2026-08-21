@@ -88,6 +88,8 @@ link:reference-llm-supported-models.html["了解 NetApp Console 本機部署中�
 * 審查供應商端的使用情況和警示，以偵測異常活動。
 
 
+透過選擇適當的 LLM 供應商和模型、與供應商設定使用限制和警示，以及監控 token 使用情況，來控制 Console 助手的成本。只有向 LLM 發送請求的活動才會使用供應商 token；後端操作則不會。
+
 
 
 [[connect-your-llm]]

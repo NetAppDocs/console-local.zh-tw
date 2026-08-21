@@ -32,8 +32,8 @@ NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能�
 
 
 
-[[gather-what-you-need-before-you-connect-an-llm]]
-== 在連接 LLM 之前，請先準備好所需資料。
+[[before-you-begin]]
+== 開始之前
 
 請準備供應商憑證和端點存取，以便 Console 助理可以在您組織設定的治理範圍內運作。
 
