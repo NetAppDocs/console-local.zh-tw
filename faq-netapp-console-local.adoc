@@ -156,13 +156,19 @@ link:reference-iam-predefined-roles.html["了解預先定義的存取角色"]。
 == 人工智慧輔助管理
 
 .哪些 LLM 供應商支援 NetApp Console 本地部署以實現 AI 輔助管理？
-您需要自備訂閱或服務存取，且供應商類型必須為受支援的 OpenAI 或 OpenAI 相容型。組態過程中，您需要提供有效的 API 金鑰。此外，您還需要部署具有叢集存取的 Console、與已設定端點的傳出網路連線、組織管理員角色，以及用於指引資源配置的儲存設備類別。link:concept-llm-integration.html["了解 LLM 整合"]。
+您需要自備訂閱或服務存取，且支援的供應商類型為：OpenAI、OpenAI 相容型或 Anthropic，具體取決於您的版本和端點支援情況。組態過程中，您需要提供有效的 API 金鑰。此外，您還需要與已設定端點的傳出網路連線，並擁有組織管理員或超級管理員角色才能設定整合。link:concept-llm-integration.html["了解 LLM 整合"]。
 
 .啟用 LLM 整合是否會將我的儲存設備資料或查詢傳送到第三方服務？
 Console 僅向您設定的 LLM 端點傳送提示和相關上下文。如果該端點是第三方雲端服務，資料會透過 HTTPS 傳送至該服務。如果該端點是內部 OpenAI 相容服務，資料將保留在您內部的整合路徑中。所有 AI 行動均遵循您的 RBAC，且敏感操作需要您確認。link:concept-llm-integration.html["了解 LLM 整合"].
 
 .控制台助手可以做什麼？如何控制它是否更改我的儲存設備？
-連接 LLM 後，Console 助手允許使用者使用自然語言資源配置儲存設備、調查警報並取得答案。使用者可以選擇存取模式：在「唯讀」模式下，助手會提供答案和指導，但不會進行任何變更；而在「讀取/寫入」模式下，助手可以對儲存基礎架構進行操作，但會在每次變更之前顯示詳細資訊供使用者審查和確認。link:task-llm-connect.html["連接您的 LLM 並啟用 NetApp Console 助手"]。
+連接 LLM 後，Console 助手允許使用者使用自然語言獲取指導、分析支援的計量、配置儲存資源、調查警報以及請求支援的 ONTAP 作業。在 *唯讀* 模式下，助手不會進行任何變更。在 *讀取/寫入* 模式下，它會顯示建議的儲存變更動作，供使用者在執行前進行審查和確認。link:task-console-asst-use.html["使用 NetApp Console 助手"]。
+
+.Console 助手支援哪些作業？
+Console 助手支援對話式指導、支援的唯讀計量分析、儲存資源配置、警示調查以及部分 ONTAP 管理作業。可用作業取決於版本、設定的端點以及您的角色和資源範圍。link:reference-console-assistant-operations.html["查看支援的 Console 助理操作"]。
+
+.當 Console 助手執行非同步作業時會發生什麼情況？
+對於無法立即完成的支援作業，助手會建立一個工作，並在您詢問請求時傳回目前狀態。link:task-console-asst-use.html["使用 NetApp Console 助手"]。
 
 
 

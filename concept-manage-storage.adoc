@@ -37,8 +37,6 @@ summary: 了解 NetApp Console 本地部署中的機組管理和儲存管理的�
 
 貴組織的資源層級結構由資料夾和機組組成：
 
-有關層次結構和存取模型的詳細總覽，請參閱link:concept-folders-fleets-overview.html["了解 NetApp Console 本地部署中的資料夾和機組"]。
-
 * *組織* - 代表貴公司的最高層級。
 * *資料夾* - 協助您組織相關機組。例如，您可以為每個區域或業務單位建立一個資料夾，然後在每個資料夾內建立機組。資料夾可以包含其他資料夾或機組。當您在資料夾層級指派角色時，成員將繼承該資料夾內所有機組的該角色。
 * *機組* - 將您管理的儲存設備系統分組在一起。您可以將儲存設備系統與機組關聯，並將成員指派到機組以授予他們存取權限。
@@ -46,6 +44,8 @@ summary: 了解 NetApp Console 本地部署中的機組管理和儲存管理的�
 
 
 NOTE: 資料夾是一種組織工具，對於沒有 IAM 權限（例如組織管理員、資料夾管理員或機組管理員角色）的成員而言不可見。成員存取機組，而不是資料夾。
+
+link:concept-folders-fleets-overview.html["深入瞭解 NetApp Console 本地部署中的資料夾和機組"]。
 
 
 
@@ -108,9 +108,10 @@ Console 本機部署支援三種資源配置方法，所有方法均受 RBAC、�
 [[where-to-go-next]]
 == 接下來該去哪裡？
 
-* 若要了解儲存設備標準，請參閱link:concept-storage-classes.html["了解 NetApp Console 本機部署中的儲存設備類別和原則"]。
-* 若要建立和管理機組，請參閱link:task-iam-manage-folders-fleets.html["管理資料夾和機組"]。
+* link:concept-storage-classes.html["了解 NetApp Console 本機部署中的儲存設備類別和原則"]。
+* link:task-iam-manage-folders-fleets.html["瞭解如何建立及管理機組"]。
 * link:task-provisioning-manual.html["手動配置儲存設備"]
 * link:task-provisioning-automated.html["自動配置儲存設備"]
 * link:task-provisioning-agentic.html["借助人工智慧輔助提供儲存設備"]
+* link:reference-console-assistant-operations.html["查看支援的 Console 助理操作"]
 

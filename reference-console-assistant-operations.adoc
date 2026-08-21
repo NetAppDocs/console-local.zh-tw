@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: reference-console-assistant-operations.html 
+keywords: Console assistant, AI-assisted management, agentic operations, metrics, storage provisioning, ONTAP management, netapp console local 
+summary: 審查 NetApp Console 本機部署中 Console 助理所支援的面向客戶操作類別。 
+---
+= 在 NetApp Console 本機部署中支援的 Console 助理操作
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Console 助手支援自然語言查詢和部分儲存設備操作。可用操作取決於版本、已設定的 LLM 端點以及您被指派的權限。
+
+
+NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能，此文件以技術預覽版形式提供。對於此預覽產品，NetApp 保留在正式發行前修改產品詳情、內容及時間表的權利。
+
+對於無需更改基礎架構的問題和分析，請使用 Console 助手的「唯讀」模式。對於可能變更儲存設備或 ONTAP 系統的支援操作，請使用「讀取/寫入」模式。助手會顯示建議的變更，並在執行寫入作業前要求確認。
+
+
+
+[[conversational-guidance-and-search]]
+== 對話式指導與搜尋
+
+詢問有關 NetApp Console 本機部署、儲存環境或受支援的 ONTAP 管理工作流程的問題。助理會使用已設定的 LLM 端點以及可用的文件和機組內容來傳回答案或要求更多內容資訊。
+
+
+
+[[metrics-and-analytics]]
+== 計量與分析
+
+詢問您權限範圍內資源的儲存容量、效能及其他計量的唯讀問題。如果這些細節與您的問題相關，請提供資源、計量和時間段。
+
+助手傳回分析結果，但不會以*唯讀*模式變更儲存設備。
+
+
+
+[[storage-provisioning]]
+== 儲存資源配置
+
+請用自然語言描述工作負載及其儲存設備需求。助理可以推薦儲存設備類別和放置位置、識別缺少的詳細資訊，並提供資源配置方案供審查。
+
+批准計劃後，助手將根據您的角色權限和儲存類別原則，佈建受支援的 Volume 或 LUN 作業。link:task-provisioning-agentic.html["了解如何使用人工智慧輔助工作流程資源配置儲存設備"]。
+
+
+
+[[alert-investigation-and-remediation]]
+== 警報調查和補救
+
+請助手調查受支援的作用中警報。它會分析警報並可能建議補救行動。當受支援的補救措施會變更儲存設備時，助手會顯示該行動供審查，並在執行前要求您確認。
+
+
+
+[[ontap-management]]
+== ONTAP 管理
+
+使用自然語言請求對已註冊的 ONTAP 系統執行受支援的管理作業。如果您知道目標叢集、SVM 或資源，請加以識別，以便助理能夠使用正確的內容。
+
+助手會區分唯讀請求與寫入作業。在確認寫入作業之前，請審查目標和擬議的變更。可用的作業集取決於 Console 本機部署版本以及指派給您帳戶的權限。
+
+
+
+[[permissions-and-scope]]
+== 權限和範圍
+
+助理使用已登入使用者的權限和資源範圍：
+
+* 您的角色決定了您可以檢視或變更哪些資源和作業。
+* 組織、資料夾和機組範圍限制了助理可用的系統和工作負載。
+* 儲存類別原則限制了 AI 輔助的儲存資源配置。
+* 助理不會繞過 Console 本機部署存取控制。
+
+
+link:reference-iam-predefined-roles.html["了解 NetApp Console 本機部署存取角色"]。
+
+
+
+[[asynchronous-operations]]
+== 非同步作業
+
+某些受支援的寫入作業不會立即完成。對於這些作業，助手會建立一個工作。請向助手詢問請求狀態以監控完成情況。
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:concept-llm-integration.html["了解 LLM 在 NetApp Console 本機部署中的整合"]
+* link:task-console-asst-use.html["使用 NetApp Console 助手"]
+* link:reference-llm-supported-models.html["支援的 LLM 提供者和模型"]
+

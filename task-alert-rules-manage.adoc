@@ -31,7 +31,7 @@ summary: 在 NetApp Console 本機部署中設定通知規則，以控制哪些�
 [[before-you-begin]]
 == 開始之前
 
-* 若要透過電子郵件交付通知，您的組織管理員必須在 Console 本機部署中設定電子郵件伺服器。若要將通知交付到外部系統，您的組織管理員必須設定 Webhook。如需相關步驟，請參閱 link:task-console-configure-notifications-delivery.html["設定通知交付"]。
+* 若要透過電子郵件交付通知，您的組織管理員必須在 Console 本機部署中設定電子郵件伺服器。若要將通知交付到外部系統，您的組織管理員必須設定 Webhook。link:task-console-configure-notifications-delivery.html["了解如何設定 Webhook"]。
 * Console 本機部署通知中心預設顯示通知，因此無需對主控台通知進行額外設定。
 
 

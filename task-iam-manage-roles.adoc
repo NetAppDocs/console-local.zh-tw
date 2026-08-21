@@ -63,7 +63,7 @@ link:concept-iam-rbac.html#role-inheritance["了解 NetApp Console 本地部署�
 
 當成員的職責發生變化時，您可以調整其存取權限。例如，當隊友承擔第二個區域的備份職責時，可以在不影響其現有儲存設備角色的情況下，為其在該區域的機組上新增 Backup and Recovery 管理員角色。
 
-如果您需要新增成員並為其指派第一個角色，請參閱link:task-iam-manage-members-permissions.html#add-members["新增成員並分配角色"]。
+link:task-iam-manage-members-permissions.html#add-members["了解如何新增成員和分配角色"]。
 
 
 

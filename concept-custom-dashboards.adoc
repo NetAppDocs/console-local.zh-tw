@@ -53,7 +53,7 @@ summary: 了解預先定義的首頁儀表板和自訂儀表板如何在 NetApp 
 警示:: 關鍵警報數量、按嚴重程度劃分的警報、按影響區域劃分的警報、近期警報以及警報隨時間變化的趨勢。
 
 
-有關預定義卡片和計量的完整目錄，請參閱link:reference-dashboard-card-templates.html["了解 NetApp Console 本地部署中的自訂儀表板卡片和計量"]。
+link:reference-dashboard-card-templates.html["審查 NetApp Console 本地部署中的自訂儀表板卡片和計量目錄"]。
 
 
 

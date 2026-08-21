@@ -694,7 +694,6 @@
   <block id="df583ae7ba964fd4806b55904da81813" category="list-text">警示</block>
   <block id="4c086d3715a8b22b3c143d19166de38e" category="list-text">關鍵警報數量、按嚴重程度劃分的警報、按影響區域劃分的警報、近期警報以及警報隨時間變化的趨勢。</block>
   <block id="b42fdc31e61410be0c86a5b9f19f19ca" category="inline-link-macro">了解 NetApp Console 本地部署中的自訂儀表板卡片和計量</block>
-  <block id="38d88cefcc7a0718a9c0bcce1717fce6" category="paragraph">有關預定義卡片和計量的完整目錄，請參閱<block ref="3c1edbc90178caabd44cba55bcbaa0a8" category="inline-link-macro-rx"></block>。</block>
   <block id="b6af2b8fdca63591236d48930018b8db" category="section-title">資源類型</block>
   <block id="bfd5a6ae9cda3045e7221edca5e40d50" category="paragraph">您可以將卡片的範圍限定在 ONTAP 儲存設備層次結構的任意層級：機組、叢集、系統（節點）、SVM、Volume、LUN 和本機分層（彙總）。可用的資源類型取決於您選擇的卡片模板。</block>
   <block id="f74a30443ec29f100214ac2ade776efa" category="section-title">規劃儀表板檢視</block>
@@ -890,13 +889,10 @@
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">了解 NetApp Console IAM 的 API</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
   <block id="aaa31fb12388ee6f380920310c04b753" category="doc">了解 LLM 在 NetApp Console 本機部署中的整合</block>
-  <block id="345b50b0707634d277d7a44851e59fe4" category="paragraph">NetApp Console 本機部署連線至大型語言模型 （LLM），用於 AI 輔助的儲存管理。設定後，使用者可以使用自然語言來進行儲存設備資源配置、調查警示並取得儲存設備指引。</block>
   <block id="4f9d5100edf765a8f2ae1c53a1a257cc" category="paragraph">AI 輔助管理讓使用者能以簡單的語言描述請求，而 Console 本機部署則套用您的儲存設備原則。</block>
   <block id="60fbe3f23efb906d26a4c4bbd9ca4833" category="paragraph">Console 本機部署僅向您設定的端點傳送 LLM 請求。</block>
   <block id="cab4ccf93d529848163ed08f0ada7f06" category="section-title">您可以利用 AI 輔助儲存管理執行哪些作業</block>
-  <block id="3f38bedfc27f189a284145765b9a449b" category="paragraph">啟用 LLM 整合後，NetApp Console 本機部署可透過 Console 助手提供以下三項功能：</block>
   <block id="cf8a6bb8b76d2d0b249ebb7a5adc9be3" category="list-text">*儲存設備資源配置* 請用簡單易懂的語言描述工作負載需求。Console 本機部署會根據您的儲存設備類別推薦並執行資源配置計畫。</block>
-  <block id="28f3b1780ea624d65d217245143767c1" category="list-text">*警報回應* 要求 Console 本機部署調查作用中警報。它會分析問題，並根據指派的權限建議或執行相應的行動。</block>
   <block id="39602a23041c5f7b663f3da5d0e00558" category="list-text">*搜尋與指導* 詢問有關儲存環境或 ONTAP 管理的問題。NetApp Console 本機部署會根據文件和目前機組狀態傳回內容相關的答案。</block>
   <block id="5f7253fc639860a02e10fa7f2828ed5c" category="section-title">選擇 Console 助手的唯讀或讀寫存取</block>
   <block id="bbe76109c7fbe5aecb4f4a81f82d5417" category="paragraph">使用者根據自身需求選擇助手存取模式：</block>
@@ -913,20 +909,13 @@
   <block id="fee6af50bc6105fefb846f7e518fb7cf" category="list-text">*相容於 OpenAI*，適用於相容的端點，例如企業閘道或 Proxy 服務。</block>
   <block id="7de1d980a668ed0c9d00649c3750c5d1" category="paragraph">模型可用度取決於您設定的端點。請從 Console 本機部署的清單中選取模型。</block>
   <block id="64c716e8b3c375cb10518555f2cc559d" category="inline-link-macro">了解 NetApp Console 本機部署中支援的 LLM 供應商和模型</block>
-  <block id="42e3047ea36dd2b663d0f3f5d7b20152" category="paragraph">有關支援的型號詳情，請參閱<block ref="1a3a7e8df14b08dab1953f3a058a454f" category="inline-link-macro-rx"></block>。</block>
-  <block id="422101339203679b06feb11e89eaddee" category="section-title">了解 LLM 要求的去向</block>
-  <block id="9558d54e54b350a8e1a8d840174a01d2" category="paragraph">資料流取決於您選擇的端點路徑：</block>
-  <block id="1b9758ab620ca9cdf6403026ad8296a9" category="list-text">如果設定了 OpenAI 端點，Console 本機部署會將提示和上下文傳送到 OpenAI 端點。</block>
-  <block id="12d8fe4fe548c2403000b35372fb4f89" category="list-text">如果您設定了與 OpenAI 相容的端點，Console 本機部署會將提示和上下文傳送到您組織所設定的相容端點。</block>
   <block id="26973ca0129cd9b839210e7a88910363" category="section-title">保護 LLM 認證資料並控制管理員存取</block>
   <block id="2772caebca7670bd33b60c225f1e6e00" category="paragraph">使用以下控制項保護整合：</block>
   <block id="69f9166e1bc0ee68a717caa86c61c0ed" category="list-text">將 API 金鑰視為特權認證資料，並根據組織原則進行輪調。</block>
   <block id="f6e53988ba18fbea16b697bbb45138b4" category="list-text">審查供應商端的使用情況和警示，以偵測異常活動。</block>
   <block id="a522d99644d6d85ac7382eaf2e2d4c05" category="section-title">連接您的 LLM</block>
   <block id="97c3ffcb37aa0f2c1a487457b78e22d2" category="inline-link-macro">連接您的 LLM 並啟用 NetApp Console 助手</block>
-  <block id="1d391b5ecd383efab633bc06537f6377" category="paragraph">做出這些決定後，繼續<block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>。</block>
   <block id="8116430033c6b5f8f6545eebccfd8429" category="inline-link-macro">疑難排解 LLM 整合</block>
-  <block id="602d4acd38bae620a7cc9e4fb8acc871" category="paragraph">如果連線或執行階段檢查失敗，請參閱<block ref="0a33e06ad623a7ea3644eaec2b7d3695" category="inline-link-macro-rx"></block>。</block>
   <block id="38c8b5197ae6f48260ff2edca54448f4" category="summary">了解如何在 NetApp Console 本機部署中管理儲存設備，包括儲存設備類別、原則和資源配置方法。</block>
   <block id="3b495f6b085b370d0fc9fbecd94193a2" category="doc">NetApp Console 本機部署中的儲存管理工作流程總覽</block>
   <block id="9f0d8205383391e4bcee4e39b5a47105" category="paragraph">在 NetApp Console 本機部署中，netApp Console （local） 可協助您使用一致且可重複使用的標準大規模管理 ONTAP 儲存設備。您無需為每個 Volume 或 LUN 單獨做出決策，只需定義一次已核准的行為，即可將其套用至整個機組——無論您是手動資源配置、使用自動放置，還是使用 AI 輔助的規劃與審查工作流程。</block>
@@ -971,7 +960,6 @@
   <block id="fbda47b9907c4910495133059586edf7" category="list-text">*治理與控制* - 隨著團隊規模的擴大，您需要明確管理權限範圍。機組管理透過組織結構和存取控制來提供這些權限範圍，確保儲存設備決策始終受到監管並可稽核。</block>
   <block id="d4d4881ce496e1c9ced87e9ddc5c24de" category="section-title">機組如何組織資源</block>
   <block id="ed36d27fd3d784f75bc4e95f9c5d9bab" category="paragraph">貴組織的資源層級結構由資料夾和機組組成：</block>
-  <block id="96fb720c859e15c5611f5bb8e74bcb92" category="paragraph">有關層次結構和存取模型的詳細總覽，請參閱<block ref="d07384ef73e7914a88e8fd2435c2eb27" category="inline-link-macro-rx"></block>。</block>
   <block id="93188c76880b80093e9bb0b625dda8c9" category="list-text">*組織* - 代表貴公司的最高層級。</block>
   <block id="f62a689acdcb6a2cee436effe083f024" category="list-text">*資料夾* - 協助您組織相關機組。例如，您可以為每個區域或業務單位建立一個資料夾，然後在每個資料夾內建立機組。資料夾可以包含其他資料夾或機組。當您在資料夾層級指派角色時，成員將繼承該資料夾內所有機組的該角色。</block>
   <block id="568367fa2b5f52767293ebbd0abe589a" category="list-text">*機組* - 將您管理的儲存設備系統分組在一起。您可以將儲存設備系統與機組關聯，並將成員指派到機組以授予他們存取權限。</block>
@@ -1002,9 +990,6 @@
   <block id="8070eb0b00a3637e1cc617ccae39a765" category="list-text">*AI 輔助（代理）資源配置* - 您可以使用自然語言來描述您的需求。Console 本機部署會根據 RBAC 和儲存設備類別提出計劃，並在您審查並核准後才進行資源配置。</block>
   <block id="3163b3d4dc92f42d04ad4c79906dcdc3" category="section-title">接下來該去哪裡？</block>
   <block id="4687a271cd6bee287b9ef74078e0d610" category="inline-link-macro">了解 NetApp Console 本機部署中的儲存設備類別和原則</block>
-  <block id="ceab724e78618b5f1158c38dc82aeadd" category="list-text">若要了解儲存設備標準，請參閱<block ref="091e8c8fe9f2d7d00a71788386fcbe28" category="inline-link-macro-rx"></block>。</block>
-  <block id="09b4fb9c519c7b32e176f5b13226fc0a" category="inline-link-macro">管理資料夾和機組</block>
-  <block id="dff51bcbaaa971512ca0f18440810108" category="list-text">若要建立和管理機組，請參閱<block ref="e60e2f54a818b7abd8e7f20686567eb6" category="inline-link-macro-rx"></block>。</block>
   <block id="8fab4a7bf5aa87ccfa487603d06afe37" category="inline-link-macro">手動配置儲存設備</block>
   <block id="db2b7390ec9b3e4fc8c8630658ede1c4" category="list-text"><block ref="db2b7390ec9b3e4fc8c8630658ede1c4" category="inline-link-macro-rx"></block></block>
   <block id="b2616964d51b081a64cd32c5987bb43d" category="inline-link-macro">自動配置儲存設備</block>
@@ -1281,11 +1266,7 @@
   <block id="4c24782166765ed0ecf73dc338eaee4b" category="list-text">*修復偏差以還原法規遵循* - 當偵測到偏差或效能不合規時，您可以依照引導步驟手動修正問題，讓 Console 本機部署自動解決常見的偏差情況，或者如果您需要變更工作負載的設定，則可以將其與儲存設備類別取消關聯。</block>
   <block id="792a20076f5be715e2bc7691d34eb87f" category="section-title">儲存設備類別如何與機組搭配運作</block>
   <block id="fd32177227b2e1a8f54a4a0e61faff04" category="paragraph">儲存類別與機組相關聯。當您將儲存類別與機組相關聯時，該類別即可用於機組內的所有資源配置。這可確保在機組中配置資源的每個工作負載都遵循相同的標準，使機組成為在相關叢集之間強制執行一致的儲存行為的主要方式。</block>
-  <block id="845057ca05c9dd57e612009f918546d2" category="paragraph">有關如何組織機組的詳細資訊，請參閱 <block ref="db9b96303a8e941f40944ec886cf0ba1" category="inline-link-macro-rx"></block>。</block>
-  <block id="282bf41f7883989b4cfb23e79bcf8587" category="list-text">若要了解機組組織，請參閱<block ref="db9b96303a8e941f40944ec886cf0ba1" category="inline-link-macro-rx"></block>。</block>
   <block id="d583d8c6f74d877962807ff61ff1f0ad" category="inline-link-macro">管理儲存設備類別和原則</block>
-  <block id="b3578b2947412769eaa0d865f7566d63" category="list-text">若要建立原則和儲存設備類別，請參閱<block ref="130e257000a6cd23784d6444ddff3ea4" category="inline-link-macro-rx"></block>。</block>
-  <block id="c099b69ff5969d5fa0df3d96a690d645" category="list-text">若要分析並修正漂移，請參閱<block ref="2945052ecb7e00bcbe7209543ea78a15" category="inline-link-macro-rx"></block></block>
   <block id="68acd361711f151c44997846746f2774" category="summary">儲存設備機組用於將您在 NetApp Console 本機部署中一起管理的儲存設備系統分組。使用資料夾對相關的機組進行分組。您可以在所需範圍內套用原則、授予存取權限並監控健全狀況。</block>
   <block id="2ab6f9761744c4c00754544731fa746c" category="section-title">機組為何重要</block>
   <block id="c7abac757cf7ea7b2744ef118c1de04c" category="paragraph">隨著儲存設備環境的擴展，以隔離方式管理各個叢集變得不再可行。機組提供了一種結構化的方式，將相關的儲存設備系統分組，以便您可以將其作為一個整體進行操作。您無需逐個叢集設定原則或存取控制，只需在機組層級套用一次即可。這減少了重複的管理工作，並確保機組中的每個叢集都依照相同的標準運作。</block>
@@ -1437,11 +1418,9 @@
   <block id="251b3f0f2d74ad68082fdfbe4e030798" category="section-title">人工智慧輔助管理</block>
   <block id="9144aed32c3947c3f6c915dc667afa48" category="paragraph-title">哪些 LLM 供應商支援 NetApp Console 本地部署以實現 AI 輔助管理？</block>
   <block id="bde5aef56c75d1b40669feeeaa6d189e" category="inline-link-macro">了解 LLM 整合</block>
-  <block id="ba0dbc4b8aaac2e9b705bbdcf93005aa" category="paragraph">您需要自備訂閱或服務存取，且供應商類型必須為受支援的 OpenAI 或 OpenAI 相容型。組態過程中，您需要提供有效的 API 金鑰。此外，您還需要部署具有叢集存取的 Console、與已設定端點的傳出網路連線、組織管理員角色，以及用於指引資源配置的儲存設備類別。<block ref="470eda43e450182c243ef76ccd1f9255" category="inline-link-macro-rx"></block>。</block>
   <block id="ce9dbbbce76848eef723ebc6c26618fd" category="paragraph-title">啟用 LLM 整合是否會將我的儲存設備資料或查詢傳送到第三方服務？</block>
   <block id="cf9f2412b65fd4c0739ede3eadcd4bc7" category="paragraph">Console 僅向您設定的 LLM 端點傳送提示和相關上下文。如果該端點是第三方雲端服務，資料會透過 HTTPS 傳送至該服務。如果該端點是內部 OpenAI 相容服務，資料將保留在您內部的整合路徑中。所有 AI 行動均遵循您的 RBAC，且敏感操作需要您確認。<block ref="470eda43e450182c243ef76ccd1f9255" category="inline-link-macro-rx"></block>.</block>
   <block id="c8bfe037e2674cf290bd34c015885d33" category="paragraph-title">控制台助手可以做什麼？如何控制它是否更改我的儲存設備？</block>
-  <block id="aa95c154e986d1901c90d69d45d2f85e" category="paragraph">連接 LLM 後，Console 助手允許使用者使用自然語言資源配置儲存設備、調查警報並取得答案。使用者可以選擇存取模式：在「唯讀」模式下，助手會提供答案和指導，但不會進行任何變更；而在「讀取/寫入」模式下，助手可以對儲存基礎架構進行操作，但會在每次變更之前顯示詳細資訊供使用者審查和確認。<block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>。</block>
   <block id="e70a0f55fac9d337b8fc9f4a5eed76ea" category="section-title">資料保護與稽核</block>
   <block id="a2acd4e5b8eeb2c4eb2049373cc4a3d6" category="paragraph-title">NetApp Console 本地部署提供哪些資料保護功能？</block>
   <block id="67a4b4d0a88d7fc6b0ef85b232ef7613" category="inline-link-macro">了解資料服務</block>
@@ -1920,7 +1899,6 @@
   <block id="758cbeb7242c0d95a1ba25a826bf7466" category="list-text">*OpenAI* — 提供可直接整合到 OpenAI 的模型。</block>
   <block id="f8882d796dcd55911551ffa65e9934af" category="list-text">*OpenAI-compatible* — 提供組織相容端點所公開的模型。</block>
   <block id="8c705cedce8873cec4385d32a46d41f7" category="list-text">*Anthropic* — 提供直接 Anthropic 整合的模型。</block>
-  <block id="51fdad81afa838750840be2f600de9f8" category="paragraph">您看到的模型可能因端點組態、Proxy 或閘道行為以及組織原則而異。供應商類型取決於您連線的端點以及該端點公開的模型，而不是傳輸協定。</block>
   <block id="08a146c5c0cb45bfe3682f78567b0421" category="section-title">支援的 OpenAI 模型</block>
   <block id="5b6c99e4c6c823fdc627954b67266130" category="list-text">GPT-5.4</block>
   <block id="de392d99e073d932039aa08f1f59041b" category="list-text">GPT-5.5</block>
@@ -2311,7 +2289,6 @@
   <block id="ab92140b4fca6a428c4d9dd6177333dc" category="paragraph">超級管理員、組織管理員、儲存設備管理員、維運支援分析師，或任何與 NetApp Backup and Recovery 相關的管理員角色。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="181c0a0c09dfe0f8ba7b3346903c6def" category="paragraph">使用通知規則，透過適合您環境的通路，將正確的警示路由給正確的人員，同時減少與您無關的警示幹擾。通知規則是「警示」頁面的補充：您可以在「警示」工作流程中調查或修復警示，然後使用規則來控制未來類似警示的交付方式。</block>
   <block id="ef9e7cefa30ba8567d3175e4dd97d705" category="inline-link-macro">設定通知交付</block>
-  <block id="ed25804203fe0cfacd7338fe370fab02" category="list-text">若要透過電子郵件交付通知，您的組織管理員必須在 Console 本機部署中設定電子郵件伺服器。若要將通知交付到外部系統，您的組織管理員必須設定 Webhook。如需相關步驟，請參閱 <block ref="672eea012e5868d936761017846dcdbf" category="inline-link-macro-rx"></block>。</block>
   <block id="6be1395fcc81300b6bceb20c8b98659a" category="list-text">Console 本機部署通知中心預設顯示通知，因此無需對主控台通知進行額外設定。</block>
   <block id="aa0688cb1a2561ce4a0b9e33ec24c385" category="section-title">檢視通知規則</block>
   <block id="3fd13d8d5fe12b342d50496d8c1b14ea" category="paragraph">通知規則頁面是審查和管理適用於您組織的每條規則的中心位置。每條規則都會顯示其關鍵屬性，讓您能夠快速評估和調整警示行為。</block>
@@ -2516,21 +2493,17 @@
   <block id="5393c2b8908e1f48ca31ccf7d8bb057c" category="section-title">從「稽核」頁面下載稽核日誌</block>
   <block id="95e9b23238ddd8479992115173ab7048" category="paragraph">您可以從「稽核」頁面將稽核日誌下載到 CSV 檔案。這樣，您可以記錄使用者在組織中執行的行動。下載的 CSV 檔案包含所有稽核日誌欄，無論「稽核」頁面上的篩選條件或顯示的欄位為何。</block>
   <block id="a485c1defdaf491b2f5cf7219289d8cc" category="list-text">在「稽核」頁面中，選擇表格右上角的下載圖示。</block>
-  <block id="ce92a41c26b3eebfca3ce82d2ed7d946" category="summary">在 NetApp Console 本機部署中，使用 Console 助手來資源配置儲存設備、調查警報並使用自然語言取得答案。</block>
   <block id="61698078caca443ab3276eaf6da68c26" category="doc">在 NetApp Console 本地部署中使用 NetApp Console 助理</block>
   <block id="59142dd8097fc5d816523b76490538ee" category="paragraph">在 NetApp Console 本機部署中使用 NetApp Console 助理來管理儲存設備，並以自然語言獲取答案。以簡單的語言描述您的需求，NetApp Console 本機部署將根據您的儲存設備原則和角色型存取執行相應的操作。</block>
   <block id="cebceed3e52d61da104d709d7fd52f64" category="paragraph">助理的操作權限受您指派的角色型存取限制。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="79a8d49114f4c57f8615836d0fbd9a6e" category="section-title">瞭解您可以使用 Console 助理執行的操作</block>
-  <block id="44f46c68c044ca6bc826f2070cb8b0fb" category="paragraph">Console 助手是 NetApp Console 本機部署的自然語言介面。您可以提出問題或描述工作，它會傳回答案或建議的行動。此助手提供以下功能：</block>
   <block id="eb164d1b95f721517463fac94e0c232b" category="list-text">*資源配置儲存設備* 請用簡單易懂的語言描述工作負載。助理會推薦儲存設備類別和位置，並在您確認詳細資料後建立 Volume 或 LUN。例如，您可以要求它建立一個具有特定容量的 CIFS Volume。助理會辨識叢集和儲存虛擬機器 （SVM），填入所需參數，並進行儲存設備資源配置。</block>
   <block id="80ec6f74b9c11afc0493a49dc2ed5880" category="list-text">*搜尋並取得指導* 詢問有關儲存環境的問題，尋找 Console 本機部署功能，並從 NetApp 文件和目前機組狀態中取得情境式答案。</block>
   <block id="8f85ab1426c6a97b7f27ff0a64189e0d" category="list-text">*調查警報* 請助手調查作用中警報。它會分析問題並提出修復建議，或在您確認後執行補救行動。</block>
   <block id="4d4201f172588de834e98c686fa4e70d" category="paragraph">此助手僅向系統管理員在 Console 本機部署中設定的 LLM 端點傳送請求。它會在執行儲存設備變更動作之前要求確認，且所有動作均遵守指派給您帳戶的角色型存取控制。</block>
   <block id="1646e83ecacdbfca35b7035c36d17902" category="section-title">確認您可以使用 Console 助手</block>
-  <block id="447ba774f83dff318547a6ed4188be4e" category="list-text">組織管理員或超級管理員必須透過將大型語言模型 (LLM) 連接到 Console 本機部署來啟用 Console 助理。如果您在儀表板上看不到 *Console assistant* 按鈕，請聯絡您的系統管理員以啟用此功能。如需詳細資訊，請參閱 <block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>。</block>
   <block id="dea2a7e837aa4048051b43f95def7b7b" category="list-text">請確保您已具備助手執行所需動作的角色型存取控制。</block>
   <block id="5716899e4d4f84a6f0338e39a6dbae95" category="section-title">向 Console 助手提問或請求行動</block>
-  <block id="acf4008535e52c8a7a0c01bf71aed735" category="paragraph">開啟 Console 助手，選擇存取模式，然後輸入描述您要求的提示。</block>
   <block id="a01a8afdc9473eb09e91ee338b83c764" category="list-text">從 NetApp Console 本機部署儀表板中，選擇 *Console assistant* 按鈕。</block>
   <block id="0d4e49e4c9814c6a19f7ea22506c8390" category="list-text">選擇存取模式：</block>
   <block id="baa7f738c248456fd2ade1cf90ab4eaa" category="list-text">選擇*唯讀*即可提問並獲取指導，而無需進行任何變更。</block>
@@ -2958,7 +2931,6 @@
   <block id="d9613d9880d0f8ba12fda6a2e9d388b1" category="paragraph">如果您擁有「資料夾」或「機組」管理員角色，則該頁面會顯示組織中的所有成員。但是，您只能檢視和管理您所管理的資料夾和機組的權限。<block ref="8ccbb3041729be4bc278ed61135bfa9c" category="inline-link-macro-rx"></block>。</block>
   <block id="644ed7e725ca7a7a2108f353f403ae81" category="section-title">分配或修改成員存取</block>
   <block id="6b6981b3ecd57254f87269c9a7bb333a" category="paragraph">當成員的職責發生變化時，您可以調整其存取權限。例如，當隊友承擔第二個區域的備份職責時，可以在不影響其現有儲存設備角色的情況下，為其在該區域的機組上新增 Backup and Recovery 管理員角色。</block>
-  <block id="f955499f62dbb4edbf385d3a7a960528" category="paragraph">如果您需要新增成員並為其指派第一個角色，請參閱<block ref="91ad8701e2dee484ad75d90050d10ec4" category="inline-link-macro-rx"></block>。</block>
   <block id="c323dfe4bfabb938f780b4b7d546c9b0" category="section-title">為現有成員新增存取角色</block>
   <block id="dd1ad82c7de8ea1d9224b58fdb2b344a" category="paragraph">當成員的職責範圍擴充時，可以在組織、資料夾或機組層級為其授予額外的角色。例如，可以授予 Storage admin 組織層級的 Backup and recovery admin 角色，使其能夠在不遺失現有儲存設備權限的情況下，管理所有機組的備份與還原工作。</block>
   <block id="9faffc990c3127454a9cf05bef90bbef" category="paragraph">您可以為組織、資料夾或機組的成員指派存取角色。</block>
@@ -3069,49 +3041,33 @@
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">查看「準備完成」視窗中的詳細資訊，選擇「完成」。</block>
   <block id="e10d92d1786b3cdd3dbeba70b55cf973" category="paragraph">vSphere 工作列會顯示 NetApp Console 本機部署的部署進度。</block>
   <block id="54453e0b33b1c136b904d49d40e5584f" category="list-text">啟動虛擬機器。</block>
-  <block id="56c613fb0424d7f13733ef150e334c26" category="summary">連接 OpenAI 或 OpenAI 相容的端點，以在 NetApp Console 本機部署中啟用 Console 助理和 AI 輔助管理。</block>
   <block id="2ac259cc9722764f511c25ee28b40616" category="doc">連接您的 LLM 並在 NetApp Console 本機部署中啟用 NetApp Console 助手</block>
-  <block id="bfb7707f64c08883a1d0f2aaa8204091" category="paragraph">將您的大型語言模型 (LLM) 連接到 NetApp Console 本機部署，以啟用 Console 助理和 AI 輔助儲存管理。</block>
   <block id="17abc48cf3411ff16b4582375b97de22" category="paragraph">設定後，使用者從儀表板開啟 Console 助手並選擇存取模式：</block>
   <block id="45dcb8347c7045ac1ea1ed3f1fd6f1d3" category="list-text">在*唯讀*模式下，助理會回答問題並提供指導，但不會進行任何變更。</block>
   <block id="3bd3a3686b7176c32e3b12727e98ec87" category="list-text">在 *Read/write* 模式下，助手可以對儲存基礎架構進行操作。每次變更之前，它都會顯示詳細資訊供審查和確認。對於非同步操作（例如建立 Volume），它會建立一個工作，使用者可以從助手檢視該工作。</block>
   <block id="185163aa217fa2fc072c5f14236ca72a" category="paragraph">若要連接您的 LLM，請選擇供應商路徑，輸入端點詳細資訊和 API 金鑰，然後在「管理 &gt; AI 工具」中選擇模型。助手行動將遵守您的儲存設備原則和角色型存取控制。</block>
   <block id="5fc0a856a394f8c04ef5ff5374c766d3" category="section-title">在連接 LLM 之前，請先準備好所需資料。</block>
-  <block id="7cf0713cb6862c8d869de102444bc058" category="paragraph">在連接您的 LLM 之前，請收集以下資料：</block>
-  <block id="4bdc2b0afb2016e71f49debc29862e0f" category="inline-link-macro">了解供應商的選擇。</block>
-  <block id="336e4351e57a856f458961abc5062751" category="list-text">您的供應商類型選擇：OpenAI 或 OpenAI 相容型。<block ref="78f935c14127e9543a594b2e8112c798" category="inline-link-macro-rx"></block></block>
   <block id="d8bd49d8fe4a0de7a2b03c1aec99e88b" category="list-text">您所選供應商路徑的有效 API 金鑰。</block>
   <block id="12415726cf97af159e3e05710842f040" category="list-text">您的供應商路徑的端點 URL。</block>
   <block id="cfe024af8356a3decd0f09b47eff88fa" category="list-text">從 Console 本機部署到所選端點的網路存取。</block>
-  <block id="1f3d7608a574b42ba681dcef64704661" category="list-text">儲存類別和角色型存取控制，適用於您計劃允許的助手行動。</block>
   <block id="6d4074b2f4345e60985cf590c19c3368" category="section-title">將 LLM 連線到 NetApp Console 本機部署</block>
-  <block id="1ad8081ba1205278968b9c4aee3e50af" category="paragraph">輸入供應商設定、API 金鑰和模型，將您的 LLM 連接到 Console 本機部署。</block>
   <block id="f88a0cbb78fae5f3111d6d10db7c5597" category="list-text">登入 NetApp Console 本機部署。</block>
   <block id="e63bd278e9f3067278f0c1de02ea51d1" category="list-text">選擇 *Administration &gt; AI Tools*。</block>
   <block id="fce40004669eef7e64c789d1aba006e4" category="list-text">選擇選單，然後選擇*編輯*。</block>
   <block id="7f15a21cfa00dfd7d41b88b3e1451357" category="list-text">在「供應商類型」中，選取供應商類型。</block>
   <block id="cf72c8170aef768cae71f4e2a449acaf" category="list-text">如果提示輸入供應商端點，請輸入您選擇的供應商路徑的端點 URL。</block>
-  <block id="0bb644c5b092ae6dc29b1cb8f4f06967" category="list-text">輸入 Proxy 或閘道 URL 和認證資料。</block>
   <block id="d78f26f4373007724d98776e20cd9322" category="list-text">在「使用者名稱」欄位中，輸入您的使用者名稱或 SSO ID （如果您的供應商路徑要求）。</block>
   <block id="b2914c614292093e506dbf4a10fd671c" category="list-text">在「API 金鑰」欄位中，貼上您選擇的供應商路徑中的 API 金鑰。</block>
   <block id="73d0a6de3953116536b1666d0db7c78a" category="list-text">從清單中選取型號。</block>
   <block id="f646c307a4396cd41f6593ce84be57d7" category="list-text">審查組態，然後選擇 * 儲存 *。</block>
-  <block id="5648efa514fe8196ba399910bb0eb531" category="paragraph">如果儲存或測試失敗，請驗證供應商類型、端點 URL、API 金鑰和所選模型，然後重試。</block>
-  <block id="9cf8774c3baeb070428c648054d7d24a" category="inline-link-macro">追蹤 LLM 整合問題</block>
-  <block id="1de83f5da1c16cfca8ca9ae1534dcf3b" category="paragraph"><block ref="263da31548d1ff54f99ec1ad656a62e4" category="inline-link-macro-rx"></block>。</block>
   <block id="4e0ef856d01b17ebeacb44ab6e813a5b" category="section-title">驗證 LLM 整合是否正常運作</block>
-  <block id="649811a3ff05f0c93f06c2fdaa3bbeed" category="paragraph">儲存組態後，驗證助手的可用度和行為。</block>
   <block id="b9218edb7fcba77407a69cc8446ba839" category="list-text">確認需要行動工作流程的使用者是否擁有必要的角色型存取控制權限。</block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="inline-link-macro">使用 NetApp Console 助手</block>
-  <block id="7d69bfcb234231881e32fc0c2d9f1364" category="paragraph">完成驗證後，使用者可以從儀表板開啟 Console 助手，並以簡單的語言描述工作。有關使用範例和終端使用者工作流程，請參閱 <block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>。</block>
   <block id="fc9577b448da71bbbc03dcdb4d914f81" category="section-title">保護認證資料並監控 LLM 使用情況</block>
   <block id="37b26df9f5774fb277ce6408503c5677" category="list-text">盡可能使用專用 API 金鑰進行 Console 本機部署整合。</block>
   <block id="95856ec02ad5b7d7cee102aa9ad5af55" category="list-text">根據貴組織的原則輪換 API 金鑰。</block>
-  <block id="190a2694407d226555de2087b9d1904c" category="list-text">限制只有必要的管理員角色才能編輯 AI 工具設定。</block>
-  <block id="1c8d15d10f068c63827f873ef7cad063" category="list-text">監控供應商端 API 使用情況和警示，以追蹤異常活動或成本飆升。</block>
   <block id="0a4e1261dd22ab21fdd948f324d9de9b" category="summary">使用快速分類流程，針對設定、助理可用度、執行階段錯誤及認證資料問題，對 NetApp Console 本機部署中的 LLM 整合進行疑難排解。</block>
   <block id="ddfbe43817a433ffd54b8a30a5ea7e8e" category="doc">排查 NetApp Console 本地部署中的 LLM 整合問題</block>
-  <block id="feac9faca2350b85c19776bf4902e7a0" category="paragraph">使用此快速分類流程，診斷並解決 NetApp Console 本機部署中常見的 LLM 整合問題。</block>
   <block id="df329b70beb5e90d896034f48ef8cbc2" category="paragraph">如果您尚未完成設定，請參閱<block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>。</block>
   <block id="a02d415ac796cf16dae4cab7c8ba8370" category="section-title">快速處理 LLM 整合問題</block>
   <block id="c9541189aa749534605523e54cb1faec" category="list-text">在「管理 &gt; AI 工具」中驗證 AI 工具組態。</block>
@@ -3130,8 +3086,6 @@
   <block id="d14bb5fad558ea5cad8e313bb415d379" category="cell">供應商類型、端點 URL、API 金鑰格式、所選模型和傳出存取</block>
   <block id="db55f13382d52e64285ac9a3f031d1b8" category="cell">修正驗證失敗的值並再次儲存</block>
   <block id="75c661dabf312b48c1e945bfecc84b33" category="cell">*Console assistant* 按鈕遺失</block>
-  <block id="4075b5acdb4d5a8eff5467d981ede6aa" category="cell">整合狀態不健全、組織不符或 RBAC 不符</block>
-  <block id="e6685677e50c25ce6bb330b8b728b88c" category="cell">AI 工具儲存成功、整合狀態、目前組織及預期存取角色</block>
   <block id="d4338e4524c2f2b8cc99a7ab334e1d3c" category="cell">刷新工作階段並使用已知有效的管理員帳戶進行驗證</block>
   <block id="1b977b36b6a765d48f91ef10be75e2ee" category="cell">助理開啟但請求失敗</block>
   <block id="f3d32e9d5050f0fb014bf917d41b98d8" category="cell">供應商或執行階段路徑問題</block>
@@ -3177,23 +3131,18 @@
   <block id="d999f1f9870b33a6f990ea80c528cd45" category="list-text">選擇是否移除或停用使用者的 MFA 組態。</block>
   <block id="85aa860fee126cdca80b809c375778ce" category="paragraph">審查稽核日誌，確認是誰更改了 MFA 存取、更改時間以及行動是否成功。<block ref="d77547ef27346a5e3d858216dfd41684" category="inline-link-macro-rx"></block>。</block>
   <block id="a657b530c9804722859fcb4792bf4466" category="section-title">重新建立服務帳戶的認證資料</block>
-  <block id="3a09c67515f2086631474e15f73de6c7" category="paragraph">如果您遺失服務帳戶的憑證或需要更新憑證，可以建立新的憑證。</block>
   <block id="cbb983c8b2240366fdf2e6a4ca41bee0" category="paragraph">建立新認證資料會刪除舊認證資料。您將無法使用舊認證資料。</block>
   <block id="2a8af9814216612acb3d97c9c2e363bf" category="list-text">在「成員」表中，導覽至服務帳戶，選擇 <block ref="c838adf4502bfb790ed3df711c4a4613" category="inline-image-macro-rx" type="image"></block>，然後選擇 *Recreate secrets*。</block>
   <block id="8de213850e1e3dc79a14014382d25163" category="list-text">選擇 *Recreate*。</block>
   <block id="842b78e990c1bcb6ecd6f6d3502a80e1" category="paragraph">Console 本機部署僅顯示一次用戶端金鑰。請務必複製或下載該金鑰並妥善保管。</block>
-  <block id="f1edd9f95e01d5e077a85e747833fbd2" category="summary">使用 AI 驅動的代理程式資源配置，在 NetApp Console 本地部署中自主完成儲存設備請求。</block>
   <block id="9cc2452429913b270189381056266c1f" category="doc">在 NetApp Console 本機部署中，使用 AI 輔助（代理）工作流程進行儲存資源配置</block>
-  <block id="3dc6f8478de12a2130120c0861a97514" category="paragraph">在 NetApp Console 本機部署中，如果您希望以對話方式要求儲存設備、審查建議的計劃並核准變更，請使用 AI 輔助（代理）資源配置。如果您希望在減少 UI 導覽的同時加快請求速度，並保持資源配置與儲存設備類別及角色型存取控制 （RBAC） 一致，此方法非常實用。</block>
   <block id="abbcf954598f470ff036de76ef87bb49" category="paragraph">超級管理員、組織管理員、資料夾或機組管理員，或儲存管理員。您的 AI 輔助行動與 UI 型行動一樣，都受到角色型存取控制的限制。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="7e77d8c212cb920bf80baefd3e4f84bd" category="paragraph">代理資源配置需要在您的 NetApp Console 本機部署環境中設定並啟用 LLM 整合。</block>
   <block id="0e37a98340ea1efd343ffc16528dfd6b" category="list-text">請確保已為 NetApp Console 本機部署設定並啟用 LLM 整合。</block>
   <block id="b602c2b6042c9852669a4070bad055b9" category="list-text">確保目標機組包含已探索的儲存設備系統。</block>
   <block id="8a797101f27fb91dbfde08d5dafe5a58" category="list-text">確保已設定儲存設備類別並將其與機組建立關聯，以便助理可以提出與類別一致的計劃。</block>
-  <block id="1c5aa0a55ec38e7a2896da2387989eaa" category="list-title">步驟（待重新檢視）</block>
   <block id="0bac4d651b89773695617a95d16eb82b" category="list-text">開啟 NetApp Console 助手。</block>
   <block id="96856aab291d4ec635cda593158436db" category="list-text">請用簡單易懂的語言描述您的需求（例如，協定、規模、環境、效能目標以及目標機組（如適用））。</block>
-  <block id="ad82849b62ed2d6137578f79d12eb9fd" category="list-text">審查建議方案，包括：選定的機組和目標系統部署（如適用）、選定或建議的儲存設備等級、將套用的關鍵設定（容量行為、保護排程、安全性要求，以及任何與 QoS 相關的意圖（如有顯示））。</block>
   <block id="9a68116ebd01ecfb132f0548f9dec65e" category="list-text">確認或調整計劃。如果計劃選擇了非預期的等級或部署位置，請指定所需的等級、機組或約束條件，然後重新產生計劃。</block>
   <block id="417fabd69538dfc4f67bdfbe3d03a4d3" category="list-text">批准執行以資源配置工作負載。</block>
   <block id="d84e668c89e4c7cd302b38780154ffac" category="list-text">在儲存設備清單中驗證已建立的資源，並確認其與預期的儲存設備類別相關聯，以便進行後續的漂移監控。</block>
@@ -3542,7 +3491,6 @@
   <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">Marketplace 訂閱及自帶授權</block>
   <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">自帶授權</block>
   <block id="955bb7127a670884e7aac906d810238a" category="sidebar">控制台本地部署 API 參考</block>
-  <block id="c88543bdef944177133ea29faedf50df" category="summary">了解 NetApp Console 本地部署如何與 OpenAI 和 OpenAI 相容模型整合，包括供應商和安全性決策。</block>
   <block id="7886cf4f03a683503e8235a0eef59e73" category="list-text">*Anthropic* 適用於 Anthropic 的 Claude 模型。</block>
   <block id="dc666edc3ed6edcb6babcae67d26fcd2" category="list-text">從 <block ref="5574d9b8352359225831a51c7e6c17ee" category="inline-link-macro-rx"></block> 下載 Console 本機部署軟體。</block>
   <block id="ad8f5be1c708f8e891508a0a9c643e0a" category="sidebar">NetApp 信任中心</block>
@@ -3636,4 +3584,105 @@
   <block id="d2a0f46558d1ad15a1efcaa26aef1b39" category="inline-link">了解 NetApp Console 本地部署、NetApp Console SaaS 和私有模式之間的差異</block>
   <block id="fc43c258a671e0d243e8a95a48956300" category="paragraph"><block ref="a79ef635b40614d2cd5c555de517dd6f" category="inline-link-rx"></block>。</block>
   <block id="4688d87a2acbed67ab6380ef3dbee717" category="paragraph"><block ref="dff1bfa50abe498b973310763c6748f5" category="inline-link-macro-rx"></block>。</block>
+  <block id="308fca2a4a1364a6f322b2c118b7b61f" category="inline-link-macro">審查 NetApp Console 本地部署中的自訂儀表板卡片和計量目錄</block>
+  <block id="a0f815fa331e417e035c94057c02da63" category="paragraph"><block ref="9cb01a50e3be9e51b4836d3b61b3a330" category="inline-link-macro-rx"></block>。</block>
+  <block id="12818197bdccc6b71577f79083f87ab9" category="summary">了解 NetApp Console 本地部署如何與 LLM 供應商整合，以支援 AI 輔助的儲存管理、分析和作業。</block>
+  <block id="a2dfb8028327c74e6dcd4f59c80cf8cc" category="paragraph">NetApp Console 本地部署連接到大型語言模型 (LLM)，用於 AI 輔助儲存管理。設定後，使用者可以使用自然語言進行儲存設備指導、分析、資源配置和支援的操作。</block>
+  <block id="86bd9186f70e386755999e81499ded00" category="paragraph">啟用 LLM 整合後，Console 本機部署可透過 Console 助手提供下列功能：</block>
+  <block id="3bbe97361de9c8c53c88bf2d9e8c64a0" category="list-text">*Metrics and analytics* 查詢目前機組狀態的儲存容量、效能和其他支援的計量。此功能為唯讀。</block>
+  <block id="9471394d83a3e1cfd009afa44b8ab232" category="list-text">*警報回應* 要求 Console 本地部署調查作用中警報。它會分析問題，並根據指派的權限建議或執行受支援的行動。</block>
+  <block id="f6f41613e5a60a7ef8f9fea0817e5740" category="list-text">*ONTAP 管理* 請助手檢視或執行已註冊 ONTAP 系統上支援的管理作業。寫入作業需要審查和確認。</block>
+  <block id="59772d058082216c0ad36e64556c225e" category="list-text">助手在存取機組、系統和儲存資源時，會使用已登入使用者的範圍。</block>
+  <block id="70215a79da775b85263f210fed046e9d" category="paragraph"><block ref="1a3a7e8df14b08dab1953f3a058a454f" category="inline-link-macro-rx"></block>。</block>
+  <block id="d49c8ce9358d0437778308c33e11e8d7" category="inline-link-macro">連接您的 LLM 以啟用 NetApp Console 助手</block>
+  <block id="9c8c3b21e2f65283b0264a06ae25ccf1" category="paragraph">在您做出這些決定之後，<block ref="37482822d9b3368bafb48a4cd1e69aa0" category="inline-link-macro-rx"></block>。</block>
+  <block id="14cbab43b1b73784473641a579f441cb" category="inline-link-macro">深入瞭解 NetApp Console 本地部署中的資料夾和機組</block>
+  <block id="71034945100a7032d7ff28ceab11c41f" category="paragraph"><block ref="054c3e5ebcb94ba42a77f67aedc0b310" category="inline-link-macro-rx"></block>。</block>
+  <block id="e859dfab2ec3d57d35cb6286952461c1" category="list-text"><block ref="091e8c8fe9f2d7d00a71788386fcbe28" category="inline-link-macro-rx"></block>。</block>
+  <block id="c68352f63feed607f9a921b49938ad4e" category="inline-link-macro">瞭解如何建立及管理機組</block>
+  <block id="c5efe13a3738df4f6befae61c1cf5629" category="list-text"><block ref="07ac86035f9108c61da780967a52fd7f" category="inline-link-macro-rx"></block>。</block>
+  <block id="f541b58efff953bd8e3be0b471693869" category="inline-link-macro">查看支援的 Console 助理操作</block>
+  <block id="dd8c951af3ad634c9f93a524a7b628c3" category="list-text"><block ref="dd8c951af3ad634c9f93a524a7b628c3" category="inline-link-macro-rx"></block></block>
+  <block id="c9fcbea76605871581a2e35dfbd4699c" category="paragraph"><block ref="db9b96303a8e941f40944ec886cf0ba1" category="inline-link-macro-rx"></block>。</block>
+  <block id="82b67b1eab84a35e6b425089eb157147" category="list-text"><block ref="130e257000a6cd23784d6444ddff3ea4" category="inline-link-macro-rx"></block>。</block>
+  <block id="95847954aedcd8c7811c2a4901112ea6" category="inline-link-macro">了解如何修復儲存設備類別漂移</block>
+  <block id="8433ac145fee5e5f64990cdc0f364c59" category="list-text"><block ref="8433ac145fee5e5f64990cdc0f364c59" category="inline-link-macro-rx"></block></block>
+  <block id="061a8b04d0511678aa72605c1685e930" category="paragraph">您需要自備訂閱或服務存取，且支援的供應商類型為：OpenAI、OpenAI 相容型或 Anthropic，具體取決於您的版本和端點支援情況。組態過程中，您需要提供有效的 API 金鑰。此外，您還需要與已設定端點的傳出網路連線，並擁有組織管理員或超級管理員角色才能設定整合。<block ref="470eda43e450182c243ef76ccd1f9255" category="inline-link-macro-rx"></block>。</block>
+  <block id="d9d9b26883256b91beb0f1ec9f2d43db" category="paragraph">連接 LLM 後，Console 助手允許使用者使用自然語言獲取指導、分析支援的計量、配置儲存資源、調查警報以及請求支援的 ONTAP 作業。在 *唯讀* 模式下，助手不會進行任何變更。在 *讀取/寫入* 模式下，它會顯示建議的儲存變更動作，供使用者在執行前進行審查和確認。<block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>。</block>
+  <block id="047cef47f85ce2fa43f24e2f56ac9991" category="paragraph-title">Console 助手支援哪些作業？</block>
+  <block id="d5eefe905dd1017aff3fae90092217c2" category="paragraph">Console 助手支援對話式指導、支援的唯讀計量分析、儲存資源配置、警示調查以及部分 ONTAP 管理作業。可用作業取決於版本、設定的端點以及您的角色和資源範圍。<block ref="dd8c951af3ad634c9f93a524a7b628c3" category="inline-link-macro-rx"></block>。</block>
+  <block id="2c212b08e4736776d7319ed0a5f0035b" category="paragraph-title">當 Console 助手執行非同步作業時會發生什麼情況？</block>
+  <block id="01d252d292ef2fa1ec4e87035d62b0ff" category="paragraph">對於無法立即完成的支援作業，助手會建立一個工作，並在您詢問請求時傳回目前狀態。<block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ac7c7f441c2811eca6f1a53e0cc4415" category="summary">審查 NetApp Console 本機部署中 Console 助理所支援的面向客戶操作類別。</block>
+  <block id="85bf6002699be71eba50e47fb9bfd4c1" category="doc">在 NetApp Console 本機部署中支援的 Console 助理操作</block>
+  <block id="563f4fbc7c399302e702b396b6962087" category="paragraph">Console 助手支援自然語言查詢和部分儲存設備操作。可用操作取決於版本、已設定的 LLM 端點以及您被指派的權限。</block>
+  <block id="e595004f51bd799a728be4e3b594fcd0" category="paragraph">對於無需更改基礎架構的問題和分析，請使用 Console 助手的「唯讀」模式。對於可能變更儲存設備或 ONTAP 系統的支援操作，請使用「讀取/寫入」模式。助手會顯示建議的變更，並在執行寫入作業前要求確認。</block>
+  <block id="0c3b317be5b2bb916652eceef25c2446" category="section-title">對話式指導與搜尋</block>
+  <block id="2c377b791aed117e43f0a6c81044bce4" category="paragraph">詢問有關 NetApp Console 本機部署、儲存環境或受支援的 ONTAP 管理工作流程的問題。助理會使用已設定的 LLM 端點以及可用的文件和機組內容來傳回答案或要求更多內容資訊。</block>
+  <block id="55490a2d250ada7c70e503e7b86bb3da" category="section-title">計量與分析</block>
+  <block id="bb8be897830de5647e5d1894f9ebe3a9" category="paragraph">詢問您權限範圍內資源的儲存容量、效能及其他計量的唯讀問題。如果這些細節與您的問題相關，請提供資源、計量和時間段。</block>
+  <block id="56836aa8c36f40ecb89a0e4c2367d066" category="paragraph">助手傳回分析結果，但不會以*唯讀*模式變更儲存設備。</block>
+  <block id="6ba6ceafe8bda6d338b883b2b39f45f1" category="section-title">儲存資源配置</block>
+  <block id="3ffedc67f75e0f4d147056a9bf25f066" category="paragraph">請用自然語言描述工作負載及其儲存設備需求。助理可以推薦儲存設備類別和放置位置、識別缺少的詳細資訊，並提供資源配置方案供審查。</block>
+  <block id="100bc2e2a20e7ce958593a0d05afc0c6" category="inline-link-macro">了解如何使用人工智慧輔助工作流程資源配置儲存設備</block>
+  <block id="cbdbb49c3c83f87c7341673121c514f1" category="paragraph">批准計劃後，助手將根據您的角色權限和儲存類別原則，佈建受支援的 Volume 或 LUN 作業。<block ref="1b5b8c5997353b7aabbb30633f8a4653" category="inline-link-macro-rx"></block>。</block>
+  <block id="ec34af6bd148135244cacb1e26e16b97" category="section-title">警報調查和補救</block>
+  <block id="45867710357b5b0f50631031775b1817" category="paragraph">請助手調查受支援的作用中警報。它會分析警報並可能建議補救行動。當受支援的補救措施會變更儲存設備時，助手會顯示該行動供審查，並在執行前要求您確認。</block>
+  <block id="040360382f7205dbe8c14babe21f1f10" category="section-title">ONTAP 管理</block>
+  <block id="79ce2be78836813592ebf411e031cded" category="paragraph">使用自然語言請求對已註冊的 ONTAP 系統執行受支援的管理作業。如果您知道目標叢集、SVM 或資源，請加以識別，以便助理能夠使用正確的內容。</block>
+  <block id="cedb71b26ba4e3df138c7912c7840e34" category="paragraph">助手會區分唯讀請求與寫入作業。在確認寫入作業之前，請審查目標和擬議的變更。可用的作業集取決於 Console 本機部署版本以及指派給您帳戶的權限。</block>
+  <block id="58dd82c11548cddba3b3f34021d1584c" category="section-title">權限和範圍</block>
+  <block id="e9ac0af69146f2419ab6d771536a605c" category="paragraph">助理使用已登入使用者的權限和資源範圍：</block>
+  <block id="b84f73e57fbeeeec34e2bb90579be4ce" category="list-text">您的角色決定了您可以檢視或變更哪些資源和作業。</block>
+  <block id="37a5812a05e19af3ee627e60c15c7db6" category="list-text">組織、資料夾和機組範圍限制了助理可用的系統和工作負載。</block>
+  <block id="df84d67f514675b861778c76b8a6a614" category="list-text">儲存類別原則限制了 AI 輔助的儲存資源配置。</block>
+  <block id="d567ccd2ac57ad2a43fa88120c847309" category="list-text">助理不會繞過 Console 本機部署存取控制。</block>
+  <block id="109a8ebaf5d17fd52cd0cedbd294848c" category="inline-link-macro">了解 NetApp Console 本機部署存取角色</block>
+  <block id="ba6f7f76a855b2fc7d63c83f41c23e52" category="paragraph"><block ref="4560386b07ef22f3583d98e6a67e39c0" category="inline-link-macro-rx"></block>。</block>
+  <block id="4546d7c5f1604db2d9865ec0658ee574" category="section-title">非同步作業</block>
+  <block id="610ff444091a8d5a8e4d08c8e34ed1b7" category="paragraph">某些受支援的寫入作業不會立即完成。對於這些作業，助手會建立一個工作。請向助手詢問請求狀態以監控完成情況。</block>
+  <block id="ab74dc1a527eb39bc2a75230306dc5a0" category="list-text"><block ref="ab74dc1a527eb39bc2a75230306dc5a0" category="inline-link-macro-rx"></block></block>
+  <block id="c8bbfbc1e29e08fb75792570f8da2288" category="list-text"><block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block></block>
+  <block id="7770f03f53e256d55b44faa7b5b1c1a3" category="list-text"><block ref="7770f03f53e256d55b44faa7b5b1c1a3" category="inline-link-macro-rx"></block></block>
+  <block id="1d0c70d69fe69f6422869da4c9f85df8" category="cell">設定 LLM 整合並啟用 Console 助手</block>
+  <block id="f3e5aa0c754758ae8ba5235340e18232" category="cell">設定通知傳送和電子郵件伺服器設定</block>
+  <block id="cc208136ed66d8be6e30eed429e8198d" category="paragraph">您看到的模型可能會因端點組態、Proxy 或閘道行為、版本支援以及組織原則而異。供應商類型取決於您連線的端點以及該端點公開的模型，而不是傳輸協定。</block>
+  <block id="8c6ec3d71610da2323f8a0d4bf1cc952" category="inline-link-macro">了解如何設定 Webhook</block>
+  <block id="c5ed2fa54f60fceea32401d4d28620a2" category="list-text">若要透過電子郵件交付通知，您的組織管理員必須在 Console 本機部署中設定電子郵件伺服器。若要將通知交付到外部系統，您的組織管理員必須設定 Webhook。<block ref="f3c52c8e646f7bab6c54f37065734593" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6364709e85199698077ea2221b6cc5a" category="summary">在 NetApp Console 本機部署中，使用 Console 助理取得儲存設備指導、分析、資源配置和支援的操作。</block>
+  <block id="53e18ee08d24e9c17895d47a3dd34166" category="paragraph">透過對話式介面即可識別儲存設備條件和支援的操作，以便您判斷何時需要指導或介入。提出問題或描述工作，即可獲得答案、分析或建議的行動。此助手提供以下功能：</block>
+  <block id="8ddb49feff7961c071eec6cb71ef40e4" category="list-text">*分析計量* 詢問您授權範圍內資源的支援容量、效能和儲存計量。助理會根據可用機組狀態傳回唯讀分析結果。</block>
+  <block id="1e452dcff511c7097712e60cfaf5c28e" category="list-text">*管理 ONTAP 系統* 使用自然語言請求受支援的 ONTAP 管理作業。助理會識別缺少的系統或 SVM 內容，顯示建議的作業，並在執行寫入作業前要求確認。</block>
+  <block id="dc8736e0412bd3d1386d928dc57c00a6" category="inline-link-macro">了解如何連接您的 LLM 並啟用 NetApp Console 助手</block>
+  <block id="351bf1cee2d203043d7c8694e72832a7" category="list-text">組織管理員或超級管理員必須透過將大型語言模型 (LLM) 連接到 Console 本機部署來啟用 Console 助理。如果您在儀表板上看不到 *Console assistant* 按鈕，請聯絡您的系統管理員以啟用此功能。<block ref="184a90bf2acb5b061c7dc2b4dcb64467" category="inline-link-macro-rx"></block>。</block>
+  <block id="58501690578abc96980f69a9f3694b55" category="paragraph">以對話方式請求支援的儲存工作負載，以便在建議的變更影響您的基礎架構之前進行評估。</block>
+  <block id="a0f4a83e648fb4aed450e560789131f0" category="section-title">使用助手進行計量和分析</block>
+  <block id="fab19ba8fb5bfe09d2af357771050725" category="paragraph">提出一個唯讀問題，明確您想要了解的資源、範圍、計量和時間段。助手會傳回所支援計量的分析結果，且不會變更您的儲存設備。</block>
+  <block id="1d054bfa483e4be3faf418d083bdd3ef" category="section-title">使用助手進行 ONTAP 管理</block>
+  <block id="9f6c8c6993979cb1877a9e86b9a8d0ce" category="paragraph">透過審查助理提案來管理受支援的 ONTAP 作業，以確保基礎架構變更保持審慎且受權限控制。</block>
+  <block id="d5fc4106714e4828d2904733226a81fc" category="inline-link-macro">了解支援的 Console 助理操作</block>
+  <block id="7becbfb07bf54d9cf645b2f81e7a6590" category="paragraph"><block ref="4d7a86fccb2254d6cedae676f2157eab" category="inline-link-macro-rx"></block>。</block>
+  <block id="1c0b13974e165ed22019e869049df6d4" category="inline-link-macro">了解如何新增成員和分配角色</block>
+  <block id="db830c34683e05539af2a3f56d942d2f" category="paragraph"><block ref="2a51355ed5754464f193ef2e666c601e" category="inline-link-macro-rx"></block>。</block>
+  <block id="06f4b3c533aaacbe7f5b54e11890ed43" category="summary">連接受支援的 LLM 端點，以在 NetApp Console 本機部署中啟用 Console 助理和 AI 輔助管理。</block>
+  <block id="c85a5bee169bf00565c85292d26490c9" category="paragraph">連接受支援的 LLM 端點，以便向 NetApp Console 本機部署使用者提供受治理的自然語言儲存設備指導和操作。</block>
+  <block id="d8d4c492ef9ce07470fd7c71a7074375" category="paragraph">請準備供應商憑證和端點存取，以便 Console 助理可以在您組織設定的治理範圍內運作。</block>
+  <block id="755c1d5c75ebb1af53c8d9be3e7bd559" category="list-text">您的供應商類型選擇：OpenAI、OpenAI 相容或 Anthropic，取決於版本和端點的支援情況。</block>
+  <block id="433b02ac268c7f9d577bf9be57b5c3eb" category="paragraph">透過經過驗證的供應商組態啟用助手功能，同時保留對端點憑證的管理控制。</block>
+  <block id="26033ba1ab8ce1319bdb0de963d1cdcc" category="paragraph">儲存組態前，請審查供應商類型、端點 URL、API 金鑰和所選模型。</block>
+  <block id="eddb36c1b2e3f9e786d7cccf7782664c" category="paragraph">確認助理的可用度和核准行為，讓使用者能夠依賴已設定的整合來執行受管控的作業。</block>
+  <block id="3f9a5821f38ce494dd45cf9edfdf74d3" category="inline-link-macro">了解如何使用 NetApp Console 助手</block>
+  <block id="634f9e5260713299abe36310597702d1" category="paragraph">完成驗證後，使用者可以從儀表板開啟 Console 助手，並以簡單的語言描述工作。<block ref="8dfd03d5e9a3a9ef76c8379ee37ac6ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="bb5810dadd5175496182052d2de15fea" category="paragraph">保護 LLM 憑證並監控供應商活動，以減少未經授權使用整合的情況，並支援組織治理。</block>
+  <block id="977dccb231b4b0190cc19909bd5e2b81" category="list-text">根據貴組織的治理要求，監控供應商端 API 使用情況和警示。</block>
+  <block id="89de26853ae08e2e1eca92041c9aee61" category="paragraph">診斷 NetApp Console 本地部署中的 LLM 整合故障，以還原 Console 助手存取及儲存設備指導與操作的可靠回應。</block>
+  <block id="e16bb502112ccf0ba7e2576aa84b360e" category="cell">整合狀態不健全</block>
+  <block id="5d51fa5a0136c09330f9c7a707995cbb" category="cell">AI 工具儲存成功、整合狀態和預期存取角色</block>
+  <block id="aa1f45d9a4e867bc07e3b720f5437cae" category="paragraph">當安全性要求發生變更時，輪換服務帳戶憑證，使先前的金鑰失效，並保持受控 API 存取。</block>
+  <block id="dd0d49763648b2ed5bab7cf76b57126d" category="summary">使用 AI 輔助資源配置來要求儲存設備、審查提議的計劃，並核准 NetApp Console 本地部署的變更。</block>
+  <block id="663af2f8dbfa6e16165ed0a44aeb0b6d" category="paragraph">在 NetApp Console 本機部署中，以對話方式要求儲存設備，同時保留跨代管機組的已核准儲存類別意圖和角色型控制。</block>
+  <block id="aa61f4e9d254d9e185de69ff3b105179" category="paragraph">準備好機組、系統、儲存設備類別和 LLM 存取，以便助理能夠在核准的資源配置範圍內產生計畫。</block>
+  <block id="25c218c5bf35c2c497390dbd2a954660" category="list-text">審查建議方案，包括：選定的機組和目標系統部署位置（如適用）。選定或建議的儲存設備等級。將套用的關鍵設定，例如容量行為、保護排程、安全性要求以及與 QoS 相關的意圖（如有顯示）。</block>
+  <block id="2d3db212529548d7afc49cfc5cb8bcf1" category="sidebar">支援的 Console 助理操作</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="sidebar">授權</block>
 </blocks>

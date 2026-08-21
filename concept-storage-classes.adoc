@@ -101,17 +101,18 @@ summary: 了解 NetApp Console 本地部署中的儲存設備類別和儲存設�
 
 儲存類別與機組相關聯。當您將儲存類別與機組相關聯時，該類別即可用於機組內的所有資源配置。這可確保在機組中配置資源的每個工作負載都遵循相同的標準，使機組成為在相關叢集之間強制執行一致的儲存行為的主要方式。
 
-有關如何組織機組的詳細資訊，請參閱 link:concept-manage-storage.html["了解 NetApp Console 本地部署中的機組管理"]。
+link:concept-manage-storage.html["了解 NetApp Console 本地部署中的機組管理"]。
 
 
 
 [[where-to-go-next]]
 == 接下來該去哪裡？
 
-* 若要了解機組組織，請參閱link:concept-manage-storage.html["了解 NetApp Console 本地部署中的機組管理"]。
-* 若要建立原則和儲存設備類別，請參閱link:task-storage-class-manage.html["管理儲存設備類別和原則"]。
+* link:concept-manage-storage.html["了解 NetApp Console 本地部署中的機組管理"]。
+* link:task-storage-class-manage.html["管理儲存設備類別和原則"]。
 * link:task-provisioning-manual.html["手動配置儲存設備"]
 * link:task-provisioning-automated.html["自動配置儲存設備"]
 * link:task-provisioning-agentic.html["借助人工智慧輔助提供儲存設備"]
-* 若要分析並修正漂移，請參閱link:task-storage-class-drift-remediate.html["修復儲存設備類別漂移"]
+* link:reference-console-assistant-operations.html["查看支援的 Console 助理操作"]
+* link:task-storage-class-drift-remediate.html["了解如何修復儲存設備類別漂移"]
 

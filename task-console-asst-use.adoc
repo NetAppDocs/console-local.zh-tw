@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-console-asst-use.html 
 keywords: console assistant, ai assistant, ask questions, provision storage, natural language, agentic, netapp console local 
-summary: 在 NetApp Console 本機部署中，使用 Console 助手來資源配置儲存設備、調查警報並使用自然語言取得答案。 
+summary: 在 NetApp Console 本機部署中，使用 Console 助理取得儲存設備指導、分析、資源配置和支援的操作。 
 ---
 = 在 NetApp Console 本地部署中使用 NetApp Console 助理
 :hardbreaks:
@@ -26,11 +26,13 @@ NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能�
 [[see-what-you-can-do-with-the-console-assistant]]
 == 瞭解您可以使用 Console 助理執行的操作
 
-Console 助手是 NetApp Console 本機部署的自然語言介面。您可以提出問題或描述工作，它會傳回答案或建議的行動。此助手提供以下功能：
+透過對話式介面即可識別儲存設備條件和支援的操作，以便您判斷何時需要指導或介入。提出問題或描述工作，即可獲得答案、分析或建議的行動。此助手提供以下功能：
 
 * *資源配置儲存設備* 請用簡單易懂的語言描述工作負載。助理會推薦儲存設備類別和位置，並在您確認詳細資料後建立 Volume 或 LUN。例如，您可以要求它建立一個具有特定容量的 CIFS Volume。助理會辨識叢集和儲存虛擬機器 （SVM），填入所需參數，並進行儲存設備資源配置。
+* *分析計量* 詢問您授權範圍內資源的支援容量、效能和儲存計量。助理會根據可用機組狀態傳回唯讀分析結果。
 * *搜尋並取得指導* 詢問有關儲存環境的問題，尋找 Console 本機部署功能，並從 NetApp 文件和目前機組狀態中取得情境式答案。
 * *調查警報* 請助手調查作用中警報。它會分析問題並提出修復建議，或在您確認後執行補救行動。
+* *管理 ONTAP 系統* 使用自然語言請求受支援的 ONTAP 管理作業。助理會識別缺少的系統或 SVM 內容，顯示建議的作業，並在執行寫入作業前要求確認。
 
 
 此助手僅向系統管理員在 Console 本機部署中設定的 LLM 端點傳送請求。它會在執行儲存設備變更動作之前要求確認，且所有動作均遵守指派給您帳戶的角色型存取控制。
@@ -40,7 +42,7 @@ Console 助手是 NetApp Console 本機部署的自然語言介面。您可以�
 [[confirm-that-you-can-use-the-console-assistant]]
 == 確認您可以使用 Console 助手
 
-* 組織管理員或超級管理員必須透過將大型語言模型 (LLM) 連接到 Console 本機部署來啟用 Console 助理。如果您在儀表板上看不到 *Console assistant* 按鈕，請聯絡您的系統管理員以啟用此功能。如需詳細資訊，請參閱 link:task-llm-connect.html["連接您的 LLM 並啟用 NetApp Console 助手"]。
+* 組織管理員或超級管理員必須透過將大型語言模型 (LLM) 連接到 Console 本機部署來啟用 Console 助理。如果您在儀表板上看不到 *Console assistant* 按鈕，請聯絡您的系統管理員以啟用此功能。link:task-llm-connect.html["了解如何連接您的 LLM 並啟用 NetApp Console 助手"]。
 * 請確保您已具備助手執行所需動作的角色型存取控制。
 
 
@@ -49,7 +51,7 @@ Console 助手是 NetApp Console 本機部署的自然語言介面。您可以�
 [[ask-the-console-assistant-a-question-or-request-an-action]]
 == 向 Console 助手提問或請求行動
 
-開啟 Console 助手，選擇存取模式，然後輸入描述您要求的提示。
+以對話方式請求支援的儲存工作負載，以便在建議的變更影響您的基礎架構之前進行評估。
 
 .步驟
 . 從 NetApp Console 本機部署儀表板中，選擇 *Console assistant* 按鈕。
@@ -72,3 +74,19 @@ Console 助手是 NetApp Console 本機部署的自然語言介面。您可以�
 . 確認行動。對於非同步作業（例如 Volume 建立），助理會建立工作來完成要求。
 . 若要查詢請求狀態，請詢問助手。例如，輸入 `Let me know when the job completes`，助手會回傳目前狀態。
 
+
+
+
+[[use-the-assistant-for-metrics-and-analytics]]
+== 使用助手進行計量和分析
+
+提出一個唯讀問題，明確您想要了解的資源、範圍、計量和時間段。助手會傳回所支援計量的分析結果，且不會變更您的儲存設備。
+
+
+
+[[use-the-assistant-for-ontap-management]]
+== 使用助手進行 ONTAP 管理
+
+透過審查助理提案來管理受支援的 ONTAP 作業，以確保基礎架構變更保持審慎且受權限控制。
+
+link:reference-console-assistant-operations.html["了解支援的 Console 助理操作"]。
