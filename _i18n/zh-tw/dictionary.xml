@@ -2468,27 +2468,19 @@
   <block id="a9000c4acfd5c08b7b8d7de29052aac5" category="list-text">如果分析器顯示容量或快照成長迅速，且需求持續增加，請審查容量和快照計量，以了解此成長可能對 Volume 造成的影響。</block>
   <block id="42a91a5617368256a8de8b25fe27c329" category="paragraph"><block ref="f7c67828ff7f607ca1bc8919fb69ebbf" category="inline-link-macro-rx"></block>。<block ref="9e153fbb74c19e5f630133420be99e05" category="inline-link-macro-rx"></block>。</block>
   <block id="f75243783aae9e7bfb7abafe2d6d3b8c" category="summary">您可以在「稽核」頁面稽核使用者活動（包括透過 UI 和 API 啟動的活動），並監控 Console 正在執行的操作狀態，以查看是否有需要解決的問題。您可以從「稽核」頁面檢視狀態，也可以設定稽核日誌以傳送到您自己的 syslog 伺服器。</block>
-  <block id="58c54c7b590a741efbd405c94ded9c1b" category="paragraph">您可以從「稽核」頁面稽核透過 UI 和 API 發起的使用者活動，還可以監控 NetApp Console 本機部署中的操作狀態以及發起這些操作的使用者。</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">所需角色</block>
   <block id="e0eda6c794ad821fdacf3da5db44cb48" category="paragraph">超級管理員、組織管理員、資料夾和機組管理員、維運支援分析師、超級檢視器、組織檢視器或資料夾和機組檢視器。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
-  <block id="897a81a7274c262992e7cc7f6867adf4" category="paragraph">您可以在 Console 本機部署中檢視稽核活動、下載稽核日誌的 CSV，或使用 webhook 設定稽核日誌傳送至您自己的 syslog 伺服器。</block>
   <block id="da8be55f3871d0a372174a9f477823f0" category="section-title">從「稽核」頁面稽核使用者活動</block>
-  <block id="9db935187270e9463d3c97a81c631027" category="paragraph">使用「稽核」頁面來確認誰執行了某項行動或其狀態。</block>
-  <block id="f5176b3b2c78c79f2d8d2a9fce59ec07" category="paragraph">「稽核」頁面顯示使用者在組織內完成的行動。例如，您可以驗證是誰為組織新增了成員，或者某個機組是否已成功刪除，也可以檢視使用者在組織內執行的其他儲存管理行動。</block>
   <block id="b724b6f0e9bd6d4851344d51f2cb40fc" category="paragraph">稽核日誌顯示以下服務的活動：</block>
   <block id="df9f3a2c2e961fb8338278c76b2e448a" category="list-text">租戶：與管理您的組織相關的行動，例如新增使用者、建立機組和關聯資源。</block>
   <block id="4185957ddf7d1b5e3043c21f93f9b6d3" category="list-text">儲存管理：與管理儲存資源相關的行動。</block>
   <block id="740519dc6dd7c95dc5a661caaddd08a0" category="list-text">聯盟：與管理聯盟相關的行動，例如建立聯盟以及新增或移除聯盟組織。</block>
   <block id="aa46e79c9c39c9b3aa215604efa5eb2c" category="list-text">選擇「管理 &gt; 稽核」。</block>
-  <block id="e8bcacc75837d7d116d27b0912ef8827" category="list-text">使用表格上方的篩選器來變更表格中顯示的行動。</block>
-  <block id="3031af9277fd81e368c5bfe8edccd8e5" category="paragraph">例如，您可以使用 *Service* 篩選器來顯示與特定服務相關的行動，或者您可以使用 *User* 篩選器來顯示與特定使用者帳戶相關的行動。</block>
   <block id="a2d62fc9ff55ca3578bca22a03bfeb4e" category="section-title">篩選身分和存取管理動作的稽核日誌</block>
-  <block id="b47972fc47da176fee2b5945d1512385" category="paragraph">若要僅檢視與管理組織相關的行動（例如新增成員、建立機組或刪除資源），請依 Tenancy 服務篩選稽核日誌。</block>
   <block id="4bff463066dd752ee016143b8a1f56a6" category="list-text">使用篩選器縮小搜尋結果範圍。選擇 *Service* ，然後選擇 *Tenancy* 。</block>
   <block id="388dadc2c14bab87b8bcc62f6c76a95d" category="list-text">使用其他篩選條件可以進一步精簡結果。</block>
   <block id="c9726ff4f70650c857eaf23bb51de567" category="paragraph">例如，使用 *使用者* 篩選器顯示特定使用者帳戶執行的 IAM 行動。</block>
   <block id="5393c2b8908e1f48ca31ccf7d8bb057c" category="section-title">從「稽核」頁面下載稽核日誌</block>
-  <block id="95e9b23238ddd8479992115173ab7048" category="paragraph">您可以從「稽核」頁面將稽核日誌下載到 CSV 檔案。這樣，您可以記錄使用者在組織中執行的行動。下載的 CSV 檔案包含所有稽核日誌欄，無論「稽核」頁面上的篩選條件或顯示的欄位為何。</block>
   <block id="a485c1defdaf491b2f5cf7219289d8cc" category="list-text">在「稽核」頁面中，選擇表格右上角的下載圖示。</block>
   <block id="61698078caca443ab3276eaf6da68c26" category="doc">在 NetApp Console 本地部署中使用 NetApp Console 助理</block>
   <block id="59142dd8097fc5d816523b76490538ee" category="paragraph">在 NetApp Console 本機部署中使用 NetApp Console 助理來管理儲存設備，並以自然語言獲取答案。以簡單的語言描述您的需求，NetApp Console 本機部署將根據您的儲存設備原則和角色型存取執行相應的操作。</block>
@@ -3715,4 +3707,13 @@
   <block id="beb0e01e7e36ff62ee977dd31ad8b0c7" category="list-text">請依照助理的回應操作。根據請求內容，助理可能會返回資訊、詢問更多細節，或在執行行動前請求確認。</block>
   <block id="69200085693b2c07a9fd57550280affd" category="paragraph">在不更改儲存環境的前提下，調查您允許範圍內的容量和效能狀況。提出一個唯讀問題，明確您要了解的資源、範圍、計量和時間段。助手會傳回所支援計量的分析結果，且不會變更您的儲存設備。</block>
   <block id="a320b4ddc74c3e0d5cf1e99a74a477c7" category="list-text">選擇建議的補救行動，例如 *Fix It*。</block>
+  <block id="0357e7ee5d63c9b015d917447bd17e44" category="paragraph">在法規遵循審查期間記錄管理活動，以驗證存取變更並保存跨 NetApp Console 本機部署的行動記錄。</block>
+  <block id="a2f5eaf80bcdf173527dfc64a6a64416" category="paragraph">您可以在 Console 本機部署中檢視稽核活動，並下載稽核日誌的 CSV 檔案。</block>
+  <block id="12b45e42c264512a3833dccc0d3bcf22" category="paragraph">在解決事件或驗證操作責任時，監控管理活動以追蹤 NetApp Console 本機部署中的變更。</block>
+  <block id="c82e61f9a450b60bf8f88d80b2002367" category="paragraph">「稽核」頁面顯示使用者在組織內完成的行動。例如，您可以驗證是誰向組織新增了成員，確認使用者是否刪除了機組，或檢視使用者在組織內執行的其他儲存管理行動。</block>
+  <block id="89c6b9f0a19ad66cc2a968e4012a1cd1" category="list-text">使用表格上方的篩選器，依時間範圍、服務、行動、資源、使用者或狀態縮小稽核活動的範圍。</block>
+  <block id="a4fd3a9f5e77f8f43da93716404f70b5" category="paragraph">稽核條目會在能夠確定使用者身分的情況下顯示執行行動的使用者。如果無法確定使用者身份，條目則會顯示使用者的<block ref="1cd101a4da14a833018679c5f52a1b96" prefix=" " category="inline-code"></block>，而不是其姓名。</block>
+  <block id="4e1a1e7b8efe108b690da878451d0a8b" category="paragraph">例如，您可以使用 *服務* 篩選器顯示與特定服務相關的行動，或者使用 *使用者* 篩選器顯示與特定使用者帳戶相關的行動。</block>
+  <block id="ae8c879a42f4e5075028b4c740849cdf" category="paragraph">審查存取管理變更，以確認誰修改了組織資源，並支援準確的安全性調查。</block>
+  <block id="1c0679d5195b4dd09500e158593c6031" category="paragraph">保留組織行動的獨立記錄，以支援法規遵循審查和未來的事件調查。下載的 CSV 檔案包含所有稽核日誌欄，即使您套用篩選器或變更顯示的欄。</block>
 </blocks>
