@@ -453,8 +453,6 @@
   <block id="c689fa25946d46da8f6a7efbcd7168ea" category="paragraph">代理程式使用<block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block>來安裝<block ref="a23365e1ae67810a7446b65d3be9a5d0" prefix=" " category="inline-code"></block>目錄及其內容。</block>
   <block id="bb10ef2c23f410792fcbd03b913a73b2" category="list-text"><block ref="ca905eb4a00d34150573153a09e2e79b" prefix="" category="inline-code"></block>：必須有 40 GiB 的可用空間</block>
   <block id="27ff1f9070d810259fd05323c4e31904" category="paragraph">Console 代理程式需要在<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block>中使用此空間，因為 Docker 或 Podman 的架構設計是在此目錄中建立 Container。具體來說，它們會在<block ref="af5045a6e72956f67984a97cd3e8b9da" prefix=" " category="inline-code"></block>目錄中建立 Container。外部掛載或符號連結無法用於此空間。</block>
-  <block id="57d8ea3b46119392eb93bf8ac3897270" category="list-text">CPU：16 個核心或 16 個虛擬 CPU</block>
-  <block id="66359cf2dd3a32d550ed76b685e652e1" category="list-text">記憶體：64 GB</block>
   <block id="680bf96524219dc64fa3e3d6074bf710" category="list-text">磁碟空間：596 GB（建議採用厚置備）</block>
   <block id="6fc0cd97e3282b970c695d7dbeebf3f2" category="list-text">vSphere 7.0u3 或更高版本，虛擬硬體版本 19 或更高版本</block>
   <block id="fea0f702d4271201382c08e403cebafd" category="admonition">Console 代理程式保留了 19000 到 19200 的 UID 和 GID 範圍。此範圍固定，無法修改。如果您的主機上有任何第三方軟體正在使用此範圍內的 UID 或 GID，則代理程式安裝將會失敗。NetApp 建議使用未安裝任何第三方軟體的主機，以避免衝突。</block>
@@ -3512,7 +3510,6 @@
   <block id="30ed16d592d987bc97f9c257fb0d026c" category="list-text">如果需要，請提供您的 LLM 供應商帳戶使用者名稱或 ID。</block>
   <block id="e90cfbea605d047e2c768be5cc0d5d90" category="list-text">以*唯讀*模式開啟 *Console assistant* 並執行基本查詢。</block>
   <block id="ddbbb4fd6daa8474cc88e6beb3919a85" category="list-text">在*讀取/寫入*模式下開啟 *Console assistant*，並確認變更儲存設備的操作在執行前需要使用者確認。</block>
-  <block id="f9fe4a5426c609bf7ec63303066954e3" category="list-text">虛擬機器啟動時，ESXi 主機上的 CPU 和記憶體容量會被預留，而不僅僅是分配。請確保目標主機至少有 16 個 CPU 核心和 64 GB 的可用未預留容量。主機上已有的虛擬機器預留會減少可用容量。</block>
   <block id="fb2aa2f24e94d02ba0aa39b5b1953b02" category="list-text">資料儲存必須符合最低磁碟寫入效能要求：fsync p99 寫入延遲 ≤ 20 毫秒，4K 隨機寫入 IOPS ≥ 200。延遲超過 50 毫秒或 IOPS 低於 30 會導致部署故障。</block>
   <block id="bc30837cb3bcee1ef470300a93faccd1" category="list-text">不支援 IPv6。需要靜態 IPv4 位址。</block>
   <block id="2938c9aef13e6b9e5ef64008f86cbed9" category="summary">NetApp Console 本機部署 OVA 管理其自身的內部防火牆。如果您的環境在虛擬機器上強制執行外部防火牆原則，請確保以下傳入連接埠可從您的管理主機存取。</block>
@@ -3716,4 +3713,7 @@
   <block id="4e1a1e7b8efe108b690da878451d0a8b" category="paragraph">例如，您可以使用 *服務* 篩選器顯示與特定服務相關的行動，或者使用 *使用者* 篩選器顯示與特定使用者帳戶相關的行動。</block>
   <block id="ae8c879a42f4e5075028b4c740849cdf" category="paragraph">審查存取管理變更，以確認誰修改了組織資源，並支援準確的安全性調查。</block>
   <block id="1c0679d5195b4dd09500e158593c6031" category="paragraph">保留組織行動的獨立記錄，以支援法規遵循審查和未來的事件調查。下載的 CSV 檔案包含所有稽核日誌欄，即使您套用篩選器或變更顯示的欄。</block>
+  <block id="4e2631c6a272a31e284ef25e345044a4" category="list-text">CPU：16 個核心或 16 個 vCPUs（已保留）</block>
+  <block id="1c79bf4bb50e04e0a86202e73216460a" category="list-text">RAM：64 GB（已保留）</block>
+  <block id="43e1d149efe94e65609c12dcb5cab779" category="list-text">VM 啟動時，ESXi 主機上的 CPU 和記憶體容量會預留，而不僅僅是分配。請確保目標主機至少有 16 個 CPU 核心和 64 GB 的可用預留容量。主機上現有的 VM 預留會減少可用容量。</block>
 </blocks>
