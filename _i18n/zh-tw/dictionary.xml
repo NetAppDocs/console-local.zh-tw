@@ -3011,10 +3011,6 @@
   <block id="6d78ed573fddd6a3f8f162c07848707d" category="list-text">選擇要使用的 Proxy 組態類型：明確 Proxy、透明的 Proxy 或無 Proxy。</block>
   <block id="12dc2cce6b942756043a4ae0da4c14b6" category="list-text">選擇要部署 VM 的資料存放區，然後選擇「下一步」。請確保其符合主機需求。</block>
   <block id="945e8bee85a6e3eef017e30f4ee2df31" category="list-text">選取要連接 VM 的網路，然後選取 *Next*。確保該網路為 IPv4，且具有傳出網際網路存取所需端點的能力。</block>
-  <block id="5ff2f6027b004f50fdeef1f7b72a3261" category="list-text">在「自訂範本」視窗中，填寫以下欄位：</block>
-  <block id="25ed452e0ddd0d0767ff6341fa17da58" category="list-text">*Proxy 資訊*</block>
-  <block id="bb1e1ef266584a5a332dfd21a0ceff90" category="list-text">如果您選擇了明確 Proxy，請輸入 Proxy 伺服器主機名稱或 IP 位址和連接埠號，以及使用者名稱和密碼。</block>
-  <block id="777fde86c6354cd539ec78cfac87b390" category="list-text">如果您選擇了透明的 Proxy，請上傳對應的憑證。</block>
   <block id="f6b06d7af2e17b031527e55078cf6bda" category="list-text">*虛擬機器組態*</block>
   <block id="4dbd3c987fc3c99f4068f93b9ddf0271" category="list-text">*維護密碼*：設定<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>使用者的密碼，以允許存取 NetApp Console 本機部署維護主控台。</block>
   <block id="cb059a17daa0db402273fce83326bc2b" category="list-text">*NTP 伺服器*：指定一個或多個 NTP 伺服器用於時間同步。</block>
@@ -3718,4 +3714,5 @@
   <block id="43e1d149efe94e65609c12dcb5cab779" category="list-text">VM 啟動時，ESXi 主機上的 CPU 和記憶體容量會預留，而不僅僅是分配。請確保目標主機至少有 16 個 CPU 核心和 64 GB 的可用預留容量。主機上現有的 VM 預留會減少可用容量。</block>
   <block id="e68d2c37dd2355df41bb544adc897de6" category="inline-link-macro">NetApp 支援網站知識庫文章</block>
   <block id="29bfebf6dcc74c9e558756ca6998173c" category="admonition">若要使用您自己的 TLS 憑證來確保安全的通訊，請按照此<block ref="eb10a8c97ab666bf81650f11f6a3aa78" category="inline-link-macro-rx"></block>中的指示進行操作。</block>
+  <block id="e1b143775fd4087c8f3fffb22a2a2569" category="list-text">在 *Customize template* 視窗中、填寫以下欄位：</block>
 </blocks>
