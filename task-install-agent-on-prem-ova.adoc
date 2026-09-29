@@ -128,3 +128,6 @@ vSphere 工作列會顯示 NetApp Console 本機部署的部署進度。
 
 . 啟動虛擬機器。
 
+
+
+NOTE: 若要使用您自己的 TLS 憑證來確保安全的通訊，請按照此link:https://kb.netapp.com/Cloud/ncds/ncld/ncld_kbs/How_to_Install_a_Commercial_TLS_Certificate_in_NetApp_Console_local_deployment["NetApp 支援網站知識庫文章"^]中的指示進行操作。

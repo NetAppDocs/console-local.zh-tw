@@ -3716,4 +3716,6 @@
   <block id="4e2631c6a272a31e284ef25e345044a4" category="list-text">CPU：16 個核心或 16 個 vCPUs（已保留）</block>
   <block id="1c79bf4bb50e04e0a86202e73216460a" category="list-text">RAM：64 GB（已保留）</block>
   <block id="43e1d149efe94e65609c12dcb5cab779" category="list-text">VM 啟動時，ESXi 主機上的 CPU 和記憶體容量會預留，而不僅僅是分配。請確保目標主機至少有 16 個 CPU 核心和 64 GB 的可用預留容量。主機上現有的 VM 預留會減少可用容量。</block>
+  <block id="e68d2c37dd2355df41bb544adc897de6" category="inline-link-macro">NetApp 支援網站知識庫文章</block>
+  <block id="29bfebf6dcc74c9e558756ca6998173c" category="admonition">若要使用您自己的 TLS 憑證來確保安全的通訊，請按照此<block ref="eb10a8c97ab666bf81650f11f6a3aa78" category="inline-link-macro-rx"></block>中的指示進行操作。</block>
 </blocks>
