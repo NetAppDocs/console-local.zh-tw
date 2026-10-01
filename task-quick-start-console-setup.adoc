@@ -50,6 +50,6 @@ summary: 透過安裝軟體、規劃和建立組織、設定整合以及設定�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 設定 NetApp Backup and Recovery
 [role="quick-margin-list"]
 * link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html#use-a-netapp-backup-and-recovery-byol-license["取得 NetApp Backup and Recovery 授權"^]。如果您不需要存取進階備份和復原服務，可以跳過此步驟。
-* 將 NetApp Backup and Recovery 授權新增至 NetApp Console 本機部署。link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["將授權新增至 NetApp Console 本機部署"^]。
+* 將 NetApp Backup and Recovery 授權新增至 NetApp Console 本機部署。link:task-manage-licenses.html["在 NetApp Console 本機部署中管理授權"]。
 * link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["授予使用者對 NetApp Backup and Recovery 的存取權限"]。
 

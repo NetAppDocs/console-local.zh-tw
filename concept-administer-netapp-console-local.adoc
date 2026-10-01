@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-administer-netapp-console-local.html 
 keywords: administer Console local deployment, audit, audit log, compliance, SIEM, webhook, VM maintenance, access management, demonstrate compliance, operational visibility, netapp console local 
-summary: 了解如何管理和監控 NetApp Console 本地部署，包括稽核活動、訂閱、維護、疑難排解和成員存取。 
+summary: 了解如何管理和監控 NetApp Console 本地部署，包括稽核活動、授權、維護、疑難排解和成員存取。 
 ---
 = 了解 NetApp Console 本地部署的管理與監控
 :hardbreaks:
@@ -29,12 +29,12 @@ summary: 了解如何管理和監控 NetApp Console 本地部署，包括稽核�
 
 
 
-[[licenses-and-subscriptions]]
-== Licenses and subscriptions
+[[licenses]]
+== 授權
 
-使用 Licenses and subscriptions 資訊，了解您的 NetApp Console 環境的服務授權和訂閱狀態。
+使用授權資訊了解 Console 本機部署的服務權限。
 
-link:https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["了解 Licenses and subscriptions"^]。
+link:task-manage-licenses.html["在 NetApp Console 本機部署中管理授權"]
 
 
 

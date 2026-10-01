@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: task-manage-licenses.html 
+keywords: licenses, licensing, NetApp Backup and Recovery, NetApp Console local deployment, BYOL, bring-your-own-license, direct license 
+summary: 管理 NetApp Backup and Recovery 在 NetApp Console 本機部署中的直接授權。 
+---
+= 在 NetApp Console 本機部署中管理授權
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Console 本機部署中管理 NetApp Backup and Recovery 授權。這是一個浮動授權，可用於與您的 NetApp Console 組織關聯的所有系統。如果授權提供的備份容量足夠，則無需購買其他授權。您可以新增、更新和移除授權，並檢視其已使用容量、授權容量和授權到期日。
+
+
+NOTE: NetApp Console 本機部署不需要授權。NetApp Backup and Recovery 是目前唯一在 NetApp Console 本機部署中支援直接授權的服務。此授權也稱為自帶授權（BYOL）。如需詳細資訊，請參閱 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetApp Backup and Recovery 授權文件"^]。
+
+.所需存取權限
+您必須擁有超級管理員或組織管理員角色才能管理 Console 本機部署中的授權。
+
+
+
+[[add-a-license]]
+== 新增授權
+
+透過上傳授權檔案，將授權新增至您的 Console 組織。
+
+.開始之前
+您需要雲端服務序號和 NetApp Console 組織 ID 來產生授權檔案。
+
+.步驟
+. 選擇 *Administration > Licenses*。
+. 選取 *Direct licenses* 分頁。
+. 選擇 *新增授權*。
+. 前往 NetApp 支援網站的 *System > Software Licenses* 標籤，產生授權檔案。
+. 返回 *新增授權* 對話方塊，選擇 *上傳*，然後選擇授權檔案。
+. 選取 *新增授權* 以安裝授權。
+
+
+授權會顯示在 *Direct licenses* 表格中，且 *License and Capacity Distribution* 總結會更新。
+
+
+
+[[view-license-status]]
+== 檢視授權狀態
+
+從 *Direct licenses* 標籤檢視已安裝的授權及其狀態。此表格顯示服務、序號、類型、已使用容量、授權容量和授權到期日。*License and Capacity Distribution* 總結顯示已安裝的授權數量以及分配給 NetApp Backup and Recovery 的容量。
+
+從每一行的動作選單 image:icon-action.png["一個有三個點的圖示"] 中，您可以更新或移除授權。
+
+.步驟
+. 選擇 *Administration > Licenses*。
+. 選取 *Direct licenses* 分頁。
+. 請檢閱表格與 *授權與容量分配* 總結。
+
+
+
+
+[[update-a-license]]
+== 更新授權
+
+替換 Console 組織中的現有授權，例如，當授權續約或其容量或到期日變更時。
+
+.步驟
+. 選擇 *Administration > Licenses*。
+. 選取 *Direct licenses* 分頁。
+. 選擇您要更新之授權的操作選單 image:icon-action.png["一個有三個點的圖示"]，然後選擇 *更新授權*。
+. 在 *更新授權* 對話方塊中，選擇 *上傳* 並選擇新的授權檔案。
+. 選擇 *更新授權* 以確認更新。
+
+
+授權更新後，所選列將顯示新的授權容量和授權到期日。*授權和容量分佈* 總結也會更新。
+
+
+
+[[remove-a-license]]
+== 移除授權
+
+從您的 Console 組織中移除授權。移除授權是永久性的。移除的授權將不再為 NetApp Backup and Recovery 貢獻容量或持續時間。如果授權過期，現有原則的備份和還原將繼續進行，但您無法建立新的備份原則或將保護擴展到其他工作負載和資料存放區。
+
+.步驟
+. 選擇 *Administration > Licenses*。
+. 選取 *Direct licenses* 分頁。
+. 選取您要移除之授權的動作功能表 image:icon-action.png["一個有三個點的圖示"]，然後選取 *移除授權*。
+. 在 *移除授權* 確認對話方塊中，驗證提示中的序號。
+. 選擇 *移除* 以永久移除授權。
+
+
+授權已從 *直接授權* 表中移除，並且 *授權與容量分配* 總結會更新。

@@ -507,7 +507,6 @@
   <block id="c8e7383477673ee726b6ba29dc487444" category="list-text">使用 IMDSv2 時的 PUT 回應跳數限制</block>
   <block id="6072a0c0865bf8071e3960e01a77d5f4" category="list-text">如果 EC2 執行個體上啟用了 IMDSv2（這是新 EC2 執行個體的預設設定），則必須將執行個體上的 PUT 回應跳數限制變更為 3。如果不變更 EC2 執行個體上的限制，則在嘗試設定代理程式時會收到 UI 初始化錯誤。</block>
   <block id="98dddf7eafbbdfa88756d62945237473" category="inline-link-macro">要求在 Amazon EC2 執行個體上使用 IMDSv2</block>
-  <block id="8d8efedf65fe740dfe59c5779c9d745c" category="list-text"><block ref="8d8efedf65fe740dfe59c5779c9d745c" category="inline-link-macro-rx"></block></block>
   <block id="75c0fbf84b1614b17a984df62bf849f6" category="inline-link">AWS 文件：變更 PUT 回應跳數限制</block>
   <block id="ca7f44589a06d75665d92002d6148e98" category="list-text"><block ref="ca7f44589a06d75665d92002d6148e98" category="inline-link-rx"></block></block>
   <block id="893ba5865a015de9dc77765cdf7184e3" category="list-text">Azure VM 大小</block>
@@ -614,7 +613,6 @@
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">如果您（客戶）需要停止然後啟動 Console 代理程式 VM，則應從雲端供應商的主控台或使用內部部署管理的標準程序進行操作。</block>
   <block id="2402a0b8d9aa0c3e1beaccf0071277cc" category="doc">介紹 NetApp Console 本地部署</block>
   <block id="258ea65dfbe28db96b93f873d22fbf91" category="inline-link">學習 NetApp Console 本機部署</block>
-  <block id="01d7fad8bf6934be5b2c4a94892a6089" category="summary">了解如何管理和監控 NetApp Console 本地部署，包括稽核活動、訂閱、維護、疑難排解和成員存取。</block>
   <block id="c6c906d845365b31f1a3d974e79792f1" category="doc">了解 NetApp Console 本地部署的管理與監控</block>
   <block id="670ed77781e2c20b187adbc14ae28dad" category="paragraph">部署 NetApp Console 本地部署後，使用管理和監控工具來審查活動、維護 VM，以及管理成員存取。</block>
   <block id="980949ecd0b09f55572260f966480f7c" category="section-title">稽核活動</block>
@@ -623,10 +621,6 @@
   <block id="e1de85747c549269b8ff9d47258fa0f5" category="list-text"><block ref="e1de85747c549269b8ff9d47258fa0f5" category="inline-link-macro-rx"></block></block>
   <block id="e464be32a656da70e4497036dd7bfa27" category="inline-link-macro">在 NetApp Console 本機部署中設定通知傳遞管道</block>
   <block id="390314978359a827205be20044a720d7" category="list-text"><block ref="390314978359a827205be20044a720d7" category="inline-link-macro-rx"></block></block>
-  <block id="0e83ec1135d78041291977ef91f42a52" category="section-title">Licenses and subscriptions</block>
-  <block id="d3750dc5d54e736686cf3b9cc84cc828" category="paragraph">使用 Licenses and subscriptions 資訊，了解您的 NetApp Console 環境的服務授權和訂閱狀態。</block>
-  <block id="1a64901c54ab09814efdf25e5f43e721" category="inline-link-macro">了解 Licenses and subscriptions</block>
-  <block id="2911a770deda0bb77566f78d552dfda4" category="paragraph"><block ref="0af2069e5399d38f7197920e16d3e933" category="inline-link-macro-rx"></block>。</block>
   <block id="3104f37255772981acbacccf67d9e69d" category="section-title">維護和疑難排解 Console 本地部署 VM</block>
   <block id="0d37b7263460fc595f1d4f006dc06a67" category="paragraph">維護託管 Console 本地部署的 VM，審查網路和系統設定，存取診斷工具，並在服務或代理程式未按預期運行時進行疑難排解。</block>
   <block id="3971ca1022683ea0d36cbdd46c250ee4" category="inline-link-macro">維護您的 vCenter 或 ESXi 主機以進行 NetApp Console 本機部署</block>
@@ -3192,8 +3186,6 @@
   <block id="e230576dace207ebd856e57c6fe8e15a" category="list-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 設定 NetApp Backup and Recovery</block>
   <block id="eca3fd2056bf98a6c5e6cef89ccab0f7" category="inline-link-macro">取得 NetApp Backup and Recovery 授權</block>
   <block id="f0babb8294f33c3aef3243c2efb1cc1a" category="list-text"><block ref="490656acfefe9653179282fa7c05f8f5" category="inline-link-macro-rx"></block>。如果您不需要存取進階備份和復原服務，可以跳過此步驟。</block>
-  <block id="f8b074d6473f4ccd3b5744a93a40658f" category="inline-link-macro">將授權新增至 NetApp Console 本機部署</block>
-  <block id="d5c8020a1894db77e7f90ec62af195a1" category="list-text">將 NetApp Backup and Recovery 授權新增至 NetApp Console 本機部署。<block ref="76a2d5b2eea7a314e0fcef167796a267" category="inline-link-macro-rx"></block>。</block>
   <block id="d31be9c871f00244df75cc58f27c83c2" category="inline-link-macro">授予使用者對 NetApp Backup and Recovery 的存取權限</block>
   <block id="f1632e37ec141a641ef4e45008b6c65b" category="list-text"><block ref="2f2dc60c865addcfc19ab84f30977762" category="inline-link-macro-rx"></block>。</block>
   <block id="e7563db134aee8b1b774296ac9f4f6e5" category="summary">尋找、分析和修復 NetApp Console 本地部署中的儲存設備類別漂移。</block>
@@ -3715,4 +3707,41 @@
   <block id="e68d2c37dd2355df41bb544adc897de6" category="inline-link-macro">NetApp 支援網站知識庫文章</block>
   <block id="29bfebf6dcc74c9e558756ca6998173c" category="admonition">若要使用您自己的 TLS 憑證來確保安全的通訊，請按照此<block ref="eb10a8c97ab666bf81650f11f6a3aa78" category="inline-link-macro-rx"></block>中的指示進行操作。</block>
   <block id="e1b143775fd4087c8f3fffb22a2a2569" category="list-text">在 *Customize template* 視窗中、填寫以下欄位：</block>
+  <block id="b874ba81953e4df46329ee5a8e8b7ce0" category="list-text"><block ref="b874ba81953e4df46329ee5a8e8b7ce0" category="inline-link-rx"></block></block>
+  <block id="d8333cc7485c82a7c067cc852cfce42a" category="summary">了解如何管理和監控 NetApp Console 本地部署，包括稽核活動、授權、維護、疑難排解和成員存取。</block>
+  <block id="176f491924b5945481f66571c5dec3a1" category="paragraph">使用授權資訊了解 Console 本機部署的服務權限。</block>
+  <block id="f2a9940fd0d7a08ae86365be93b73609" category="inline-link-macro">在 NetApp Console 本機部署中管理授權</block>
+  <block id="b245df0c039209d78d5353ec232ea246" category="paragraph"><block ref="b245df0c039209d78d5353ec232ea246" category="inline-link-macro-rx"></block></block>
+  <block id="5ea7a0024ab1d2b3244ba0c699b3390c" category="summary">管理 NetApp Backup and Recovery 在 NetApp Console 本機部署中的直接授權。</block>
+  <block id="1414b8807db3a544302b461e7372d3d9" category="paragraph">在 NetApp Console 本機部署中管理 NetApp Backup and Recovery 授權。這是一個浮動授權，可用於與您的 NetApp Console 組織關聯的所有系統。如果授權提供的備份容量足夠，則無需購買其他授權。您可以新增、更新和移除授權，並檢視其已使用容量、授權容量和授權到期日。</block>
+  <block id="db999994b08c5c61418e4ca147392c08" category="inline-link-macro">NetApp Backup and Recovery 授權文件</block>
+  <block id="4aa97d391dbc667c46beaaf39dfb7ddd" category="admonition">NetApp Console 本機部署不需要授權。NetApp Backup and Recovery 是目前唯一在 NetApp Console 本機部署中支援直接授權的服務。此授權也稱為自帶授權（BYOL）。如需詳細資訊，請參閱 <block ref="b68a6b1a846d68bcaf8da70ea0f764ae" category="inline-link-macro-rx"></block>。</block>
+  <block id="7b17f4802e5875aea6b273b7dfe498f3" category="paragraph">您必須擁有超級管理員或組織管理員角色才能管理 Console 本機部署中的授權。</block>
+  <block id="ec01ce5d7a75843507cddc0f1e980f6a" category="section-title">新增授權</block>
+  <block id="ba11df1d1373b340eae5ee22a7703b40" category="paragraph">透過上傳授權檔案，將授權新增至您的 Console 組織。</block>
+  <block id="a03e1a44589be8a351ff3a7a1d863c97" category="paragraph">您需要雲端服務序號和 NetApp Console 組織 ID 來產生授權檔案。</block>
+  <block id="c2dab7efe42335c34a0f152ae2750987" category="list-text">選擇 *Administration &gt; Licenses*。</block>
+  <block id="e8287c7448cfd8625359581b1cb6deb2" category="list-text">選取 *Direct licenses* 分頁。</block>
+  <block id="37fcb8e7d30cc5903f7318cd979d8ae4" category="list-text">選擇 *新增授權*。</block>
+  <block id="bc8ae46a6370e9f316f1e4bfce188513" category="list-text">前往 NetApp 支援網站的 *System &gt; Software Licenses* 標籤，產生授權檔案。</block>
+  <block id="1794b7dae269471cf87de4697f4ba5b0" category="list-text">返回 *新增授權* 對話方塊，選擇 *上傳*，然後選擇授權檔案。</block>
+  <block id="b74e2bce077ef14025639b4f19ad4337" category="list-text">選取 *新增授權* 以安裝授權。</block>
+  <block id="bbc338806b3fde403217598842ed392b" category="paragraph">授權會顯示在 *Direct licenses* 表格中，且 *License and Capacity Distribution* 總結會更新。</block>
+  <block id="6d6c2071320d39aedc7f752f83e093e6" category="section-title">檢視授權狀態</block>
+  <block id="d82718ab00ad307fce581d5eb2860f64" category="paragraph">從 *Direct licenses* 標籤檢視已安裝的授權及其狀態。此表格顯示服務、序號、類型、已使用容量、授權容量和授權到期日。*License and Capacity Distribution* 總結顯示已安裝的授權數量以及分配給 NetApp Backup and Recovery 的容量。</block>
+  <block id="21a7e07f0125ddcf392e4ca0d7d37806" category="paragraph">從每一行的動作選單 <block ref="c838adf4502bfb790ed3df711c4a4613" category="inline-image-macro-rx" type="image"></block> 中，您可以更新或移除授權。</block>
+  <block id="7e1885787a91975e343dfdb2b890f307" category="list-text">請檢閱表格與 *授權與容量分配* 總結。</block>
+  <block id="6c1c5737355a8b30e87ad5d7c6da9553" category="section-title">更新授權</block>
+  <block id="f09c55ca898583bd4ec051e61c0d6cdb" category="paragraph">替換 Console 組織中的現有授權，例如，當授權續約或其容量或到期日變更時。</block>
+  <block id="e3e575e1c2597108bb52d42a805493f3" category="list-text">選擇您要更新之授權的操作選單 <block ref="c838adf4502bfb790ed3df711c4a4613" category="inline-image-macro-rx" type="image"></block>，然後選擇 *更新授權*。</block>
+  <block id="973469f4c553cd4cf50320ce0103e19c" category="list-text">在 *更新授權* 對話方塊中，選擇 *上傳* 並選擇新的授權檔案。</block>
+  <block id="290735d09687ddc37259135c5300ba5f" category="list-text">選擇 *更新授權* 以確認更新。</block>
+  <block id="fb5fa0478317073a0a52cdc3a1dde652" category="paragraph">授權更新後，所選列將顯示新的授權容量和授權到期日。*授權和容量分佈* 總結也會更新。</block>
+  <block id="621e98bbd8c91680af3f444c8d10eaa3" category="section-title">移除授權</block>
+  <block id="542cace16423f513003aaff591c943db" category="paragraph">從您的 Console 組織中移除授權。移除授權是永久性的。移除的授權將不再為 NetApp Backup and Recovery 貢獻容量或持續時間。如果授權過期，現有原則的備份和還原將繼續進行，但您無法建立新的備份原則或將保護擴展到其他工作負載和資料存放區。</block>
+  <block id="b0baed4c31346f82a57cdffed05036ec" category="list-text">選取您要移除之授權的動作功能表 <block ref="c838adf4502bfb790ed3df711c4a4613" category="inline-image-macro-rx" type="image"></block>，然後選取 *移除授權*。</block>
+  <block id="ddfe8d8ce6e3dfceb7a2039cd142aa3e" category="list-text">在 *移除授權* 確認對話方塊中，驗證提示中的序號。</block>
+  <block id="37bea8c46b8d33fa477648eba0912d07" category="list-text">選擇 *移除* 以永久移除授權。</block>
+  <block id="2c6ce7383b3cc986a190791da38b9a2a" category="paragraph">授權已從 *直接授權* 表中移除，並且 *授權與容量分配* 總結會更新。</block>
+  <block id="81c2b56f99167782a533db86470cac6e" category="list-text">將 NetApp Backup and Recovery 授權新增至 NetApp Console 本機部署。<block ref="b245df0c039209d78d5353ec232ea246" category="inline-link-macro-rx"></block>。</block>
 </blocks>
