@@ -29,7 +29,7 @@ NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能�
 您選擇的供應商類型決定了 Console 本機部署模型清單中顯示的模型：
 
 * *OpenAI* — 提供可直接整合到 OpenAI 的模型。
-* *OpenAI-compatible* — 提供組織相容端點所公開的模型。
+* *相容於 OpenAI 的 Proxy* — 使用企業閘道或 Proxy 服務連接到受支援的模型。
 * *Anthropic* — 提供直接 Anthropic 整合的模型。
 
 

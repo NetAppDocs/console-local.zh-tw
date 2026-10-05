@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-llm-connect.html 
-keywords: LLM, AI, connect, large language model, console assistant, openai, openai-compatible, proxy, netapp console 
+keywords: LLM, AI, connect, large language model, console assistant, openai, openai-compatible proxy, netapp console 
 summary: 連接受支援的 LLM 端點，以在 NetApp Console 本機部署中啟用 Console 助理和 AI 輔助管理。 
 ---
 = 連接您的 LLM 並在 NetApp Console 本機部署中啟用 NetApp Console 助手
@@ -37,7 +37,7 @@ NOTE: 本文件說明如何將 LLM 連接至 Console 助理以啟用 AI 功能�
 
 請準備供應商憑證和端點存取，以便 Console 助理可以在您組織設定的治理範圍內運作。
 
-* 您的供應商類型選擇：OpenAI、OpenAI 相容或 Anthropic，取決於版本和端點的支援情況。
+* 您的供應商類型選擇：OpenAI、OpenAI 相容 Proxy 或 Anthropic
 * 您所選供應商路徑的有效 API 金鑰。
 * 您的供應商路徑的端點 URL。
 * 如果需要，請提供您的 LLM 供應商帳戶使用者名稱或 ID。
@@ -59,17 +59,16 @@ link:reference-llm-supported-models.html["了解 NetApp Console 本機部署中�
 . 選擇選單，然後選擇*編輯*。
 . 在「供應商類型」中，選取供應商類型。
 +
-link:concept-llm-integration.html["了解 LLM 在 NetApp Console 本機部署中的整合"]。
-
-. 如果提示輸入供應商端點，請輸入您選擇的供應商路徑的端點 URL。
-. 在「使用者名稱」欄位中，輸入您的使用者名稱或 SSO ID （如果您的供應商路徑要求）。
-. 在「API 金鑰」欄位中，貼上您選擇的供應商路徑中的 API 金鑰。
-. 從清單中選取型號。
-. 審查組態，然後選擇 * 儲存 *。
-+
-儲存組態前，請審查供應商類型、端點 URL、API 金鑰和所選模型。
+** *OpenAI* 用於直接存取 OpenAI 模型。
+** *相容於 OpenAI 的 Proxy* 以使用企業閘道或 Proxy 服務。
+** *Anthropic* 適用於 Anthropic 的 Claude 模型。
 
 
+
+
+link:concept-llm-integration.html["了解 LLM 在 NetApp Console 本機部署中的整合"]。。如果提示輸入供應商端點，請輸入您選擇的供應商路徑的端點 URL。。在「使用者名稱」欄位中，輸入您的使用者名稱或 SSO ID （如果您的供應商路徑要求）。。在「API 金鑰」欄位中，貼上您選擇的供應商路徑中的 API 金鑰。。從清單中選取型號。。審查組態，然後選擇 * 儲存 *。
+
++ 儲存組態前，請檢查供應商類型、端點 URL、API 金鑰和所選模型。
 
 
 
