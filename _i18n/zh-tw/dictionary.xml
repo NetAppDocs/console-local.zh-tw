@@ -3738,6 +3738,10 @@
   <block id="06b44c661a84a26e0ce1a017b3a10bf5" category="list-text">*相容於 OpenAI 的 Proxy* 以使用企業閘道或 Proxy 服務。</block>
   <block id="06cec8d93319a0a41f62ded52e6e388b" category="list-text">*相容於 OpenAI 的 Proxy* — 使用企業閘道或 Proxy 服務連接到受支援的模型。</block>
   <block id="b1cda2c8041bdb2e7c757f55bc07d4e0" category="list-text">您的供應商類型選擇：OpenAI、OpenAI 相容 Proxy 或 Anthropic</block>
-  <block id="a9e0ed29bcf0eb9114558aea8e38b3dd" category="paragraph"><block ref="ab74dc1a527eb39bc2a75230306dc5a0" category="inline-link-macro-rx"></block>。。如果提示輸入供應商端點，請輸入您選擇的供應商路徑的端點 URL。。在「使用者名稱」欄位中，輸入您的使用者名稱或 SSO ID （如果您的供應商路徑要求）。。在「API 金鑰」欄位中，貼上您選擇的供應商路徑中的 API 金鑰。。從清單中選取型號。。審查組態，然後選擇 * 儲存 *。</block>
-  <block id="3202e0a5b24589a1f3bedee597ddb7d9" category="paragraph">+ 儲存組態前，請檢查供應商類型、端點 URL、API 金鑰和所選模型。</block>
+  <block id="cf72c8170aef768cae71f4e2a449acaf" category="list-text">如果提示輸入供應商端點，請輸入您選擇的供應商路徑的端點 URL。</block>
+  <block id="d78f26f4373007724d98776e20cd9322" category="list-text">在「使用者名稱」欄位中，輸入您的使用者名稱或 SSO ID （如果您的供應商路徑要求）。</block>
+  <block id="b2914c614292093e506dbf4a10fd671c" category="list-text">在「API 金鑰」欄位中，貼上您選擇的供應商路徑中的 API 金鑰。</block>
+  <block id="73d0a6de3953116536b1666d0db7c78a" category="list-text">從清單中選取型號。</block>
+  <block id="f646c307a4396cd41f6593ce84be57d7" category="list-text">審查組態，然後選擇 * 儲存 *。</block>
+  <block id="26033ba1ab8ce1319bdb0de963d1cdcc" category="paragraph">儲存組態前，請審查供應商類型、端點 URL、API 金鑰和所選模型。</block>
 </blocks>
